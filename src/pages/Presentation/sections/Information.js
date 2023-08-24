@@ -30,6 +30,7 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+// import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 function Information() {
   return (
@@ -41,23 +42,17 @@ function Information() {
               <RotatingCardFront
                 image={bgFront}
                 icon="touch_app"
-                title={
-                  <>
-                    Feel the
-                    <br />
-                    Material Kit
-                  </>
-                }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                title={<>Kurumsal</>}
+                description="Kurumsal kimliğimiz, kaliteli ürünler ve müşteri odaklı yaklaşımımızla, sektörde öncü bir konumda bulunuyoruz. Amacımız, en iyi hizmeti sunarak müşterilerimizin güvenini kazanmaktır."
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
+                title="Kurumsal"
                 description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  label: "Detaylar",
                 }}
               />
             </RotatingCard>
@@ -67,23 +62,17 @@ function Information() {
               <RotatingCardFront
                 image={bgFront}
                 icon="touch_app"
-                title={
-                  <>
-                    Feel the
-                    <br />
-                    Material Kit
-                  </>
-                }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                title={<>Ürünlerimiz</>}
+                description=" Diş sağlığı alanındaki yenilikleri yakından takip ediyor, deneyimli ekibimizle birlikte özenle tasarlanmış ürünler sunarak diş hekimleri ve sağlık profesyonellerinin ihtiyaçlarını tam anlamıyla karşılıyoruz."
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Ürünlerimiz"
+                description="Sektördeki gelişmeleri önceden görmek ve beklentileri aşmak amacıyla sürekli olarak kendimizi geliştiriyor, müşterilerimize en güvenilir, etkili ve kaliteli çözümleri sunma vizyonumuzu sürdürüyoruz"
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  label: "Detaylar",
                 }}
               />
             </RotatingCard>
@@ -93,23 +82,17 @@ function Information() {
               <RotatingCardFront
                 image={bgFront}
                 icon="touch_app"
-                title={
-                  <>
-                    Feel the
-                    <br />
-                    Material Kit
-                  </>
-                }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                title={<>İletişim</>}
+                description="Kurumsal çözümlerimiz ve ürünlerimizle sektördeki etkimizi güçlendirmeye devam ederken, müşteri memnuniyetini artırmak için buradayız. İhtiyaçlarınızı ve sorularınızı iletişim kanallarımız ile bizimle paylaşabilirsiniz."
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="İletişim"
+                description="Size en iyi şekilde yardımcı olabilmek için iletişim seçeneklerimizi kullanabilirsiniz."
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  label: "detaylar",
                 }}
               />
             </RotatingCard>
@@ -147,8 +130,8 @@ function Information() {
                   description="Regardless of the screen size, the website content will naturally fit the given resolution."
                 />
               </Grid>
-            </Grid>
-          </Grid> */}
+            </Grid> 
+          </Grid>*/}
         </Grid>
       </Container>
     </MKBox>

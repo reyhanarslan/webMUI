@@ -80,7 +80,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
   );
 
   return (
-    <MKBox position="relative">
+    <MKBox position="relative" display="flex" alignItems="center">
       {pro ? (
         <Tooltip title="Pro Element" placement="top">
           {imageTemplate}
@@ -88,20 +88,18 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
       ) : (
         imageTemplate
       )}
-      {name || count > 0 ? (
-        <MKBox mt={1} ml={1} lineHeight={1}>
-          {name && (
-            <MKTypography variant="h6" fontWeight="bold">
-              {name}
-            </MKTypography>
-          )}
-          {count > 0 && (
-            <MKTypography variant="button" fontWeight="regular" color="secondary">
-              {count} {count === 1 ? "Example" : "Examples"}
-            </MKTypography>
-          )}
-        </MKBox>
-      ) : null}
+      <MKBox ml={1} position="relative" display="flex" alignItems="center">
+        {name && (
+          <MKTypography variant="h6" fontWeight="bold">
+            {name}
+          </MKTypography>
+        )}
+        {count > 0 && (
+          <MKTypography variant="button" fontWeight="regular" color="secondary">
+            {count} {count === 1 ? "Example" : "Examples"}
+          </MKTypography>
+        )}
+      </MKBox>
     </MKBox>
   );
 }
