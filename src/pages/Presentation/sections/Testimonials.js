@@ -44,13 +44,15 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">Trusted by over</MKTypography>
-          <MKTypography variant="h2" color="info" textGradient mb={2}>
-            1,679,477+ web developers
+          <MKTypography variant="h3">Birlikte çalıştığımız</MKTypography>
+          <MKTypography variant="h3" color="info" textGradient mb={2}>
+            100+ çalıştığımız firma ile
           </MKTypography>
           <MKTypography variant="body1" color="text" mb={2}>
-            Many Fortune 500 companies, startups, universities and governmental institutions love
-            Creative Tim&apos;s products.
+            Firmamız, uzun yıllardır sektörde güvenilirliği ve kalitesi ile öne çıkmaktadır.
+            Müşterilerimizin büyük bir çoğunluğu, geniş ürün yelpazemiz, rekabetçi fiyatlarımız ve
+            müşteri memnuniyetine verdiğimiz önem nedeniyle bizi tercih etmektedir. Sizin için de en
+            iyi ürünleri ve hizmeti sunmak için buradayız.
           </MKTypography>
         </Grid>
         <Grid container spacing={3} sx={{ mt: 8 }}>

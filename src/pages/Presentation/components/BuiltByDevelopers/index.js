@@ -45,23 +45,20 @@ function BuiltByDevelopers() {
     >
       <Container>
         <Grid container item xs={12} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
-          <MKTypography variant="h4" color="white" fontWeight="bold">
-            Built by developers
-          </MKTypography>
-          <MKTypography variant="h1" color="white" mb={1}>
-            Complex Documentation
-          </MKTypography>
-          <MKTypography variant="body1" color="white" opacity={0.8} mb={2}>
+          {/* <MKTypography variant="h4" color="white" fontWeight="bold">
+            DAHA FAZLA ÜRÜN BİLGİSİ İÇİN <br />
+          </MKTypography> */}
+          {/* <MKTypography variant="body1" color="white" opacity={0.8} mb={2}>
             From colors, cards, typography to complex elements, you will find the full
             documentation. Play with the utility classes and you will create unlimited combinations
             for our components.
-          </MKTypography>
+          </MKTypography> */}
           <MKTypography
             component="a"
             href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
             target="_blank"
             rel="noreferrer"
-            variant="body2"
+            variant="h5"
             color="white"
             fontWeight="regular"
             sx={{
@@ -79,7 +76,8 @@ function BuiltByDevelopers() {
               },
             }}
           >
-            Read docs <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            Daha Fazla Ürün Bilgisi İçin Lütfen Tıklayınız{" "}
+            <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
           </MKTypography>
         </Grid>
       </Container>

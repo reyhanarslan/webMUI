@@ -47,8 +47,9 @@ function AboutUs() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route:
+            "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
+          label: "Whatsapp ıle Sipariş ",
           color: "default",
         }}
         transparent

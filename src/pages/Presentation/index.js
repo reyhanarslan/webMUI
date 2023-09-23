@@ -10,7 +10,7 @@ import MKSocialButton from "components/MKSocialButton";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
+// import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
 // import Counters from "pages/Presentation/sections/Counters";
@@ -37,8 +37,9 @@ function Presentation() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route:
+            "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
+          label: "Whatsapp ıle Sipariş ",
           color: "info",
         }}
         sticky
@@ -67,7 +68,7 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
+              Arena Diş Deposu Title
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -76,8 +77,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              Arena Diş Deposu description
             </MKTypography>
           </Grid>
         </Container>
@@ -100,7 +100,7 @@ function Presentation() {
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
         </Container>
-        <Container>
+        {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -143,7 +143,7 @@ function Presentation() {
               />
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
         <Testimonials />
         <Download />
         <MKBox pt={18} pb={6}>
