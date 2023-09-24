@@ -62,7 +62,7 @@ export default function App() {
             <Grid className="d-flex" item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
               <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
             </Grid>
-            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
+            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3, mt: 3 }}>
               <MKTypography
                 display="block"
                 variant="button"
@@ -90,7 +90,7 @@ export default function App() {
                 ))}
               </MKBox>
             </Grid>
-            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
+            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3, mt: 3 }}>
               <MKTypography
                 display="block"
                 variant="button"
@@ -118,7 +118,7 @@ export default function App() {
                 ))}
               </MKBox>
             </Grid>
-            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
+            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3, mt: 3 }}>
               <MKTypography
                 display="block"
                 variant="button"

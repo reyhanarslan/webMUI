@@ -1,37 +1,39 @@
-const imagesPrefix =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/pages";
+import scanner from "assets/images/dashboard-product/scanner.png";
+import siladent from "assets/images/dashboard-product/siladent.jpg";
+import firin from "assets/images/dashboard-product/dis-firini.jpg";
+import unite from "assets/images/dashboard-product/dis-unitesi.jpg";
+import klinik from "assets/images/dashboard-product/klinik.jpg";
+import tomografi from "assets/images/dashboard-product/dis-tomografisi.jpg";
 
 export default [
   {
-    image: `${imagesPrefix}/about-us.jpg`,
-    name: "About Us Page",
+    image: scanner,
+    name: "Ağız İçi Tarayıcılar",
     route: "/pages/landing-pages/about-us",
   },
   {
-    image: `${imagesPrefix}/contact.jpg`,
-    name: "Contact Us Page",
+    image: siladent,
+    name: "CAD/CAM Sistemleri",
     route: "/pages/landing-pages/contact-us",
   },
   {
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/account/signin-basic.jpg",
-    name: "Sign In Page",
+    image: firin,
+    name: "Dental Fırınlar",
     route: "/pages/authentication/sign-in",
   },
   {
-    image: `${imagesPrefix}/author.jpg`,
-    name: "Author Page",
+    image: unite,
+    name: "Diş Üniteleri",
     route: "/pages/landing-pages/author",
   },
   {
-    image:
-      "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/account/signin-basic.jpg",
-    name: "Sign In Page",
+    image: klinik,
+    name: "Klinik Dolapları",
     route: "/pages/authentication/sign-in",
   },
   {
-    image: `${imagesPrefix}/author.jpg`,
-    name: "Author Page",
+    image: tomografi,
+    name: "Görüntüleme Sistemleri",
     route: "/pages/landing-pages/author",
   },
 ];

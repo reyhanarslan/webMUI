@@ -24,7 +24,7 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 
 import breakpoints from "assets/theme/base/breakpoints";
 
-function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
+function DefaultNavbar({ routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
   const [dropdownEl, setDropdownEl] = useState("");
   const [dropdownName, setDropdownName] = useState("");
@@ -433,11 +433,12 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   return (
     <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
       <MKBox
-        py={1}
+        // py={1}
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
-        my={relative ? 0 : 2}
+        my={relative ? 0 : 2} //Navbar margin
         mx={relative ? 0 : 3}
-        width={relative ? "100%" : "calc(100% - 48px)"}
+        // ml={30}
+        width={relative ? "80%" : "calc(80% - 48px)"}
         borderRadius="xl"
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
@@ -450,17 +451,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
-          <MKBox
-            component={Link}
-            to="/"
-            lineHeight={1}
-            py={transparent ? 1.5 : 0.75}
-            pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
-          >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
-            </MKTypography>
-          </MKBox>
           <MKBox
             color="inherit"
             display={{ xs: "none", lg: "flex" }}

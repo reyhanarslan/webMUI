@@ -2,7 +2,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
+// import MKTypography from "components/MKTypography";
 // import MKSocialButton from "components/MKSocialButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 // import DefaultFooter from "examples/Footers/DefaultFooter";
@@ -18,72 +18,85 @@ import Testimonials from "pages/Presentation/sections/Testimonials";
 
 // Presentation page components
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
-
+import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import { CardMedia } from "@mui/material";
 // Routes
 import routes from "routes";
 // import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-presentation.jpg";
+// import bgImage from "assets/images/bg-presentation.jpg";
+// import bgImage from "assets/images/dashboard/dashboard-img.jpg";
 import CarouselImages from "./sections/Carousel";
+import intro from "assets/videos/UP3D.mp4";
+import ReactPlayer from "react-player";
 
 function Presentation() {
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route:
-            "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
-          label: "Whatsapp ıle Sipariş ",
-          color: "success",
-        }}
-        sticky
-      />
+      <MKBox>
+        <Grid container>
+          <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: "auto", mb: 3 }}>
+            <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
+          </Grid>
+          <Grid
+            className="d-flex justify-content-center align-items-center"
+            item
+            xs={12}
+            md={6}
+            lg={9}
+            sx={{ ml: "auto", mb: 3 }}
+          >
+            <DefaultNavbar
+              routes={routes}
+              action={{
+                type: "external",
+                route:
+                  "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
+                label: "Whatsapp ıle Sipariş ",
+                color: "success",
+              }}
+              sticky
+            />
+          </Grid>
+        </Grid>
+      </MKBox>
+
       <MKBox
-        minHeight="75vh"
+        minHeight="90vh"
         width="100%"
         sx={{
-          backgroundImage: `url(${bgImage})`,
+          // backgroundImage: `url(${bgImage})`, //video gelecek
           backgroundSize: "cover",
           backgroundPosition: "top",
           display: "grid",
           placeItems: "center",
         }}
       >
-        <Container>
-          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
-            <MKTypography
-              variant="h1"
-              color="white"
-              mt={-6}
-              mb={1}
-              sx={({ breakpoints, typography: { size } }) => ({
-                [breakpoints.down("md")]: {
-                  fontSize: size["3xl"],
-                },
-              })}
-            >
-              Arena Diş Deposu Title
-            </MKTypography>
-            <MKTypography
-              variant="body1"
-              color="white"
-              textAlign="center"
-              px={{ xs: 6, lg: 12 }}
-              mt={1}
-            >
-              Arena Diş Deposu description
-            </MKTypography>
-          </Grid>
-        </Container>
+        {/* <CardMedia
+          width={300}
+          height={300}
+          component="video"
+          src="video"
+          // className={classes.media}
+          image={intro}
+          autoPlay
+        /> */}
+
+        <ReactPlayer
+          width={"100%"}
+          height="100%"
+          url={intro}
+          playing={true}
+          muted={true}
+          controls={true}
+        />
       </MKBox>
       <Card
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: -8,
+          mt: 3, //-8
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
           backdropFilter: "saturate(200%) blur(30px)",

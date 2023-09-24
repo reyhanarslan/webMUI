@@ -1,6 +1,6 @@
 export default {
   background: {
-    default: "#f0f2f5",
+    default: "#D8D9DA",
   },
 
   text: {
@@ -54,8 +54,8 @@ export default {
   },
 
   light: {
-    main: "#f0f2f5",
-    focus: "#f0f2f5",
+    main: "#D8D9DA",
+    focus: "#D8D9DA",
   },
 
   dark: {
@@ -65,7 +65,7 @@ export default {
 
   grey: {
     100: "#f8f9fa",
-    200: "#f0f2f5",
+    200: "#D8D9DA",
     300: "#dee2e6",
     400: "#ced4da",
     500: "#adb5bd",
