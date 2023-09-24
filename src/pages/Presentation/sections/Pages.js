@@ -50,7 +50,7 @@ function Pages() {
           lg={6}
           flexDirection="column"
           alignItems="center"
-          sx={{ textAlign: "center", my: 6, mx: "auto", px: 0.75 }}
+          sx={{ textAlign: "center", my: 3, mx: "auto" }}
         >
           {/* <MKBadge
             variant="contained"
@@ -69,7 +69,7 @@ function Pages() {
       </Container>
       <Container sx={{ mt: { xs: 8, lg: 16 } }}>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={16} sx={{ mt: 3, px: { xs: 0, lg: 8 } }}>
+          <Grid item xs={12} lg={16} sx={{ px: { xs: 0, lg: 8 } }}>
             <Grid container spacing={3}>
               {renderData}
             </Grid>

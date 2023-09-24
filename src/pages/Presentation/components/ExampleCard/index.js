@@ -39,7 +39,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         transition: "transform 200ms ease-out",
 
         "&:hover": {
-          transform: "perspective(999px) rotateX(7deg) translate3d(0px, -4px, 5px)",
+          transform: "perspective(999px) rotateX(7deg) translate3d(0px, -10px, 50px)",
         },
       }}
       {...rest}
@@ -80,7 +80,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
   );
 
   return (
-    <MKBox position="relative" display="flex" alignItems="center">
+    <MKBox position="relative" alignItems="center">
       {pro ? (
         <Tooltip title="Pro Element" placement="top">
           {imageTemplate}
@@ -88,7 +88,14 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
       ) : (
         imageTemplate
       )}
-      <MKBox ml={1} position="relative" display="flex" alignItems="center">
+      <MKBox
+        mt={1}
+        ml={1}
+        justifyContent="center"
+        position="relative"
+        display="flex"
+        alignItems="center"
+      >
         {name && (
           <MKTypography variant="h6" fontWeight="bold">
             {name}
