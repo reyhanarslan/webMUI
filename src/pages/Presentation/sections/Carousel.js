@@ -31,7 +31,7 @@ function CarouselImages() {
     <MKBox py={12} px={35}>
       <Container>
         <Grid lg={3}></Grid>
-        <Grid className="d-flex justify-content-center align-items-center" lg={6}>
+        <Grid className="d-flex justify-content-center align-items-center" lg={3}>
           <Carousel
             className="d-flex justify-content-center align-items-center"
             animation="slide"
@@ -47,7 +47,14 @@ function CarouselImages() {
 
               <CardMedia
                 className="d-flex justify-content-center align-items-center"
-                style={{ width: 630, height: 600 }}
+                style={{
+                  width: 1200,
+                  height: 250,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginLeft: "70px",
+                }}
                 key={i}
                 image={item}
                 alt="Logo"
