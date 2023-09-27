@@ -20,6 +20,7 @@ import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
 
 import ContactUs from "pages/LandingPages/ContactUs/index";
+import PresentationPage from "layouts/pages/presentation";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
 // import Modals from "layouts/sections/attention-catchers/modals";
@@ -39,6 +40,9 @@ const routes = [
     icon: <Icon>dashboard</Icon>,
     columns: 1,
     rowsPerColumn: 2,
+    route: "/presentation",
+    component: <PresentationPage />,
+
     // collapse: [
     //   {
     //     name: "landing pages",
