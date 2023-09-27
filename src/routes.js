@@ -18,7 +18,7 @@ import NavTabs from "layouts/sections/navigation/nav-tabs";
 import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
-
+import ProductInfo from "products/AboutUs/index.js";
 import ContactUs from "pages/LandingPages/ContactUs/index";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
@@ -32,12 +32,15 @@ import ContactUs from "pages/LandingPages/ContactUs/index";
 // import ProgressBars from "layouts/sections/elements/progress-bars";
 // import Toggles from "layouts/sections/elements/toggles";
 // import Typography from "layouts/sections/elements/typography";
+// import Presentation from "pages/Presentation";
 
 const routes = [
   {
     name: "Ana Sayfa",
     icon: <Icon>dashboard</Icon>,
     columns: 1,
+    // component:<Presentation />,
+    // route:"ana-sayfa",
     rowsPerColumn: 2,
     // collapse: [
     //   {
@@ -74,11 +77,15 @@ const routes = [
   },
   {
     name: "Ürünlerimiz",
+    route: "/urunler",
+    // component: <ContactUs />,
     icon: <Icon>view_day</Icon>,
     collapse: [
       {
         name: "Ağıziçi Tarayıcılar",
-        description: "See all sections",
+        route: "/urunler/agiz-ici-tarayicilar/:name",
+        component: <ProductInfo />,
+        // description: "See all sections",
         // dropdown: true,
         // collapse: [
         //   {
@@ -95,56 +102,59 @@ const routes = [
       },
       {
         name: "CAD/CAM Sistemleri",
-        description: "See all navigations",
+        route: "/urunler/cad-cam-sistemleri",
+        // description: "See all navigations",
         dropdown: true,
         collapse: [
           {
             name: "3D Printerler",
-            route: "/sections/navigation/navbars",
+            route: "/urunler/cad-cam-sistemleri/3d-printer",
             component: <Navbars />,
           },
           {
             name: "Kazıyıcılar",
-            route: "/sections/navigation/nav-tabs",
+            route: "/urunler/cad-cam-sistemleri/kaziyicilar",
             component: <NavTabs />,
           },
           {
             name: "Model Tarayıcılar",
-            route: "/sections/navigation/pagination",
+            route: "/urunler/cad-cam-sistemleri/model-tarayicilar",
             component: <Pagination />,
           },
         ],
       },
       {
         name: "Dental Fırınlar",
-        description: "See all input areas",
+        route: "/urunler/dental-firinlar",
+        // description: "See all input areas",
         dropdown: true,
         collapse: [
           {
             name: "Ceramic Processing - Porselen Fırınları",
-            route: "/sections/input-areas/inputs",
+            route: "/urunler/dental-firinlar/porselen-firinlar",
             component: <Inputs />,
           },
           {
             name: "Döküm Fırınları",
-            route: "/sections/input-areas/forms",
+            route: "/urunler/dental-firinlar/dokum-firinlar",
             component: <Forms />,
           },
           {
             name: "Press Fırınları",
-            route: "/sections/input-areas/forms",
+            route: "/urunler/dental-firinlar/press-firinlar",
             component: <Forms />,
           },
           {
             name: "Zirkon Sinterleme Fırınları",
-            route: "/sections/input-areas/forms",
+            route: "/urunler/dental-firinlar/zirkon-sinterleme-firinlari",
             component: <Forms />,
           },
         ],
       },
       {
         name: "Diş Üniteleri",
-        description: "See all examples",
+        route: "/urunler/dis-uniteleri",
+        // description: "See all examples",
         // dropdown: true,
         // collapse: [
         //   {
@@ -166,7 +176,8 @@ const routes = [
       },
       {
         name: "Görüntülenme Sistemleri",
-        description: "See all 32 examples",
+        route: "/urunler/goruntuleme-sistemleri",
+        // description: "See all 32 examples",
         // dropdown: true,
         // collapse: [
         //   {
@@ -213,17 +224,20 @@ const routes = [
       },
       {
         name: "Klinik Dolapları",
-        description: "See all 32 examples",
+        route: "/urunler/klinik-dolaplari",
+        // description: "See all 32 examples",
         // dropdown: true,
       },
       {
         name: "Laboratuvar Ekipmanları",
-        description: "See all 32 examples",
+        route: "/urunler/labaratuvar-ekipmanlari",
+        // description: "See all 32 examples",
         // dropdown: true,
       },
       {
         name: "Teknisyen Masaları",
-        description: "See all 32 examples",
+        route: "/urunler/teknisyen masalari",
+        // description: "See all 32 examples",
         // dropdown: true,
       },
     ],
@@ -234,27 +248,27 @@ const routes = [
     collapse: [
       {
         name: "Hakkımızda",
-        description: "All about overview, quick start, license and contents",
+        // description: "All about overview, quick start, license and contents",
         href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
       },
       {
         name: "Satış ve Garanti Koşullarımız",
-        description: "See our colors, icons and typography",
+        // description: "See our colors, icons and typography",
         href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
       },
       {
         name: "Mesafeli Satış Sözleşmesi",
-        description: "Explore our collection of fully designed components",
+        // description: "Explore our collection of fully designed components",
         href: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
       },
       {
         name: "Çerez Politikası",
-        description: "Check how you can integrate our plugins",
+        // description: "Check how you can integrate our plugins",
         href: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
       },
       {
         name: "Kişisel Verilerin Korunması(KVKK)",
-        description: "Check how you can integrate our plugins",
+        // description: "Check how you can integrate our plugins",
         href: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
       },
     ],
