@@ -1,33 +1,33 @@
 // react-router components
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import MuiLink from "@mui/material/Link";
-import Icon from "@mui/material/Icon";
+// import MuiLink from "@mui/material/Link";
+// import Icon from "@mui/material/Icon";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function BackgroundBlogCard({ image, title, description, action }) {
-  const cardActionStyles = {
-    display: "flex",
-    alignItems: "center",
-    width: "max-content",
+function BackgroundBlogCard({ image, title, description }) {
+  // const cardActionStyles = {
+  //   display: "flex",
+  //   alignItems: "center",
+  //   width: "max-content",
 
-    "& .material-icons, .material-icons-round,": {
-      transform: `translateX(2px)`,
-      transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
-    },
+  //   "& .material-icons, .material-icons-round,": {
+  //     transform: `translateX(2px)`,
+  //     transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
+  //   },
 
-    "&:hover .material-icons, &:focus .material-icons, &:hover .material-icons-round, &:focus .material-icons-round":
-      {
-        transform: `translateX(6px)`,
-      },
-  };
+  //   "&:hover .material-icons, &:focus .material-icons, &:hover .material-icons-round, &:focus .material-icons-round":
+  //     {
+  //       transform: `translateX(6px)`,
+  //     },
+  // };
 
   return (
     <Card
@@ -54,7 +54,7 @@ function BackgroundBlogCard({ image, title, description, action }) {
           <MKTypography variant="body2" color="white" my={3}>
             {description}
           </MKTypography>
-          {action.type === "internal" ? (
+          {/* {action.type === "internal" ? (
             <MKTypography
               component={Link}
               to={action.route}
@@ -82,7 +82,7 @@ function BackgroundBlogCard({ image, title, description, action }) {
               {action.label}
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </MKTypography>
-          )}
+          )} */}
         </MKBox>
       </MKBox>
     </Card>
