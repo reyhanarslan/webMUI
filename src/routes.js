@@ -18,7 +18,7 @@ import Navbars from "layouts/sections/navigation/navbars";
 import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
-import ProductInfo from "products/AboutUs/index.js";
+// import ProductInfo from "products/AboutUs/index.js";
 import ContactUs from "pages/LandingPages/ContactUs/index";
 import PresentationPage from "layouts/pages/presentation";
 import Category from "Category/AboutUs";
@@ -88,8 +88,8 @@ const routes = [
     collapse: [
       {
         name: "Ağıziçi Tarayıcılar",
-        route: "/urunler/agiz-ici-tarayicilar/:name",
-        component: <ProductInfo />,
+        // route: "/urunler/agiz-ici-tarayicilar/:name",
+        // component: <ProductInfo />,
         // description: "See all sections",
         // dropdown: true,
         // collapse: [

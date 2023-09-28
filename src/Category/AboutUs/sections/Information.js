@@ -53,7 +53,7 @@ function CategoryMenu() {
 
   const renderData = listingProduct.map((section, index) => (
     <Grid item xs={12} lg={4} md={6} sx={{ mb: { xs: 3, lg: 0 } }} key={index}>
-      <Link>
+      <Link to={"/urun-detay/:" + section.id}>
         <ExampleCard image={section.img[0]} name={section.model} display="grid" minHeight="auto" />
       </Link>
     </Grid>

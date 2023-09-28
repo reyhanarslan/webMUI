@@ -27,7 +27,7 @@ import { useEffect } from "react";
 
 function ProductInfo() {
   const navigate = useNavigate();
-  const { name } = useParams();
+  const { productid } = useParams();
   const test = () => {
     navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
   };
@@ -87,6 +87,7 @@ function ProductInfo() {
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
               Urunler SubTitle
+              {productid} nolu id
             </MKTypography>
             <Button onClick={() => test()}> TEST BUTTON</Button>
 
