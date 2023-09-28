@@ -14,13 +14,14 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // import PageHeaders from "layouts/sections/page-sections/page-headers";
 // import Features from "layouts/sections/page-sections/featuers";
 import Navbars from "layouts/sections/navigation/navbars";
-import NavTabs from "layouts/sections/navigation/nav-tabs";
+// import NavTabs from "layouts/sections/navigation/nav-tabs";
 import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
 import ProductInfo from "products/AboutUs/index.js";
 import ContactUs from "pages/LandingPages/ContactUs/index";
 import PresentationPage from "layouts/pages/presentation";
+import Category from "Category/AboutUs";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
 // import Modals from "layouts/sections/attention-catchers/modals";
@@ -118,7 +119,7 @@ const routes = [
           {
             name: "Kazıyıcılar",
             route: "/urunler/cad-cam-sistemleri/kaziyicilar",
-            component: <NavTabs />,
+            component: <Category />,
           },
           {
             name: "Model Tarayıcılar",

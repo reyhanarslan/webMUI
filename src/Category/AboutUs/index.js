@@ -6,9 +6,9 @@ import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+// import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // About Us page sections
-import Information from "pages/LandingPages/AboutUs/sections/Information";
 // import Team from "pages/LandingPages/AboutUs/sections/Team";
 // import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
 // import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
@@ -18,14 +18,16 @@ import Information from "pages/LandingPages/AboutUs/sections/Information";
 
 // Routes
 import routes from "routes";
+// import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg-about-us.jpg";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "@mui/material";
 import { useEffect } from "react";
+import CategoryMenu from "./sections/Information";
 
-function ProductInfo() {
+function Category() {
   const navigate = useNavigate();
   const { name } = useParams();
   const test = () => {
@@ -116,7 +118,7 @@ function ProductInfo() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
+        <CategoryMenu />
         {/* <Team />
         <Featuring />
         <Newsletter /> */}
@@ -125,4 +127,4 @@ function ProductInfo() {
   );
 }
 
-export default ProductInfo;
+export default Category;

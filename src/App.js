@@ -24,6 +24,7 @@ import MKTypography from "components/MKTypography";
 import footerRoutes from "footer.routes";
 import { CardMedia } from "@mui/material";
 import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import ProductInfo from "products/AboutUs";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -53,6 +54,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} />
+        <Route exact path="/urun-detay/:productid" element={<ProductInfo />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
 
