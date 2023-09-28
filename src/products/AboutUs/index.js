@@ -9,6 +9,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // About Us page sections
 import Information from "pages/LandingPages/AboutUs/sections/Information";
+
 // import Team from "pages/LandingPages/AboutUs/sections/Team";
 // import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
 // import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
@@ -23,16 +24,30 @@ import routes from "routes";
 import bgImage from "assets/images/bg-about-us.jpg";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Products from "products/ProductDatas/products";
 
 function ProductInfo() {
   const navigate = useNavigate();
   const { productid } = useParams();
+  const [productInfo, setProductInfo] = useState({});
   const test = () => {
     navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
   };
   useEffect(() => {
-    console.log(name);
+    console.log(productid);
+    let result = productid.replace(":", "");
+    console.log(result);
+
+    Products.map((item) => {
+      item.product.map((section) => {
+        console.log(section.id);
+        if (result === section.id) {
+          setProductInfo(section);
+        }
+      });
+    });
+    console.log(productInfo);
   }, []);
   return (
     <>
@@ -84,10 +99,14 @@ function ProductInfo() {
               })}
             >
               Urunler Title
+              {productInfo.model}
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
               Urunler SubTitle
               {productid} nolu id
+            </MKTypography>
+            <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
+              {/* {productInfo.model} */}
             </MKTypography>
             <Button onClick={() => test()}> TEST BUTTON</Button>
 

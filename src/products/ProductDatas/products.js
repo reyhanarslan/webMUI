@@ -32,36 +32,6 @@ const Products = [
         model: "Carestream CS 3700 Ağız İçi Tarayıcı",
         img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
       },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
-      },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
-      },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
-      },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
-      },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
-      },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
-      },
     ],
   },
   {
@@ -121,12 +91,13 @@ const Products = [
   {
     index: 2,
     category: "dental-firinlar",
+    product: [],
   },
-  { index: 3, category: "dis-uniteleri" },
-  { index: 4, category: "goruntulenme-sistemleri" },
-  { index: 5, category: "klinik-dolaplari" },
-  { index: 6, category: "laboratuvar-ekipmanlari" },
-  { index: 7, category: "teknisyen-masalari" },
+  { index: 3, category: "dis-uniteleri", product: [] },
+  { index: 4, category: "goruntulenme-sistemleri", product: [] },
+  { index: 5, category: "klinik-dolaplari", product: [] },
+  { index: 6, category: "laboratuvar-ekipmanlari", product: [] },
+  { index: 7, category: "teknisyen-masalari", product: [] },
 ];
 
 export default Products;
