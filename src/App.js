@@ -57,9 +57,8 @@ export default function App() {
         <Route exact path="/urun-detay/:productid" element={<ProductInfo />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
-
-      <MKBox component="footer">
-        <div>
+      <div style={{ marginTop: "50px", marginBottom: "50px" }}>
+        <MKBox component="footer">
           <Grid container>
             <Grid className="d-flex" item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
               <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
@@ -161,8 +160,8 @@ export default function App() {
               </MKTypography>
             </Grid> */}
           </Grid>
-        </div>
-      </MKBox>
+        </MKBox>
+      </div>
     </ThemeProvider>
   );
 }
