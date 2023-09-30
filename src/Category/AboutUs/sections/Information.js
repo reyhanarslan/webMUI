@@ -20,6 +20,7 @@ import { Box } from "@mui/material";
 import Products from "products/ProductDatas/products";
 import { Link } from "react-router-dom";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
+import "./category.css";
 function CategoryMenu() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   // const [open, setOpen] = useState(true);
@@ -42,6 +43,7 @@ function CategoryMenu() {
 
   useEffect(() => {
     console.log(selectedIndex);
+    setListingProduct([]);
     if (selectedIndex === 0) {
       console.log(Products[0].product);
       setListingProduct(Products[0].product);
@@ -80,9 +82,16 @@ function CategoryMenu() {
   console.log(listingProduct);
 
   const renderData = listingProduct.map((section, index) => (
-    <Grid item xs={12} lg={4} md={6} sx={{ mb: { xs: 3, lg: 0 } }} key={index}>
+    <Grid item xs={12} lg={4} md={6} sx={{ mb: { xs: 3, lg: 0 } }} key={Math.random(index) * 10000}>
       <Link to={"/urun-detay/:" + section.id}>
-        <ExampleCard image={section.img[0]} name={section.model} display="grid" minHeight="auto" />
+        <div className="product-card">
+          <ExampleCard
+            image={section.img[0]}
+            name={section.model}
+            // display="grid"
+            // minHeight="auto"
+          />{" "}
+        </div>
       </Link>
     </Grid>
   ));
@@ -206,7 +215,7 @@ function CategoryMenu() {
                       </ListItemButton>
                       <ListItemButton
                         sx={{ pl: 4 }}
-                        selected={selectedIndex === 23}
+                        selected={selectedIndex === 24}
                         onClick={() => handleListItemClick(24)}
                       >
                         <ListItemIcon>
