@@ -237,21 +237,25 @@ const Products = [
     category: "cad-cam-sistemleri",
     product: [
       {
+        code: 1,
         id: "0fky5JRUK5",
         model: "DentaFab Sega 3D Printer",
         img: [linkedin1024393, Segamodel, Segafront, Segadouble, segasidejpg],
       },
       {
+        code: 1,
         id: "wF2McAwDbN",
         model: "SILADENT 3D PRINTER SILAPRINT LCD",
         img: [SILADENT3DPRINTERSILAPRINTLCD],
       },
       {
+        code: 2,
         id: "OgKzyq7qlj",
         model: "SILAMILL 4 EDITION",
         img: [silamill4edition1, silamill4edition2],
       },
       {
+        code: 2,
         id: "9XlMdrhb4i",
         model: "SILAMILL 5.8 EDITION",
         img: [
@@ -268,6 +272,7 @@ const Products = [
         ],
       },
       {
+        code: 2,
         id: "Aq012yPOpC",
         model: "SILAMILL N4 EDITION",
         img: [
@@ -280,11 +285,13 @@ const Products = [
         ],
       },
       {
+        code: 2,
         id: "6AGNtjzh3x",
         model: "SILAMILL R5",
         img: [silamillr5_1, silamillr5_2, silamillr5_3, silamillr5_4, silamillr5_5],
       },
       {
+        code: 2,
         id: "fxI4W0jv90",
         model: "SILAMILL T5",
         img: [
@@ -297,12 +304,9 @@ const Products = [
           silamillt5_7,
         ],
       },
+      { code: 2, id: "kyBvNYd9Eo", model: "SILAMILL T5 EDITION", img: [silamillt5edition_1] },
       {
-        id: "kyBvNYd9Eo",
-        model: "SILAMILL T5 EDITION",
-        img: [silamillt5edition_1],
-      },
-      {
+        code: 2,
         id: "iNp4KdAwi3",
         model: "SILAMILL Z4",
         img: [
@@ -315,16 +319,19 @@ const Products = [
         ],
       },
       {
+        code: 3,
         id: "6ckA2QoXgA",
         model: "SMART OPTİCS VİNYL OPEN AİR",
         img: [sovoa_1],
       },
       {
+        code: 3,
         id: "VWt82QTAxh",
         model: "SMARTOPTICS VINYL HIGH RESOLUTION",
         img: [svhr_1, svhr_2, svhr_3, svhr_4, svhr_5, svhr_6],
       },
       {
+        code: 2,
         id: "jJpfLj3OLE",
         model: "Up3D P53 DENTAL FREZELEME CİHAZI",
         img: [up3d_1, up3d_2, up3d_3, up3d_4, up3d_5, up3d_6, up3d_7, up3d_8, up3d_9],
@@ -336,65 +343,50 @@ const Products = [
     category: "dental-firinlar",
     product: [
       {
-        id: "",
+        code: 1,
+        id: "aYdRQamh7o",
         model: "CERAMIC MASTER E20",
         img: [e20_1, e20_2, e20_3],
       },
       {
-        id: "",
+        code: 1,
+        id: "OJ14vR3cSM",
         model: "CERAMICMASTER E1000",
         img: [e1000_1, e1000_2, e1000_3],
       },
+      { code: 1, id: "", model: "CERAMICMASTER E3000", img: [e3000_1, e3000_2, e3000_3] },
       {
-        id: "",
-        model: "CERAMICMASTER E3000",
-        img: [e3000_1, e3000_2, e3000_3],
-      },
-      {
-        id: "",
+        code: 3,
+        id: "TsvMva0AMu",
         model: "CERAMICMASTER PRESS",
         img: [erress_1, erress_2, erress_3],
       },
       {
-        id: "",
+        code: 3,
+        id: "gX0OVoBxIK",
         model: "CERAMICMASTER PRESS PRO",
         img: [presspro_1, presspro_2, presspro_3],
       },
+      { code: 2, id: "", model: "FIREMAGIC ET400", img: [firemagicer400_1, firemagicer400_2] },
       {
-        id: "",
-        model: "FIREMAGIC ET400",
-        img: [firemagicer400_1, firemagicer400_2],
-      },
-      {
-        id: "",
+        code: 2,
+        id: "nxwVeHnsqI",
         model: "LC CAST 600T",
         img: [lccast_1, lccast_2, lccast_3, lccast_4, lccast_5],
       },
       {
-        id: "",
+        id: "fS9WOxabf1",
         model: "PINPRECISE PP100",
         img: [pinprecise_1, pinprecise_2],
       },
+      { code: 2, id: "", model: "POLI AM", img: [polyam_1, polyam_2] },
+      { code: 2, id: "", model: "POLI MAX", img: [polymax_1, polymax_2] },
       {
-        id: "",
-        model: "POLI AM",
-        img: [polyam_1, polyam_2],
-      },
-      {
-        id: "",
-        model: "POLI MAX",
-        img: [polymax_1, polymax_2],
-      },
-      {
-        id: "",
+        id: "zObKvzOCgk",
         model: "SLITPRECISE SP100",
         img: [slitprecise_1, slitprecise_2, slitprecise_3, slitprecise_4],
       },
-      {
-        id: "",
-        model: "ZIRCONMASTER S",
-        img: [zms_1],
-      },
+      { code: 4, id: "", model: "ZIRCONMASTER S", img: [zms_1] },
     ],
   },
   {
@@ -402,57 +394,57 @@ const Products = [
     category: "dis-uniteleri",
     product: [
       {
-        id: "",
+        id: "JqScIHy2mA",
         model: "Advance Askılı Diş Ünitesi",
         img: [aadu_1, aadu_2],
       },
       {
-        id: "",
+        id: "lKBwnEMjYG",
         model: "ADVANCE Askılı Diş Ünitesi A1",
         img: [aadu_a1_1, aadu_a1_2],
       },
       {
-        id: "",
+        id: "PnKlBZXX8A",
         model: "ADVANCE Askılı Diş Ünitesi A3",
         img: [aadu_a3_1, aadu_a3_2],
       },
       {
-        id: "",
+        id: "I74N2fI3Y8",
         model: "ADVANCE Kamçılı Diş Ünitesi",
         img: [akdu_1, akdu_2],
       },
       {
-        id: "",
+        id: "m0A99mC1Fk",
         model: "ADVANCE Kamçılı Diş Ünitesi A1",
         img: [akdu_a1_1],
       },
       {
-        id: "",
+        id: "uRnqC40euA",
         model: "ADVANCE Kamçılı Diş Ünitesi A3",
         img: [akdu_a3_1],
       },
       {
-        id: "",
+        id: "dxYoNv22oe",
         model: "Ameliyat Masaları",
         img: [am_1, am_2, am_3, am_4],
       },
       {
-        id: "",
+        id: "d8kYA19AkJ",
         model: "Jinekolojik ve Ürolojik Masa",
         img: [jvum_1, jvum_2],
       },
       {
-        id: "",
+        id: "6Xn6aML6Fq",
         model: "Phantom Dental Simülasyon Çalışma Masası",
         img: [pdscm_1, pdscm_2],
       },
       {
-        id: "",
+        id: "AvrFuUwAeb",
         model: "QUATTRO Askılı Diş Ünitesi",
         img: [qadu_1, qadu_2],
       },
       {
-        id: "",
+        id: "YNRlN6GndQ",
         model: "QUATTRO Kamçılı Diş Ünitesi",
         img: [qkdu_1, qkdu_2],
       },
@@ -463,12 +455,12 @@ const Products = [
     category: "goruntulenme-sistemleri",
     product: [
       {
-        id: "",
+        id: "3ZTv5PyOQ4",
         model: "Panoramik",
         img: [grntlnm],
       },
       {
-        id: "",
+        id: "cTg3vb7U9Y",
         model: "Tomografi",
         img: [grntlnm],
       },
@@ -479,67 +471,67 @@ const Products = [
     category: "klinik-dolaplari",
     product: [
       {
-        id: "",
+        id: "epnxnAvWlU",
         model: "Anemon 00",
         img: [anemon00_1, anemon00_2, anemon00_3],
       },
       {
-        id: "",
+        id: "2T1pEFn3YS",
         model: "ANEMON 04",
         img: [anemon04_1],
       },
       {
-        id: "",
+        id: "552Cyt4p01",
         model: "ANEMON 05",
         img: [anemon05_1, anemon05_2],
       },
       {
-        id: "",
+        id: "2xYBmwMbdT",
         model: "ANEMON 06",
         img: [anemon06_1, anemon06_2],
       },
       {
-        id: "",
+        id: "9VIP5Ei9QX",
         model: "ANEMON 07",
         img: [anemon07_1, anemon07_2],
       },
       {
-        id: "",
+        id: "WzVYkyUoD2",
         model: "AZURIT 01",
         img: [azurit_01, azurit_02],
       },
       {
-        id: "",
+        id: "Xi5k2aJ4ed",
         model: "AZURIT 02",
         img: [azurit02_1, azurit02_2],
       },
       {
-        id: "",
+        id: "hLqXePzk1g",
         model: "AZURIT 05",
         img: [azurit05_1, azurit05_2, azurit05_3],
       },
       {
-        id: "",
+        id: "7YfeKNbzL9",
         model: "KUVARS 01",
         img: [kuvars01_1, kuvars01_2],
       },
       {
-        id: "",
+        id: "AiJ5G4Zj0o",
         model: "KUVARS MOBİL",
         img: [kuvarsmobil_1, kuvarsmobil_2],
       },
       {
-        id: "",
+        id: "mDrVUOMGai",
         model: "MOBİL KABİN 02",
         img: [mobilkabin02_1, mobilkabin02_2],
       },
       {
-        id: "",
+        id: "BfOBwS5xTj",
         model: "MOBİL KABİN 03",
         img: [mobilkabin03_1, mobilkabin03_2],
       },
       {
-        id: "",
+        id: "Kw9eOocx1F",
         model: "MOBİL KABİN 04",
         img: [mobilkabin04_1, mobilkabin04_2],
       },
@@ -550,17 +542,17 @@ const Products = [
     category: "laboratuvar-ekipmanlari",
     product: [
       {
-        id: "",
+        id: "r3etcIMTgJ",
         model: "DFM 75E",
         img: [dfm_1, dfm_2],
       },
       {
-        id: "",
+        id: "V7RSRfY4BO",
         model: "PINPRECISE PP100",
         img: [pinprecise_1, pinprecise_2],
       },
       {
-        id: "",
+        id: "SwCYBQQ3TM",
         model: "SLITPRECISE SP100",
         img: [slitprecise_1, slitprecise_2, slitprecise_3, slitprecise_4],
       },
@@ -571,12 +563,12 @@ const Products = [
     category: "teknisyen-masalari",
     product: [
       {
-        id: "",
+        id: "1jmZFqoVSi",
         model: "Çift Teknisyen Çalışma Masası",
         img: [ttcm_1],
       },
       {
-        id: "",
+        id: "pW7rUCqbGJ",
         model: "Tekli Teknisyen Çalışma Masası",
         img: [ctcm_1],
       },
