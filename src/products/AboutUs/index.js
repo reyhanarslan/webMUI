@@ -9,6 +9,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 // About Us page sections
 import Information from "pages/LandingPages/AboutUs/sections/Information";
+import "./product.css";
 
 // import Team from "pages/LandingPages/AboutUs/sections/Team";
 // import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
@@ -19,14 +20,54 @@ import Information from "pages/LandingPages/AboutUs/sections/Information";
 
 // Routes
 import routes from "routes";
+import PropTypes from "prop-types";
 
 // Images
 import bgImage from "assets/images/bg-about-us.jpg";
 import { useNavigate, useParams } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, CardMedia } from "@mui/material";
 import { useEffect, useState } from "react";
 import Products from "products/ProductDatas/products";
+import Carousel from "react-material-ui-carousel";
 
+export function ProductSlider({ images }) {
+  return (
+    <Carousel
+      className="d-flex justify-content-center align-items-center"
+      animation="slide"
+      duration={500}
+      width={1000}
+      height={500}
+      navButtnsAlwaysVisible={false}
+      fullHeightHover={true}
+      stopAutoPlayOnHover={true}
+      swipe={true}
+    >
+      {images.map((item, i) => (
+        <CardMedia
+          className="d-flex justify-content-center align-items-center carousel-item"
+          style={{
+            width: 1000,
+            height: 500,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginLeft: "70px",
+            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            transition: "transform 0.3s ease-in-out",
+          }}
+          key={i}
+          image={item}
+          alt="Logo"
+        />
+      ))}
+    </Carousel>
+  );
+}
+ProductSlider.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 function ProductInfo() {
   const navigate = useNavigate();
   const { productid } = useParams();
@@ -62,71 +103,90 @@ function ProductInfo() {
         }}
         transparent
         light
-      />
-      <MKBox
-        minHeight="75vh"
-        width="100%"
-        sx={{
-          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-            `${linearGradient(
-              rgba(gradients.dark.main, 0.6),
-              rgba(gradients.dark.state, 0.6)
-            )}, url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
-        <Container>
-          <Grid
-            container
-            item
-            xs={12}
-            lg={8}
-            justifyContent="center"
-            alignItems="center"
-            flexDirection="column"
-            sx={{ mx: "auto", textAlign: "center" }}
-          >
-            <MKTypography
-              variant="h1"
-              color="white"
-              sx={({ breakpoints, typography: { size } }) => ({
-                [breakpoints.down("md")]: {
-                  fontSize: size["3xl"],
-                },
-              })}
+      />{" "}
+      <Container>
+        <Grid container>
+          <Grid marginTop={"8rem"} item xs={12} md={8}>
+            {/* <MKBox
+              minHeight="50vh"
+              width="100%"
+              sx={{
+                backgroundImage: ({
+                  functions: { linearGradient, rgba },
+                  palette: { gradients },
+                }) =>
+                  `${linearGradient(
+                    rgba(gradients.dark.main, 0.6),
+                    rgba(gradients.dark.state, 0.6)
+                  )}, url(${bgImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "grid",
+                placeItems: "center",
+              }}
             >
-              Urunler Title
-              {productInfo.model}
-            </MKTypography>
-            <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-              Urunler SubTitle
-              {productid} nolu id
-            </MKTypography>
-            <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-              {/* {productInfo.model} */}
-            </MKTypography>
-            <Button onClick={() => test()}> TEST BUTTON</Button>
+              {" "}
+            </MKBox> */}
+            <ProductSlider images={[bgImage, bgImage, bgImage]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <MKBox
+              minHeight="75vh"
+              width="100%"
+              sx={{
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "grid",
+                placeItems: "center",
+              }}
+            >
+              <Grid
+                container
+                justifyContent="center"
+                alignItems="center"
+                flexDirection="column"
+                sx={{ mx: "auto", textAlign: "center" }}
+              >
+                <MKTypography
+                  variant="h1"
+                  color="white"
+                  sx={({ breakpoints, typography: { size } }) => ({
+                    [breakpoints.down("md")]: {
+                      fontSize: size["3xl"],
+                    },
+                  })}
+                >
+                  Urunler Title
+                  {productInfo.model}
+                </MKTypography>
+                <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
+                  Urunler SubTitle
+                  {productid} nolu id
+                </MKTypography>
+                <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
+                  {/* {productInfo.model} */}
+                </MKTypography>
+                <Button onClick={() => test()}> TEST BUTTON</Button>
 
-            <MKTypography variant="h6" color="white" mt={8} mb={1}>
-              Daha Fazla Bilgi İçin Bize Ulaşın
-            </MKTypography>
-            <MKBox display="flex" justifyContent="center" alignItems="center">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fa fa-whatsapp" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fa fa-phone" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fa fa-envelope  " />
-              </MKTypography>
+                <MKTypography variant="h6" color="white" mt={8} mb={1}>
+                  Daha Fazla Bilgi İçin Bize Ulaşın
+                </MKTypography>
+                <MKBox display="flex" justifyContent="center" alignItems="center">
+                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                    <i className="fa fa-whatsapp" />
+                  </MKTypography>
+                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                    <i className="fa fa-phone" />
+                  </MKTypography>
+                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                    <i className="fa fa-envelope  " />
+                  </MKTypography>
+                </MKBox>
+              </Grid>
             </MKBox>
           </Grid>
-        </Container>
-      </MKBox>
+        </Grid>
+      </Container>
       <Card
         sx={{
           p: 2,
