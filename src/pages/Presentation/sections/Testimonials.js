@@ -5,15 +5,19 @@ import Divider from "@mui/material/Divider";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import Companies_1 from "assets/companies/Arena-markalar-1.jpg";
+import Companies_2 from "assets/companies/Arena-markalar-2.jpg";
+import Companies_3 from "assets/companies/Arena-markalar-3.jpg";
+import Companies_4 from "assets/companies/Arena-markalar-4.jpg";
+import Companies_5 from "assets/companies/Arena-markalar-5.jpg";
+import Companies_6 from "assets/companies/Arena-markalar-6.jpg";
+import Companies_7 from "assets/companies/Arena-markalar-7.jpg";
+import Companies_8 from "assets/companies/Arena-markalar-8.jpg";
+import Companies_9 from "assets/companies/Arena-markalar-9.jpg";
 
 // import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
 // Images
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import nasaLogo from "assets/images/logos/gray-logos/logo-nasa.svg";
-import vodafoneLogo from "assets/images/logos/gray-logos/logo-vodafone.svg";
-import digitalOceanLogo from "assets/images/logos/gray-logos/logo-digitalocean.svg";
 
 function Information() {
   return (
@@ -79,25 +83,39 @@ function Information() {
             <MKTypography variant="h2">Çalıştığımız Markalar</MKTypography>
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={appleLogo} alt="Apple" width="100%" opacity={0.6} />
+            <MKBox component="img" src={Companies_1} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={facebookLogo} alt="Facebook" width="100%" opacity={0.6} />
+            <MKBox component="img" src={Companies_2} alt="Facebook" width="100%" opacity={0.6} />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={nasaLogo} alt="Nasa" width="100%" opacity={0.6} />
+            <MKBox component="img" src={Companies_3} alt="Nasa" width="100%" opacity={0.6} />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={vodafoneLogo} alt="Vodafone" width="100%" opacity={0.6} />
+            <MKBox component="img" src={Companies_4} alt="Vodafone" width="100%" opacity={0.6} />
           </Grid>
           <Grid item xs={6} md={4} lg={2}>
             <MKBox
               component="img"
-              src={digitalOceanLogo}
+              src={Companies_5}
               alt="DigitalOcean"
               width="100%"
               opacity={0.6}
             />
+          </Grid>
+        </Grid>
+        <Grid container spacing={3} justifyContent="center">
+          <Grid item xs={6} md={4} lg={2}>
+            <MKBox component="img" src={Companies_6} alt="Apple" width="100%" opacity={0.6} />
+          </Grid>
+          <Grid item xs={6} md={4} lg={2}>
+            <MKBox component="img" src={Companies_7} alt="Apple" width="100%" opacity={0.6} />
+          </Grid>
+          <Grid item xs={6} md={4} lg={2}>
+            <MKBox component="img" src={Companies_8} alt="Apple" width="100%" opacity={0.6} />
+          </Grid>
+          <Grid item xs={6} md={4} lg={2}>
+            <MKBox component="img" src={Companies_9} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
         </Grid>
       </Container>
