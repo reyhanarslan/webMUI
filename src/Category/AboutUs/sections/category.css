@@ -1,14 +1,14 @@
-.product-card {
-  animation: card-animation 1s !important;
+.product-video {
+  animation: video-animation 10s !important;
 }
 
-@keyframes card-animation{
+@keyframes video-animation{
   0%{
     opacity: 0.3;
-    transform: translateY(20px);
+    transform: translatey(30px);
   }
   100%{
     opacity: 1;
-    transform: translateY(0);
+    transform: translatey(0);
   }  
 }

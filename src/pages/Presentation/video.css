@@ -1,0 +1,14 @@
+.video-card {
+  animation: card-animation 1s !important;
+}
+
+@keyframes card-animation{
+  0%{
+    opacity: 0.3;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }  
+}
