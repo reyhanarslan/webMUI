@@ -23,17 +23,17 @@ import ExampleCard from "pages/Presentation/components/ExampleCard";
 function CategoryMenu() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   // const [open, setOpen] = useState(true);
-  const [isOpenCadCam, setIsOpenCadCam] = useState(true);
-  const [isOpenDentalFirin, setIsOpenDentalFirin] = useState(true);
+  const [isOpenCadCam] = useState(true);
+  const [isOpenDentalFirin] = useState(true);
   const [listingProduct, setListingProduct] = useState([]);
 
   const cadCam = (index) => {
     setSelectedIndex(index);
-    setIsOpenCadCam(!isOpenCadCam);
+    // setIsOpenCadCam(!isOpenCadCam);
   };
   const dental = (index) => {
     setSelectedIndex(index);
-    setIsOpenDentalFirin(!isOpenDentalFirin);
+    // setIsOpenDentalFirin(!isOpenDentalFirin);
   };
 
   const handleListItemClick = (index) => {
@@ -45,6 +45,34 @@ function CategoryMenu() {
     if (selectedIndex === 0) {
       console.log(Products[0].product);
       setListingProduct(Products[0].product);
+    } else if (selectedIndex === 1) {
+      setListingProduct(Products[1].product);
+    } else if (selectedIndex === 11) {
+      setListingProduct(Products[1].product.filter((item) => item.code === 1));
+    } else if (selectedIndex === 12) {
+      setListingProduct(Products[1].product.filter((item) => item.code === 2));
+    } else if (selectedIndex === 13) {
+      setListingProduct(Products[1].product.filter((item) => item.code === 3));
+    } else if (selectedIndex === 2) {
+      setListingProduct(Products[2].product);
+    } else if (selectedIndex === 21) {
+      setListingProduct(Products[2].product.filter((item) => item.code === 1));
+    } else if (selectedIndex === 22) {
+      setListingProduct(Products[2].product.filter((item) => item.code === 2));
+    } else if (selectedIndex === 23) {
+      setListingProduct(Products[2].product.filter((item) => item.code === 3));
+    } else if (selectedIndex === 24) {
+      setListingProduct(Products[2].product.filter((item) => item.code === 4));
+    } else if (selectedIndex === 3) {
+      setListingProduct(Products[3].product);
+    } else if (selectedIndex === 4) {
+      setListingProduct(Products[4].product);
+    } else if (selectedIndex === 5) {
+      setListingProduct(Products[5].product);
+    } else if (selectedIndex === 6) {
+      setListingProduct(Products[6].product);
+    } else if (selectedIndex === 7) {
+      setListingProduct(Products[7].product);
     } else {
       setListingProduct([]);
     }
@@ -93,7 +121,8 @@ function CategoryMenu() {
 
                   <ListItemButton
                     selected={selectedIndex === 1}
-                    onClick={(event) => cadCam(event, 1)}
+                    onClick={() => cadCam(1)}
+                    // onClick={(event) => cadCam(event, 1)}
                   >
                     <ListItemIcon>
                       <StarBorder />
@@ -136,10 +165,7 @@ function CategoryMenu() {
                     </List>
                   </Collapse>
 
-                  <ListItemButton
-                    selected={selectedIndex === 2}
-                    onClick={(event) => dental(event, 2)}
-                  >
+                  <ListItemButton selected={selectedIndex === 2} onClick={() => dental(2)}>
                     <ListItemIcon>
                       <StarBorder />
                     </ListItemIcon>
@@ -211,8 +237,8 @@ function CategoryMenu() {
                     <ListItemText primary="Görüntülenme Sistemleri" />
                   </ListItemButton>
                   <ListItemButton
-                    selected={selectedIndex === 4}
-                    onClick={() => handleListItemClick(4)}
+                    selected={selectedIndex === 5}
+                    onClick={() => handleListItemClick(5)}
                   >
                     <ListItemIcon>
                       <StarBorder />
@@ -220,8 +246,8 @@ function CategoryMenu() {
                     <ListItemText primary="Klinik Dolapları" />
                   </ListItemButton>
                   <ListItemButton
-                    selected={selectedIndex === 4}
-                    onClick={() => handleListItemClick(4)}
+                    selected={selectedIndex === 6}
+                    onClick={() => handleListItemClick(6)}
                   >
                     <ListItemIcon>
                       <StarBorder />
@@ -229,8 +255,8 @@ function CategoryMenu() {
                     <ListItemText primary="Laboratuvar Ekipmanları" />
                   </ListItemButton>
                   <ListItemButton
-                    selected={selectedIndex === 4}
-                    onClick={() => handleListItemClick(4)}
+                    selected={selectedIndex === 7}
+                    onClick={() => handleListItemClick(7)}
                   >
                     <ListItemIcon>
                       <StarBorder />
