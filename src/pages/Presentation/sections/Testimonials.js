@@ -14,6 +14,7 @@ import Companies_6 from "assets/companies/Arena-markalar-6.jpg";
 import Companies_7 from "assets/companies/Arena-markalar-7.jpg";
 import Companies_8 from "assets/companies/Arena-markalar-8.jpg";
 import Companies_9 from "assets/companies/Arena-markalar-9.jpg";
+import "./card-hover.css";
 
 // import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
@@ -82,19 +83,19 @@ function Information() {
           >
             <MKTypography variant="h2">Çalıştığımız Markalar</MKTypography>
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_1} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_2} alt="Facebook" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_3} alt="Nasa" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_4} alt="Vodafone" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox
               component="img"
               src={Companies_5}
@@ -105,16 +106,16 @@ function Information() {
           </Grid>
         </Grid>
         <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_6} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_7} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_8} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
-          <Grid item xs={6} md={4} lg={2}>
+          <Grid item xs={6} md={4} lg={2} className="card-hover">
             <MKBox component="img" src={Companies_9} alt="Apple" width="100%" opacity={0.6} />
           </Grid>
         </Grid>
