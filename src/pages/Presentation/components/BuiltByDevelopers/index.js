@@ -4,10 +4,11 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import DashboardImg from "assets/images/dashboard/arena-dis-banner-2-2.jpg";
 
 function BuiltByDevelopers() {
-  const bgImage =
-    "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
+  // const bgImage =
+  //   "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
 
   return (
     <MKBox
@@ -19,9 +20,9 @@ function BuiltByDevelopers() {
       sx={{
         backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
           `${linearGradient(
-            rgba(gradients.dark.main, 0.8),
-            rgba(gradients.dark.state, 0.8)
-          )}, url(${bgImage})`,
+            rgba(gradients.dark.main, 0.3),
+            rgba(gradients.dark.state, 0.9)
+          )}, url(${DashboardImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

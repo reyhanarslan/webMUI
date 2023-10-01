@@ -30,7 +30,7 @@ function Information() {
               <RotatingCardBack
                 image={bgBack}
                 title="Kurumsal"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                description="Bu firma, güçlü bir kurumsal kimlik ve etik değerlerle müşterilerine yüksek kalitede hizmet sunmayı taahhüt ediyor."
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
