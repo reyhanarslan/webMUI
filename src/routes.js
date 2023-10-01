@@ -44,8 +44,9 @@ const routes = [
     columns: 1,
     // component:<Presentation />,
     // route:"ana-sayfa",
+
     rowsPerColumn: 2,
-    route: "/presentation",
+    route: "/home",
     component: <PresentationPage />,
 
     // collapse: [
@@ -83,7 +84,8 @@ const routes = [
   },
   {
     name: "Ürünlerimiz",
-    route: "/urunler",
+    route: "/urunler/cad-cam-sistemleri/kaziyicilar",
+    // component: <ContactUs />,
     icon: <Icon>view_day</Icon>,
     collapse: [
       {

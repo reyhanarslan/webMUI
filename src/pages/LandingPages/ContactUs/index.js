@@ -131,9 +131,9 @@ function ContactUs() {
           </Grid>
         </Grid>
 
-        <Grid item xs={12} lg={6}>
+        <Grid item sm={6} md={6} xs={12} lg={6} xl={6}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item sm={6} md={6} lg={6} xl={6} xs={12}>
               <MKBox
                 bgColor="white"
                 borderRadius="xl"
@@ -152,7 +152,7 @@ function ContactUs() {
                 />
               </MKBox>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item sm={6} md={6} lg={6} xl={6} xs={12}>
               <MKBox
                 bgColor="white"
                 borderRadius="xl"
@@ -171,7 +171,7 @@ function ContactUs() {
                 />
               </MKBox>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item sm={8} md={8} lg={12} xl={12} xs={6}>
               <MKBox
                 bgColor="white"
                 borderRadius="xl"
@@ -194,7 +194,17 @@ function ContactUs() {
               </MKBox>
             </Grid>
           </Grid>
-          <Grid container justifyContent="flex-end" xs={11} mt={3} mb={2}>
+          <Grid
+            container
+            justifyContent="flex-end"
+            xs={11}
+            sm={11}
+            md={11}
+            lg={11}
+            xl={11}
+            mt={3}
+            mb={2}
+          >
             <MKButton type="submit" variant="gradient" color="info">
               Gönder
             </MKButton>
