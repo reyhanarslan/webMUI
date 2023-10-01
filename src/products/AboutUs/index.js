@@ -7,9 +7,10 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 // About Us page sections
-import Information from "pages/LandingPages/AboutUs/sections/Information";
+// import Information from "pages/LandingPages/AboutUs/sections/Information";
 import "./product.css";
-
+import Carestream3600 from "Category/Category-list/carestream3600";
+import Carestream3700 from "Category/Category-list/carestream3700";
 // import Team from "pages/LandingPages/AboutUs/sections/Team";
 // import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
 // import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
@@ -67,11 +68,13 @@ export function ProductSlider({ images }) {
 ProductSlider.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
+
 function ProductInfo() {
   const navigate = useNavigate();
   const { productid } = useParams();
   const [productInfo, setProductInfo] = useState({});
   const [productImages, setProductImages] = useState([]);
+  const [productModel, setProductModel] = useState([]);
   const test = () => {
     navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
   };
@@ -87,12 +90,23 @@ function ProductInfo() {
         if (result === section.id) {
           setProductInfo(section);
           setProductImages(section.img);
+          setProductModel(section.model);
           console.log(section);
         }
       });
     });
     console.log(productInfo);
   }, []);
+  const renderProductComponent = () => {
+    switch (productModel) {
+      case "Carestream CS 3600 Ağız İçi Tarayıcı":
+        return <Carestream3600 />;
+      case "Carestream CS 3700 Ağız İçi Tarayıcı":
+        return <Carestream3700 />;
+      default:
+        return null;
+    }
+  };
   return (
     <>
       <DefaultNavbar
@@ -219,7 +233,10 @@ function ProductInfo() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />
+        {/* <Carestream3600 />
+        <Carestream3700 /> */}
+        {renderProductComponent()}
+
         {/* <Team />
         <Featuring />
         <Newsletter /> */}
