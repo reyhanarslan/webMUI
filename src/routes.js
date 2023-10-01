@@ -177,7 +177,7 @@ const routes = [
       },
       {
         name: "Teknisyen Masaları",
-        route: "/urunler/teknisyen masalari",
+        route: "/urunler/teknisyen-masalari",
         component: <Category />,
         // description: "See all 32 examples",
         // dropdown: true,
