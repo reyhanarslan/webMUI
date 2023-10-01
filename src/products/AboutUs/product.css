@@ -16,3 +16,14 @@
     line-height: 1.5;
     color: #555; /* Metin rengi */
   }
+
+  .productTitle {
+    font-size: "2rem";
+   
+  }
+  .productSubtitle {
+    color: "white";
+    opacity: 0.8;
+    margin-top: "1rem";
+    margin-bottom: "3rem";
+  }
