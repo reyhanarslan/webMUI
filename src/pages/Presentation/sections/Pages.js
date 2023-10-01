@@ -51,9 +51,15 @@ function Pages() {
         </Grid>
       </Container>
       <Container sx={{ mt: { xs: 8, lg: 16 } }}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} lg={16} sx={{ px: { xs: 0, lg: 8 } }}>
-            <Grid container spacing={3}>
+        <Grid container>
+          <Grid
+            item
+            xs={12}
+            lg={16}
+            sx={{ px: { xs: 0, lg: 8 } }}
+            style={{ marginLeft: "50px", marginRight: "50px" }}
+          >
+            <Grid container spacing={5}>
               {renderData}
             </Grid>
           </Grid>

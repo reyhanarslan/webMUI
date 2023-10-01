@@ -27,9 +27,12 @@ import routes from "routes";
 // Images
 // import bgImage from "assets/images/bg-presentation.jpg";
 // import bgImage from "assets/images/dashboard/dashboard-img.jpg";
+import bgImage from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 import CarouselImages from "./sections/Carousel";
 import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
+
+import("./video.css");
 
 function Presentation() {
   return (
@@ -61,19 +64,19 @@ function Presentation() {
           </Grid>
         </Grid>
       </MKBox>
-
-      <MKBox
-        minHeight="90vh"
-        width="100%"
-        sx={{
-          // backgroundImage: `url(${bgImage})`, //video gelecek
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
-        {/* <CardMedia
+      <Card>
+        <MKBox
+          minHeight="90vh"
+          width="100%"
+          sx={{
+            backgroundImage: `url(${bgImage})`, //video gelecek
+            backgroundSize: "cover",
+            backgroundPosition: "top",
+            display: "grid",
+            placeItems: "center",
+          }}
+        >
+          {/* <CardMedia
           width={300}
           height={300}
           component="video"
@@ -82,21 +85,24 @@ function Presentation() {
           image={intro}
           autoPlay
         /> */}
-
-        <ReactPlayer
-          width={"100%"}
-          height="100%"
-          url={intro}
-          playing={true}
-          muted={true}
-          controls={true}
-        />
-      </MKBox>
+          <div className="d-flex justify-content-center align-items-center video-card">
+            <ReactPlayer
+              style={{ opacity: "0.90" }}
+              width={"100%"}
+              height="100%"
+              url={intro}
+              playing={true}
+              muted={true}
+              controls={true}
+            />
+          </div>
+        </MKBox>
+      </Card>
       <Card
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: 3, //-8
+          mt: -2.5, //-8
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
           backdropFilter: "saturate(200%) blur(30px)",

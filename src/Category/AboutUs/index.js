@@ -22,17 +22,17 @@ import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-about-us.jpg";
-import { useNavigate, useParams } from "react-router-dom";
-import { Button } from "@mui/material";
+// import { useNavigate, useParams } from "react-router-dom";
+// import { Button } from "@mui/material";
 import { useEffect } from "react";
 import CategoryMenu from "./sections/Information";
 
 function Category() {
-  const navigate = useNavigate();
-  const { name } = useParams();
-  const test = () => {
-    navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
-  };
+  // const navigate = useNavigate();
+  // const { name } = useParams();
+  // const test = () => {
+  //   navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
+  // };
   useEffect(() => {
     console.log(name);
   }, []);
@@ -76,7 +76,7 @@ function Category() {
             flexDirection="column"
             sx={{ mx: "auto", textAlign: "center" }}
           >
-            <MKTypography
+            {/* <MKTypography
               variant="h1"
               color="white"
               sx={({ breakpoints, typography: { size } }) => ({
@@ -90,7 +90,7 @@ function Category() {
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
               Urunler SubTitle
             </MKTypography>
-            <Button onClick={() => test()}> TEST BUTTON</Button>
+            <Button onClick={() => test()}> TEST BUTTON</Button> */}
 
             <MKTypography variant="h6" color="white" mt={8} mb={1}>
               Daha Fazla Bilgi İçin Bize Ulaşın
