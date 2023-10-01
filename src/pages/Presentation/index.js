@@ -36,7 +36,11 @@ import("./video.css");
 
 function Presentation() {
   return (
-    <>
+    <div
+      style={{
+        background: "linear-gradient(90deg, rgba(188, 188, 189, 0), rgba(7, 7, 67, 0.8) 25.71%)",
+      }}
+    >
       <MKBox>
         <Grid container>
           <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: "auto", mb: 3 }}>
@@ -102,8 +106,7 @@ function Presentation() {
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
-          mt: -2.5, //-8
-          mb: 4,
+          mt: -2.5, //-8,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
           backdropFilter: "saturate(200%) blur(30px)",
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -219,7 +222,7 @@ function Presentation() {
       {/* <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox> */}
-    </>
+    </div>
   );
 }
 

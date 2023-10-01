@@ -57,7 +57,12 @@ export default function App() {
         <Route exact path="/urun-detay/:productid" element={<ProductInfo />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
-      <div style={{ marginTop: "50px", marginBottom: "50px" }}>
+      <div
+        style={{
+          height: "200px",
+          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), rgba(7, 7, 67, 0.8) 25.71%)",
+        }}
+      >
         <MKBox component="footer">
           <Grid container>
             <Grid className="d-flex" item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
