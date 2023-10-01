@@ -21,10 +21,14 @@ import MKBox from "components/MKBox";
 import Grid from "@mui/material/Grid";
 
 import MKTypography from "components/MKTypography";
-import footerRoutes from "footer.routes";
+// import footerRoutes from "footer.routes";
 import { CardMedia } from "@mui/material";
 import logo from "assets/images/logos/arenadis-logo-web-1.png";
 import ProductInfo from "./products/AboutUs";
+
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -64,106 +68,125 @@ export default function App() {
         }}
       >
         <MKBox component="footer">
-          <Grid container>
+          <Grid container style={{ paddingTop: "40px" }}>
             <Grid className="d-flex" item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
               <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
             </Grid>
-            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3, mt: 3 }}>
-              <MKTypography
-                display="block"
-                variant="button"
-                fontWeight="bold"
-                textTransform="capitalize"
-                mb={1}
-              >
-                Bize Ulaşın:
-              </MKTypography>
-              <MKBox display="flex" alignItems="center" mt={3}>
-                {footerRoutes.socials.map(({ icon, link }, key) => (
-                  <MKTypography
-                    key={link}
-                    component="a"
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="h5"
-                    color="dark"
-                    opacity={0.8}
-                    mr={key === footerRoutes.socials.length - 1 ? 0 : 2.5}
-                  >
-                    {icon}
-                  </MKTypography>
-                ))}
-              </MKBox>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3, mt: 3 }}>
-              <MKTypography
-                display="block"
-                variant="button"
-                fontWeight="bold"
-                textTransform="capitalize"
-                mb={1}
-              >
-                Bize Ulaşın:
-              </MKTypography>
-              <MKBox display="flex" alignItems="center" mt={3}>
-                {footerRoutes.socials.map(({ icon, link }, key) => (
-                  <MKTypography
-                    key={link}
-                    component="a"
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="h5"
-                    color="dark"
-                    opacity={0.8}
-                    mr={key === footerRoutes.socials.length - 1 ? 0 : 2.5}
-                  >
-                    {icon}
-                  </MKTypography>
-                ))}
-              </MKBox>
-            </Grid>
-            <Grid item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3, mt: 3 }}>
-              <MKTypography
-                display="block"
-                variant="button"
-                fontWeight="bold"
-                textTransform="capitalize"
-                mb={1}
-              >
-                Bize Ulaşın:
-              </MKTypography>
-              <MKBox display="flex" alignItems="center" mt={3}>
-                {footerRoutes.socials.map(({ icon, link }, key) => (
-                  <MKTypography
-                    key={link}
-                    component="a"
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="h5"
-                    color="dark"
-                    opacity={0.8}
-                    mr={key === footerRoutes.socials.length - 1 ? 0 : 2.5}
-                  >
-                    {icon}
-                  </MKTypography>
-                ))}
+            <Grid
+              item
+              xs={12}
+              md={3}
+              lg={3}
+              sx={{
+                ml: "auto",
+                mb: 3,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <MKBox mt={1}>
+                <MKTypography
+                  display="block"
+                  variant="button"
+                  fontWeight="bold"
+                  textTransform="capitalize"
+                  mb={1}
+                >
+                  <p style={{ color: "rgb(205,205,206)", fontSize: "20px" }}>
+                    <LocationOnIcon style={{ marginRight: "5px", marginTop: "20px" }} /> Adres:
+                  </p>
+                </MKTypography>
+
+                <MKTypography
+                  component="a"
+                  target="_blank"
+                  rel="noreferrer"
+                  color="dark"
+                  opacity={0.8}
+                >
+                  <p style={{ color: "#F2F2F2", fontSize: "15px" }}>
+                    {" "}
+                    Sokullu Mehmet Paşa, 1361. Sk. <br /> No:6 D:25, 06420 Çankaya/Ankara
+                  </p>
+                </MKTypography>
               </MKBox>
             </Grid>
 
-            {/* <Grid item xs={6} md={2} sx={{ mb: 3 }}>
-              <MKTypography
-                display="block"
-                variant="button"
-                fontWeight="bold"
-                textTransform="capitalize"
-                mb={1}
-              >
-                Telefon:
-              </MKTypography>
-            </Grid> */}
+            <Grid
+              item
+              xs={12}
+              md={3}
+              lg={3}
+              sx={{
+                ml: "auto",
+                mb: 3,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <MKBox mt={1}>
+                <MKTypography
+                  display="block"
+                  variant="button"
+                  fontWeight="bold"
+                  textTransform="capitalize"
+                  mb={1}
+                >
+                  <p style={{ color: "rgb(205,205,206)", fontSize: "20px" }}>
+                    <PhoneIcon style={{ marginRight: "5px", marginTop: "20px" }} /> Telefon:
+                  </p>
+                </MKTypography>
+
+                <MKTypography
+                  component="a"
+                  target="_blank"
+                  rel="noreferrer"
+                  color="dark"
+                  opacity={0.8}
+                >
+                  <p style={{ color: "#F2F2F2", fontSize: "15px" }}>
+                    {" "}
+                    +90 312 433 27 35
+                    <br />
+                    +90 507 868 89 53
+                  </p>
+                </MKTypography>
+              </MKBox>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={3}
+              lg={3}
+              sx={{
+                ml: "auto",
+                mb: 3,
+
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <MKBox mt={1}>
+                <MKTypography
+                  display="block"
+                  variant="button"
+                  fontWeight="bold"
+                  textTransform="capitalize"
+                  mb={1}
+                >
+                  <p style={{ color: "rgb(205,205,206)", fontSize: "20px" }}>
+                    <EmailIcon style={{ marginRight: "5px", marginTop: "20px" }} /> E-mail:
+                  </p>
+                </MKTypography>
+
+                <MKTypography target="_blank" rel="noreferrer" color="dark" opacity={0.8}>
+                  <p style={{ color: "#F2F2F2", fontSize: "15px" }}> info@arenadis.com.tr</p>
+                </MKTypography>
+              </MKBox>
+            </Grid>
           </Grid>
         </MKBox>
       </div>

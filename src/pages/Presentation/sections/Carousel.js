@@ -9,56 +9,34 @@ import MKBox from "components/MKBox";
 // import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 
 // Images
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import nasaLogo from "assets/images/logos/gray-logos/logo-nasa.svg";
-import vodafoneLogo from "assets/images/logos/gray-logos/logo-vodafone.svg";
-import digitalOceanLogo from "assets/images/logos/gray-logos/logo-digitalocean.svg";
+import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
+import sld2 from "assets/images/carousel/SLIDER-2.jpg";
+import sld3 from "assets/images/carousel/SLIDER-3.jpg";
+
 import { useState } from "react";
 
-import Examplescompo from "assets/images/examples/blog2.jpg";
-import { CardMedia, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 function CarouselImages() {
-  const [images] = useState([
-    Examplescompo,
-    digitalOceanLogo,
-    vodafoneLogo,
-    nasaLogo,
-    facebookLogo,
-    appleLogo,
-  ]);
+  const [images] = useState([sld1, sld2, sld3]);
   return (
-    <MKBox py={12} px={35}>
+    <MKBox py={12}>
       <Container>
         <Grid lg={3}></Grid>
         <Grid className="d-flex justify-content-center align-items-center" lg={3}>
           <Carousel
-            className="d-flex justify-content-center align-items-center"
-            animation="slide"
-            duration={500}
-            height={300}
+            animation="fade"
+            duration={1500}
+            height={"600px"}
             navButtonsAlwaysVisible={true}
             fullHeightHover={true}
             stopAutoPlayOnHover={true}
             swipe={true}
+
+            // Carousel bileşeninin genişliği burada ayarlanıyor
+            // style={{ width: "1920px" }}
           >
             {images.map((item, i) => (
-              // <Item key={i} item={item} />
-
-              <CardMedia
-                className="d-flex justify-content-center align-items-center"
-                style={{
-                  width: 1200,
-                  height: 250,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginLeft: "70px",
-                }}
-                key={i}
-                image={item}
-                alt="Logo"
-              />
+              <img key={i} src={item} />
             ))}
           </Carousel>
         </Grid>

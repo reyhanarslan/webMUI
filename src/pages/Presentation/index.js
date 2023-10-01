@@ -115,6 +115,7 @@ function Presentation() {
         {/* <Counters /> */}
         <Information />
         {/* <DesignBlocks /> */}
+        <CarouselImages />
         <Pages />
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
@@ -163,8 +164,9 @@ function Presentation() {
             </Grid>
           </Grid>
         </Container> */}
+
         <Testimonials />
-        <CarouselImages />
+
         {/* <Download /> */}
         {/* <MKBox pt={18} pb={6}>
           <Container>
