@@ -13,15 +13,16 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // Sections
 // import PageHeaders from "layouts/sections/page-sections/page-headers";
 // import Features from "layouts/sections/page-sections/featuers";
-import Navbars from "layouts/sections/navigation/navbars";
+// import Navbars from "layouts/sections/navigation/navbars";
 // import NavTabs from "layouts/sections/navigation/nav-tabs";
-import Pagination from "layouts/sections/navigation/pagination";
-import Inputs from "layouts/sections/input-areas/inputs";
-import Forms from "layouts/sections/input-areas/forms";
+// import Pagination from "layouts/sections/navigation/pagination";
+// import Inputs from "layouts/sections/input-areas/inputs";
+// import Forms from "layouts/sections/input-areas/forms";
 // import ProductInfo from "products/AboutUs/index.js";
 import ContactUs from "pages/LandingPages/ContactUs/index";
 import PresentationPage from "layouts/pages/presentation";
 import Category from "Category/AboutUs";
+// import Category from "Category/AboutUs";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
 // import Modals from "layouts/sections/attention-catchers/modals";
@@ -83,165 +84,101 @@ const routes = [
   {
     name: "Ürünlerimiz",
     route: "/urunler",
-    // component: <ContactUs />,
     icon: <Icon>view_day</Icon>,
     collapse: [
       {
         name: "Ağıziçi Tarayıcılar",
-        // route: "/urunler/agiz-ici-tarayicilar/:name",
-        // component: <ProductInfo />,
-        // description: "See all sections",
-        // dropdown: true,
-        // collapse: [
-        //   {
-        //     name: "page headers",
-        //     route: "/sections/page-sections/page-headers",
-        //     component: <PageHeaders />,
-        //   },
-        //   {
-        //     name: "features",
-        //     route: "/sections/page-sections/features",
-        //     component: <Features />,
-        //   },
-        // ],
+        route: "/urunler/agiz-ici-tarayicilar",
+        component: <Category />,
       },
       {
         name: "CAD/CAM Sistemleri",
         route: "/urunler/cad-cam-sistemleri",
+        component: <Category />,
         // description: "See all navigations",
         dropdown: true,
         collapse: [
           {
             name: "3D Printerler",
             route: "/urunler/cad-cam-sistemleri/3d-printer",
-            component: <Navbars />,
+            component: <Category />,
+            // component: <Navbars />,
           },
           {
             name: "Kazıyıcılar",
             route: "/urunler/cad-cam-sistemleri/kaziyicilar",
             component: <Category />,
+            // component: <Category />,
           },
           {
             name: "Model Tarayıcılar",
             route: "/urunler/cad-cam-sistemleri/model-tarayicilar",
-            component: <Pagination />,
+            component: <Category />,
+            // component: <Pagination />,
           },
         ],
       },
       {
         name: "Dental Fırınlar",
         route: "/urunler/dental-firinlar",
+        component: <Category />,
         // description: "See all input areas",
         dropdown: true,
         collapse: [
           {
             name: "Ceramic Processing - Porselen Fırınları",
             route: "/urunler/dental-firinlar/porselen-firinlar",
-            component: <Inputs />,
+            component: <Category />,
+            // component: <Inputs />,
           },
           {
             name: "Döküm Fırınları",
             route: "/urunler/dental-firinlar/dokum-firinlar",
-            component: <Forms />,
+            component: <Category />,
+            // component: <Forms />,
           },
           {
             name: "Press Fırınları",
             route: "/urunler/dental-firinlar/press-firinlar",
-            component: <Forms />,
+            component: <Category />,
+            // component: <Forms />,
           },
           {
             name: "Zirkon Sinterleme Fırınları",
             route: "/urunler/dental-firinlar/zirkon-sinterleme-firinlari",
-            component: <Forms />,
+            component: <Category />,
+            // component: <Forms />,
           },
         ],
       },
       {
         name: "Diş Üniteleri",
         route: "/urunler/dis-uniteleri",
-        // description: "See all examples",
-        // dropdown: true,
-        // collapse: [
-        //   {
-        //     name: "alerts",
-        //     route: "/sections/attention-catchers/alerts",
-        //     component: <Alerts />,
-        //   },
-        //   {
-        //     name: "modals",
-        //     route: "/sections/attention-catchers/modals",
-        //     component: <Modals />,
-        //   },
-        //   {
-        //     name: "tooltips & popovers",
-        //     route: "/sections/attention-catchers/tooltips-popovers",
-        //     component: <TooltipsPopovers />,
-        //   },
-        // ],
+        component: <Category />,
       },
       {
         name: "Görüntülenme Sistemleri",
         route: "/urunler/goruntuleme-sistemleri",
-        // description: "See all 32 examples",
-        // dropdown: true,
-        // collapse: [
-        //   {
-        //     name: "avatars",
-        //     route: "/sections/elements/avatars",
-        //     component: <Avatars />,
-        //   },
-        //   {
-        //     name: "badges",
-        //     route: "/sections/elements/badges",
-        //     component: <Badges />,
-        //   },
-        //   {
-        //     name: "breadcrumbs",
-        //     route: "/sections/elements/breadcrumbs",
-        //     component: <BreadcrumbsEl />,
-        //   },
-        //   {
-        //     name: "buttons",
-        //     route: "/sections/elements/buttons",
-        //     component: <Buttons />,
-        //   },
-        //   {
-        //     name: "dropdowns",
-        //     route: "/sections/elements/dropdowns",
-        //     component: <Dropdowns />,
-        //   },
-        //   {
-        //     name: "progress bars",
-        //     route: "/sections/elements/progress-bars",
-        //     component: <ProgressBars />,
-        //   },
-        //   {
-        //     name: "toggles",
-        //     route: "/sections/elements/toggles",
-        //     component: <Toggles />,
-        //   },
-        //   {
-        //     name: "typography",
-        //     route: "/sections/elements/typography",
-        //     component: <Typography />,
-        //   },
-        // ],
+        component: <Category />,
       },
       {
         name: "Klinik Dolapları",
         route: "/urunler/klinik-dolaplari",
+        component: <Category />,
         // description: "See all 32 examples",
         // dropdown: true,
       },
       {
         name: "Laboratuvar Ekipmanları",
         route: "/urunler/labaratuvar-ekipmanlari",
+        component: <Category />,
         // description: "See all 32 examples",
         // dropdown: true,
       },
       {
         name: "Teknisyen Masaları",
         route: "/urunler/teknisyen masalari",
+        component: <Category />,
         // description: "See all 32 examples",
         // dropdown: true,
       },

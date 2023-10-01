@@ -18,7 +18,7 @@ import StarBorder from "@mui/icons-material/StarBorder";
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import Products from "products/ProductDatas/products";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 import "./category.css";
 function CategoryMenu() {
@@ -27,6 +27,8 @@ function CategoryMenu() {
   const [isOpenCadCam] = useState(true);
   const [isOpenDentalFirin] = useState(true);
   const [listingProduct, setListingProduct] = useState([]);
+  const { productcategory, productsubcategory } = useParams();
+  const navigate = useNavigate();
 
   const cadCam = (index) => {
     setSelectedIndex(index);
@@ -50,6 +52,7 @@ function CategoryMenu() {
     } else if (selectedIndex === 1) {
       setListingProduct(Products[1].product);
     } else if (selectedIndex === 11) {
+      navigate("/urunler/" + productcategory + productsubcategory);
       setListingProduct(Products[1].product.filter((item) => item.code === 1));
     } else if (selectedIndex === 12) {
       setListingProduct(Products[1].product.filter((item) => item.code === 2));

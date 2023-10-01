@@ -29,6 +29,7 @@ import ProductInfo from "./products/AboutUs";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
+import Category from "Category/AboutUs";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -56,9 +57,15 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
+        <Route exact path="/urun-detay/:productid" element={<ProductInfo />} />
+        <Route
+          exact
+          path="/urunler/:productcategory?/:productsubcategory?"
+          element={<Category />}
+        />
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} />
-        <Route exact path="/urun-detay/:productid" element={<ProductInfo />} />
+
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
       <div
