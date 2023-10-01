@@ -14,11 +14,11 @@ import Collapse from "@mui/material/Collapse";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
+// import StarBorder from "@mui/icons-material/StarBorder";
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import Products from "products/ProductDatas/products";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 import "./category.css";
 function CategoryMenu() {
@@ -27,8 +27,8 @@ function CategoryMenu() {
   const [isOpenCadCam] = useState(true);
   const [isOpenDentalFirin] = useState(true);
   const [listingProduct, setListingProduct] = useState([]);
-  const { productcategory, productsubcategory } = useParams();
-  const navigate = useNavigate();
+  // const { productcategory, productsubcategory } = useParams();
+  // const navigate = useNavigate();
 
   const cadCam = (index) => {
     setSelectedIndex(index);
@@ -52,7 +52,7 @@ function CategoryMenu() {
     } else if (selectedIndex === 1) {
       setListingProduct(Products[1].product);
     } else if (selectedIndex === 11) {
-      navigate("/urunler/" + productcategory + productsubcategory);
+      // navigate("/urunler/" + productcategory + productsubcategory);
       setListingProduct(Products[1].product.filter((item) => item.code === 1));
     } else if (selectedIndex === 12) {
       setListingProduct(Products[1].product.filter((item) => item.code === 2));
@@ -85,7 +85,7 @@ function CategoryMenu() {
   console.log(listingProduct);
 
   const renderData = listingProduct.map((section, index) => (
-    <Grid item xs={12} lg={4} md={6} sx={{ mb: { xs: 3, lg: 0 } }} key={Math.random(index) * 10000}>
+    <Grid item xs={12} lg={4} key={Math.random(index) * 10000}>
       <Link to={"/urun-detay/:" + section.id}>
         <div className="product-card">
           <ExampleCard
@@ -110,9 +110,9 @@ function CategoryMenu() {
               lg={5}
               sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}
             >
-              <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+              <Box sx={{ width: "80%", bgcolor: "background.paper" }}>
                 <List
-                  sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+                  sx={{ width: "100%", bgcolor: "background.paper" }}
                   component="nav"
                   aria-labelledby="nested-list-subheader"
                   subheader={
@@ -125,10 +125,18 @@ function CategoryMenu() {
                     selected={selectedIndex === 0}
                     onClick={() => handleListItemClick(0)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Ağız İçi Tarayıcılar" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Ağız İçi Tarayıcılar
+                      </p>
+                    </ListItemText>
                   </ListItemButton>
 
                   <ListItemButton
@@ -136,10 +144,18 @@ function CategoryMenu() {
                     onClick={() => cadCam(1)}
                     // onClick={(event) => cadCam(event, 1)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="CAD/CAM Sistemleri" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        CAD/CAM Sistemleri
+                      </p>
+                    </ListItemText>
                     {isOpenCadCam ? <ExpandMore /> : <ExpandLess />}
                   </ListItemButton>
                   <Collapse in={isOpenCadCam} timeout="auto" unmountOnExit>
@@ -152,7 +168,17 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="3D Printerlar" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            3D Printerlar
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
                         sx={{ pl: 4 }}
@@ -162,7 +188,17 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Kazıyıcılar" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            Kazıyıcılar
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
                         sx={{ pl: 4 }}
@@ -172,16 +208,34 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Model Tarayıcılar" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            Model Tarayıcılar
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                     </List>
                   </Collapse>
 
                   <ListItemButton selected={selectedIndex === 2} onClick={() => dental(2)}>
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Dental Fırınlar" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Dental Fırınlar
+                      </p>
+                    </ListItemText>
                     {isOpenDentalFirin ? <ExpandMore /> : <ExpandLess />}
                   </ListItemButton>
                   <Collapse in={isOpenDentalFirin} timeout="auto" unmountOnExit>
@@ -194,7 +248,17 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Ceramic Processing - Porselen Fırınları" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            Ceramic Processing - Porselen Fırınları
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
                         sx={{ pl: 4 }}
@@ -204,7 +268,17 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Döküm Fırınları" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            Döküm Fırınları
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
                         sx={{ pl: 4 }}
@@ -214,7 +288,17 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Press Fırınları" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            Press Fırınları
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                       <ListItemButton
                         sx={{ pl: 4 }}
@@ -224,7 +308,17 @@ function CategoryMenu() {
                         <ListItemIcon>
                           <SendIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Zirkon Sinterleme Fırınları" />
+                        <ListItemText>
+                          <p
+                            style={{
+                              fontSize: "15px",
+                              fontFamily: "Arial, sans-serif",
+                              color: "007bff",
+                            }}
+                          >
+                            Zirkon Sinterleme Fırınları
+                          </p>
+                        </ListItemText>
                       </ListItemButton>
                     </List>
                   </Collapse>
@@ -233,53 +327,93 @@ function CategoryMenu() {
                     selected={selectedIndex === 3}
                     onClick={() => handleListItemClick(3)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Diş Üniteleri" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Diş Üniteleri
+                      </p>
+                    </ListItemText>
                   </ListItemButton>
 
                   <ListItemButton
                     selected={selectedIndex === 4}
                     onClick={() => handleListItemClick(4)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Görüntülenme Sistemleri" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Görüntülenme Sistemleri
+                      </p>
+                    </ListItemText>
                   </ListItemButton>
                   <ListItemButton
                     selected={selectedIndex === 5}
                     onClick={() => handleListItemClick(5)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Klinik Dolapları" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Klinik Dolapları
+                      </p>
+                    </ListItemText>
                   </ListItemButton>
                   <ListItemButton
                     selected={selectedIndex === 6}
                     onClick={() => handleListItemClick(6)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Laboratuvar Ekipmanları" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Laboratuvar Ekipmanları
+                      </p>
+                    </ListItemText>
                   </ListItemButton>
                   <ListItemButton
                     selected={selectedIndex === 7}
                     onClick={() => handleListItemClick(7)}
                   >
-                    <ListItemIcon>
-                      <StarBorder />
-                    </ListItemIcon>
-                    <ListItemText primary="Teknisyen Masaları" />
+                    <ListItemIcon></ListItemIcon>
+                    <ListItemText>
+                      <p
+                        style={{
+                          fontSize: "18px",
+                          fontFamily: "Arial, sans-serif",
+                          color: "007bff",
+                        }}
+                      >
+                        Teknisyen Masaları
+                      </p>
+                    </ListItemText>
                   </ListItemButton>
                 </List>
               </Box>
             </Grid>
             <Grid item xs={12} md={6} lg={7}>
-              <Container sx={{ mt: { xs: 8, lg: 12 } }}>
+              <Container sx={{ mt: { xs: 4, lg: 8 } }}>
                 <Grid container spacing={4}>
                   <Grid item xs={12} lg={12}>
                     <Grid container spacing={4}>

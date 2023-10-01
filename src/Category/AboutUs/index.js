@@ -21,11 +21,12 @@ import routes from "routes";
 // import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-about-us.jpg";
+// import bgImage from "assets/images/bg-about-us.jpg";
 // import { useNavigate, useParams } from "react-router-dom";
 // import { Button } from "@mui/material";
 import { useEffect } from "react";
 import CategoryMenu from "./sections/Information";
+import DashboardImg from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 
 function Category() {
   // const navigate = useNavigate();
@@ -58,7 +59,7 @@ function Category() {
             `${linearGradient(
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6)
-            )}, url(${bgImage})`,
+            )}, url(${DashboardImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "grid",

@@ -34,7 +34,7 @@ function Information() {
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "Detaylar",
+                  label: "Kurumsal",
                 }}
               />
             </RotatingCard>
@@ -53,8 +53,8 @@ function Information() {
                 description="Sektördeki gelişmeleri önceden görmek ve beklentileri aşmak amacıyla sürekli olarak kendimizi geliştiriyor, müşterilerimize en güvenilir, etkili ve kaliteli çözümleri sunma vizyonumuzu sürdürüyoruz"
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "Detaylar",
+                  route: "/urunler",
+                  label: "Ürünler",
                 }}
               />
             </RotatingCard>
@@ -74,7 +74,7 @@ function Information() {
                 action={{
                   type: "internal",
                   route: "/sections/page-sections/page-headers",
-                  label: "detaylar",
+                  label: "İletişim",
                 }}
               />
             </RotatingCard>
