@@ -196,12 +196,14 @@ function ProductInfo() {
                       <i className="fa fa-whatsapp" />
                     </MKTypography>
                   </Link>
-                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                    <i className="fa fa-phone" />
-                  </MKTypography>
-                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                    <i className="fa fa-envelope  " />
-                  </MKTypography>
+                  <Link to="/src/pages/LandingPages/ContactUs/index">
+                    <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                      <i className="fa fa-phone" />
+                    </MKTypography>
+                    <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                      <i className="fa fa-envelope  " />
+                    </MKTypography>
+                  </Link>
                 </MKBox>
               </Grid>
             </MKBox>
