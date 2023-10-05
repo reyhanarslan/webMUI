@@ -105,7 +105,70 @@ export default function App() {
     },
     detectRetina: true,
   };
-
+  // const options = {
+  //   fpsLimit: 60,
+  //   interactivity: {
+  //     events: {
+  //       onClick: {
+  //         enable: true,
+  //         mode: "push",
+  //       },
+  //       onHover: {
+  //         enable: true,
+  //         mode: "slow",
+  //       },
+  //       resize: true,
+  //     },
+  //     modes: {
+  //       push: {
+  //         quantity: 1,
+  //       },
+  //       bubble: {
+  //         size: 4,
+  //         distance: 100,
+  //       },
+  //     },
+  //   },
+  //   particles: {
+  //     color: {
+  //       value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
+  //     },
+  //     links: {
+  //       color: "#D1E4F7",
+  //       distance: 150,
+  //       enable: true,
+  //       opacity: 0.5,
+  //       width: 1,
+  //     },
+  //     move: {
+  //       direction: "none",
+  //       enable: true,
+  //       outModes: {
+  //         default: "bounce",
+  //       },
+  //       random: false,
+  //       speed: 2,
+  //       straight: false,
+  //     },
+  //     number: {
+  //       density: {
+  //         enable: true,
+  //         area: 800,
+  //       },
+  //       value: 20,
+  //     },
+  //     opacity: {
+  //       value: 0.5,
+  //     },
+  //     shape: {
+  //       type: "circle",
+  //     },
+  //     size: {
+  //       value: { min: 10, max: 30 },
+  //     },
+  //   },
+  //   detectRetina: true,
+  // };
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
