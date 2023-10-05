@@ -15,10 +15,10 @@ import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 // import StarBorder from "@mui/icons-material/StarBorder";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Box } from "@mui/material";
 import Products from "products/ProductDatas/products";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 import "./category.css";
 function CategoryMenu() {
@@ -27,63 +27,75 @@ function CategoryMenu() {
   const [isOpenCadCam] = useState(true);
   const [isOpenDentalFirin] = useState(true);
   const [listingProduct, setListingProduct] = useState([]);
-  // const { productcategory, productsubcategory } = useParams();
+  const navigate = useNavigate();
+  const myRef = useRef(null);
+  // const values = useParams();
+  const location = useLocation();
   // const navigate = useNavigate();
 
-  const cadCam = (index) => {
+  const cadCam = (index, path) => {
+    navigate(path);
     setSelectedIndex(index);
     // setIsOpenCadCam(!isOpenCadCam);
   };
-  const dental = (index) => {
+  const dental = (index, path) => {
+    navigate(path);
+
     setSelectedIndex(index);
     // setIsOpenDentalFirin(!isOpenDentalFirin);
   };
 
-  const handleListItemClick = (index) => {
+  const handleListItemClick = (index, path) => {
+    navigate(path);
     setSelectedIndex(index);
   };
 
   useEffect(() => {
-    console.log(selectedIndex);
+    myRef.current.scrollIntoView({ behavior: "smooth" });
+  });
+
+  useEffect(() => {
+    const currentURL = location.pathname;
+    const pathArray = currentURL.split("/");
+
     setListingProduct([]);
-    if (selectedIndex === 0) {
+    if (pathArray[2] === "agiz-ici-tarayicilar") {
       console.log(Products[0].product);
       setListingProduct(Products[0].product);
-    } else if (selectedIndex === 1) {
+    } else if (pathArray[2] === "cad-cam-sistemleri") {
       setListingProduct(Products[1].product);
-    } else if (selectedIndex === 11) {
+    } else if (pathArray[3] === "3d-printer") {
       // navigate("/urunler/" + productcategory + productsubcategory);
       setListingProduct(Products[1].product.filter((item) => item.code === 1));
-    } else if (selectedIndex === 12) {
+    } else if (pathArray[3] === "kaziyicilar") {
       setListingProduct(Products[1].product.filter((item) => item.code === 2));
-    } else if (selectedIndex === 13) {
+    } else if (pathArray[3] === "model-tarayicilar") {
       setListingProduct(Products[1].product.filter((item) => item.code === 3));
-    } else if (selectedIndex === 2) {
+    } else if (pathArray[2] === "dental-firinlar") {
       setListingProduct(Products[2].product);
-    } else if (selectedIndex === 21) {
+    } else if (pathArray[3] === "porselen-firinlar") {
       setListingProduct(Products[2].product.filter((item) => item.code === 1));
-    } else if (selectedIndex === 22) {
+    } else if (pathArray[3] === "dokum-firinlar") {
       setListingProduct(Products[2].product.filter((item) => item.code === 2));
-    } else if (selectedIndex === 23) {
+    } else if (pathArray[3] === "press-firinlar") {
       setListingProduct(Products[2].product.filter((item) => item.code === 3));
-    } else if (selectedIndex === 24) {
+    } else if (pathArray[3] === "zirkon-sinterleme-firinlari") {
       setListingProduct(Products[2].product.filter((item) => item.code === 4));
-    } else if (selectedIndex === 3) {
+    } else if (pathArray[2] === "dis-uniteleri") {
       setListingProduct(Products[3].product);
-    } else if (selectedIndex === 4) {
+    } else if (pathArray[2] === "goruntuleme-sistemleri") {
       setListingProduct(Products[4].product);
-    } else if (selectedIndex === 5) {
+    } else if (pathArray[2] === "klinik-dolaplari") {
       setListingProduct(Products[5].product);
-    } else if (selectedIndex === 6) {
+    } else if (pathArray[2] === "labaratuvar-ekipmanlari") {
       setListingProduct(Products[6].product);
-    } else if (selectedIndex === 7) {
+    } else if (pathArray[2] === "teknisyen-masalari") {
       setListingProduct(Products[7].product);
     } else {
       setListingProduct([]);
     }
   }, [selectedIndex]);
   console.log(listingProduct);
-
   const renderData = listingProduct.map((section, index) => (
     <Grid item xs={12} lg={4} key={Math.random(index) * 10000}>
       <Link to={"/urun-detay/:" + section.id}>
@@ -123,7 +135,7 @@ function CategoryMenu() {
                 >
                   <ListItemButton
                     selected={selectedIndex === 0}
-                    onClick={() => handleListItemClick(0)}
+                    onClick={() => handleListItemClick(0, "/urunler/agiz-ici-tarayicilar")}
                   >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
@@ -141,7 +153,7 @@ function CategoryMenu() {
 
                   <ListItemButton
                     selected={selectedIndex === 1}
-                    onClick={() => cadCam(1)}
+                    onClick={() => cadCam(1, "/urunler/cad-cam-sistemleri")}
                     // onClick={(event) => cadCam(event, 1)}
                   >
                     <ListItemIcon></ListItemIcon>
@@ -163,7 +175,9 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 11}
-                        onClick={() => handleListItemClick(11)}
+                        onClick={() =>
+                          handleListItemClick(11, "/urunler/cad-cam-sistemleri/3d-printer")
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -183,7 +197,9 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 12}
-                        onClick={() => handleListItemClick(12)}
+                        onClick={() =>
+                          handleListItemClick(12, "/urunler/cad-cam-sistemleri/kaziyicilar")
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -203,7 +219,9 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 13}
-                        onClick={() => handleListItemClick(13)}
+                        onClick={() =>
+                          handleListItemClick(13, "/urunler/cad-cam-sistemleri/model-tarayicilar")
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -223,7 +241,10 @@ function CategoryMenu() {
                     </List>
                   </Collapse>
 
-                  <ListItemButton selected={selectedIndex === 2} onClick={() => dental(2)}>
+                  <ListItemButton
+                    selected={selectedIndex === 2}
+                    onClick={() => dental(2, "/urunler/dental-firinlar")}
+                  >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
                       <p
@@ -243,7 +264,9 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 21}
-                        onClick={() => handleListItemClick(21)}
+                        onClick={() =>
+                          handleListItemClick(21, "/urunler/dental-firinlar/porselen-firinlar")
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -263,7 +286,9 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 22}
-                        onClick={() => handleListItemClick(22)}
+                        onClick={() =>
+                          handleListItemClick(22, "/urunler/dental-firinlar/dokum-firinlar")
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -283,7 +308,9 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 23}
-                        onClick={() => handleListItemClick(23)}
+                        onClick={() =>
+                          handleListItemClick(23, "/urunler/dental-firinlar/press-firinlar")
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -303,7 +330,12 @@ function CategoryMenu() {
                       <ListItemButton
                         sx={{ pl: 4 }}
                         selected={selectedIndex === 24}
-                        onClick={() => handleListItemClick(24)}
+                        onClick={() =>
+                          handleListItemClick(
+                            24,
+                            "/urunler/dental-firinlar/zirkon-sinterleme-firinlari"
+                          )
+                        }
                       >
                         <ListItemIcon>
                           <SendIcon />
@@ -325,7 +357,7 @@ function CategoryMenu() {
 
                   <ListItemButton
                     selected={selectedIndex === 3}
-                    onClick={() => handleListItemClick(3)}
+                    onClick={() => handleListItemClick(3, "/urunler/dis-uniteleri")}
                   >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
@@ -343,7 +375,7 @@ function CategoryMenu() {
 
                   <ListItemButton
                     selected={selectedIndex === 4}
-                    onClick={() => handleListItemClick(4)}
+                    onClick={() => handleListItemClick(4, "/urunler/goruntuleme-sistemleri")}
                   >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
@@ -360,7 +392,7 @@ function CategoryMenu() {
                   </ListItemButton>
                   <ListItemButton
                     selected={selectedIndex === 5}
-                    onClick={() => handleListItemClick(5)}
+                    onClick={() => handleListItemClick(5, "/urunler/klinik-dolaplari")}
                   >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
@@ -377,7 +409,7 @@ function CategoryMenu() {
                   </ListItemButton>
                   <ListItemButton
                     selected={selectedIndex === 6}
-                    onClick={() => handleListItemClick(6)}
+                    onClick={() => handleListItemClick(6, "/urunler/labaratuvar-ekipmanlari")}
                   >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
@@ -394,7 +426,7 @@ function CategoryMenu() {
                   </ListItemButton>
                   <ListItemButton
                     selected={selectedIndex === 7}
-                    onClick={() => handleListItemClick(7)}
+                    onClick={() => handleListItemClick(7, "/urunler/teknisyen-masalari")}
                   >
                     <ListItemIcon></ListItemIcon>
                     <ListItemText>
@@ -412,6 +444,7 @@ function CategoryMenu() {
                 </List>
               </Box>
             </Grid>
+            <div ref={myRef} />
             <Grid item xs={12} md={6} lg={7}>
               <Container sx={{ mt: { xs: 4, lg: 8 } }}>
                 <Grid container spacing={4}>
