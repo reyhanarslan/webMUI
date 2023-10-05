@@ -39,7 +39,7 @@ function BuiltByDevelopers() {
           </MKTypography> */}
           <MKTypography
             component="a"
-            href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
+            href="/urunler/cad-cam-sistemleri/kaziyicilar"
             target="_blank"
             rel="noreferrer"
             variant="h5"

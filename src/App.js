@@ -30,10 +30,85 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Category from "Category/AboutUs";
+import { useCallback } from "react";
+import { loadFull } from "tsparticles";
+import Particles from "react-particles";
 
 export default function App() {
   const { pathname } = useLocation();
+  const options = {
+    // background: {
+    //   color: {
+    //     value: "#0d47a1",
+    //   },
+    // },
+    fpsLimit: 120,
+    interactivity: {
+      events: {
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        onHover: {
+          enable: true,
+          mode: "slow",
+        },
+        resize: true,
+      },
+      modes: {
+        push: {
+          quantity: 1,
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
+      },
+      links: {
+        color: "#D1E4F7",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: {
+          default: "bounce",
+        },
+        random: false,
+        speed: 2,
+        straight: false,
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 800,
+        },
+        value: 40,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: { min: 1, max: 5 },
+      },
+    },
+    detectRetina: true,
+  };
 
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
   // Setting page scroll to 0 when changing the route
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -55,6 +130,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Particles options={options} init={particlesInit} />
+
       <CssBaseline />
       <Routes>
         <Route exact path="/urun-detay/:productid" element={<ProductInfo />} />
