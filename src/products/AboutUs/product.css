@@ -1,29 +1,42 @@
+.dark-text,
+.light-text {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dark-text {
+  color: #333;
+}
+
+.light-text {
+  color: #999;
+}
 .carousel-item:hover {
   transform: scale(1.4);
   transition: transform 0.3s ease-in-out;
 }
 .page-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    color: #333; /* Başlık rengi */
-  }
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #333; /* Başlık rengi */
+}
 
-  /* Metin stil */
-  .page-content {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555; /* Metin rengi */
-  }
+/* Metin stil */
+.page-content {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555; /* Metin rengi */
+}
 
-  .productTitle {
-    font-size: "2rem";
-   
-  }
-  .productSubtitle {
-    color: "white";
-    opacity: 0.8;
-    margin-top: "1rem";
-    margin-bottom: "3rem";
-  }
+.productTitle {
+  font-size: 50px !important;
+  color: white !important;
+}
+.productSubtitle {
+  color: "white";
+  opacity: 0.8;
+  margin-top: "1rem";
+  margin-bottom: "3rem";
+}

@@ -6,7 +6,7 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
-function Carestream3600() {
+export function Carestream3600() {
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -83,4 +83,47 @@ function Carestream3600() {
   );
 }
 
-export default Carestream3600;
+export function Carestream3600Title() {
+  return (
+    <div>
+      <MKBox component="section" py={12}>
+        <Container>
+          <Grid container spacing={3} alignItems="center">
+            <Grid item xs={12} lg={8}>
+              {/* Başlık */}
+              <div className="page-title">
+                Ürün Özellikleri : Ultra Hızlı Direkt Dijital Ölçü Sistemi
+              </div>
+
+              <div className="page-content">
+                Yeni CS 3600 intra oral dijital ölçü sistemi, saniyede 64 kare görüntü yakalayarak
+                ultra hızlı dijital ölçü alımı sağlar. Gelişen dijital diş hekimliği
+                teknolojilerinde dijital ortodontik aplikasyonlar, cerrahi kılavuz üretimi gibi
+                diğer alanlarda da rahatlıkla kullanılabilir. Ağız içinde özel bir kurutmaya ihtiyaç
+                duymayan sistem, mevcut metal restorasyonları rahatlıkla okuyabilir. 10 mikronun
+                altında tarama hassasiyeti ile diş hekimliği teknolojilerinde yeni nesil dijital
+                ölçü sistemidir. Tarama sisteminin yıllık lisanslaması yoktur, STL dosya formatında
+                dışarı aktarım tamamiyle ücretsizdir ve hiçbir ara yazılım gerektirmez.
+              </div>
+
+              {/* ... */}
+            </Grid>
+            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
+              <CenteredBlogCard
+                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                title="Get insights on Search"
+                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
+                action={{
+                  type: "internal",
+                  route: "pages/company/about-us",
+                  color: "info",
+                  label: "find out more",
+                }}
+              />{" "}
+            </Grid>
+          </Grid>
+        </Container>
+      </MKBox>
+    </div>
+  );
+}

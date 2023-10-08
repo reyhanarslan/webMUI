@@ -1,16 +1,30 @@
 // @mui material components
-import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+
 // About Us page sections
 // import Information from "pages/LandingPages/AboutUs/sections/Information";
 import "./product.css";
-import Carestream3600 from "Category/Category-list/carestream3600";
-import Carestream3700 from "Category/Category-list/carestream3700";
+import {
+  Carestream3600,
+  Carestream3600Title,
+} from "Category/Category-list/agiz-ici/carestream3600";
+import {
+  Carestream3700,
+  Carestream3700Title,
+} from "Category/Category-list/agiz-ici/carestream3700";
+import {
+  DentaFabSega3D,
+  DentaFabSega3DTitle,
+} from "Category/Category-list/Cad-CamSistemleri/DentafabSega";
+import {
+  Sıladent3DPrinter,
+  Sıladent3DPrinterTitle,
+} from "Category/Category-list/Cad-CamSistemleri/Sıladent3DPrinter";
 // import Team from "pages/LandingPages/AboutUs/sections/Team";
 // import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
 // import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
@@ -24,8 +38,8 @@ import PropTypes from "prop-types";
 
 // Images
 // import bgImage from "assets/images/bg-about-us.jpg";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { Button, CardMedia } from "@mui/material";
+import { Link, useParams } from "react-router-dom";
+import { CardMedia } from "@mui/material";
 import { useEffect, useState } from "react";
 import Products from "products/ProductDatas/products";
 import Carousel from "react-material-ui-carousel";
@@ -89,8 +103,8 @@ export function ProductSlider({ images }) {
       className="d-flex justify-content-center align-items-center"
       animation="slide"
       duration={500}
-      width={600}
-      height={400}
+      width={800}
+      height={600}
       navButtnsAlwaysVisible={false}
       fullHeightHover={true}
       stopAutoPlayOnHover={true}
@@ -100,12 +114,12 @@ export function ProductSlider({ images }) {
         <CardMedia
           className="d-flex justify-content-center align-items-center carousel-item"
           style={{
-            width: 600,
-            height: 400,
+            width: "100%",
+            height: "100%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginLeft: "70px",
+            marginLeft: "0", // Sol boşluk yok
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
             borderRadius: "10px",
             transition: "transform 0.3s ease-in-out",
@@ -123,15 +137,14 @@ ProductSlider.propTypes = {
 };
 
 function ProductInfo() {
-  const navigate = useNavigate();
   const { productid } = useParams();
   const [productInfo, setProductInfo] = useState({});
   const [productImages, setProductImages] = useState([]);
-  const [, setProductModel] = useState([]);
   const [productId, setProductId] = useState("");
-  const test = () => {
-    navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
-  };
+  // const test = () => {
+  //   navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
+  // };
+  const [productModel, setProductModel] = useState([]);
 
   useEffect(() => {
     console.log(productid);
@@ -313,6 +326,24 @@ function ProductInfo() {
       case "pW7rUCqbGJ":
         return <TekliTeknisyenCalismaMasasi />;
 
+      case "DentaFab Sega 3D Printer":
+        return <DentaFabSega3D />;
+      case "SILADENT 3D PRINTER SILAPRINT LCD":
+        return <Sıladent3DPrinter />;
+      default:
+        return null;
+    }
+  };
+  const renderProductComponentTitle = () => {
+    switch (productModel) {
+      case "Carestream CS 3600 Ağız İçi Tarayıcı":
+        return <Carestream3600Title />;
+      case "Carestream CS 3700 Ağız İçi Tarayıcı":
+        return <Carestream3700Title />;
+      case "DentaFab Sega 3D Printer":
+        return <DentaFabSega3DTitle />;
+      case "SILADENT 3D PRINTER SILAPRINT LCD":
+        return <Sıladent3DPrinterTitle />;
       default:
         return null;
     }
@@ -331,109 +362,63 @@ function ProductInfo() {
         transparent
         light
       />{" "}
-      <Container>
-        <Grid container>
-          <Grid marginTop={"8rem"} item xs={12} md={8}>
-            {/* <MKBox
-              minHeight="50vh"
-              width="100%"
-              sx={{
-                backgroundImage: ({
-                  functions: { linearGradient, rgba },
-                  palette: { gradients },
-                }) =>
-                  `${linearGradient(
-                    rgba(gradients.dark.main, 0.6),
-                    rgba(gradients.dark.state, 0.6)
-                  )}, url(${bgImage})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              {" "}
-            </MKBox> */}
-            {/* <div>
-              {Products.map((product) => (
-                <div key={product.index}>
-                  {Products.product.map((item) => (
-                    <ProductSlider key={item.id} images={item.img} />
-                  ))}
-                </div>
-              ))}
-            </div> */}
-            <ProductSlider images={productImages} />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <MKBox
-              minHeight="75vh"
-              width="100%"
-              sx={{
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "grid",
-                placeItems: "center",
-              }}
-            >
-              <Grid
-                container
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                sx={{ mx: "auto", textAlign: "center" }}
-              >
-                <MKTypography
-                  className="productTitle"
-                  variant="h1"
-                  color="white"
-                  // sx={({ breakpoints, typography: { size } }) => ({
-                  //   [breakpoints.down("md")]: {
-                  //     fontSize: size["3xl"],
-                  //   },
-                  // })}
-                >
-                  {productInfo.model}
-                </MKTypography>
-                <MKTypography
-                  className="productSubtitle"
-                  variant="body1"
-                  color="white"
-                  opacity={0.8}
-                  mt={1}
-                  mb={3}
-                >
-                  Urunler SubTitle
-                  {productid} nolu id
-                </MKTypography>
-                <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-                  {/* {productInfo.model} */}
-                </MKTypography>
-                <Button onClick={() => test()}> TEST BUTTON</Button>
-
-                <MKTypography variant="h6" color="white" mt={8} mb={1}>
-                  Daha Fazla Bilgi İçin Bize Ulaşın
-                </MKTypography>
-                <MKBox display="flex" justifyContent="center" alignItems="center">
-                  <Link to="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum">
-                    <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                      <i className="fa fa-whatsapp" />
-                    </MKTypography>
-                  </Link>
-                  <Link to="/src/pages/LandingPages/ContactUs/index">
-                    <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                      <i className="fa fa-phone" />
-                    </MKTypography>
-                    <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                      <i className="fa fa-envelope  " />
-                    </MKTypography>
-                  </Link>
-                </MKBox>
-              </Grid>
-            </MKBox>
-          </Grid>
+      <Grid paddingX={20} container paddingBottom={5}>
+        <Grid marginTop={15} item xs={4} md={5} lg={7}>
+          <ProductSlider
+            sx={{
+              width: "100%",
+              height: "auto",
+            }}
+            images={productImages}
+          />
         </Grid>
-      </Container>
+
+        <Grid marginTop={4} item xs={4} md={5} lg={5}>
+          <MKBox
+            minHeight="75vh"
+            width="100%"
+            sx={{
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "grid",
+              placeItems: "center",
+            }}
+          >
+            <Grid
+              container
+              justifyContent="center"
+              alignItems="center"
+              flexDirection="column"
+              sx={{ mx: "auto", textAlign: "center" }}
+            >
+              <MKTypography className="productTitle"> {productInfo.model}</MKTypography>
+
+              <MKTypography marginBottom={3} color="white" opacity={0.8}>
+                {renderProductComponentTitle()}
+              </MKTypography>
+
+              <MKTypography marginTop={5} variant="h6" color="white">
+                Daha Fazla Bilgi İçin Bize Ulaşın
+              </MKTypography>
+              <MKBox display="flex" justifyContent="center" alignItems="center">
+                <Link to="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum">
+                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                    <i className="fa fa-whatsapp" />
+                  </MKTypography>
+                </Link>
+                <Link to="/src/pages/LandingPages/ContactUs/index">
+                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                    <i className="fa fa-phone" />
+                  </MKTypography>
+                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                    <i className="fa fa-envelope  " />
+                  </MKTypography>
+                </Link>
+              </MKBox>
+            </Grid>
+          </MKBox>
+        </Grid>
+      </Grid>
       <Card
         sx={{
           p: 2,
@@ -443,13 +428,7 @@ function ProductInfo() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        {/* <Carestream3600 />
-        <Carestream3700 /> */}
         {renderProductComponent()}
-
-        {/* <Team />
-        <Featuring />
-        <Newsletter /> */}
       </Card>
     </>
   );

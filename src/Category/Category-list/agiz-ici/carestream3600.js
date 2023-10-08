@@ -5,8 +5,13 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
-function Carestream3600() {
+import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
+
+export function Carestream3600() {
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -83,4 +88,43 @@ function Carestream3600() {
   );
 }
 
-export default Carestream3600;
+export function Carestream3600Title() {
+  const navigate = useNavigate();
+  const test = () => {
+    navigate("https://www.arenadis.com.tr/wp-content/uploads/2021/04/CS-3600-ARENA-KATALOG.pdf");
+  };
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={3}>
+            <Grid item xs={12} lg={12}>
+              {/* Başlık */}
+              <div className="page-title">
+                <h5 className="dark-text">Ürün Özellikleri:</h5>
+                <span className="light-text">Ultra Hızlı Direkt Dijital Ölçü Sistemi</span>
+              </div>
+
+              <div className="page-content">
+                Yeni CS 3600 intra oral dijital ölçü sistemi, saniyede 64 kare görüntü yakalayarak
+                ultra hızlı dijital ölçü alımı sağlar. Gelişen dijital diş hekimliği
+                teknolojilerinde dijital ortodontik aplikasyonlar, cerrahi kılavuz üretimi gibi
+                diğer alanlarda da rahatlıkla kullanılabilir. Ağız içinde özel bir kurutmaya ihtiyaç
+                duymayan sistem, mevcut metal restorasyonları rahatlıkla okuyabilir. 10 mikronun
+                altında tarama hassasiyeti ile diş hekimliği teknolojilerinde yeni nesil dijital
+                ölçü sistemidir. Tarama sisteminin yıllık lisanslaması yoktur, STL dosya formatında
+                dışarı aktarım tamamiyle ücretsizdir ve hiçbir ara yazılım gerektirmez.
+              </div>
+
+              {/* ... */}
+            </Grid>
+          </Grid>
+          <Button onClick={() => test()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+}
