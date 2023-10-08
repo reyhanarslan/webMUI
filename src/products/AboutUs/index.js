@@ -51,7 +51,7 @@ import { CardMedia } from "@mui/material";
 import { useEffect, useState } from "react";
 import Products from "products/ProductDatas/products";
 import Carousel from "react-material-ui-carousel";
-import DentafabSega3DPrinter from "Category/Category-list/DentafabSega3DPrinter";
+// import DentafabSega3DPrinter from "Category/Category-list/DentafabSega3DPrinter";
 import Siladent3dPrinterSilaPrintLCD from "Category/Category-list/Siladent3dPrinterSilaPrintLCD";
 import Silamill4Edition from "Category/Category-list/Silamill4Edition";
 import Silamill58Edition from "Category/Category-list/Silamill58Edition";
@@ -180,7 +180,7 @@ function ProductInfo() {
       case "U2qoPEPPn7":
         return <Carestream3700 />;
       case "0fky5JRUK5":
-        return <DentafabSega3DPrinter />;
+        return <DentaFabSega3D />;
       case "wF2McAwDbN":
         return <Siladent3dPrinterSilaPrintLCD />;
       case "OgKzyq7qlj":
