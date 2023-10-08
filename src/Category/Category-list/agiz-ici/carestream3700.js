@@ -6,7 +6,7 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
-function Carestream3700() {
+export function Carestream3700() {
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -122,4 +122,34 @@ function Carestream3700() {
   );
 }
 
-export default Carestream3700;
+export function Carestream3700Title() {
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center">
+            <Grid item xs={12} lg={12}>
+              {/* Başlık */}
+              <div className="page-title">
+                <h5 className="dark-text">Ürün Özellikleri:</h5>
+                <span className="light-text">Ultra Hızlı Direkt Dijital Ölçü Sistemi</span>
+              </div>
+
+              <div className="page-content">
+                CS3700; CS 3600 den %20 daha hızlı tarama sağlar buda kullanıcıya TURBO hızlı tarama
+                imkanı verir. Önerilen pc konfigürasyonu kullanıldığında 30 sn için in vitro
+                uygulamada tek çeneyi taradığı test edildi ve kanıtlandı. F.A Porsche tarafından
+                tasarlanmış ergonomik dizaynı, hekimlerin çalışma ihtiyaçlarını gelişmiş uygulama
+                fonksiyonlarının merkezine almıştır. Performansı intraoral taramada yeni nesil
+                performans sunar. Yeni CS 3700 ile sadece intraoral taramalarınızı iyileştirmeyin,
+                onu yeniden tanımlayın
+              </div>
+
+              {/* ... */}
+            </Grid>
+          </Grid>
+        </Container>
+      </MKBox>
+    </div>
+  );
+}
