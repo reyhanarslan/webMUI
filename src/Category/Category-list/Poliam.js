@@ -14,9 +14,21 @@ function Poliam() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Teknik Bilgiler</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">Güç kaynağı: 230 v ±10%, 50 hz</div>
+              <div className="page-content">Güç tüketimi: 1220 w</div>
+              <div className="page-content">Çalışma odası iç boyutları: ф 140 mm, h 145 mm</div>
+              <div className="page-content">Oda hacim: 1,5 l</div>
+              <div className="page-content">Maksimum çalışma basıncı: 6 bar</div>
+              <div className="page-content">Programlanabilir çalışma sıcaklığı: 40 ıla 125°c</div>
+              <div className="page-content">
+                Polimerizasyon için programlanabilir zaman: 1 ıla 99 dk
+              </div>
+              <br />
+              <div className="page-title">Boyutlar</div>
+              <div className="page-content">W/d/h: 315x350x260 mm</div>
+              <div className="page-content">Ağırlık: 13 кg</div>
 
               {/* ... */}
             </Grid>

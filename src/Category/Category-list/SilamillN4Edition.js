@@ -14,9 +14,79 @@ function SilamillN4Edition() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">4 Simultane Çalışma Ekseni</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">
+                Dönel eksen (A ekseni), +190 ile -10 derece arasında dönebilir.
+              </div>
+              <br />
+              <div className="page-title">8 Frezlik Otomatik Değiştirici</div>
+
+              <div className="page-content">
+                Her bir frezin yalnızca birkaç hareketle değiştirilebildiği ki adet çıkarılabilir
+                değiştirme istasyonu sayesinde materyal otomatik olarak kazınırken siz de bitmiş işi
+                makineden çıkarana kadar vaktinizi başka faydalı şeylere harcayabilirsiniz.
+              </div>
+              <br />
+              <div className="page-title">Güçlü ve Yüksek Hassasiyete Sahip Senkron Spindle</div>
+
+              <div className="page-content">
+                4 katlı hibrid seramik bilyalı rulman ve sürekli yük altında 300W’lık güç.
+              </div>
+              <br />
+              <div className="page-title">Ön Bilgi Gerektirmez</div>
+
+              <div className="page-content">
+                Birlikte gelen yazılımıyla özellikle yontma için uyarlanmış kazıma stratejileri
+                sayesinde kazıma bilgisine sahip değilseniz bile ile kolay bir çalışma mümkündür.
+              </div>
+              <br />
+              <div className="page-title">Koruyucu Mekanizmalar</div>
+
+              <div className="page-content">
+                Ön kapakta kazıma esnasında tehlikeli bölgeyi koruyan otomatik emniyet kilidi
+                bulunur. Esnek kauçuk akordeon mekanik, elektronik sistemleri ve spindle’ı nemden
+                etkili bir biçimde korur.
+              </div>
+              <br />
+              <div className="page-title">Etkili Soğutma</div>
+
+              <div className="page-content">
+                Spindle’da konumlanmış sekiz sıvı püskürtücü, tüm kazıma aşamalarında frezin
+                tamamını eşit şekilde soğutur.
+              </div>
+              <br />
+              <div className="page-title">Geniş Kullanım Alanı</div>
+
+              <div className="page-content">
+                Kronlar, köprüler (tam anatomik de olabilir), inlay, onlay, abutment, teleskop kron,
+                veneer, tabletops, vs.
+              </div>
+              <br />
+              <div className="page-title">Tek Döküm Alüminyum Makine Yatağı</div>
+
+              <div className="page-content">
+                Tek döküm alüminyum makine yatağı ile en yüksek stabilite ve düşük titreşimli
+                çalışma sağlanır.
+              </div>
+              <br />
+              <div className="page-title">Dünya Çapında Uyumluluk</div>
+
+              <div className="page-content">
+                100 – 240 V’luk geniş aralıklı değiştirme modlu güç ünitesi ve 50/60 Hz’lik ülkeye
+                özel şebeke fişi sayesinde dünya çapında uyumludur. ABD ve Kanada’ya ihracat için
+                ANSI/UL61010-1 sertifikasına sahiptir.
+              </div>
+              <br />
+              <div className="page-title">Laboratuvarlar İçin İdeal</div>
+
+              <div className="page-content">
+                N4 gecikme ve yüksek maliyetler olmadan üretim yapmak için idealdir. Sulu kesme
+                makinesi N4 Edition’ı hâlihazırda var olan kuru kesme makinelerinize
+                ekleyebilirsiniz. Bu sizi tek makinede arka arkaya sulu ve kuru kazıma yaparken
+                gerekli hale gelen temizlik işinden kurtarır.
+              </div>
+              <br />
 
               {/* ... */}
             </Grid>

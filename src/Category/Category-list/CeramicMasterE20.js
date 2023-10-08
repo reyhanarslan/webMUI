@@ -14,9 +14,25 @@ function CeramicMasterE20() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Aksesuarlar</div>
 
-              <div className="page-content"></div>
+              <li className="page-content">Yalıtım tablosu</li>
+              <li className="page-content">Ateşleme tepsisi</li>
+              <li className="page-content">Pinler</li>
+              <li className="page-content">Vakum pompası PVM122</li>
+              <br />
+              <div className="page-title">Teknik Bilgiler</div>
+
+              <div className="page-content">Güç kaynağı: ~230 v ±10%, 50/60 hz</div>
+              <div className="page-content">Vakumlu pompalı fırın: 1700 w</div>
+              <div className="page-content">Vakumlu pompasız fırın: 1550 w</div>
+              <div className="page-content">Vakum pompası verileri</div>
+              <div className="page-content">Emiş kapasitesi: 22 l/dk</div>
+              <div className="page-content">Ayarlanabilir vakum: 0,1 ıla 0,92 bar</div>
+              <div className="page-content">Maksimum ateşleme sıcaklığı: 1200°с</div>
+              <div className="page-content">Ateşleme odası boyutları: ф 95 mm, h 60 mm</div>
+              <div className="page-content">Boyutlar (w/d/h): 265/370/565 mm</div>
+              <div className="page-content">Ağırlık: 24 кg</div>
 
               {/* ... */}
             </Grid>

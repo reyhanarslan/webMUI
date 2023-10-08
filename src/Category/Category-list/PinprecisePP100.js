@@ -14,9 +14,19 @@ function PinprecisePP100() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Teknik Bilgiler</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">Güç kaynağı: 110/230v ±10%,50/60hz</div>
+              <div className="page-content">Güç tüketımı: 100 w</div>
+              <div className="page-content">Maksımum matkap devırlerı: 4000 rpm</div>
+              <div className="page-content">Rekolte çapı: ф 3 mm</div>
+              <div className="page-content">Delme derınlığı: 12 mm</div>
+              <div className="page-content">Lazer: sınıf 3</div>
+              <div className="page-content">Maksımum 5 mw:</div>
+              <br />
+              <div className="page-content">Boyutlar:</div>
+              <div className="page-content">W/d/h: 157x410x160 mm</div>
+              <div className="page-content">Ağırlık: 5кg</div>
 
               {/* ... */}
             </Grid>

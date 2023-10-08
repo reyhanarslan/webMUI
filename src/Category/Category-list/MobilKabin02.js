@@ -14,9 +14,9 @@ function MobilKabin02() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">OPSİYONEL:</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">Anti-bakteriyel plastik çekmece düzenleyici (ABS)</div>
 
               {/* ... */}
             </Grid>

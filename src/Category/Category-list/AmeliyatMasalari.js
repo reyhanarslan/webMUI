@@ -16,7 +16,29 @@ function AmeliyatMasalari() {
               {/* Başlık */}
               <div className="page-title"></div>
 
-              <div className="page-content"></div>
+              <div className="page-content">
+                El kumandasının arızalanması durumunda masanın gövdesi üzerinde bulunan acil girişim
+                düğmelerinin yardımıyla el kumandasındaki tüm hareketler yapılabilmektedir. Pozisyon
+                değişikliklerindeki hareket hızı sabittir. Baş ve ayak bölümlerinin hareketleri
+                mekanik olarak sağlanır. Masanın hareketlerini sağlayan elektrohidrolik sistem,
+                entegre akü şarj sistemi ile beslenir ve elektrik kesintilerinde masaya toplam 30
+                dakikalık hareket süresi (yaklaşık 30 tam hareket) sağlanır.
+              </div>
+              <br />
+              <div className="page-content">
+                Masanın üst tablası sıvıya dayanıklı malzemeden üretilmiştir. Baş, sırt-oturma ve
+                ayak (sağ ve sol) bölümlerinden oluşan tabla hasta güvenliği ve hijyen gereklerini
+                sağlayan 80 mm kalınlığında özel olarak tasarlanmış dört parça minderle kaplıdır. Bu
+                minderler; antistatik özelliktedir; sıvı geçirmez özel bir malzeme ile kaplanmıştır
+                ve ameliyathane koşullarında kullanılan temizleme uygulamaları ile uyumludur.
+                Minderler yerlerinden kolaylıkla çıkarılır ve takılır.
+              </div>
+              <br />
+              <div className="page-content">
+                Masa tablası özel bir aksesuar kullanarak kolay bir şekilde radyolojik incelemeler
+                için uygun duruma getirilebilir.
+              </div>
+              <br />
 
               {/* ... */}
             </Grid>
