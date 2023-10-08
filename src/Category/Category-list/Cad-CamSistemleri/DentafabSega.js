@@ -5,11 +5,6 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
-import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
 
 export function DentaFabSega3D() {
   return (
@@ -82,10 +77,6 @@ export function DentaFabSega3D() {
 }
 
 export function DentaFabSega3DTitle() {
-  const navigate = useNavigate();
-  const test = () => {
-    navigate("https://www.arenadis.com.tr/wp-content/uploads/2021/04/CS-3600-ARENA-KATALOG.pdf");
-  };
   return (
     <div>
       <MKBox component="section">
@@ -105,7 +96,6 @@ export function DentaFabSega3DTitle() {
               {/* ... */}
             </Grid>
           </Grid>
-      
         </Container>
       </MKBox>
     </div>
