@@ -29,6 +29,59 @@ import { Button, CardMedia } from "@mui/material";
 import { useEffect, useState } from "react";
 import Products from "products/ProductDatas/products";
 import Carousel from "react-material-ui-carousel";
+import DentafabSega3DPrinter from "Category/Category-list/DentafabSega3DPrinter";
+import Siladent3dPrinterSilaPrintLCD from "Category/Category-list/Siladent3dPrinterSilaPrintLCD";
+import Silamill4Edition from "Category/Category-list/Silamill4Edition";
+import Silamill58Edition from "Category/Category-list/Silamill58Edition";
+import SilamillN4Edition from "Category/Category-list/SilamillN4Edition";
+import SilamillR5 from "Category/Category-list/SilamillR5";
+import SilamillT5 from "Category/Category-list/SilamillT5";
+import SilamillT5Edition from "Category/Category-list/SilamillT5Edition";
+import SilamillZ4 from "Category/Category-list/SilamillZ4";
+import SmartOpticsVinylOpenAir from "Category/Category-list/SmartOpticsVinylOpenAir";
+import SmartOpticsVinylHighResolution from "Category/Category-list/SmartOpticsVinylHighResolution";
+import Up3dP53DentalFrezelemeCihazi from "Category/Category-list/Up3dP53DentalFrezelemeCihazi";
+import CeramicMasterE20 from "Category/Category-list/CeramicMasterE20";
+import CeramicMasterE1000 from "Category/Category-list/CeramicMasterE1000";
+import CeramicMasterE3000 from "Category/Category-list/CeramicMasterE3000";
+import CeramicMasterPress from "Category/Category-list/CeramicMasterPress";
+import CeramicMasterPressPro from "Category/Category-list/CeramicMasterPressPro";
+import FireMagicEt400 from "Category/Category-list/FireMagicEt400";
+import LcCast600T from "Category/Category-list/LcCast600T";
+import PinprecisePP100 from "Category/Category-list/PinprecisePP100";
+import Poliam from "Category/Category-list/Poliam";
+import Polimax from "Category/Category-list/Polimax";
+import SlitpreciseSP100 from "Category/Category-list/SlitpreciseSP100";
+import ZirconMasterS from "Category/Category-list/ZirconMasterS";
+import AdvanceAskiliDisUnitesi from "Category/Category-list/AdvanceAskiliDisUnitesi";
+import AdvanceAskiliDisUnitesiA1 from "Category/Category-list/AdvanceAskiliDisUnitesiA1";
+import AdvanceAskiliDisUnitesiA3 from "Category/Category-list/AdvanceAskiliDisUnitesiA3";
+import AdvanceKamciliDisUnitesi from "Category/Category-list/AdvanceKamciliDisUnitesi";
+import AdvanceKamciliDisUnitesiA1 from "Category/Category-list/AdvanceKamciliDisUnitesiA1";
+import AdvanceKamciliDisUnitesiA3 from "Category/Category-list/AdvanceKamciliDisUnitesiA3";
+import AmeliyatMasalari from "Category/Category-list/AmeliyatMasalari";
+import JinekolojikVeUrolojikMasa from "Category/Category-list/JinekolojikVeUrolojikMasa";
+import PhantomDentalSimulasyonCalismaMasasi from "Category/Category-list/PhantomDentalSimulasyonCalismaMasasi";
+import QuattroAskiliDisUnitesi from "Category/Category-list/QuattroAskiliDisUnitesi";
+import Panoramik from "Category/Category-list/Panoramik";
+import Tomografi from "Category/Category-list/Tomografi";
+import Anemon00 from "Category/Category-list/Anemon00";
+import Anemon04 from "Category/Category-list/Anemon04";
+import Anemon05 from "Category/Category-list/Anemon05";
+import Anemon06 from "Category/Category-list/Anemon06";
+import Anemon07 from "Category/Category-list/Anemon07";
+import Azurit01 from "Category/Category-list/Azurit01";
+import Azurit02 from "Category/Category-list/Azurit02";
+import Azurit05 from "Category/Category-list/Azurit05";
+import Kuvars01 from "Category/Category-list/Kuvars01";
+import KuvarsMobil from "Category/Category-list/KuvarsMobil";
+import MobilKabin02 from "Category/Category-list/MobilKabin02";
+import MobilKabin03 from "Category/Category-list/MobilKabin03";
+import MobilKabin04 from "Category/Category-list/MobilKabin04";
+import DFM75E from "Category/Category-list/DFM75E";
+import CiftTeknisyenCalismaMasasi from "Category/Category-list/CiftTeknisyenCalismaMasasi";
+import TekliTeknisyenCalismaMasasi from "Category/Category-list/TekliTeknisyenCalismaMasasi";
+import QuattroKamciliDisUnitesi from "Category/Category-list/QuattroKamciliDisUnitesi";
 
 export function ProductSlider({ images }) {
   return (
@@ -74,7 +127,8 @@ function ProductInfo() {
   const { productid } = useParams();
   const [productInfo, setProductInfo] = useState({});
   const [productImages, setProductImages] = useState([]);
-  const [productModel, setProductModel] = useState([]);
+  const [, setProductModel] = useState([]);
+  const [productId, setProductId] = useState("");
   const test = () => {
     navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
   };
@@ -91,6 +145,7 @@ function ProductInfo() {
           setProductInfo(section);
           setProductImages(section.img);
           setProductModel(section.model);
+          setProductId(section.id);
           console.log(section);
         }
       });
@@ -98,11 +153,166 @@ function ProductInfo() {
     console.log(productInfo);
   }, []);
   const renderProductComponent = () => {
-    switch (productModel) {
-      case "Carestream CS 3600 Ağız İçi Tarayıcı":
+    switch (productId) {
+      case "y62vbr40D9":
         return <Carestream3600 />;
-      case "Carestream CS 3700 Ağız İçi Tarayıcı":
+      case "U2qoPEPPn7":
         return <Carestream3700 />;
+      case "0fky5JRUK5":
+        return <DentafabSega3DPrinter />;
+      case "wF2McAwDbN":
+        return <Siladent3dPrinterSilaPrintLCD />;
+      case "OgKzyq7qlj":
+        return <Silamill4Edition />;
+      case "9XlMdrhb4i":
+        return <Silamill58Edition />;
+      case "Aq012yPOpC":
+        return <SilamillN4Edition />;
+      case "6AGNtjzh3x":
+        return <SilamillR5 />;
+      case "fxI4W0jv90":
+        return <SilamillT5 />;
+      case "kyBvNYd9Eo":
+        return <SilamillT5Edition />;
+
+      case "iNp4KdAwi3":
+        return <SilamillZ4 />;
+      case "6ckA2QoXgA":
+        return <SmartOpticsVinylOpenAir />;
+
+      case "VWt82QTAxh":
+        return <SmartOpticsVinylHighResolution />;
+
+      case "jJpfLj3OLE":
+        return <Up3dP53DentalFrezelemeCihazi />;
+
+      case "aYdRQamh7o":
+        return <CeramicMasterE20 />;
+
+      case "OJ14vR3cSM":
+        return <CeramicMasterE1000 />;
+
+      case "ZK14vR3cSM":
+        return <CeramicMasterE3000 />;
+
+      case "TsvMva0AMu":
+        return <CeramicMasterPress />;
+
+      case "gX0OVoBxIK":
+        return <CeramicMasterPressPro />;
+
+      case "Qv0OVoBxIK":
+        return <FireMagicEt400 />;
+
+      case "nxwVeHnsqI":
+        return <LcCast600T />;
+
+      case "fS9WOxabf1":
+        return <PinprecisePP100 />;
+
+      case "us9Wpxabf1":
+        return <Poliam />;
+
+      case "u963sxabf1":
+        return <Polimax />;
+      case "zObKvzOCgk":
+        return <SlitpreciseSP100 />;
+
+      case "AbbKvzOCgk":
+        return <ZirconMasterS />;
+
+      case "JqScIHy2mA":
+        return <AdvanceAskiliDisUnitesi />;
+
+      case "lKBwnEMjYG":
+        return <AdvanceAskiliDisUnitesiA1 />;
+      case "PnKlBZXX8A":
+        return <AdvanceAskiliDisUnitesiA3 />;
+
+      case "I74N2fI3Y8":
+        return <AdvanceKamciliDisUnitesi />;
+
+      case "m0A99mC1Fk":
+        return <AdvanceKamciliDisUnitesiA1 />;
+
+      case "uRnqC40euA":
+        return <AdvanceKamciliDisUnitesiA3 />;
+
+      case "dxYoNv22oe":
+        return <AmeliyatMasalari />;
+
+      case "d8kYA19AkJ":
+        return <JinekolojikVeUrolojikMasa />;
+
+      case "6Xn6aML6Fq":
+        return <PhantomDentalSimulasyonCalismaMasasi />;
+
+      case "AvrFuUwAeb":
+        return <QuattroAskiliDisUnitesi />;
+
+      case "YNRlN6GndQ":
+        return <QuattroKamciliDisUnitesi />;
+
+      case "3ZTv5PyOQ4":
+        return <Panoramik />;
+
+      case "cTg3vb7U9Y":
+        return <Tomografi />;
+
+      case "epnxnAvWlU":
+        return <Anemon00 />;
+
+      case "2T1pEFn3YS":
+        return <Anemon04 />;
+
+      case "552Cyt4p01":
+        return <Anemon05 />;
+
+      case "2xYBmwMbdT":
+        return <Anemon06 />;
+
+      case "9VIP5Ei9QX":
+        return <Anemon07 />;
+
+      case "WzVYkyUoD2":
+        return <Azurit01 />;
+
+      case "Xi5k2aJ4ed":
+        return <Azurit02 />;
+
+      case "hLqXePzk1g":
+        return <Azurit05 />;
+
+      case "7YfeKNbzL9":
+        return <Kuvars01 />;
+
+      case "AiJ5G4Zj0o":
+        return <KuvarsMobil />;
+
+      case "mDrVUOMGai":
+        return <MobilKabin02 />;
+
+      case "BfOBwS5xTj":
+        return <MobilKabin03 />;
+
+      case "Kw9eOocx1F":
+        return <MobilKabin04 />;
+
+      case "r3etcIMTgJ":
+        return <DFM75E />;
+
+      case "V7RSRfY4BO":
+        return <PinprecisePP100 />;
+
+      case "SwCYBQQ3TM":
+        return <SlitpreciseSP100 />;
+
+      case "1jmZFqoVSi":
+        return <CiftTeknisyenCalismaMasasi />;
+
+      case "pW7rUCqbGJ":
+        return <TekliTeknisyenCalismaMasasi />;
+
       default:
         return null;
     }

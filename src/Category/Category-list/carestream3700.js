@@ -32,7 +32,7 @@ function Carestream3700() {
               </div>
               <div className="page-title">Eklenen Dokunuş</div>
               <div className="page-content">
-                Dokunmatik ekranın özelliği ;tarayıcı ve mouse arasında ileri/geri geçişin neden
+                Dokunmatik ekranın özelliği tarayıcı ve mouse arasında ileri/geri geçişin neden
                 olduğu ek işlem adımlarını ortadan kaldırır.
               </div>
               <div className="page-title">Artırılmış Hassasiyet</div>

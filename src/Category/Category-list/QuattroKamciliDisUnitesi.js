@@ -6,7 +6,7 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
-function QuattroAskiliDisUnitesi() {
+function QuattroKamciliDisUnitesi() {
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -40,4 +40,4 @@ function QuattroAskiliDisUnitesi() {
   );
 }
 
-export default QuattroAskiliDisUnitesi;
+export default QuattroKamciliDisUnitesi;

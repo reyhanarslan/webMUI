@@ -354,7 +354,7 @@ const Products = [
         model: "CERAMICMASTER E1000",
         img: [e1000_1, e1000_2, e1000_3],
       },
-      { code: 1, id: "", model: "CERAMICMASTER E3000", img: [e3000_1, e3000_2, e3000_3] },
+      { code: 1, id: "ZK14vR3cSM", model: "CERAMICMASTER E3000", img: [e3000_1, e3000_2, e3000_3] },
       {
         code: 3,
         id: "TsvMva0AMu",
@@ -367,7 +367,12 @@ const Products = [
         model: "CERAMICMASTER PRESS PRO",
         img: [presspro_1, presspro_2, presspro_3],
       },
-      { code: 2, id: "", model: "FIREMAGIC ET400", img: [firemagicer400_1, firemagicer400_2] },
+      {
+        code: 2,
+        id: "Qv0OVoBxIK",
+        model: "FIREMAGIC ET400",
+        img: [firemagicer400_1, firemagicer400_2],
+      },
       {
         code: 2,
         id: "nxwVeHnsqI",
@@ -379,14 +384,14 @@ const Products = [
         model: "PINPRECISE PP100",
         img: [pinprecise_1, pinprecise_2],
       },
-      { code: 2, id: "", model: "POLI AM", img: [polyam_1, polyam_2] },
-      { code: 2, id: "", model: "POLI MAX", img: [polymax_1, polymax_2] },
+      { code: 2, id: "us9Wpxabf1", model: "POLI AM", img: [polyam_1, polyam_2] },
+      { code: 2, id: "u963sxabf1", model: "POLI MAX", img: [polymax_1, polymax_2] },
       {
         id: "zObKvzOCgk",
         model: "SLITPRECISE SP100",
         img: [slitprecise_1, slitprecise_2, slitprecise_3, slitprecise_4],
       },
-      { code: 4, id: "", model: "ZIRCONMASTER S", img: [zms_1] },
+      { code: 4, id: "AbbKvzOCgk", model: "ZIRCONMASTER S", img: [zms_1] },
     ],
   },
   {
