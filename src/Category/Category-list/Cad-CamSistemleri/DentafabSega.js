@@ -105,10 +105,7 @@ export function DentaFabSega3DTitle() {
               {/* ... */}
             </Grid>
           </Grid>
-          <Button onClick={() => test()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
+      
         </Container>
       </MKBox>
     </div>
