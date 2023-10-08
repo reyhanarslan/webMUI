@@ -25,6 +25,14 @@ import {
   Sıladent3DPrinter,
   Sıladent3DPrinterTitle,
 } from "Category/Category-list/Cad-CamSistemleri/Sıladent3DPrinter";
+
+import {
+  SVHighResolution,
+  SVHighResolutionTitle,
+} from "Category/Category-list/Cad-CamSistemleri/SVHighResolution";
+
+import { SVOpenAir, SVOpenAirTitle } from "Category/Category-list/Cad-CamSistemleri/SVOpenAir";
+
 // import Team from "pages/LandingPages/AboutUs/sections/Team";
 // import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
 // import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
@@ -330,6 +338,10 @@ function ProductInfo() {
         return <DentaFabSega3D />;
       case "SILADENT 3D PRINTER SILAPRINT LCD":
         return <Sıladent3DPrinter />;
+      case "SMARTOPTICS VINYL HIGH RESOLUTION":
+        return <SVHighResolution />;
+      case "SMART OPTİCS VİNYL OPEN AİR":
+        return <SVOpenAir />;
       default:
         return null;
     }
@@ -344,6 +356,10 @@ function ProductInfo() {
         return <DentaFabSega3DTitle />;
       case "SILADENT 3D PRINTER SILAPRINT LCD":
         return <Sıladent3DPrinterTitle />;
+      case "SMARTOPTICS VINYL HIGH RESOLUTION":
+        return <SVHighResolutionTitle />;
+      case "SMART OPTİCS VİNYL OPEN AİR":
+        return <SVOpenAirTitle />;
       default:
         return null;
     }
