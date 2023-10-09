@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { Link } from "react-router-dom";
 
 function SlitpreciseSP100() {
   return (
@@ -14,9 +15,35 @@ function SlitpreciseSP100() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Teknik Bilgiler</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">Güç kaynağı: 110/230v ±10%,50/60hz</div>
+              <div className="page-content">Güç tüketımı: 200w</div>
+              <div className="page-content">Maksımum devır sayısı: 10000 rpm</div>
+              <div className="page-content">Kesımın maksımum derınlığı: 26,5 mm</div>
+              <div className="page-content">Kesımın genışlığı: 0,3 mm</div>
+              <div className="page-content">Elmas kesme dıskı: ф85хф16х0,3</div>
+              <div className="page-content">Lazer: sınıf 2</div>
+
+              <div className="page-title">Boyutlar</div>
+
+              <div className="page-content">W/d/h: 290x320x170 mm</div>
+              <div className="page-content">Ağırlık: 10кg</div>
+
+              <div className="page-title">Youtube Vıdeosu</div>
+
+              <Link to="https://www.youtube.com/watch?v=pLXvoYGskPo&ab_channel=VOPBulgaria">
+                SP 100 Cutting
+              </Link>
+              <br />
+              <Link to="https://www.youtube.com/watch?v=h87OXy3Mrjs&ab_channel=VOPBulgaria">
+                SP 100 Cutting 1
+              </Link>
+              <br />
+
+              <Link to="https://www.youtube.com/watch?v=m8FR-tX1JMc&ab_channel=VOPBulgaria">
+                SP 100 Cutting 2
+              </Link>
 
               {/* ... */}
             </Grid>

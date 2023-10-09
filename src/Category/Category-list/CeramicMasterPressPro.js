@@ -14,9 +14,35 @@ function CeramicMasterPressPro() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Aksesuarlar</div>
 
-              <div className="page-content"></div>
+              <li className="page-content">Yalıtım basın tablosu</li>
+              <li className="page-content">Seramik kesici uç 100 g halka</li>
+              <li className="page-content">Seramik kesici uç 200 g halka</li>
+              <li className="page-content">Yalıtım tablosu</li>
+              <li className="page-content">Ateşleme tepsisi</li>
+              <li className="page-content">Pinler</li>
+              <li className="page-content">Vakum pompası RVD50</li>
+              <br />
+              <div className="page-title">Teknik Bilgiler</div>
+              <div className="page-content">Güç kaynağı: ~110/230 v ±10%, 50/60 hz</div>
+              <br />
+              <div className="page-title">Güç Tüketimi</div>
+              <div className="page-content">Vakumlu pompalı fırın: 1700 w</div>
+              <div className="page-content">Vakumlu pompasız fırın: 1550 w</div>
+              <br />
+
+              <div className="page-title">Vakum Pompası Verileri</div>
+              <div className="page-content">{"Emiş kapasitesi: >22 l/dak."}</div>
+              <div className="page-content">Ayarlanabilir vakum: f0,96 bara kadar</div>
+              <div className="page-content">Maksimum ateşleme sıcaklığı: 1200°с</div>
+              <div className="page-content">Ateşleme odası boyutları: ф 95 mm, h 60 mm</div>
+              <br />
+
+              <div className="page-title">Boyutlar</div>
+              <div className="page-content">(w/d/h): 260/370/750 mm</div>
+              <div className="page-content">Ağırlık: 24,2 кg</div>
+              <br />
 
               {/* ... */}
             </Grid>

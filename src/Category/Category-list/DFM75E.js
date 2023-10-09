@@ -14,9 +14,24 @@ function DFM75E() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Teknik Bilgiler</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">Güç kaynağı: 230 v ±10%, 50 hz</div>
+              <div className="page-content">Güç tüketimi: 140 w</div>
+              <div className="page-content">Mikromotor: 3m160-2</div>
+              <div className="page-content">Türü: fırçasız</div>
+              <div className="page-content">Güç çıkışı: 160 w</div>
+              <div className="page-content">Hız: 450 ıle 30000 rpm arasında</div>
+              <div className="page-content">Ters: evet</div>
+              <br />
+              <div className="page-content">Çalışma bölgesi:</div>
+              <div className="page-content">Y ekseni hareketi: 75 mm</div>
+              <div className="page-content">Zaxıs hareketi: 30 mm</div>
+              <div className="page-content">Φ eksenı döndürme: 360°c</div>
+              <div className="page-content">Yürütme mekanızmasının dıkey seyahatı: 70 mm</div>
+              <div className="page-title">Boyutlar</div>
+              <div className="page-content">W/d/h: 245x340x520 mm</div>
+              <div className="page-content">Ağırlık: 18кg</div>
 
               {/* ... */}
             </Grid>

@@ -14,9 +14,24 @@ function JinekolojikVeUrolojikMasa() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Motorlu Jinekolojik Masa</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">
+                Masanın aşağı-yukarı hareketi elektromekanik motor ile sırt kısmı hareketi gazlı
+                piston yardımı ile çalışmaktadır.
+              </div>
+              <br />
+              <div className="page-content">Motor Kumandası Ayak Pedalı ile sağlanmaktadır.</div>
+              <br />
+              <div className="page-content">
+                <b>Motorlu Jinekolojik Masaistek doğrultusunda</b> hem Ayak hem de El kumandalı
+                olarak üretilmektedir.
+              </div>
+              <br />
+              <div className="page-content">
+                Masada: Oturma, Sırt ve Bacaklık kısmı bulunmaktadır.
+              </div>
+              <br />
 
               {/* ... */}
             </Grid>

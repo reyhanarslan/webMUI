@@ -14,9 +14,11 @@ function Azurit02() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">OPSİYONEL:</div>
 
-              <div className="page-content"></div>
+              <li className="page-content">Ayakla mikser kontrol mekanizması</li>
+              <li className="page-content">Tezgah için lamine veya cam seçeneği</li>
+              <li className="page-content">Anti-bakteriyel plastik çekmece düzenleyici (ABS)</li>
 
               {/* ... */}
             </Grid>

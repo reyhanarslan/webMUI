@@ -14,10 +14,24 @@ function Siladent3dPrinterSilaPrintLCD() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
-
-              <div className="page-content"></div>
-
+              <div className="page-title">Işlev</div> <br />
+              <div className="page-content">
+                Hava temizleme sistemi (aktif karbon filtresi), rahat 7 inç dokunmatik ekran
+                kontrolü ve W-LAN & Ethernet ile kolay baskı gibi özel işlevler.
+              </div>{" "}
+              <br />
+              <div className="page-title">Kontrol ve Kullanım Kolaylığı</div> <br />
+              <div className="page-content">
+                Eğilen 7 inç dokunmatik ekranlı monitör kullanıcıları, entegre kontrol panelini
+                kullanarak yazdırma ayarlarını ve yazdırma durumunu her an kolayca kontrol edebilir.
+              </div>{" "}
+              <br />
+              <div className="page-title">Dental 3D yazılım</div> <br />
+              <div className="page-content">
+                Geliştirilen özel Dental üretim gereksinimleri için özel bir yazılım özel olarak
+                tasarlanmıştır.
+              </div>{" "}
+              <br />
               {/* ... */}
             </Grid>
             <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>

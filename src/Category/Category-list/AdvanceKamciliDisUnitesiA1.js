@@ -14,9 +14,62 @@ function AdvanceKamciliDisUnitesiA1() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Güvenli ve Pratik Çalışma</div>
 
-              <div className="page-content"></div>
+              <li className="page-content">
+                Doktorun hastaya yaklaşmasını kolaylaştıra “Yakın dikkat” tasarımlı sırtlık
+              </li>
+              <li className="page-content">
+                Acil durumlar için otomatik durmayı sağlayan emniyet anahtarı
+              </li>
+              <li className="page-content">
+                Koltuğa monte, pnömatik sistemli 90 derece dönebilen seramik kreşuar
+              </li>
+              <li className="page-content">
+                Başlıkların hızını ve koltuğun hareketlerini kumanda eden tek bir ayak pedalı
+              </li>
+              <br />
+              <div className="page-title">Özgür Hareket Kabiliyeti</div>
+              <li className="page-content">
+                Elektromekanik sistemli, LP ve 0 pozisyonlarını içeren 4 programlı trandelenburg
+                pozisyonu alabilen ergonomik koltuk
+              </li>
+              <li className="page-content">
+                Sırtlık ve ayaklığın hastayı rahatsız etmeyen senkronize hareketi
+              </li>
+              <li className="page-content">24 V DC motorları destekleyen amortisör sistemi</li>
+              <br />
+              <div className="page-title">Asistan Kontrol Paneli</div>
+              <li className="page-content">
+                Beş çıkışlı unit ve koltuk hareketlerinin kontrolünün yapılabildiği asistan kontrol
+                paneli
+              </li>
+              <br />
+              <div className="page-title">Geniş Doktor Tablası</div>
+              <li className="page-content">
+                Hekimin Rahat çalışabilmesi için tasarlanmış geniş enstrüman tablası
+              </li>
+              <br />
+              <div className="page-title">Reflektör</div>
+              <li className="page-content">
+                Doğal gün ışığına yakın soğuk ışıklı iki kademeli aydınlatma sensörlü veya sensörsüz
+                reflektör sistemi
+              </li>
+              <br />
+              <div className="page-title">Greşuar</div>
+              <li className="page-content">
+                Koltuğa monte pnömatik sistemli 90 derece dönebilen seramik çanaklı greşuar.
+                Zamanlanabilir ve otoklavlanabilir bardak doldurucu ve çanak yıkayıcı
+              </li>
+              <br />
+              <div className="page-title">Ayak Padedalı</div>
+              <li className="page-content">
+                Başlıkların hızını ve koltuğun hareketlerini kumanda eden ayak pedalı
+              </li>
+              <br />
+              <div className="page-title">Ergonomik Tetiyer</div>
+              <li className="page-content">Çift mafsallı pedo kullanıma uygun ergonomik tetiyer</li>
+              <br />
 
               {/* ... */}
             </Grid>

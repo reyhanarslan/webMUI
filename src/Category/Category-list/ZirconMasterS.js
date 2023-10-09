@@ -14,9 +14,16 @@ function ZirconMasterS() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Teknik Teknik Bilgiler</div>
 
-              <div className="page-content"></div>
+              <li className="page-content">Güç kaynağı: 110/230 v ±10%, 50/60 hz</li>
+              <li className="page-content">Güç tüketımı: 1650 w</li>
+              <li className="page-content">Ateşleme odası boyutları: 120x120x100</li>
+              <li className="page-content">Maksımum ateşleme sıcaklığı: 1600°c</li>
+              <br />
+              <li className="page-content">Boyutlar</li>
+              <li className="page-content">W/d/h: 420x400x870 mm</li>
+              <li className="page-content">Ağırlık: 60 кg</li>
 
               {/* ... */}
             </Grid>

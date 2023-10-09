@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { Link } from "react-router-dom";
 
 function LcCast600T() {
   return (
@@ -14,9 +15,42 @@ function LcCast600T() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">Aksesuarlar</div>
 
-              <div className="page-content"></div>
+              <li className="page-content">Pota tepsi</li>
+              <li className="page-content">Halka tutucu</li>
+              <li className="page-content">Pota</li>
+              <li className="page-content">Silikon halka no2</li>
+              <li className="page-content">Silikon halka no3</li>
+              <li className="page-content">Silikon halka no4</li>
+              <li className="page-content">Grafit kesici uç</li>
+              <br />
+              <div className="page-title">Teknik Bilgiler</div>
+              <div className="page-content">Güç kaynağı: 110/230v~, ±10%, 50/60hz</div>
+              <div className="page-content">Güç tüketimi: 2500 w</div>
+              <div className="page-content">Potadaki minimum alaşım miktarı: 7 g</div>
+              <div className="page-content">Potadaki maksimum alaşım miktarı: 80 g</div>
+              <div className="page-content">
+                Dış alaşımlı seramik pota için pota tipi: seramik potası
+              </div>
+              <div className="page-content">
+                Değerli alaşımlar seramik için pota tipi: grafit uçlu pota
+              </div>
+              <div className="page-content">
+                30 g dış alaşımının tamamen erimesi için maksimum süre: 60 sn
+              </div>
+              <div className="page-content">Soğutma otonom: damıtılmış su soğutma</div>
+              <div className="page-content">Otomatik eritme için hf güç ayarı: otomatik</div>
+              <div className="page-content">Motor ivmesi ayar kılavuzu: el ile</div>
+              <div className="page-content">Otomatik döküm: otomatik</div>
+              <div className="page-content">W/d/h boyutları: 564x620x540 mm</div>
+              <div className="page-content">Ağırlık: 75 kg</div>
+              <br />
+              <div className="page-title">Youtube Videosu:</div>
+              <div className="page-content">LC Cast 600T Filling of the wather tank</div>
+              <Link to="https://www.youtube.com/watch?v=dEMArq04MaY&feature=youtu.be&ab_channel=VOPBulgaria">
+                How to cast with LC Cast 600T
+              </Link>
 
               {/* ... */}
             </Grid>

@@ -14,9 +14,6 @@ function PhantomDentalSimulasyonCalismaMasasi() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
-
-              <div className="page-content"></div>
 
               {/* ... */}
             </Grid>

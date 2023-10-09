@@ -14,9 +14,57 @@ function Silamill4Edition() {
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
-              <div className="page-title"></div>
+              <div className="page-title">SİMULTANE ÇALIŞAN 4 EKSEN</div>
 
-              <div className="page-content"></div>
+              <div className="page-content">
+                Entegre Harmonic Drive® döner ekseni (A ekseni) 360 derece dönüş açısına sahiptir.
+              </div>
+              <br />
+              <div className="page-title">GENİŞ MALZEME YELPAZESİ VE KULLANIM ALANI</div>
+
+              <div className="page-content">
+                Plastik, mum, zirkonyum oksit, kompozit, kobalt-krom bazlı değerli olmayan
+                metallerin kazınması mümkündür. Kronlar, köprüler (tam anatomik de olabilir), inlay,
+                onlay, abutment vs.
+              </div>
+              <br />
+              <div className="page-title">EN YÜKSEK HASSASİYET</div>
+
+              <div className="page-content">
+                Otomatik eksen ölçümü ve dengelemesi sayesinde yüksek hassasiyet sağlanır ve
+                dolayısıyla en yüksek kalitede sonuçlara ulaşılır.
+              </div>
+              <br />
+              <div className="page-title">OTOMATİK 7 FREZ DEĞİŞTİRİCİ</div>
+
+              <div className="page-content">
+                K4, kullanıcı müdahalesi olmadan bir bloğu tamamen işlemesine olanak veren otomatik
+                7 frez değiştiriciye sahiptir.
+              </div>
+              <br />
+              <div className="page-title">DÜNYA ÇAPINDA UYUMLULUK</div>
+
+              <div className="page-content">
+                100 – 240 V’luk geniş aralıklı değiştirme modlu güç ünitesi ve 50/60 Hz’lik ülkeye
+                özel şebeke fişi sayesinde dünya çapında uyumludur. ABD ve Kanada’ya ihracat için
+                ANSI/UL61010-1 sertifikasına sahiptir.
+              </div>
+              <br />
+              <div className="page-title">SOFİSTİKE KORUYUCU MEKANİZMALAR</div>
+
+              <div className="page-content">
+                Ön kapakta kazıma esnasında tehlikeli bölgeyi koruyan otomatik emniyet kilidi
+                bulunur. Havayı hapseden entegre çalışma haznesi sayesinde, cihazın mekanik
+                aksamları tozdan korunur ve yıpranma payı en aza iner.
+              </div>
+              <br />
+              <div className="page-title">ÖN BİLGİ GEREKTİRMEZ</div>
+
+              <div className="page-content">
+                Cihazla birlikte gelen Direct-Mill fonksiyonuna sahip DentalCAM yazılımı sayesinde
+                kazıma işlemi hiç bu kadar kolay olmamıştı!
+              </div>
+              <br />
 
               {/* ... */}
             </Grid>
