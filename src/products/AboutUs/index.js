@@ -429,20 +429,20 @@ function ProductInfo() {
                 {renderProductComponentTitle()}
               </MKTypography>
 
-              <MKTypography marginTop={3} variant="h6" color="white">
+              <MKTypography marginTop={3} variant="h6" color="blue">
                 Daha Fazla Bilgi İçin Bize Ulaşın
               </MKTypography>
               <MKBox display="flex" justifyContent="center" alignItems="center">
                 <Link to="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum">
-                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                  <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                     <i className="fa fa-whatsapp" />
                   </MKTypography>
                 </Link>
                 <Link to="/src/pages/LandingPages/ContactUs/index">
-                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                  <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                     <i className="fa fa-phone" />
                   </MKTypography>
-                  <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                  <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                     <i className="fa fa-envelope  " />
                   </MKTypography>
                 </Link>

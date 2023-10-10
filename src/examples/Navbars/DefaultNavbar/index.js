@@ -291,11 +291,11 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
           {...TransitionProps}
           sx={{
             transformOrigin: "left top",
-            background: ({ palette: { white } }) => white.main,
+            background: ({ palette: { blue } }) => blue.main,
           }}
         >
           <MKBox borderRadius="lg">
-            <MKTypography variant="h1" color="white">
+            <MKTypography variant="h1" color="blue">
               <Icon ref={setArrowRef} sx={{ mt: -3 }}>
                 arrow_drop_up
               </Icon>
@@ -417,7 +417,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
           {...TransitionProps}
           sx={{
             transformOrigin: "left top",
-            background: ({ palette: { white } }) => white.main,
+            background: ({ palette: { blue } }) => blue.main,
           }}
         >
           <MKBox ml={2.5} mt={-2.5} borderRadius="lg">

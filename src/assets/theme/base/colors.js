@@ -1,6 +1,7 @@
 export default {
   background: {
-    default: "#D8D9DA",
+    // default: "#D8D9DA",
+    default: "#F8F9FF",
   },
 
   text: {
@@ -16,7 +17,10 @@ export default {
     main: "#ffffff",
     focus: "#ffffff",
   },
-
+  blue: {
+    main: "#11304C",
+    focus: "#11304C",
+  },
   black: {
     light: "#000000",
     main: "#000000",
@@ -211,8 +215,8 @@ export default {
     },
 
     light: {
-      background: "#ffffff",
-      text: "#c7d3de",
+      background: "#11304C",
+      text: "#11304C",
     },
 
     dark: {

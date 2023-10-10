@@ -95,17 +95,17 @@ function Category() {
             </MKTypography>
             <Button onClick={() => test()}> TEST BUTTON</Button> */}
 
-            <MKTypography variant="h6" color="white" mt={1} mb={1}>
+            <MKTypography variant="h6" color="blue" mt={1} mb={1}>
               Daha Fazla Bilgi İçin Bize Ulaşın
             </MKTypography>
             <MKBox display="flex" justifyContent="center" alignItems="center">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                 <i className="fa fa-whatsapp" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                 <i className="fa fa-phone" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                 <i className="fa fa-envelope  " />
               </MKTypography>
             </MKBox>
