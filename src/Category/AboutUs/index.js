@@ -52,7 +52,8 @@ function Category() {
         light
       />
       <MKBox
-        minHeight="75vh"
+        // minHeight="75vh"
+        minHeight="60vh"
         width="100%"
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
@@ -72,6 +73,7 @@ function Category() {
             item
             xs={12}
             lg={8}
+            mt={-7}
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
@@ -93,7 +95,7 @@ function Category() {
             </MKTypography>
             <Button onClick={() => test()}> TEST BUTTON</Button> */}
 
-            <MKTypography variant="h6" color="white" mt={8} mb={1}>
+            <MKTypography variant="h6" color="white" mt={1} mb={1}>
               Daha Fazla Bilgi İçin Bize Ulaşın
             </MKTypography>
             <MKBox display="flex" justifyContent="center" alignItems="center">
@@ -113,9 +115,9 @@ function Category() {
       <Card
         sx={{
           p: 2,
-          mx: { xs: 2, lg: 3 },
-          mt: -8,
-          mb: 4,
+          // mx: { xs: 2, lg: 3 },
+          mt: -15,
+          mb: 0,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >

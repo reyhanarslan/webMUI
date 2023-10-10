@@ -73,9 +73,10 @@ function ContactUs() {
                     }}
                     style={cardStyle}
                   >
+                    {" "}
                     <CardContent>
-                      <MKTypography variant="h5">Adres</MKTypography>
-                      <p>Sokullu Mehmet Paşa, 1361. Sk. No:6 D:25, 06420 Çankaya/Ankara</p>
+                      <MKTypography variant="h4">Adres</MKTypography>
+                      <p> Sokullu Mehmet Paşa, 1361. Sk. No:6 D:25, 06420 Çankaya/Ankara</p>
                     </CardContent>
                   </Card>
                 </Grid>
@@ -97,7 +98,11 @@ function ContactUs() {
                     style={cardStyle}
                   >
                     <CardContent>
-                      <MKTypography variant="h5">Telefon</MKTypography>
+                      <MKTypography variant="h4">
+                        {" "}
+                        <i className="fa fa-phone" style={{ marginRight: "8px" }} />
+                        Telefon
+                      </MKTypography>
                       <p>+90 312 433 27 35</p>
                       <p>+90 507 868 89 53</p>
                     </CardContent>
@@ -121,7 +126,11 @@ function ContactUs() {
                     style={cardStyle}
                   >
                     <CardContent>
-                      <MKTypography variant="h5">Mail</MKTypography>
+                      <MKTypography variant="h4">
+                        {" "}
+                        <i className="fa fa-envelope " style={{ marginRight: "8px" }} />
+                        Mail
+                      </MKTypography>
                       <p>arenadis@gmail.com</p>
                     </CardContent>
                   </Card>
