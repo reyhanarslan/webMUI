@@ -44,3 +44,31 @@
   margin-top: "1rem";
   margin-bottom: "3rem";
 }
+.product-card-left {
+  animation: product-animation-left 1s ease-in-out both;
+}
+
+@keyframes product-animation-left {
+  0% {
+    opacity: 0.3;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(60px);
+  }
+}
+.product-card-right {
+  animation: product-animation-right 1s ease-in-out both;
+}
+
+@keyframes product-animation-right {
+  0% {
+    opacity: 0.3;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(70px);
+  }
+}

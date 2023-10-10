@@ -104,6 +104,8 @@ import DFM75E from "Category/Category-list/DFM75E";
 import CiftTeknisyenCalismaMasasi from "Category/Category-list/CiftTeknisyenCalismaMasasi";
 import TekliTeknisyenCalismaMasasi from "Category/Category-list/TekliTeknisyenCalismaMasasi";
 import QuattroKamciliDisUnitesi from "Category/Category-list/QuattroKamciliDisUnitesi";
+import "./product.css";
+import { useRef } from "react";
 
 export function ProductSlider({ images }) {
   return (
@@ -153,6 +155,12 @@ function ProductInfo() {
   //   navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
   // };
   const [productModel, setProductModel] = useState([]);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   useEffect(() => {
     console.log(productid);
@@ -379,7 +387,7 @@ function ProductInfo() {
         light
       />{" "}
       <Grid paddingX={20} container paddingBottom={5}>
-        <Grid marginTop={15} item xs={4} md={5} lg={7}>
+        <Grid className="product-card-right" marginTop={15} item xs={4} md={5} lg={7}>
           <ProductSlider
             sx={{
               width: "100%",
@@ -389,7 +397,7 @@ function ProductInfo() {
           />
         </Grid>
 
-        <Grid marginTop={4} item xs={4} md={5} lg={5}>
+        <Grid className="product-card-left" marginTop={4} item xs={4} md={5} lg={5}>
           <MKBox
             minHeight="75vh"
             width="100%"
