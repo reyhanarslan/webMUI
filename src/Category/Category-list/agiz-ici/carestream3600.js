@@ -97,7 +97,7 @@ export function Carestream3600Title() {
     <div>
       <MKBox component="section">
         <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={3}>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
             <Grid item xs={12} lg={12}>
               {/* Başlık */}
               <div className="page-title">

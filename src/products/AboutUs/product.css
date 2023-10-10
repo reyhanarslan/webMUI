@@ -5,11 +5,13 @@
 }
 
 .dark-text {
-  color: #333;
+  color: #11304c !important;
+  font-weight: bold;
 }
 
 .light-text {
-  color: #999;
+  color: #333;
+  font-weight: 400 !important;
 }
 .carousel-item:hover {
   transform: scale(1.4);
@@ -20,19 +22,21 @@
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 20px;
-  color: #333; /* Başlık rengi */
+  color: #11304c !important;
 }
 
-/* Metin stil */
 .page-content {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #555; /* Metin rengi */
+  font-size: 18px;
+  line-height: 1.2;
+  color: #11304c;
+  font-weight: 500 !important;
 }
 
 .productTitle {
   font-size: 50px !important;
-  color: white !important;
+  color: #18a1a4 !important;
+  font-weight: 600 !important;
+  font-family: sans-serif !important;
 }
 .productSubtitle {
   color: "white";

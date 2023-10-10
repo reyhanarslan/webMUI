@@ -413,7 +413,7 @@ function ProductInfo() {
                 {renderProductComponentTitle()}
               </MKTypography>
 
-              <MKTypography marginTop={5} variant="h6" color="white">
+              <MKTypography marginTop={3} variant="h6" color="white">
                 Daha Fazla Bilgi İçin Bize Ulaşın
               </MKTypography>
               <MKBox display="flex" justifyContent="center" alignItems="center">
@@ -438,7 +438,7 @@ function ProductInfo() {
       <Card
         sx={{
           p: 2,
-          mx: { xs: 2, lg: 3 },
+          // mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
