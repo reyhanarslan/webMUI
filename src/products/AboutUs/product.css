@@ -13,9 +13,13 @@
   color: #333;
   font-weight: 400 !important;
 }
+.carousel-item {
+  border-radius: 20px !important;
+}
 .carousel-item:hover {
   transform: scale(1.4);
   transition: transform 0.3s ease-in-out;
+  border-radius: 20px !important;
 }
 .page-title {
   font-size: 24px;

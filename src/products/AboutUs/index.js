@@ -129,9 +129,9 @@ export function ProductSlider({ images }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginLeft: "0", // Sol boşluk yok
+            marginLeft: "0",
             boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
-            borderRadius: "10px",
+            borderRadius: "20px",
             transition: "transform 0.3s ease-in-out",
           }}
           key={i}
@@ -387,7 +387,15 @@ function ProductInfo() {
         light
       />{" "}
       <Grid paddingX={20} container paddingBottom={5}>
-        <Grid className="product-card-right" marginTop={15} item xs={4} md={5} lg={7}>
+        <Grid
+          className="product-card-right"
+          borderRadius={25}
+          marginTop={15}
+          item
+          xs={4}
+          md={5}
+          lg={7}
+        >
           <ProductSlider
             sx={{
               width: "100%",
