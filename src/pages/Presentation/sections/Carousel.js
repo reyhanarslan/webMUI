@@ -33,10 +33,10 @@ function CarouselImages() {
             animation="fade"
             duration={1500}
             height={"600px"}
-            navButtonsAlwaysVisible={true}
+            navButtonsAlwaysVisible={false}
             fullHeightHover={true}
             stopAutoPlayOnHover={true}
-            swipe={true}
+            swipe={false}
 
             // Carousel bileşeninin genişliği burada ayarlanıyor
             // style={{ width: "1920px" }}
