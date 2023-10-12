@@ -159,7 +159,7 @@ function Presentation() {
           <Information />
           {/* <DesignBlocks /> */}
           <CarouselImages />
-          <Container sx={{ mt: 6 }}>
+          <Container sx={{ mt: 0 }}>
             <BuiltByDevelopers />
           </Container>
 

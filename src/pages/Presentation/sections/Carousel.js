@@ -37,8 +37,8 @@ function CarouselImages() {
             fullHeightHover={true}
             stopAutoPlayOnHover={true}
             swipe={false}
+            className="custom-carousel"
 
-            // Carousel bileşeninin genişliği burada ayarlanıyor
             // style={{ width: "1920px" }}
           >
             {images.map((item, i) => (
