@@ -138,7 +138,7 @@ function Presentation() {
           </MKBox>
         </Card>
         <Card
-          className="div-background"
+          // className="div-background"
           sx={{
             p: 0,
             // mx: { xs: 2, lg: 3 },
@@ -148,7 +148,7 @@ function Presentation() {
             borderRadius: "30px",
             // borderRadius:"30px",
 
-            backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
+            // backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}

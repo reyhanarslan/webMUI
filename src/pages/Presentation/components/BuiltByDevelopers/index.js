@@ -18,10 +18,12 @@ function BuiltByDevelopers() {
       my={2}
       py={6}
       sx={{
+        borderRadius: "30px",
+
         backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
           `${linearGradient(
-            rgba(gradients.dark.main, 0.3),
-            rgba(gradients.dark.state, 0.9)
+            rgba(gradients.light.main, 0.3),
+            rgba(gradients.arena.state, 0.9)
           )}, url(${DashboardImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",

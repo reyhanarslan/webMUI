@@ -19,7 +19,13 @@ import { Grid } from "@mui/material";
 function CarouselImages() {
   const [images] = useState([sld1, sld2, sld3]);
   return (
-    <MKBox py={12}>
+    <MKBox
+      sx={{
+        background: "#fffff",
+        borderRadius: "30px",
+      }}
+      py={12}
+    >
       <Container>
         <Grid lg={3}></Grid>
         <Grid className="d-flex justify-content-center align-items-center" lg={3}>
