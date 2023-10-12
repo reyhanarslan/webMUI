@@ -47,7 +47,7 @@ function RotatingCardFront({ color, image, icon, title, description }) {
 
 // Setting default props for the RotatingCardFront
 RotatingCardFront.defaultProps = {
-  color: "info",
+  color: "arena",
   icon: "",
 };
 
@@ -62,6 +62,7 @@ RotatingCardFront.propTypes = {
     "error",
     "dark",
     "light",
+    "arena",
   ]),
   image: PropTypes.string.isRequired,
   icon: PropTypes.node,

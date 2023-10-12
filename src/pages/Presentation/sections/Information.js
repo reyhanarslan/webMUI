@@ -10,25 +10,38 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
-import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import bgFront1 from "assets/images/dashboard/back1.jpg";
+import bgFront2 from "assets/images/dashboard/back2.jpg";
+import bgFront3 from "assets/images/dashboard/back3.jpg";
+// import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+// import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+// import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+// import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 function Information() {
   return (
-    <MKBox component="section" py={6} my={6}>
+    <MKBox
+      sx={{
+        background: "#F8F9FF",
+        borderBottomRightRadius: "30px",
+        borderBottomLeftRadius: "30px",
+        py: 6,
+      }}
+      component="section"
+    >
       <Container>
         <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
-                image={bgFront}
+                image={bgFront1}
                 icon="touch_app"
                 title={<>Kurumsal</>}
                 description="Kurumsal kimliğimiz, kaliteli ürünler ve müşteri odaklı yaklaşımımızla, sektörde öncü bir konumda bulunuyoruz. Amacımız, en iyi hizmeti sunarak müşterilerimizin güvenini kazanmaktır."
               />
               <RotatingCardBack
-                image={bgBack}
+                image={bgFront3}
                 title="Kurumsal"
                 description="Bu firma, güçlü bir kurumsal kimlik ve etik değerlerle müşterilerine yüksek kalitede hizmet sunmayı taahhüt ediyor."
                 action={{
@@ -42,13 +55,13 @@ function Information() {
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
-                image={bgFront}
+                image={bgFront2}
                 icon="touch_app"
                 title={<>Ürünlerimiz</>}
                 description=" Diş sağlığı alanındaki yenilikleri yakından takip ediyor, deneyimli ekibimizle birlikte özenle tasarlanmış ürünler sunarak diş hekimleri ve sağlık profesyonellerinin ihtiyaçlarını tam anlamıyla karşılıyoruz."
               />
               <RotatingCardBack
-                image={bgBack}
+                image={bgFront1}
                 title="Ürünlerimiz"
                 description="Sektördeki gelişmeleri önceden görmek ve beklentileri aşmak amacıyla sürekli olarak kendimizi geliştiriyor, müşterilerimize en güvenilir, etkili ve kaliteli çözümleri sunma vizyonumuzu sürdürüyoruz"
                 action={{
@@ -62,13 +75,13 @@ function Information() {
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
-                image={bgFront}
+                image={bgFront3}
                 icon="touch_app"
                 title={<>İletişim</>}
                 description="Kurumsal çözümlerimiz ve ürünlerimizle sektördeki etkimizi güçlendirmeye devam ederken, müşteri memnuniyetini artırmak için buradayız. İhtiyaçlarınızı ve sorularınızı iletişim kanallarımız ile bizimle paylaşabilirsiniz."
               />
               <RotatingCardBack
-                image={bgBack}
+                image={bgFront2}
                 title="İletişim"
                 description="Size en iyi şekilde yardımcı olabilmek için iletişim seçeneklerimizi kullanabilirsiniz."
                 action={{
