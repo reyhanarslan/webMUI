@@ -27,14 +27,32 @@ import routes from "routes";
 // Images
 // import bgImage from "assets/images/bg-presentation.jpg";
 // import bgImage from "assets/images/dashboard/dashboard-img.jpg";
-import bgImage from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
+// import bgImage from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 import CarouselImages from "./sections/Carousel";
 import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
+import { useEffect } from "react";
 
 import("./video.css");
 
 function Presentation() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const bgPosition = `-${scrollY / 15}px 0`;
+      const divBackground = document.querySelector(".div-background");
+
+      if (divBackground) {
+        divBackground.style.backgroundPosition = bgPosition;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div
       style={{
@@ -68,12 +86,16 @@ function Presentation() {
           </Grid>
         </Grid>
       </MKBox>
-      <Card>
+      <Card
+        style={{
+          marginRight: "100px",
+          marginLeft: "100px",
+        }}
+      >
         <MKBox
           minHeight="90vh"
           width="100%"
           sx={{
-            backgroundImage: `url(${bgImage})`, //video gelecek
             backgroundSize: "cover",
             backgroundPosition: "top",
             display: "grid",
@@ -103,6 +125,7 @@ function Presentation() {
         </MKBox>
       </Card>
       <Card
+        className="div-background"
         sx={{
           p: 2,
           mx: { xs: 2, lg: 3 },
@@ -110,6 +133,9 @@ function Presentation() {
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
           backdropFilter: "saturate(200%) blur(30px)",
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
+          // backgroundImage: `url(${bgImage})`, // bgImage, kullanmak istediğiniz arka plan resminin yolunu içermelidir.
+          // backgroundSize: "cover", // İstenirse backgroundSize ekleyerek arka plan resminin boyutunu ayarlayabilirsiniz.
+          // backgroundAttachment: "fixed", // İstenirse backgroundAttachment ekleyerek resmi sabit yapabilirsiniz.
         }}
       >
         {/* <Counters /> */}

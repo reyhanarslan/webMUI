@@ -2,13 +2,22 @@
   animation: card-animation 1s !important;
 }
 
-@keyframes card-animation{
-  0%{
+@keyframes card-animation {
+  0% {
     opacity: 0.3;
     transform: translateY(10px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
-  }  
+  }
+}
+
+.div-background {
+  background-image: url("assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed; /* "fixed" tırnak içinde olmamalı */
+  background-size: "250%"; /* "cover" tırnak içinde olmamalı */
+  background-position: center; /* "center" tırnak içinde olmamalı */
+
 }
