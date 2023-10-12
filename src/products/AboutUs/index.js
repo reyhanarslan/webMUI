@@ -453,7 +453,7 @@ function ProductInfo() {
       </Grid>
       <Card
         sx={{
-          p: 2,
+          p: 0,
           // mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 0,

@@ -22,7 +22,14 @@ import "./card-hover.css";
 
 function Information() {
   return (
-    <MKBox component="section" py={12}>
+    <MKBox
+      component="section"
+      py={12}
+      sx={{
+        background: "#F8F9FF",
+        borderRadius: "30px",
+      }}
+    >
       <Container>
         <Grid
           container
