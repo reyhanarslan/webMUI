@@ -384,7 +384,7 @@ function ProductInfo() {
           color: "default",
         }}
         transparent
-        light
+        blue
       />{" "}
       <Grid paddingX={20} container paddingBottom={5}>
         <Grid
@@ -456,7 +456,9 @@ function ProductInfo() {
           p: 2,
           // mx: { xs: 2, lg: 3 },
           mt: -8,
-          mb: 4,
+          mb: 0,
+          borderBottomLeftRadius: "30px",
+          borderBottomRightRadius: "30px",
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >

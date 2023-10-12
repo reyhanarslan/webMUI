@@ -20,7 +20,7 @@ function HeaderOne() {
               component={Link}
               href="#"
               variant="button"
-              color="white"
+              color="blue"
               fontWeight="regular"
               py={0.8125}
               mr={2}
@@ -29,10 +29,10 @@ function HeaderOne() {
             </MKTypography>
             <MKButton
               variant="outlined"
-              color="white"
+              color="blue"
               sx={{ display: { xs: "block", lg: "none" }, ml: "auto" }}
             >
-              <MKBox component="i" color="white" className="fas fa-bars" />
+              <MKBox component="i" color="blue" className="fas fa-bars" />
             </MKButton>
             <MKBox
               component="ul"
@@ -47,7 +47,7 @@ function HeaderOne() {
                   component={Link}
                   href="#"
                   variant="button"
-                  color="white"
+                  color="blue"
                   fontWeight="regular"
                   p={1}
                   onClick={(e) => e.preventDefault()}
@@ -60,7 +60,7 @@ function HeaderOne() {
                   component={Link}
                   href="#"
                   variant="button"
-                  color="white"
+                  color="blue"
                   fontWeight="regular"
                   p={1}
                   onClick={(e) => e.preventDefault()}
@@ -73,7 +73,7 @@ function HeaderOne() {
                   component={Link}
                   href="#"
                   variant="button"
-                  color="white"
+                  color="blue"
                   fontWeight="regular"
                   p={1}
                   onClick={(e) => e.preventDefault()}
@@ -97,7 +97,7 @@ function HeaderOne() {
                   p={1}
                   onClick={(e) => e.preventDefault()}
                 >
-                  <MKBox component="i" color="white" className="fab fa-twitter" />
+                  <MKBox component="i" color="blue" className="fab fa-twitter" />
                 </MKTypography>
               </MKBox>
               <MKBox component="li">
@@ -108,7 +108,7 @@ function HeaderOne() {
                   p={1}
                   onClick={(e) => e.preventDefault()}
                 >
-                  <MKBox component="i" color="white" className="fab fa-facebook" />
+                  <MKBox component="i" color="blue" className="fab fa-facebook" />
                 </MKTypography>
               </MKBox>
               <MKBox component="li">
@@ -119,7 +119,7 @@ function HeaderOne() {
                   p={1}
                   onClick={(e) => e.preventDefault()}
                 >
-                  <MKBox component="i" color="white" className="fab fa-instagram" />
+                  <MKBox component="i" color="blue" className="fab fa-instagram" />
                 </MKTypography>
               </MKBox>
             </MKBox>

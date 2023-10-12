@@ -17,8 +17,8 @@ import routes from "routes";
 
 function BaseLayout({ breadcrumb, title, children }) {
   return (
-    <MKBox display="flex" flexDirection="column" bgColor="white" minHeight="100vh">
-      <MKBox bgColor="white" shadow="sm" py={0.25}>
+    <MKBox display="flex" flexDirection="column" bgColor="blue" minHeight="100vh">
+      <MKBox bgColor="blue" shadow="sm" py={0.25}>
         <DefaultNavbar
           routes={routes}
           action={{

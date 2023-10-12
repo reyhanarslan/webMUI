@@ -41,7 +41,7 @@ function ContactUs() {
     "https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?w=1380&t=st=1695842013~exp=1695842613~hmac=bbe8d7b00c95f26157f7c4875836bedd0f7c5de0c8ce47128eef4fbc1f81ea77";
   return (
     <>
-      <MKBox position="fixed" top="0.5rem" width="100%">
+      <div style={{ position: "fixed", top: "0.5rem", width: "100%" }}>
         <DefaultNavbar
           routes={routes}
           action={{
@@ -49,10 +49,12 @@ function ContactUs() {
             route:
               "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
             label: "Whatsapp ıle Sipariş ",
-            color: "info",
+            color: "default",
           }}
+          transparent
+          blue
         />
-      </MKBox>
+      </div>
       <Grid container spacing={3} alignItems="center" marginTop={"8rem"} marginLeft={"1rem"}>
         <Grid item xs={12} lg={5}>
           <Grid container spacing={3} alignItems="center">

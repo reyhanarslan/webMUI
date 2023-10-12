@@ -36,51 +36,44 @@ import("./video.css");
 
 function Presentation() {
   return (
-    <div
-      style={{
-        background: "linear-gradient(90deg, rgba(188, 188, 189, 0), rgba(7, 7, 67, 0.8) 25.71%)",
-      }}
-    >
-      <MKBox>
-        <Grid container>
-          <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: "auto", mb: 3 }}>
-            <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
+    <>
+      <DefaultNavbar
+        routes={routes}
+        action={{
+          type: "external",
+          route:
+            "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
+          label: "Whatsapp ıle Sipariş ",
+          color: "default",
+        }}
+        transparent
+        light
+      />
+      <div
+        style={{
+          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), rgba(7, 7, 67, 0.8) 25.71%)",
+        }}
+      >
+        <MKBox>
+          <Grid container>
+            <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: "auto", mb: 3 }}>
+              <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
+            </Grid>
           </Grid>
-          <Grid
-            className="d-flex justify-content-center align-items-center"
-            item
-            xs={12}
-            md={6}
-            lg={9}
-            sx={{ ml: "auto", mb: 3 }}
+        </MKBox>
+        <Card>
+          <MKBox
+            minHeight="90vh"
+            width="100%"
+            sx={{
+              backgroundImage: `url(${bgImage})`, //video gelecek
+              backgroundSize: "cover",
+              backgroundPosition: "top",
+              display: "grid",
+              placeItems: "center",
+            }}
           >
-            <DefaultNavbar
-              routes={routes}
-              action={{
-                type: "external",
-                route:
-                  "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
-                label: "Whatsapp ıle Sipariş ",
-                color: "success",
-              }}
-              sticky
-            />
-          </Grid>
-        </Grid>
-      </MKBox>
-      <Card>
-        <MKBox
-          minHeight="90vh"
-          width="100%"
-          sx={{
-            backgroundImage: `url(${bgImage})`, //video gelecek
-            backgroundSize: "cover",
-            backgroundPosition: "top",
-            display: "grid",
-            placeItems: "center",
-          }}
-        >
-          {/* <CardMedia
+            {/* <CardMedia
           width={300}
           height={300}
           component="video"
@@ -89,38 +82,42 @@ function Presentation() {
           image={intro}
           autoPlay
         /> */}
-          <div className="d-flex justify-content-center align-items-center video-card">
-            <ReactPlayer
-              style={{ opacity: "0.90" }}
-              width={"100%"}
-              height="100%"
-              url={intro}
-              playing={true}
-              muted={true}
-              controls={true}
-            />
-          </div>
-        </MKBox>
-      </Card>
-      <Card
-        sx={{
-          p: 2,
-          mx: { xs: 2, lg: 3 },
-          mt: 2, //-8,
-          backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
-          backdropFilter: "saturate(200%) blur(30px)",
-          boxShadow: ({ boxShadows: { xxl } }) => xxl,
-        }}
-      >
-        {/* <Counters /> */}
-        <Information />
-        {/* <DesignBlocks /> */}
-        <CarouselImages />
-        <Pages />
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container>
-        {/* <Container>
+            <div className="d-flex justify-content-center align-items-center video-card">
+              <ReactPlayer
+                style={{ opacity: "0.90" }}
+                width={"100%"}
+                height="100%"
+                url={intro}
+                playing={true}
+                muted={true}
+                controls={true}
+              />
+            </div>
+          </MKBox>
+        </Card>
+        <Card
+          sx={{
+            p: 2,
+            // mx: { xs: 2, lg: 3 },
+            // mt: 2,
+            borderBottomLeftRadius: "30px",
+            borderBottomRightRadius: "30px",
+            // borderRadius:"30px",
+
+            backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
+          }}
+        >
+          {/* <Counters /> */}
+          <Information />
+          {/* <DesignBlocks /> */}
+          <CarouselImages />
+          <Pages />
+          <Container sx={{ mt: 6 }}>
+            <BuiltByDevelopers />
+          </Container>
+          {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -165,10 +162,10 @@ function Presentation() {
           </Grid>
         </Container> */}
 
-        <Testimonials />
+          <Testimonials />
 
-        {/* <Download /> */}
-        {/* <MKBox pt={18} pb={6}>
+          {/* <Download /> */}
+          {/* <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
@@ -220,11 +217,12 @@ function Presentation() {
             </Grid>
           </Container>
         </MKBox> */}
-      </Card>
-      {/* <MKBox pt={6} px={1} mt={6}>
+        </Card>
+        {/* <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox> */}
-    </div>
+      </div>
+    </>
   );
 }
 
