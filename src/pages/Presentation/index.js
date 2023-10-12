@@ -66,7 +66,9 @@ function Presentation() {
       >
         <MKBox>
           <Grid container>
-            <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: "auto", mb: 3 }}>
+            <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: 0, mb: 3 }}>
+              {" "}
+              {/* marginLeft'u 0 olarak ayarladık */}
               <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
             </Grid>
           </Grid>
