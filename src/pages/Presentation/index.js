@@ -10,6 +10,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 
 import Information from "pages/Presentation/sections/Information";
 import Testimonials from "pages/Presentation/sections/Testimonials";
+// import Pages from "pages/Presentation/sections/Pages";
 
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 import logo from "assets/images/logos/arenadis-logo-web-1.png";
@@ -124,7 +125,7 @@ function Presentation() {
           > */}
 
           {isVideoPlaying ? (
-            <div className="d-flex justify-content-center align-items-center video-card">
+            <div className="video-card">
               <ReactPlayer
                 ref={playerRef}
                 style={{ opacity: "0.90" }}
@@ -181,8 +182,11 @@ function Presentation() {
           {/* <Counters /> */}
           <Information />
           {/* <DesignBlocks /> */}
+
           <CarouselImages />
           <Container sx={{ mt: 6 }}>
+            {" "}
+            {/* <Pages> </Pages> */}
             <BuiltByDevelopers />
           </Container>
 

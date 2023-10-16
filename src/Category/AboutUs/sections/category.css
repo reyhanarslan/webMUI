@@ -2,13 +2,35 @@
   animation: product-animation 1s !important;
 }
 
-@keyframes product-animation{
-  0%{
+@keyframes product-animation {
+  0% {
     opacity: 0.3;
     transform: translateY(30px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.listItemButton {
+  position: relative;
+}
+
+.listItemButton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-bottom: 4px solid #898989;
+  transition: width 0.6s ease;
+}
+
+.listItemButton:hover::before {
+  width: 100%;
+}
+
+.listItemButton.selected::before {
+  border-bottom: 6px solid #898989;
 }
