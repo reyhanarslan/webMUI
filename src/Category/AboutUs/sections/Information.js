@@ -60,6 +60,7 @@ function CategoryMenu() {
     const currentURL = location.pathname;
     const pathArray = currentURL.split("/");
     console.log(pathArray[3]);
+    setPage(1);
     if (pathArray[2] === "agiz-ici-tarayicilar") {
       const result = Products[0].product;
       setCount(Math.ceil(result.length / limit));
@@ -155,6 +156,7 @@ function CategoryMenu() {
     </Grid>
   ));
   const handleChangePage = (event, value) => {
+    myRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
     console.log(value);
     setPage(value);
     setListingPerPage(listingProduct.slice((value - 1) * 9, (value - 1) * 9 + 9));
@@ -479,6 +481,7 @@ function CategoryMenu() {
                         </ListItemText>
                       </ListItemButton>
                       <ListItemButton
+                        className="listItemButton"
                         selected={selectedIndex === 6}
                         onClick={() => handleListItemClick(6, "/urunler/labaratuvar-ekipmanlari")}
                       >
