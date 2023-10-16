@@ -84,7 +84,7 @@ const routes = [
   },
   {
     name: "Ürünlerimiz",
-    route: "/urunler/cad-cam-sistemleri/kaziyicilar",
+    route: "/urunler/agiz-ici-tarayicilar",
     // component: <ContactUs />,
     icon: <Icon>view_day</Icon>,
     collapse: [
