@@ -151,9 +151,12 @@ function CategoryMenu() {
                     }
                   >
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 0}
                       onClick={() => handleListItemClick(0, "/urunler/agiz-ici-tarayicilar")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
@@ -169,11 +172,14 @@ function CategoryMenu() {
                     </ListItemButton>
 
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 1}
                       onClick={() => cadCam(1, "/urunler/cad-cam-sistemleri")}
                       // onClick={(event) => cadCam(event, 1)}
                     >
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
+
                       <ListItemText>
                         <p
                           style={{
@@ -190,15 +196,15 @@ function CategoryMenu() {
                     <Collapse in={isOpenCadCam} timeout="auto" unmountOnExit>
                       <List component="div" disablePadding>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 11}
                           onClick={() =>
                             handleListItemClick(11, "/urunler/cad-cam-sistemleri/3d-printer")
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          {" "}
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -212,15 +218,15 @@ function CategoryMenu() {
                           </ListItemText>
                         </ListItemButton>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 12}
                           onClick={() =>
                             handleListItemClick(12, "/urunler/cad-cam-sistemleri/kaziyicilar")
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          {" "}
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -234,15 +240,15 @@ function CategoryMenu() {
                           </ListItemText>
                         </ListItemButton>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 13}
                           onClick={() =>
                             handleListItemClick(13, "/urunler/cad-cam-sistemleri/model-tarayicilar")
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          {" "}
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -259,9 +265,12 @@ function CategoryMenu() {
                     </Collapse>
 
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 2}
                       onClick={() => dental(2, "/urunler/dental-firinlar")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
@@ -279,15 +288,14 @@ function CategoryMenu() {
                     <Collapse in={isOpenDentalFirin} timeout="auto" unmountOnExit>
                       <List component="div" disablePadding>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 21}
                           onClick={() =>
                             handleListItemClick(21, "/urunler/dental-firinlar/porselen-firinlar")
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -301,15 +309,14 @@ function CategoryMenu() {
                           </ListItemText>
                         </ListItemButton>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 22}
                           onClick={() =>
                             handleListItemClick(22, "/urunler/dental-firinlar/dokum-firinlar")
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -323,15 +330,14 @@ function CategoryMenu() {
                           </ListItemText>
                         </ListItemButton>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 23}
                           onClick={() =>
                             handleListItemClick(23, "/urunler/dental-firinlar/press-firinlar")
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -345,6 +351,7 @@ function CategoryMenu() {
                           </ListItemText>
                         </ListItemButton>
                         <ListItemButton
+                          className="listItemButton"
                           sx={{ pl: 4 }}
                           selected={selectedIndex === 24}
                           onClick={() =>
@@ -354,9 +361,8 @@ function CategoryMenu() {
                             )
                           }
                         >
-                          <ListItemIcon>
-                            <SendIcon />
-                          </ListItemIcon>
+                          {" "}
+                          <ListItemIcon></ListItemIcon>
                           <ListItemText>
                             <p
                               style={{
@@ -373,9 +379,12 @@ function CategoryMenu() {
                     </Collapse>
 
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 3}
                       onClick={() => handleListItemClick(3, "/urunler/dis-uniteleri")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
@@ -391,9 +400,12 @@ function CategoryMenu() {
                     </ListItemButton>
 
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 4}
                       onClick={() => handleListItemClick(4, "/urunler/goruntuleme-sistemleri")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
@@ -408,9 +420,12 @@ function CategoryMenu() {
                       </ListItemText>
                     </ListItemButton>
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 5}
                       onClick={() => handleListItemClick(5, "/urunler/klinik-dolaplari")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
@@ -428,6 +443,8 @@ function CategoryMenu() {
                       selected={selectedIndex === 6}
                       onClick={() => handleListItemClick(6, "/urunler/labaratuvar-ekipmanlari")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
@@ -442,9 +459,12 @@ function CategoryMenu() {
                       </ListItemText>
                     </ListItemButton>
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 7}
                       onClick={() => handleListItemClick(7, "/urunler/teknisyen-masalari")}
                     >
+                      {" "}
+                      <SendIcon />
                       <ListItemIcon></ListItemIcon>
                       <ListItemText>
                         <p
