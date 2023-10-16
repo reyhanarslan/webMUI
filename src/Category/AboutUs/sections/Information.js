@@ -440,6 +440,7 @@ function CategoryMenu() {
                       </ListItemText>
                     </ListItemButton>
                     <ListItemButton
+                      className="listItemButton"
                       selected={selectedIndex === 6}
                       onClick={() => handleListItemClick(6, "/urunler/labaratuvar-ekipmanlari")}
                     >
