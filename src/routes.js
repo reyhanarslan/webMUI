@@ -84,7 +84,7 @@ const routes = [
   },
   {
     name: "Ürünlerimiz",
-    route: "/urunler/agiz-ici-tarayicilar",
+    route: "/urunler/tum-urunler",
     // component: <ContactUs />,
     icon: <Icon>view_day</Icon>,
     collapse: [

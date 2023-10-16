@@ -30,7 +30,6 @@ function CategoryMenu() {
   const [listingPerPage, setListingPerPage] = useState([]);
   const navigate = useNavigate();
   const myRef = useRef(null);
-  // const values = useParams();
   const location = useLocation();
   const [page, setPage] = useState(1);
   const [count, setCount] = useState(0);
@@ -56,6 +55,7 @@ function CategoryMenu() {
   };
 
   useEffect(() => {
+    console.log(location);
     myRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
     const currentURL = location.pathname;
     const pathArray = currentURL.split("/");
@@ -66,80 +66,103 @@ function CategoryMenu() {
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(0);
     } else if (pathArray[3] === "3d-printer") {
       const result = Products[1].product.filter((item) => item.code === 1);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(11);
     } else if (pathArray[3] === "kaziyicilar") {
       const result = Products[1].product.filter((item) => item.code === 2);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(12);
     } else if (pathArray[3] === "model-tarayicilar") {
       const result = Products[1].product.filter((item) => item.code === 3);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(13);
     } else if (pathArray[2] === "cad-cam-sistemleri") {
       const result = Products[1].product;
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(1);
     } else if (pathArray[3] === "porselen-firinlar") {
       const result = Products[2].product.filter((item) => item.code === 1);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(21);
     } else if (pathArray[3] === "dokum-firinlar") {
       const result = Products[2].product.filter((item) => item.code === 2);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(22);
     } else if (pathArray[3] === "press-firinlar") {
       const result = Products[2].product.filter((item) => item.code === 3);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(23);
     } else if (pathArray[3] === "zirkon-sinterleme-firinlari") {
       const result = Products[2].product.filter((item) => item.code === 4);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(24);
     } else if (pathArray[2] === "dental-firinlar") {
       const result = Products[2].product;
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(2);
     } else if (pathArray[2] === "dis-uniteleri") {
       const result = Products[3].product;
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(3);
     } else if (pathArray[2] === "goruntuleme-sistemleri") {
       const result = Products[4].product;
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(4);
     } else if (pathArray[2] === "klinik-dolaplari") {
       const result = Products[5].product;
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
+      setSelectedIndex(5);
     } else if (pathArray[2] === "labaratuvar-ekipmanlari") {
       const result = Products[6].product;
       setListingProduct(result);
       setListingPerPage(result.slice(0, 9));
       setCount(Math.ceil(result.length / limit));
+      setSelectedIndex(6);
     } else if (pathArray[2] === "teknisyen-masalari") {
       const result = Products[7].product;
       setListingPerPage(result.slice(0, 9));
       setCount(Math.ceil(result.length / limit));
       setListingProduct(result);
+      setSelectedIndex(7);
     } else {
-      setListingProduct([]);
+      const allProducts = [];
+
+      Products.forEach((category) => {
+        allProducts.push(...category.product);
+      });
+      setListingPerPage(allProducts.slice(0, 9));
+      setCount(Math.ceil(allProducts.length / limit));
+      setListingProduct(allProducts);
+      setSelectedIndex(100);
     }
-  }, [selectedIndex]);
+  }, [location?.pathname]);
   console.log(listingProduct);
   const renderData = listingPerPage.map((section, index) => (
     <Grid item xs={12} lg={4} key={Math.random(index) * 10000}>
