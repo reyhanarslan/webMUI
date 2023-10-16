@@ -1,13 +1,15 @@
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+// import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import DashboardImg from "assets/images/dashboard/arena-dis-banner-2-2.jpg";
+// import DashboardImg from "assets/images/dashboard/arena-dis-banner-2-2.jpg";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 import { Link } from "react-router-dom";
 import data from "pages/Presentation/sections/data/pagesData";
+// import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import DashboardImg1 from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 
 function BuiltByDevelopers() {
   const renderData = data.map(({ image, name, route }) => (
@@ -22,7 +24,21 @@ function BuiltByDevelopers() {
 
   return (
     <>
-      <MKBox sx={{ background: "#F8F9FF" }} component="section">
+      <MKBox
+        component="section"
+        sx={{
+          borderRadius: "30px",
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+            `${linearGradient(
+              rgba(gradients.light.main, 0.3),
+              rgba(gradients.arena.state, 0.9)
+            )}, url(${DashboardImg1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          animation: "slideRight 10s linear infinite", // Animasyon eklemek
+        }}
+      >
         <Container>
           <Grid
             container
@@ -31,15 +47,8 @@ function BuiltByDevelopers() {
             lg={6}
             flexDirection="column"
             alignItems="center"
-            sx={{ textAlign: "center", my: 3, mx: "auto" }}
+            sx={{ textAlign: "center", my: 2, mx: "auto" }}
           >
-            {/* <MKBadge
-          variant="contained"
-          color="info"
-          badgeContent="boost creativity"
-          container
-          sx={{ mb: 2 }}
-        /> */}
             <MKTypography variant="h2" fontWeight="bold">
               Ürünlerimiz
             </MKTypography>
@@ -48,34 +57,24 @@ function BuiltByDevelopers() {
             </MKTypography>
           </Grid>
         </Container>
-        <Container sx={{ mt: { xs: 8, lg: 16 } }}>
+
+        <Container sx={{ mt: { xs: 4, lg: 8 } }}>
           <Grid container>
             <Grid
               item
               xs={12}
               lg={16}
               sx={{ px: { xs: 0, lg: 8 } }}
-              style={{ marginLeft: "50px", marginRight: "50px" }}
+              style={{ marginLeft: "50px", marginRight: "50px", marginBottom: "15px" }}
             >
               <Grid container spacing={5}>
                 {renderData}
               </Grid>
             </Grid>
-            {/* <Grid item xs={12} lg={3}>
-          <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
-            <MKTypography variant="h3" fontWeight="bold" mb={1}>
-              Presentation Pages for Company, Landing Pages, Blogs and Support
-            </MKTypography>
-            <MKTypography variant="body2" fontWeight="regular" color="secondary" mb={1} pr={2}>
-              These is just a small selection of the multiple possibitilies you have. Focus on the
-              business, not on the design.
-            </MKTypography>
-          </MKBox>
-        </Grid> */}
           </Grid>
         </Container>
       </MKBox>
-      <MKBox
+      {/* <MKBox
         display="flex"
         alignItems="center"
         borderRadius="xl"
@@ -94,15 +93,7 @@ function BuiltByDevelopers() {
         }}
       >
         <Container>
-          <Grid container item xs={12} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
-            {/* <MKTypography variant="h4" color="white" fontWeight="bold">
-            DAHA FAZLA ÜRÜN BİLGİSİ İÇİN <br />
-          </MKTypography> */}
-            {/* <MKTypography variant="body1" color="white" opacity={0.8} mb={2}>
-            From colors, cards, typography to complex elements, you will find the full
-            documentation. Play with the utility classes and you will create unlimited combinations
-            for our components.
-          </MKTypography> */}
+          <Grid container item xs={6} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri/kaziyicilar"
@@ -114,13 +105,11 @@ function BuiltByDevelopers() {
               sx={{
                 display: "flex",
                 alignItems: "center",
-
                 "& .material-icons-round": {
                   fontSize: "1.125rem",
                   transform: `translateX(3px)`,
                   transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
                 },
-
                 "&:hover .material-icons-round, &:focus .material-icons-round": {
                   transform: `translateX(6px)`,
                 },
@@ -131,7 +120,7 @@ function BuiltByDevelopers() {
             </MKTypography>
           </Grid>
         </Container>
-      </MKBox>
+      </MKBox> */}
     </>
   );
 }
