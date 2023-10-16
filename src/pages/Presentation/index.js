@@ -134,7 +134,6 @@ function Presentation() {
                 playing={true}
                 muted={true}
                 controls={false}
-          
               />
             </div>
           ) : (
