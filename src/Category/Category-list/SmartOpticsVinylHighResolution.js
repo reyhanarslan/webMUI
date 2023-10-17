@@ -80,9 +80,7 @@ function SmartOpticsVinylHighResolution() {
               <div className="page-content">siyah / beyaz</div>
               <br />
 
-              <li className="page-content">
-                <br>exocad® DentalCAD ile Uyumlu</br>
-              </li>
+              <li className="page-content">exocad® DentalCAD ile Uyumlu</li>
 
               {/* ... */}
             </Grid>
