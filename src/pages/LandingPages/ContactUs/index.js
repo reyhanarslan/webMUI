@@ -40,8 +40,19 @@ function ContactUs() {
   const phone =
     "https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?w=1380&t=st=1695842013~exp=1695842613~hmac=bbe8d7b00c95f26157f7c4875836bedd0f7c5de0c8ce47128eef4fbc1f81ea77";
   return (
-    <>
-      <div style={{ position: "fixed", top: "0.5rem", width: "100%" }}>
+    <div
+      style={{
+        backgroundColor: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
+      }}
+    >
+      <div
+        style={{
+          position: "fixed",
+          top: "0.5rem",
+          width: "100%",
+          backgroundColor: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
+        }}
+      >
         <DefaultNavbar
           routes={routes}
           action={{
@@ -55,8 +66,8 @@ function ContactUs() {
           blue
         />
       </div>
-      <Grid container spacing={3} alignItems="center" marginTop={"8rem"} marginLeft={"1rem"}>
-        <Grid item xs={12} lg={5}>
+      <Grid container spacing={3} alignItems="center" marginTop={"8rem"}>
+        <Grid item xs={12} lg={6}>
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} lg={12} marginLeft={"10rem"}>
               <Grid container spacing={2}>
@@ -142,7 +153,7 @@ function ContactUs() {
           </Grid>
         </Grid>
 
-        <Grid item sm={6} md={6} xs={12} lg={6} xl={6}>
+        <Grid item sm={12} md={6} xs={12} lg={6} xl={6}>
           <Grid container spacing={3}>
             <Grid item sm={6} md={6} lg={6} xl={6} xs={12}>
               <MKBox
@@ -269,7 +280,7 @@ function ContactUs() {
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>
-    </>
+    </div>
   );
 }
 
