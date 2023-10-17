@@ -17,7 +17,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         overflow: "hidden",
         transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
         transformOrigin: "50% 0",
-        backfaceVisibility: "hidden",
+        // backfaceVisibility: "hidden",
         willChange: "transform, box-shadow",
         transition: "transform 200ms ease-out",
 
@@ -28,7 +28,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
       {...rest}
     >
       {pro && (
-        <MKBox position="absolute" top={0} right={0} zIndex={2} p={1}>
+        <MKBox position="absolute" top={0} right={0} zIndex={2}>
           <svg
             width="24px"
             height="24px"
@@ -56,8 +56,8 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         src={image}
         alt={name}
         width="100%"
-        height="200px"
-        my="auto"
+        height="300px"
+        // my="auto"
         opacity={pro ? 0.6 : 1}
       />
     </MKBox>

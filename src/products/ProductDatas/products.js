@@ -217,18 +217,18 @@ const Products = [
         id: "y62vbr40D9",
         model: "Carestream CS 3600 Ağız İçi Tarayıcı",
         img: [
+          Agizicitarayicilar5,
           Agizicitarayicilar1,
           Agizicitarayicilar2,
           Agizicitarayicilar3,
           Agizicitarayicilar4,
-          Agizicitarayicilar5,
           Agizicitarayicilar6,
         ],
       },
       {
         id: "U2qoPEPPn7",
         model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar9, Agizicitarayicilar10],
+        img: [Agizicitarayicilar9, Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar10],
       },
     ],
   },
@@ -240,7 +240,7 @@ const Products = [
         code: 1,
         id: "0fky5JRUK5",
         model: "DentaFab Sega 3D Printer",
-        img: [linkedin1024393, Segamodel, Segafront, Segadouble, segasidejpg],
+        img: [Segadouble, linkedin1024393, Segamodel, Segafront, segasidejpg],
       },
       {
         code: 1,
@@ -252,13 +252,14 @@ const Products = [
         code: 2,
         id: "OgKzyq7qlj",
         model: "SILAMILL 4 EDITION",
-        img: [silamill4edition1, silamill4edition2],
+        img: [silamill4edition2, silamill4edition1],
       },
       {
         code: 2,
         id: "9XlMdrhb4i",
         model: "SILAMILL 5.8 EDITION",
         img: [
+          silamill58edition10,
           silamill58edition1,
           silamill58edition2,
           silamill58edition3,
@@ -268,7 +269,6 @@ const Products = [
           silamill58edition7,
           silamill58edition8,
           silamill58edition9,
-          silamill58edition10,
         ],
       },
       {
@@ -276,12 +276,12 @@ const Products = [
         id: "Aq012yPOpC",
         model: "SILAMILL N4 EDITION",
         img: [
+          silamilln4edition6,
           silamilln4edition1,
           silamilln4edition2,
           silamilln4edition3,
           silamilln4edition4,
           silamilln4edition5,
-          silamilln4edition6,
         ],
       },
       {
@@ -295,13 +295,13 @@ const Products = [
         id: "fxI4W0jv90",
         model: "SILAMILL T5",
         img: [
+          silamillt5_7,
           silamillt5_1,
           silamillt5_2,
           silamillt5_3,
           silamillt5_4,
           silamillt5_5,
           silamillt5_6,
-          silamillt5_7,
         ],
       },
       { code: 2, id: "kyBvNYd9Eo", model: "SILAMILL T5 EDITION", img: [silamillt5edition_1] },
@@ -310,12 +310,12 @@ const Products = [
         id: "iNp4KdAwi3",
         model: "SILAMILL Z4",
         img: [
+          silamillz4edition_6,
           silamillz4edition_1,
           silamillz4edition_2,
           silamillz4edition_3,
           silamillz4edition_4,
           silamillz4edition_5,
-          silamillz4edition_6,
         ],
       },
       {
@@ -328,13 +328,13 @@ const Products = [
         code: 3,
         id: "VWt82QTAxh",
         model: "SMARTOPTICS VINYL HIGH RESOLUTION",
-        img: [svhr_1, svhr_2, svhr_3, svhr_4, svhr_5, svhr_6],
+        img: [svhr_5, svhr_1, svhr_2, svhr_3, svhr_4, svhr_6],
       },
       {
         code: 2,
         id: "jJpfLj3OLE",
         model: "Up3D P53 DENTAL FREZELEME CİHAZI",
-        img: [up3d_1, up3d_2, up3d_3, up3d_4, up3d_5, up3d_6, up3d_7, up3d_8, up3d_9],
+        img: [up3d_9, up3d_1, up3d_2, up3d_3, up3d_4, up3d_5, up3d_6, up3d_7, up3d_8],
       },
     ],
   },
@@ -365,19 +365,19 @@ const Products = [
         code: 3,
         id: "gX0OVoBxIK",
         model: "CERAMICMASTER PRESS PRO",
-        img: [presspro_1, presspro_2, presspro_3],
+        img: [presspro_2, presspro_1, presspro_3],
       },
       {
         code: 2,
         id: "Qv0OVoBxIK",
         model: "FIREMAGIC ET400",
-        img: [firemagicer400_1, firemagicer400_2],
+        img: [firemagicer400_2, firemagicer400_1],
       },
       {
         code: 2,
         id: "nxwVeHnsqI",
         model: "LC CAST 600T",
-        img: [lccast_1, lccast_2, lccast_3, lccast_4, lccast_5],
+        img: [lccast_3, lccast_1, lccast_2, lccast_4, lccast_5],
       },
       {
         id: "fS9WOxabf1",
@@ -385,7 +385,7 @@ const Products = [
         img: [pinprecise_1, pinprecise_2],
       },
       { code: 2, id: "us9Wpxabf1", model: "POLI AM", img: [polyam_1, polyam_2] },
-      { code: 2, id: "u963sxabf1", model: "POLI MAX", img: [polymax_1, polymax_2] },
+      { code: 2, id: "u963sxabf1", model: "POLI MAX", img: [polymax_2, polymax_1] },
       {
         id: "zObKvzOCgk",
         model: "SLITPRECISE SP100",
@@ -436,7 +436,7 @@ const Products = [
       {
         id: "d8kYA19AkJ",
         model: "Jinekolojik ve Ürolojik Masa",
-        img: [jvum_1, jvum_2],
+        img: [jvum_2, jvum_1],
       },
       {
         id: "6Xn6aML6Fq",
@@ -549,7 +549,7 @@ const Products = [
       {
         id: "r3etcIMTgJ",
         model: "DFM 75E",
-        img: [dfm_1, dfm_2],
+        img: [dfm_2, dfm_1],
       },
       {
         id: "V7RSRfY4BO",
@@ -559,7 +559,7 @@ const Products = [
       {
         id: "SwCYBQQ3TM",
         model: "SLITPRECISE SP100",
-        img: [slitprecise_1, slitprecise_2, slitprecise_3, slitprecise_4],
+        img: [slitprecise_2, slitprecise_1, slitprecise_3, slitprecise_4],
       },
     ],
   },
