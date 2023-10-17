@@ -438,7 +438,7 @@ function ProductInfo() {
                     <i className="fa fa-whatsapp" />
                   </MKTypography>
                 </Link>
-                <Link to="/src/pages/LandingPages/ContactUs/index">
+                <Link to="/iletişim">
                   <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
                     <i className="fa fa-phone" />
                   </MKTypography>

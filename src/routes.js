@@ -221,7 +221,7 @@ const routes = [
     name: "İletişim",
     icon: <GitHubIcon />,
     // href: "https://www.github.com/creativetimofficial/material-kit-react",
-    route: "/src/pages/LandingPages/ContactUs/index",
+    route: "/iletişim",
     component: <ContactUs />,
   },
 ];

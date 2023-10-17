@@ -86,7 +86,7 @@ function Information() {
                 description="Size en iyi şekilde yardımcı olabilmek için iletişim seçeneklerimizi kullanabilirsiniz."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
+                  route: "/iletişim",
                   label: "İletişim",
                 }}
               />

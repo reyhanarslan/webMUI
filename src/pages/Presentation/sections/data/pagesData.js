@@ -9,31 +9,31 @@ export default [
   {
     image: scanner,
     name: "Ağız İçi Tarayıcılar",
-    route: "/pages/landing-pages/about-us",
+    route: "/urunler/agiz-ici-tarayicilar",
   },
   {
     image: siladent,
     name: "CAD/CAM Sistemleri",
-    route: "/pages/landing-pages/contact-us",
+    route: "/urunler/cad-cam-sistemleri",
   },
   {
     image: firin,
     name: "Dental Fırınlar",
-    route: "/pages/authentication/sign-in",
+    route: "//urunler/dental-firinlar",
   },
   {
     image: unite,
     name: "Diş Üniteleri",
-    route: "/pages/landing-pages/author",
+    route: "/urunler/dis-uniteleri",
   },
   {
     image: klinik,
     name: "Klinik Dolapları",
-    route: "/pages/authentication/sign-in",
+    route: "/urunler/klinik-dolaplari",
   },
   {
     image: tomografi,
     name: "Görüntüleme Sistemleri",
-    route: "/pages/landing-pages/author",
+    route: "/urunler/goruntuleme-sistemleri",
   },
 ];
