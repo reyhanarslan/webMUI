@@ -28,9 +28,21 @@
   margin-top: 20px;
   color: #11304c !important;
 }
-
+.page-title-about {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #11304c !important;
+}
 .page-content {
   font-size: 18px;
+  line-height: 1.2;
+  color: #11304c;
+  font-weight: 500 !important;
+}
+.page-content-about {
+  font-size: 22px;
   line-height: 1.2;
   color: #11304c;
   font-weight: 500 !important;
@@ -51,7 +63,12 @@
 .product-card-left {
   animation: product-animation-left 1s ease-in-out both;
 }
-
+.about-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
 @keyframes product-animation-left {
   0% {
     opacity: 0.3;

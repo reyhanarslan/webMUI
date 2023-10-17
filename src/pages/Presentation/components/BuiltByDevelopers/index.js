@@ -1,15 +1,13 @@
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-// import Icon from "@mui/material/Icon";
-import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-// import DashboardImg from "assets/images/dashboard/arena-dis-banner-2-2.jpg";
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 import { Link } from "react-router-dom";
 import data from "pages/Presentation/sections/data/pagesData";
-// import logo from "assets/images/logos/arenadis-logo-web-1.png";
-import DashboardImg1 from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
+import { useCallback } from "react";
+import { loadFull } from "tsparticles";
+import Particles from "react-particles";
+import Icon from "@mui/material/Icon";
 
 function BuiltByDevelopers() {
   const renderData = data.map(({ image, name, route }) => (
@@ -19,26 +17,82 @@ function BuiltByDevelopers() {
       </Link>
     </Grid>
   ));
-  // const bgImage =
-  //   "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg";
-
+  const options = {
+    fpsLimit: 120,
+    interactivity: {
+      events: {
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        onHover: {
+          enable: true,
+          mode: "slow",
+        },
+        resize: true,
+      },
+      modes: {
+        push: {
+          quantity: 1,
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
+      },
+      links: {
+        color: "#D1E4F7",
+        distance: 150,
+        enable: true,
+        opacity: 0.5,
+        width: 1,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: {
+          default: "bounce",
+        },
+        random: false,
+        speed: 2,
+        straight: false,
+      },
+      number: {
+        density: {
+          enable: true,
+          area: 400,
+        },
+        value: 20,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        value: { min: 1, max: 3 },
+      },
+    },
+    detectRetina: true,
+  };
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
   return (
     <>
-      <MKBox
-        component="section"
-        sx={{
-          borderRadius: "30px",
-          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-            `${linearGradient(
-              rgba(gradients.light.main, 0.3),
-              rgba(gradients.arena.state, 0.9)
-            )}, url(${DashboardImg1})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-          animation: "slideRight 10s linear infinite", // Animasyon eklemek
+      {" "}
+      <div
+        style={{
+          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #11304C 20.71%)",
         }}
       >
+        <Particles options={options} init={particlesInit} className="custom-particles" />
         <Container>
           <Grid
             container
@@ -49,15 +103,14 @@ function BuiltByDevelopers() {
             alignItems="center"
             sx={{ textAlign: "center", my: 2, mx: "auto" }}
           >
-            <MKTypography variant="h2" fontWeight="bold">
+            <MKTypography color="white" variant="h2" fontWeight="bold">
               Ürünlerimiz
             </MKTypography>
-            <MKTypography variant="body1" color="text">
+            <MKTypography color="white" variant="body1">
               Ürünlerimiz sektörün ihtiyaçlarına uygun çözümler sunuyor.
             </MKTypography>
           </Grid>
         </Container>
-
         <Container sx={{ mt: { xs: 4, lg: 8 } }}>
           <Grid container>
             <Grid
@@ -73,27 +126,9 @@ function BuiltByDevelopers() {
             </Grid>
           </Grid>
         </Container>
-      </MKBox>
-      {/* <MKBox
-        display="flex"
-        alignItems="center"
-        borderRadius="xl"
-        my={2}
-        py={6}
-        sx={{
-          borderRadius: "30px",
 
-          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-            `${linearGradient(
-              rgba(gradients.light.main, 0.3),
-              rgba(gradients.arena.state, 0.9)
-            )}, url(${DashboardImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
         <Container>
-          <Grid container item xs={6} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
+          <Grid container item mt={3} sx={{ justifyContent: "flex-end", marginLeft: "-120px" }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri/kaziyicilar"
@@ -120,7 +155,7 @@ function BuiltByDevelopers() {
             </MKTypography>
           </Grid>
         </Container>
-      </MKBox> */}
+      </div>
     </>
   );
 }

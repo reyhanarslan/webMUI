@@ -22,6 +22,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import ContactUs from "pages/LandingPages/ContactUs/index";
 import PresentationPage from "layouts/pages/presentation";
 import Category from "Category/AboutUs";
+import { Hakkimizda } from "products/AboutUs/hakkimizda";
 // import Category from "Category/AboutUs";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
@@ -192,8 +193,8 @@ const routes = [
     collapse: [
       {
         name: "Hakkımızda",
-        // description: "All about overview, quick start, license and contents",
-        href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+        component: <Hakkimizda />,
+        route: "/hakkimizda",
       },
       {
         name: "Satış ve Garanti Koşullarımız",
