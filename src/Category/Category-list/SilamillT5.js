@@ -6,6 +6,50 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
+import Content_1 from "assets/images/content-imgs/silamill_t5/11.jpg";
+import Content_2 from "assets/images/content-imgs/silamill_t5/12.jpg";
+import Content_3 from "assets/images/content-imgs/silamill_t5/13.jpg";
+import Content_4 from "assets/images/content-imgs/silamill_t5/7.jpg";
+import Content_5 from "assets/images/content-imgs/silamill_t5/8.jpg";
+import Content_6 from "assets/images/content-imgs/silamill_t5/9.jpg";
+
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+
+const itemData = [
+  {
+    img: Content_1,
+    title: "Bed",
+    author: "",
+  },
+  {
+    img: Content_2,
+    title: "Books",
+    author: "",
+  },
+  {
+    img: Content_3,
+    title: "Kitchen",
+    author: "",
+  },
+  {
+    img: Content_5,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_6,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_4,
+    title: "Blinds",
+    author: "",
+  },
+];
+
 function SilamillT5() {
   return (
     <div>
@@ -91,6 +135,19 @@ function SilamillT5() {
                 }}
               />{" "}
             </Grid>
+            <ImageList variant="masonry" cols={3} gap={8}>
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar position="below" title={item.author} />
+                </ImageListItem>
+              ))}
+            </ImageList>
           </Grid>
         </Container>
       </MKBox>

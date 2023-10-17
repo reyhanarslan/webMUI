@@ -6,6 +6,38 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
+import Content_1 from "assets/images/content-imgs/silamill_n4/2.jpg";
+import Content_2 from "assets/images/content-imgs/silamill_n4/4.jpg";
+import Content_3 from "assets/images/content-imgs/silamill_n4/5.jpg";
+import Content_4 from "assets/images/content-imgs/silamill_n4/6.jpg";
+
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+
+const itemData = [
+  {
+    img: Content_3,
+    title: "Bed",
+    author: "",
+  },
+  {
+    img: Content_4,
+    title: "Books",
+    author: "",
+  },
+  {
+    img: Content_1,
+    title: "Kitchen",
+    author: "",
+  },
+  {
+    img: Content_2,
+    title: "Blinds",
+    author: "",
+  },
+];
+
 function SilamillN4Edition() {
   return (
     <div>
@@ -103,6 +135,19 @@ function SilamillN4Edition() {
                 }}
               />{" "}
             </Grid>
+            <ImageList variant="masonry" cols={3} gap={8}>
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar position="below" title={item.author} />
+                </ImageListItem>
+              ))}
+            </ImageList>
           </Grid>
         </Container>
       </MKBox>

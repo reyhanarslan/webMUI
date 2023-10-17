@@ -6,6 +6,116 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
+import Content_1 from "assets/images/content-imgs/silamill_r5/7.png";
+import Content_2 from "assets/images/content-imgs/silamill_r5/8.jpg";
+import Content_3 from "assets/images/content-imgs/silamill_r5/9.jpg";
+import Content_4 from "assets/images/content-imgs/silamill_r5/10.jpg";
+import Content_5 from "assets/images/content-imgs/silamill_r5/11.jpg";
+import Content_6 from "assets/images/content-imgs/silamill_r5/12.jpg";
+import Content_7 from "assets/images/content-imgs/silamill_r5/13.jpg";
+import Content_8 from "assets/images/content-imgs/silamill_r5/14.jpg";
+import Content_9 from "assets/images/content-imgs/silamill_r5/15.jpg";
+import Content_10 from "assets/images/content-imgs/silamill_r5/16.jpg";
+import Content_11 from "assets/images/content-imgs/silamill_r5/17.jpg";
+import Content_12 from "assets/images/content-imgs/silamill_r5/18.jpg";
+import Content_13 from "assets/images/content-imgs/silamill_r5/19.jpg";
+import Content_14 from "assets/images/content-imgs/silamill_r5/20.png";
+import Content_15 from "assets/images/content-imgs/silamill_r5/21.jpg";
+import Content_16 from "assets/images/content-imgs/silamill_r5/22.jpg";
+import Content_17 from "assets/images/content-imgs/silamill_r5/23.png";
+
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+
+const itemData = [
+  {
+    img: Content_1,
+    title: "Bed",
+    author: "",
+  },
+  {
+    img: Content_2,
+    title: "Books",
+    author: "",
+  },
+  {
+    img: Content_3,
+    title: "Kitchen",
+    author: "",
+  },
+  {
+    img: Content_4,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_5,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_6,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_7,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_8,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_9,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_10,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_11,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_12,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_13,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_14,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_15,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_16,
+    title: "Blinds",
+    author: "",
+  },
+  {
+    img: Content_17,
+    title: "Blinds",
+    author: "",
+  },
+];
+
 function SilamillR5() {
   return (
     <div>
@@ -104,6 +214,19 @@ function SilamillR5() {
                 }}
               />{" "}
             </Grid>
+            <ImageList variant="masonry" cols={3} gap={8}>
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar position="below" title={item.author} />
+                </ImageListItem>
+              ))}
+            </ImageList>
           </Grid>
         </Container>
       </MKBox>
