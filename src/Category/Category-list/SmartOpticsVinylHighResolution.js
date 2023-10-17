@@ -4,9 +4,12 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
-import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-
+// import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import content_img_1 from "assets/images/content-imgs/smartoptics_vhr-content/1.jpg";
+import { ImageListItem } from "@mui/material";
+import Products from "products/ProductDatas/products";
 function SmartOpticsVinylHighResolution() {
+  console.log(Products[1].product[11]);
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -84,20 +87,11 @@ function SmartOpticsVinylHighResolution() {
 
               {/* ... */}
             </Grid>
-            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-              <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                title="Get insights on Search"
-                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
-                action={{
-                  type: "internal",
-                  route: "pages/company/about-us",
-                  color: "info",
-                  label: "find out more",
-                }}
-              />{" "}
-            </Grid>
+            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
           </Grid>
+          <ImageListItem style={{ marginTop: "50px" }}>
+            <img src={content_img_1} alt={"SMARTOPTICS VINYL HIGH RESOLUTION"} loading="lazy" />
+          </ImageListItem>
         </Container>
       </MKBox>
     </div>
