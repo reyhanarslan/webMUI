@@ -196,7 +196,7 @@ function Presentation() {
         <div className="video-card">
           <ReactPlayer
             ref={playerRef}
-            style={{ opacity: "0.90", borderRadius: "15px" }}
+            style={{ borderRadius: "15px" }}
             width="100%"
             height="100%"
             url={intro}
@@ -253,7 +253,7 @@ function Presentation() {
           sx={{
             p: 0,
             // mx: { xs: 2, lg: 3 },
-            mt: -50,
+            mt: -25,
             // borderBottomLeftRadius: "30px",
             // borderBottomRightRadius: "30px",
             borderRadius: "30px",
