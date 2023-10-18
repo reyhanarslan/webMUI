@@ -81,7 +81,7 @@ function ExampleCard({ image, name, count, pro, ...rest }) {
         alignItems="center"
       >
         {name && (
-          <MKTypography color="white" variant="h6" fontWeight="regular">
+          <MKTypography color="blue" variant="h6" fontWeight="regular">
             {name}
           </MKTypography>
         )}
