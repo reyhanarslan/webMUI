@@ -13,6 +13,11 @@
   color: #333;
   font-weight: 400 !important;
 }
+.dark-text-info {
+  color: #11304c !important;
+  font-size: 20px;
+
+}
 .carousel-item {
   border-radius: 20px !important;
 }
@@ -46,6 +51,8 @@
   line-height: 1.2;
   color: #11304c;
   font-weight: 500 !important;
+  font-family: sans-serif !important;
+
 }
 
 .productTitle {
