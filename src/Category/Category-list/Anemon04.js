@@ -47,7 +47,7 @@ function Anemon04() {
 
 export default Anemon04;
 
-export const Anemon00Title = () => {
+export const Anemon04Title = () => {
   const pdfDownloader = () => {};
   return (
     <div>

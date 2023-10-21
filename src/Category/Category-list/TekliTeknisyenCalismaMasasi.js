@@ -46,7 +46,7 @@ function TekliTeknisyenCalismaMasasi() {
 }
 
 export default TekliTeknisyenCalismaMasasi;
-export const CiftTeknisyenCalismaMasasiTitle = () => {
+export const TekliTeknisyenCalismaMasasiTitle = () => {
   const pdfDownloader = () => {};
   return (
     <div>
