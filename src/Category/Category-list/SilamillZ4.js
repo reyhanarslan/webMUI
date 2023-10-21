@@ -5,7 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function SilamillZ4() {
   return (
     <div>
@@ -113,3 +116,42 @@ function SilamillZ4() {
 }
 
 export default SilamillZ4;
+
+export const SilamillZ4Title = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <div className="page-title">
+                <h5>Kullanımı Kolay </h5>
+              </div>{" "}
+              <br />
+              <div className="page-content">
+                <li>Akıllı dokunmatik ekranla kullanım</li>
+                <li>Çalışma odası otomatik kapısı</li>
+                <li>Alet kullanmadan iş parçası montajı (tek tıkla montaj)</li>
+                <li>Makinenin durumunu işaret eden renkli çalışma odası aydınlatması</li>
+                <li>En az temizlik için anti grafiti kaplamalı çalışma odası</li>
+                <li>Otomatik frez değişimi</li>
+                <li>
+                  Tutamaksız kendi kendine açılabilen çekmece su tankı ve frez kasetlerini
+                  barındırır
+                </li>
+                <li>Renk kodlu frez kasedi</li>
+                <li>Sökülebilir ve bulaşık makinesinde yıkanabilir su tankı</li>
+                <li>Entegre Wifi Modülü</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

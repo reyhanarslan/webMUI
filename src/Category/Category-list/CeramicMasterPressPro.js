@@ -5,7 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function CeramicMasterPressPro() {
   return (
     <div>
@@ -67,3 +70,44 @@ function CeramicMasterPressPro() {
 }
 
 export default CeramicMasterPressPro;
+
+export const CeramicMasterPressProTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>Metal, Saf Ve Pres Seramikleri İçin Otomatik Programlanabilir Diş Fırını</h5>{" "}
+              <br />
+              <div className="page-content">
+                <li>Her türlü diş metali, saf ve pres seramikleri için tasarlanmıştır</li>
+                <li>Presleme işlemi için kompresöre gerek yoktur</li>
+                <li>Sıcaklığın otomatik kalibrasyonu</li>
+                <li>255 ayrı program mevcuttur</li>
+                <li>
+                  Programların sayısının 400’e kadar isteğe bağlı olarak artırılması mevcuttur
+                </li>
+                <li>Tamamen kontrollü süreç – her programda programlanabilir parametreler</li>
+                <li>Geliştirilmiş kendi kendine teşhis ve otomatik kalibrasyon sistemi</li>
+                <li>Koruyucu temperli camlı 7” tft ekran</li>
+                <li>Sensör düğmeleri</li>
+                <li>Süreçlerin ilerlemesinin grafiksel gösterimi</li>
+                <li>Kuvars spiral tüpte ısıtma elemanı olan ısıtıcı</li>
+                <li>Pt/ro termokuple</li>
+                <li>Kısa güç kesintisinden sonra programın otomatik devamı</li>
+                <li>Program parametrelerinin usb aktarımı</li>
+                <li>Hasarın uzaktan analizi</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

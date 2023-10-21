@@ -8,6 +8,10 @@ import MKBox from "components/MKBox";
 import content_img_1 from "assets/images/content-imgs/smartoptics_vhr-content/1.jpg";
 import { ImageListItem } from "@mui/material";
 import Products from "products/ProductDatas/products";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 function SmartOpticsVinylHighResolution() {
   console.log(Products[1].product[11]);
   return (
@@ -99,3 +103,36 @@ function SmartOpticsVinylHighResolution() {
 }
 
 export default SmartOpticsVinylHighResolution;
+
+export const SmartOpticsVinylHighResolutionTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <br />
+              <div className="page-content">
+                Vinyl özellikle günlük laboratuvar işlerinde maksimum üretimi sağlamak için dizayn
+                edildi. Artık siyah beyaz mı yoksa renkli tarama mı yapmak istediğiniz tamamen sizin
+                inisiyatifinizde. Çalışma stilinize en uygun tarama modunu siz seçin. Kapak açık mı
+                yoksa kapalı mı tarama yapmak istediğinize kendiniz karar verin.
+                <br />
+                Tam otomatik z aksı ile zamandan büyük ölçüde tasarruf edin. Bazı kullanıcıların
+                önceki smart optics modellerinden de hatırlayabileceği üzere spacer tablaları
+                vidalama gerekliliği artık ortadan kalktı. Artık buna harcadığınız zamanı çok daha
+                faydalı şeylere harcayabilirsiniz. Dokunmatik ekran sayesinde tarama yapmak çok daha
+                kolay.
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

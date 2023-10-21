@@ -14,6 +14,10 @@ import Content_5 from "assets/images/content-imgs/silamill_5_8/5.jpg";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 const itemData = [
   {
@@ -80,3 +84,37 @@ function Silamill58Edition() {
 }
 
 export default Silamill58Edition;
+
+export const Silamill58EditionTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <div className="page-content">
+                <br />
+                <li>Beş eksenli eş zamanlı freze makinesi</li>
+                <li>± 30 derece dönüş açısı</li>
+                <li>16 takım için otomatik takım değiştirici</li>
+                <li>
+                  Direct-Mill fonksiyonlu sağlanan CAM yazılımı DentalCAM aracılığıyla çok kolay
+                  kullanım
+                </li>
+                <li>Frezeleme konusunda önceden bilgi gerekmez</li>
+                <li>Kısmi protez çerçeveleri için özel Cam modülü</li>
+                <li>CoCr boşluklarının frezelenmesi için de kullanılabilir</li>
+                <li>8 blok için otomatik boşluk değiştiricili</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

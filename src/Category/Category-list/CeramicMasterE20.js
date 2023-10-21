@@ -5,6 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 function CeramicMasterE20() {
   return (
@@ -57,3 +61,39 @@ function CeramicMasterE20() {
 }
 
 export default CeramicMasterE20;
+
+export const CeramicMasterE20Title = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>Diş Seramikleri İçin Otomatik Programlanabilir Vakum Fırını</h5> <br />
+              <div className="page-content">
+                <li>Mevcut tüm dental metal seramik türleri için tasarlanmıştır.</li>
+                <li>201 işletim programları</li>
+                <li>Tamamen kontrollü süreç – 14 programlanabilir</li>
+                <li>Her programdaki parametreler: ad, boşta sıcaklık</li>
+                <li>Kuru sıcaklık, önceden kuruma süresi, kuruma süresi, ateşleme,</li>
+                <li>İlk soğutma süresi, ikinci soğutma süresi, vakum kontrolü</li>
+                <li>Geliştirilmiş kendi kendine teşhis ve otomatik kalibrasyon sistemi</li>
+                <li>Kullanımı kolay çok işlevli tutamak</li>
+                <li>Kuvars susturucu</li>
+                <li>Kısa süreden sonra programın otomatik devamı için bir seçenek</li>
+                <li>Güç kesintisi</li>
+                <li>Usb’de program parametrelerinin aktarılması için bir seçenek</li>
+                Hasarın uzaktan analizi için bir seçenek
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

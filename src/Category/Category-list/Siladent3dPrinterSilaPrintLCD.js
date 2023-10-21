@@ -5,7 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function Siladent3dPrinterSilaPrintLCD() {
   return (
     <div>
@@ -55,3 +58,38 @@ function Siladent3dPrinterSilaPrintLCD() {
 }
 
 export default Siladent3dPrinterSilaPrintLCD;
+
+export const Siladent3dPrinterSilaPrintLCDTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <br />
+              <div className="page-content">
+                1 Cihaz, 12 Kusursuz İşlem!
+                <br />
+                SilaPrint LCD, LCD teknolojisi ve çift lineer Z ekseni yardımıyla ayrıntılı,
+                boyutsal olarak doğru modeller sağlayan ve aynı zamanda daha düşük giriş fiyatı
+                nedeniyle daha az model yazdırmak için ekonomik olan profesyonel ve çok yönlü bir 3D
+                yazıcıdır.
+                <br />
+                <li>DLP teknolojisi</li>
+                <li>Yüksek çözünürlük</li>
+                <li>Tam boyutsal doğruluk</li>
+                <li>SilaPrint reçineleriyle mükemmel uyum</li>
+                <li>Sezgisel kontrol ve kullanılabilirlik</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

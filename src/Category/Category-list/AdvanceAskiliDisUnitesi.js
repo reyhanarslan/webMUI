@@ -6,6 +6,11 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
+
 function AdvanceAskiliDisUnitesi() {
   return (
     <div>
@@ -86,3 +91,33 @@ function AdvanceAskiliDisUnitesi() {
 }
 
 export default AdvanceAskiliDisUnitesi;
+
+export const AdvanceAskiliDisUnitesiTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <div className="page-title">
+                <h5 className="dark-text">Ergonomik:</h5>
+              </div>
+
+              <div className="page-content">
+                <li>Koltuğun 45 cm iniş mesafesi ile oturarak rahat çalışma alanı</li>
+                <li>Doktorun rahatça çalışabileceği geniş enstrüman tablası</li>
+                <li>Doktora çalışma kolaylığı sunan pnömatik fren sistemi</li>
+                <li>Çift mafsallı pedo kullanıma uygun ergonomik tetiyer</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

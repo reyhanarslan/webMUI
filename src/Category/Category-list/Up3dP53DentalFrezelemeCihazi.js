@@ -13,6 +13,10 @@ import Content_5 from "assets/images/content-imgs/up3dp53/P53-5.jpg";
 import Content_6 from "assets/images/content-imgs/up3dp53/P53-6.jpg";
 import Content_7 from "assets/images/content-imgs/up3dp53/P53-7.jpg";
 import Content_8 from "assets/images/content-imgs/up3dp53/P53-8.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 const img = [
   Content_1,
@@ -62,3 +66,22 @@ function Up3dP53DentalFrezelemeCihazi() {
 }
 
 export default Up3dP53DentalFrezelemeCihazi;
+
+export const Up3dP53DentalFrezelemeCihaziTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}></Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

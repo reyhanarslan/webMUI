@@ -16,6 +16,10 @@ import Content_6 from "assets/images/content-imgs/silamill_t5/9.jpg";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 const itemData = [
   {
@@ -156,3 +160,37 @@ function SilamillT5() {
 }
 
 export default SilamillT5;
+
+export const SilamillT5Title = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <div className="page-title">
+                <h5>T5 – YENİ JENERASYON</h5>
+              </div>
+              <div className="page-content">
+                T5, geniş kullanım alanına sahip beş eksenli kuru kazıma makinesidir. Stabil yapısı
+                sayesinde muhteşem kazıma sonuçlarını garanti eder.
+                <br />
+                Otomatik frez değiştirici ve pratik aksesuar çekmecesi gibi pek çok avantajlı
+                özelliği, T5 ile çalışmayı hızlı ve verimli hale getirir.
+                <br />
+                {"5 Eksen     1 Blok      16 Frez"}
+                <br />
+                <li>B aksı ± 35 derece</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

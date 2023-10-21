@@ -5,6 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 function PinprecisePP100() {
   return (
@@ -51,3 +55,35 @@ function PinprecisePP100() {
 }
 
 export default PinprecisePP100;
+
+export const PinprecisePP100Title = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>Pim Delme Ünitesi </h5> <br />
+              <div className="page-content">
+                <li>Matkap devrimi yönetmeliği</li>
+                <li>Otomatik açma sistemi</li>
+                <li>Kompakt ve ergonomik</li>
+                <li>Toz azaltma sistemi</li>
+              </div>
+              <h5>Aksesuarlar:</h5>
+              <div className="page-content">
+                <li>Pin sistemi</li>
+                <li>Matkap</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

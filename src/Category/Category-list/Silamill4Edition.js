@@ -5,7 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function Silamill4Edition() {
   return (
     <div>
@@ -89,3 +92,35 @@ function Silamill4Edition() {
 }
 
 export default Silamill4Edition;
+
+export const Silamill4EditionTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>MÜKEMMEL BAŞLANGIÇ</h5>
+              <br />
+              <div className="page-content">
+                1 Cihaz, 12 Kusursuz İşlem!
+                <br />
+                K4’ün ilk göze çarpan özelliği kompakt tasarımıdır. Daha yakından incelediğimizde,
+                cihazın rijit ve sağlam yapısı göze çarpmaktadır. Bu sayede, son derece sert olan
+                krom-kobalt (CrCo) bazlı değerli olmayan metallerde bile birinci sınıf sonuçlar
+                almanız garanti altına alınır.
+                <br />
+                {"4 Eksen     1 Blok     7 Frez"}
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

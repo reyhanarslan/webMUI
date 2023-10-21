@@ -17,6 +17,10 @@ import Content_7 from "assets/images/content-imgs/sliamill_t5_edition/9.jpg";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 const itemData = [
   {
@@ -168,3 +172,31 @@ function SilamillT5Edition() {
 }
 
 export default SilamillT5Edition;
+
+export const SilamillT5EditionTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <div className="page-content">
+                Kanıtlanmış kalite artık daha da iyi: Yeni SilaMill T5 Edition ile mükemmel kuru
+                frezeleme sonuçları elde edeceksiniz. Özellikle çok çeşitli endikasyonları ve
+                malzemeleri (40 mm’ye kadar boşluklar) 5 eksenle işleyin. Aletsiz boş sıkıştırma ve
+                yerleşik iyonlaştırıcı gibi devrim niteliğindeki teknoloji bunu yapmanıza yardımcı
+                olacaktır.
+                <br />
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

@@ -6,7 +6,10 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function LcCast600T() {
   return (
     <div>
@@ -75,3 +78,35 @@ function LcCast600T() {
 }
 
 export default LcCast600T;
+
+export const LcCast600TTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <br />
+              <div className="page-content">
+                Yüksek frekanslı indüksiyon eritme ve santrifüj döküm ile otomatik masa üstü diş
+                döküm ünitesi.
+                <br />
+                <li>Dental Co-Cr, Ni-Cr ve değerli alaşımların dökümü için tasarlanmıştır</li>
+                <li>Masa üstü tasarımı</li>
+                <li>Hem manuel hem de otomatik eritme modu</li>
+                <li>Optimum gücün otomatik bakım</li>
+                <li>Otomatik döküm modu</li>
+                <li>Otonom soğutma sistemi</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

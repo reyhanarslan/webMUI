@@ -5,6 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 function DFM75E() {
   return (
@@ -56,3 +60,35 @@ function DFM75E() {
 }
 
 export default DFM75E;
+
+export const DFM75ETitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>Diş Freze Ünitesi </h5> <br />
+              <div className="page-content">
+                <li>Hem balmumu hem de diş alaşımlarının frezesi</li>
+                <li>Hassas frezeleme ve delme</li>
+                <li>olarak kullanılma imkanı</li>
+                <li>Çalışma masasının elektromanyetik fiksasyonu</li>
+              </div>
+              <h5>Aksesuarlar:</h5>
+              <div className="page-content">
+                <li>Araçlar Başlangıç Kümesi</li>
+                <li>Tablo</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

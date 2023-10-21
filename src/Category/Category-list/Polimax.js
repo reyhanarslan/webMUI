@@ -5,7 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function Polimax() {
   return (
     <div>
@@ -53,3 +56,40 @@ function Polimax() {
 }
 
 export default Polimax;
+
+export const PolimaxTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>Islak Ve Kuru Basınçlı Polimerizasyon Ünitesi</h5>
+              <br />
+              <div className="page-content">
+                <li>Islak ve kuru polimerizasyon için polimerizasyon ünitesi</li>
+                <li>Tamamen otomatik işlem</li>
+                <li>İki aşamalı polimerizasyon</li>
+                <li>Sıcaklığın mikroişlemci kontrolü ve polimerizasyon süresi</li>
+                <li>Her türlü şişe için uygun</li>
+                <li>Birim odasında bütün bir artikülatör konulabilir</li>
+              </div>
+              <br />
+              <h5>Aksesuarlar</h5>
+              <br />
+              <div className="page-content">
+                <li>Sıdırmazlık halkası</li>
+                <li>Metal filtre</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

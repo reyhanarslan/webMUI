@@ -6,7 +6,10 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import Content from "/assets/images/content-imgs/dentafabsega3d/1.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 function DentafabSega3DPrinter() {
   return (
     <div>
@@ -104,3 +107,30 @@ function DentafabSega3DPrinter() {
 }
 
 export default DentafabSega3DPrinter;
+
+export const DentafabSega3DPrinterTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <br />
+              <div className="page-content">
+                1 Cihaz, 12 Kusursuz İşlem!
+                <br />
+                Sega 3D Yazıcı, olağanüstü hızda yazdırırken çok yüksek doğruluk sağlamak için Ultra
+                Hızlı DLP teknolojimizi kullanır.
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

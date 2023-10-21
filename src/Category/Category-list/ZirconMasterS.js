@@ -5,6 +5,10 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+
+import { Button } from "@mui/material";
 
 function ZirconMasterS() {
   return (
@@ -48,3 +52,45 @@ function ZirconMasterS() {
 }
 
 export default ZirconMasterS;
+
+export const ZirconMasterSTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <h5>Zno2 Sinterleme İçin Programlanabilir Diş Fırını</h5>
+              <br />
+              <div className="page-content">
+                <li>Zno2’nin her türlü diş hekimi için tasarlanmıştır</li>
+                <li>10 işletim programı</li>
+                <li>Hızlı sıcaklık artışı</li>
+                <li>Kontrollü soğutma işlemi</li>
+                <li>Yüksek kaliteli mosi2 ısıtma elemanları</li>
+                <li>Ana ateşleme aşamasında düşük enerji tüketimi</li>
+              </div>
+              <br />
+              <h5>Aksesuarlar</h5>
+              <br />
+              <div className="page-content">
+                <li>Tepsi gts ref. No 234000001</li>
+                <li>Tepsi ag ref. No 234000002</li>
+                <li>İnci ag ref. No 234000003</li>
+                <li>İnci noritake ref. No 234000004</li>
+                <li>Tutucu tepsi ref. No 234000005</li>
+                <li>Yalıtım tablosu alt ref. No 234020301</li>
+                <li>Yalıtım tablosu üst ref. No 234020302</li>
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};

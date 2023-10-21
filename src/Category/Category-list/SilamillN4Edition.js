@@ -14,7 +14,10 @@ import Content_4 from "assets/images/content-imgs/silamill_n4/6.jpg";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
+import { Button } from "@mui/material";
 const itemData = [
   {
     img: Content_3,
@@ -156,3 +159,32 @@ function SilamillN4Edition() {
 }
 
 export default SilamillN4Edition;
+
+export const SilamillN4EditionTitle = () => {
+  const pdfDownloader = () => {};
+  return (
+    <div>
+      <MKBox component="section">
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <div className="page-content">
+                N4 Impression, bir dış üniteye ihtiyaç duymadan cam seramik, zirkonyum oksit,
+                kompozit ve titanyum abutment’ları arka arkaya sulu yontabilen bir kazıyıcıdır. En
+                yüksek hassasiyetli ve hızlı hareket sistemleriyle (ki bunlar tüm silamill
+                makinelerin ortak özelliğidir) kapalı devre sıvı soğutma sisteminin olağanüstü
+                seviyede kompakt bir muhafaza içinde bir araya gelmesidir.
+                <br />
+                {"4 Eksen     3 İngot      3 Frez"}
+              </div>
+            </Grid>
+          </Grid>
+          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+        </Container>
+      </MKBox>
+    </div>
+  );
+};
