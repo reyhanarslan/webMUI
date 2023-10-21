@@ -23,7 +23,11 @@ import ContactUs from "pages/LandingPages/ContactUs/index";
 import PresentationPage from "layouts/pages/presentation";
 import Category from "Category/AboutUs";
 import { Hakkimizda } from "products/AboutUs/hakkimizda";
+import { SatisVeGarantiKosullari } from "products/AboutUs/satisvegarantikosullari";
 // import Category from "Category/AboutUs";
+import { CerezPolitikasi } from "products/AboutUs/cerezPolitikasi";
+import { KisiselVerilerinKorunmasi } from "products/AboutUs/kvkk";
+import { MesafeliSatisSozlesmesi } from "products/AboutUs/mesafeliSatisSozlesmesi";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
 // import Modals from "layouts/sections/attention-catchers/modals";
@@ -190,6 +194,8 @@ const routes = [
   {
     name: "Kurumsal",
     icon: <Icon>article</Icon>,
+    component: <Hakkimizda />,
+    route: "/hakkimizda",
     collapse: [
       {
         name: "Hakkımızda",
@@ -198,23 +204,23 @@ const routes = [
       },
       {
         name: "Satış ve Garanti Koşullarımız",
-        // description: "See our colors, icons and typography",
-        href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
+        component: <SatisVeGarantiKosullari />,
+        route: "/satis-garanti-kosullari",
       },
       {
         name: "Mesafeli Satış Sözleşmesi",
-        // description: "Explore our collection of fully designed components",
-        href: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
+        component: <MesafeliSatisSozlesmesi />,
+        route: "/mesafeli-satis-sozlesmesi",
       },
       {
         name: "Çerez Politikası",
-        // description: "Check how you can integrate our plugins",
-        href: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
+        component: <CerezPolitikasi />,
+        route: "/cerez-politikasi",
       },
       {
         name: "Kişisel Verilerin Korunması(KVKK)",
-        // description: "Check how you can integrate our plugins",
-        href: "https://www.creative-tim.com/learning-lab/react/datepicker/material-kit/",
+        component: <KisiselVerilerinKorunmasi />,
+        route: "/kisisel-verilerin-korunmasi",
       },
     ],
   },
