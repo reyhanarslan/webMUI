@@ -47,7 +47,7 @@ function Information() {
                 description="Bu firma, güçlü bir kurumsal kimlik ve etik değerlerle müşterilerine yüksek kalitede hizmet sunmayı taahhüt ediyor."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
+                  route: "/hakkimizda",
                   label: "Kurumsal",
                 }}
               />
