@@ -16,7 +16,6 @@
 .dark-text-info {
   color: #11304c !important;
   font-size: 20px;
-
 }
 .carousel-item {
   border-radius: 20px !important;
@@ -28,7 +27,7 @@
 }
 .page-title {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 20px;
   margin-top: 20px;
   color: #11304c !important;
@@ -41,18 +40,21 @@
   color: #11304c !important;
 }
 .page-content {
-  font-size: 18px;
-  line-height: 1.2;
-  color: #11304c;
-  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #8a95a7;
+  font-weight: 400 !important;
+  justify-content: start !important;
+  align-items: start !important;
+  text-align: start !important;
+  padding: 2px;
 }
 .page-content-about {
   font-size: 22px;
   line-height: 1.2;
-  color: #11304c;
+  color: #1a212c;
   font-weight: 500 !important;
   font-family: sans-serif !important;
-
 }
 
 .productTitle {

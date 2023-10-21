@@ -579,16 +579,8 @@ function ProductInfo() {
         transparent
         blue
       />{" "}
-      <Grid paddingX={20} container paddingBottom={5}>
-        <Grid
-          className="product-card-right"
-          borderRadius={25}
-          marginTop={15}
-          item
-          xs={4}
-          md={5}
-          lg={7}
-        >
+      <Grid paddingX={10} paddingY={15} container paddingBottom={5}>
+        <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6}>
           <ProductSlider
             sx={{
               width: "100%",
@@ -598,7 +590,7 @@ function ProductInfo() {
           />
         </Grid>
 
-        <Grid className="product-card-left" marginTop={4} item xs={4} md={5} lg={5}>
+        <Grid className="product-card-left" item xs={4} md={5} lg={6}>
           <MKBox
             minHeight="75vh"
             width="100%"
@@ -618,7 +610,7 @@ function ProductInfo() {
             >
               <MKTypography className="productTitle"> {productInfo.model}</MKTypography>
 
-              <MKTypography marginBottom={3} color="white" opacity={0.8}>
+              <MKTypography marginBottom={3} color="white">
                 {renderProductComponentTitle()}
               </MKTypography>
 

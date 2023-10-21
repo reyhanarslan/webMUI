@@ -167,7 +167,7 @@ export const SilamillT5Title = () => {
     <div>
       <MKBox component="section">
         <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+          <Grid container spacing={3} marginBottom={2}>
             <Grid item xs={12} lg={12}>
               <div className="page-title">
                 <h5>T5 – YENİ JENERASYON</h5>
@@ -179,9 +179,11 @@ export const SilamillT5Title = () => {
                 Otomatik frez değiştirici ve pratik aksesuar çekmecesi gibi pek çok avantajlı
                 özelliği, T5 ile çalışmayı hızlı ve verimli hale getirir.
                 <br />
-                {"5 Eksen     1 Blok      16 Frez"}
+                <div className="page-content">{"5 Eksen     1 Blok      16 Frez"}</div>
+                <div className="page-content">
+                  <li>B aksı ± 35 derece</li>
+                </div>
                 <br />
-                <li>B aksı ± 35 derece</li>
               </div>
             </Grid>
           </Grid>
