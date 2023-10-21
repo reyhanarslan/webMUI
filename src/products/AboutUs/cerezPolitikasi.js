@@ -73,9 +73,9 @@ export function CerezPolitikasi() {
         </>
 
         <MKBox className="slide-in-container" component="section" py={8}>
-          <Container>
-            <Grid container spacing={3} alignItems="center">
-              <Grid item xs={12} sm={12} md={12} lg={12}>
+          <Container className="kurumsal">
+            <Grid container alignItems="center">
+              <Grid className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
                 <div>
                   <h5 className="dark-text-info">Çerez Politikası Hakkında</h5>
                 </div>
