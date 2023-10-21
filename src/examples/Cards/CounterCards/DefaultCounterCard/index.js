@@ -2,17 +2,19 @@
 import PropTypes from "prop-types";
 
 // react-countup component
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import icon1 from "assets/images/support.svg";
 
-function DefaultCounterCard({ color, count, title, description, ...rest }) {
+function DefaultCounterCard({ title, description }) {
   return (
     <MKBox p={2} textAlign="center" lineHeight={1}>
-      <MKTypography variant="h1" color={color} textGradient>
+      {/* <MKTypography variant="h1" color={color} textGradient>
         <CountUp end={count} duration={1} {...rest} />
-      </MKTypography>
+      </MKTypography> */}
+      {<img src={icon1} alt="" width={40} height={40} />}
       {title && (
         <MKTypography variant="h5" mt={2} mb={1}>
           {title}
@@ -32,6 +34,7 @@ DefaultCounterCard.defaultProps = {
   color: "info",
   description: "",
   title: "",
+  icon: null,
 };
 
 // Typechecking props for the DefaultCounterCard
@@ -49,6 +52,7 @@ DefaultCounterCard.propTypes = {
   count: PropTypes.number.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
+  icon: PropTypes.string,
 };
 
 export default DefaultCounterCard;

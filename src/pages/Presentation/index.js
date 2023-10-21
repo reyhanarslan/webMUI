@@ -20,6 +20,7 @@ import routes from "routes";
 // import bgImage from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 // import bgImage1 from "assets/images/dashboard/test.jpg";
 import CarouselImages from "./sections/Carousel";
+import Counters from "./sections/Counters";
 import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
 import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
@@ -193,18 +194,36 @@ function Presentation() {
             position: "relative",
           }}
         ></div>
-        <div className="video-card">
-          <ReactPlayer
-            ref={playerRef}
-            style={{ borderRadius: "15px" }}
-            width="100%"
-            height="100%"
-            url={intro}
-            playing={true}
-            muted={true}
-            controls={false}
-          />
-        </div>
+
+        <Card
+          // className="div-background"
+          sx={{
+            p: 0,
+            // mx: { xs: 2, lg: 3 },
+            mt: -25,
+            // borderBottomLeftRadius: "30px",
+            // borderBottomRightRadius: "30px",
+            borderRadius: "30px",
+            // borderRadius:"30px",
+            zIndex: 56456,
+            // backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
+          }}
+        >
+          <div className="video-card">
+            <ReactPlayer
+              ref={playerRef}
+              style={{ borderRadius: "15px" }}
+              width="100%"
+              height="100%"
+              url={intro}
+              playing={true}
+              muted={true}
+              controls={false}
+            />
+          </div>
+        </Card>
         <div
           style={{
             position: "absolute",
@@ -267,6 +286,7 @@ function Presentation() {
           <Information />
 
           <CarouselImages />
+          <Counters />
         </Card>
         <BuiltByDevelopers />
         <Card
