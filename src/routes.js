@@ -194,6 +194,8 @@ const routes = [
   {
     name: "Kurumsal",
     icon: <Icon>article</Icon>,
+    component: <Hakkimizda />,
+    route: "/hakkimizda",
     collapse: [
       {
         name: "Hakkımızda",
