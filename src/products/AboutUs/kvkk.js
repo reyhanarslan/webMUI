@@ -23,38 +23,56 @@ export function KisiselVerilerinKorunmasi() {
         blue
       />
 
-      <>
-        <Grid fluid>
-          <MKBox
-            display="flex"
-            alignItems="center"
-            borderRadius="xl"
-            my={2}
-            py={15}
-            sx={{
-              borderRadius: "30px",
-              backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-                `${linearGradient(
-                  rgba(gradients.light.main, 0.3),
-                  rgba(gradients.arena.state, 0.9)
-                )}, url(${DashboardImg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <Container>
-              <Grid container item xs={12} lg={12} sx={{ ml: { xs: 0, lg: 6 } }}>
-                <MKTypography variant="h1" color="white">
-                  Kişisel Verilerin Korunması
-                </MKTypography>
+      <Grid py={10}>
+        <>
+          <Container>
+            <Grid container>
+              <Grid item xs={12} lg={12}>
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  borderRadius="xl"
+                  py={10}
+                  className="slide-in-container"
+                  sx={{
+                    borderRadius: "30px",
+                    backgroundImage: ({
+                      functions: { linearGradient, rgba },
+                      palette: { gradients },
+                    }) =>
+                      `${linearGradient(
+                        rgba(gradients.light.main, 0.3),
+                        rgba(gradients.arena.state, 0.9)
+                      )}, url(${DashboardImg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <Container>
+                    <Grid
+                      container
+                      item
+                      xs={12}
+                      lg={12}
+                      sx={{
+                        ml: { xs: 0, lg: 0 },
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <MKTypography variant="h1" color="white">
+                        Kişisel Verilerin Korunması{" "}
+                      </MKTypography>
+                    </Grid>
+                  </Container>
+                </MKBox>
               </Grid>
-            </Container>
-          </MKBox>
-        </Grid>
-      </>
+            </Grid>
+          </Container>
+        </>
 
-      <Grid fluid>
-        <MKBox component="section" py={12}>
+        <MKBox className="slide-in-container" component="section" py={8}>
           <Container>
             <Grid container spacing={3} alignItems="center">
               <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -93,37 +111,34 @@ export function KisiselVerilerinKorunmasi() {
                     KVKK madde 4 uyarınca:
                   </h5>
                 </div>
-                <ol>
+                <ol style={{ marginLeft: "20px" }}>
                   <li>
                     Kişisel veriler, ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara
                     uygun olarak işlenebilir.
                   </li>
-                  <li>
-                    {" "}
-                    <p>
-                      {" "}
-                      Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur:
-                    </p>{" "}
-                  </li>{" "}
-                  <ul>
-                    <li>Hukuka ve dürüstlük kurallarına uygun olma.</li>
-                    <li>Doğru ve gerektiğinde güncel olma.</li>
-                    <li>Belirli, açık ve meşru amaçlar için işlenme.</li>
-                    <li>İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma.</li>
-                    <li>
-                      İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar
-                      muhafaza edilme.
-                    </li>
-                  </ul>{" "}
+                  <li> Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur:</li>
                 </ol>
-                Kişisel verileriniz, Arena Diş Deposu tarafından sunulan ürün, hizmet ya da ticari
-                faaliyete bağlı olarak değişkenlik gösterebilmekle beraber; otomatik ya da otomatik
-                olmayan yöntemlerle, ofisler, internet sitesi, sosyal medya mecraları, mobil
-                uygulamalar ve benzeri vasıtalarla sözlü, yazılı ya da elektronik olarak
-                toplanabilecektir. Arena Diş Deposu’nun ürün ve hizmetlerinden yararlandığınız
-                sürece oluşturularak ve güncellenerek kişisel verileriniz işlenebilecektir. Ayrıca,
-                internet sitemizi ziyaret ettiğinizde, Arena Diş Deposu’nun düzenlediği eğitim,
-                seminer veya organizasyonlara katıldığınızda kişisel verileriniz işlenebilecektir.
+                <ul style={{ marginLeft: "40px" }}>
+                  <li>Hukuka ve dürüstlük kurallarına uygun olma.</li>
+                  <li>Doğru ve gerektiğinde güncel olma.</li>
+                  <li>Belirli, açık ve meşru amaçlar için işlenme.</li>
+                  <li>İşlendikleri amaçla bağlantılı, sınırlı ve ölçülü olma.</li>
+                  <li>
+                    İlgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süre kadar
+                    muhafaza edilme.
+                  </li>
+                </ul>
+                <div style={{ marginTop: 20 }}>
+                  Kişisel verileriniz, Arena Diş Deposu tarafından sunulan ürün, hizmet ya da ticari
+                  faaliyete bağlı olarak değişkenlik gösterebilmekle beraber; otomatik ya da
+                  otomatik olmayan yöntemlerle, ofisler, internet sitesi, sosyal medya mecraları,
+                  mobil uygulamalar ve benzeri vasıtalarla sözlü, yazılı ya da elektronik olarak
+                  toplanabilecektir. Arena Diş Deposu’nun ürün ve hizmetlerinden yararlandığınız
+                  sürece oluşturularak ve güncellenerek kişisel verileriniz işlenebilecektir.
+                  Ayrıca, internet sitemizi ziyaret ettiğinizde, Arena Diş Deposu’nun düzenlediği
+                  eğitim, seminer veya organizasyonlara katıldığınızda kişisel verileriniz
+                  işlenebilecektir.
+                </div>{" "}
                 <div style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info ">
                     İşlenen Kişisel Verilerin Kimlere ve Hangi Amaçla Aktarılabileceği
@@ -182,7 +197,7 @@ export function KisiselVerilerinKorunmasi() {
                   tarifedeki ücret alınacaktır.{" "}
                 </div>
                 <p style={{ marginTop: 30 }}>Bu kapsamda kişisel veri sahipleri;</p>
-                <ul>
+                <ul style={{ marginLeft: "40px" }}>
                   <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
                   <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
                   <li>

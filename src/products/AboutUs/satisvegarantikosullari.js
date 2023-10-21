@@ -23,7 +23,7 @@ export function SatisVeGarantiKosullari() {
         blue
       />
 
-      <Grid fluid>
+      <Grid py={10}>
         <>
           <Container>
             <Grid container>
@@ -32,8 +32,8 @@ export function SatisVeGarantiKosullari() {
                   display="flex"
                   alignItems="center"
                   borderRadius="xl"
-                  my={2}
-                  py={15}
+                  py={10}
+                  className="slide-in-container"
                   sx={{
                     borderRadius: "30px",
                     backgroundImage: ({
@@ -49,7 +49,18 @@ export function SatisVeGarantiKosullari() {
                   }}
                 >
                   <Container>
-                    <Grid container item xs={12} lg={12} sx={{ ml: { xs: 0, lg: 6 } }}>
+                    <Grid
+                      container
+                      item
+                      xs={12}
+                      lg={12}
+                      sx={{
+                        ml: { xs: 0, lg: 0 },
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
                       <MKTypography variant="h1" color="white">
                         Satış Ve Garanti Koşullarımız
                       </MKTypography>
@@ -61,7 +72,7 @@ export function SatisVeGarantiKosullari() {
           </Container>
         </>
 
-        <MKBox component="section" py={12}>
+        <MKBox className="slide-in-container" component="section" py={8}>
           <Container>
             <Grid container spacing={3} alignItems="center">
               <Grid item xs={12} sm={12} md={12} lg={12}>

@@ -23,356 +23,390 @@ export function MesafeliSatisSozlesmesi() {
         blue
       />
 
-      <>
-        <Grid fluid>
-          <MKBox
-            display="flex"
-            alignItems="center"
-            borderRadius="xl"
-            my={2}
-            py={15}
-            sx={{
-              borderRadius: "30px",
-              backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-                `${linearGradient(
-                  rgba(gradients.light.main, 0.3),
-                  rgba(gradients.arena.state, 0.9)
-                )}, url(${DashboardImg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <Container>
-              <Grid container item xs={12} lg={12} sx={{ ml: { xs: 0, lg: 6 } }}>
-                <MKTypography variant="h1" color="white">
-                  Mesafeli Satış Sözleşmesi{" "}
-                </MKTypography>
+      <Grid py={10}>
+        <>
+          <Container>
+            <Grid container>
+              <Grid item xs={12} lg={12}>
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  borderRadius="xl"
+                  py={10}
+                  className="slide-in-container"
+                  sx={{
+                    borderRadius: "30px",
+                    backgroundImage: ({
+                      functions: { linearGradient, rgba },
+                      palette: { gradients },
+                    }) =>
+                      `${linearGradient(
+                        rgba(gradients.light.main, 0.3),
+                        rgba(gradients.arena.state, 0.9)
+                      )}, url(${DashboardImg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <Container>
+                    <Grid
+                      container
+                      item
+                      xs={12}
+                      lg={12}
+                      sx={{
+                        ml: { xs: 0, lg: 0 },
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <MKTypography variant="h1" color="white">
+                        Mesafeli Satış Sözleşmesi{" "}
+                      </MKTypography>
+                    </Grid>
+                  </Container>
+                </MKBox>
               </Grid>
-            </Container>
-          </MKBox>
-        </Grid>
-      </>
-
-      <Grid fluid>
-        <MKBox component="section" py={4}>
+            </Grid>
+          </Container>
+        </>
+        <MKBox className="slide-in-container" component="section" py={6}>
           <Container>
             <Grid container spacing={3} alignItems="center">
               <Grid item xs={12} sm={12} md={12} lg={12}>
-                <div className="page-title">SATIŞ KOŞULLARI</div>
-                <div>
-                  <h5 className="dark-text-info">FİYATLAR</h5>
+                <div style={{ marginTop: "50px" }} className="page-title">
+                  A- TARAFLAR
                 </div>
+                <div style={{ marginTop: "50px" }}>
+                  <h5 className="dark-text-info">I- Satıcı :</h5>
+                  <h5 className="dark-text-info">Adres :</h5>
+                  <h5 className="dark-text-info">Vergi D. ve No :</h5>
+                </div>
+                <div style={{ marginTop: "30px" }}>
+                  <h5 className="dark-text-info">II- Alıcı :</h5>
+                  <h5 className="dark-text-info">Adres :</h5>
+                  <h5 className="dark-text-info">Vergi D. ve No :</h5>
+                </div>
+                <div style={{ marginTop: "50px" }} className="page-title">
+                  B- KAPSAM VE SÜRE
+                </div>
+                <div style={{ marginTop: "30px" }}>
+                  1-SATICI ve ALICI arasındaki tüm ticari işlemler bu sözleşme hükümlerine tabi
+                  olup, sözleşme hükümlerinde yapılacak değişiklik ancak taraflarca yazılı olarak
+                  yapılacak “Tadil Sözleşmesi” ile yapıldığında geçerli olacaktır.
+                </div>
+                <div style={{ marginTop: "30px" }}>
+                  {" "}
+                  2-İş bu sözleşme, taraflardan birisi tarafından fesh edildiği tarihe kadar geçerli
+                  olup, taraflarca yapılacak fesih ihbarı ancak karşı tarafa yazılı olarak ulaştığı
+                  anda geçerli olacaktır. Taraflardan birisi tarafından gönderilen sözleşmenin
+                  feshine ilişkin ihbarın, muhataba ulaşmasına kadar geçerlidir.
+                </div>
+                <div style={{ marginTop: "30px" }}>
+                  {" "}
+                  ALICI, SATICIYA olan borcunu gününde ödememesi ve/veya ALICI’ya SATICI tarafından
+                  keşide edilen kıymetli evrakın ademi kabul ve ademi tediyeden protesto edilmiş
+                  olması halinde tüm alacakları muaccel hale gelecek olup işbu sözleşme, hiçbir
+                  ihtar gerekmeksizin SATICI tarafından tek taraflı olarak feshedilecektir. SATICI,
+                  bakiye alacağını tahsil için, ALICI aleyhine yasal yollara başvurma hakkını
+                  kullanacaktır.
+                </div>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li>SÖZLEŞME KONUSU ÜRÜN BİLGİLERİ</li>
+                </ul>
+                <div>
+                  <ol>
+                    <li style={{ marginLeft: "20px" }}>
+                      Malın / Ürünün/Hizmetin türü, miktarı, marka/modeli, rengi, adedi, satış
+                      bedeli, ödeme şekli, aşağıda belirtildiği gibidir;
+                    </li>
+
+                    <table
+                      style={{ marginTop: "40px", marginBottom: "40px" }}
+                      className="custom-table"
+                    >
+                      <tr></tr>
+                      <tr>
+                        <td>Mal / Ürün / Hizmet türü : </td>
+                      </tr>
+                      <tr>
+                        <td>Marka/Model : </td>
+                      </tr>
+                      <tr>
+                        <td>Rengi : </td>
+                      </tr>
+                      <tr>
+                        <td>Adedi : </td>
+                      </tr>
+                      <tr>
+                        <td>Satış Fiyatı ( KDVdahil ) : </td>
+                      </tr>
+                      <tr>
+                        <td>Garanti Süresi : </td>
+                      </tr>
+
+                      <tr>
+                        <td>Ödeme Şekli : </td>
+                      </tr>
+                      <tr>
+                        <td>Teslimat Adresi : </td>
+                      </tr>
+                      <tr>
+                        <td>Teslim Edilecek Kişi : </td>
+                      </tr>
+                      <tr>
+                        <td>Teslim Tarihi : </td>
+                      </tr>
+                      <tr>
+                        <td>Montaj Tarihi : </td>
+                      </tr>
+
+                      <tr>
+                        <td>Montajı Yapacak Teknik Servis : </td>
+                      </tr>
+                      <tr>
+                        <td>Fatura Adresi : </td>
+                      </tr>
+                      <tr>
+                        <td>Diğer (ünit içeriği) : </td>
+                      </tr>
+                    </table>
+
+                    <li style={{ marginLeft: "20px" }}>
+                      SATICI ile ALICI tacir olup, taraflar arasındaki hukuki ilişki, 13.01.2011
+                      tarih ve 6102 sayılı Türk Ticaret Kanunu ( TTK ) ve 11.01.2012 tarih ve 6098
+                      sayılı Türk Borçlar Kanunu kapsamında değerlendirilir.
+                    </li>
+                  </ol>{" "}
+                </div>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li>SATIŞLAR</li>
+                </ul>
                 <ol>
-                  <li>
-                    Fiyatlar ürünlerin ithal edildikleri ülkelere göre EURO ve USD olarak
-                    düzenlenmiştir ve tavsiye edilen satış fiyatlarıdır.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Taraflar arasındaki, satışa konu emtianın, cinsi, kalitesi, miktarı, tutarı,
+                    ödeme şekli ve varsa özel şartlarını içeren sipariş belgeleri, özel bağlantı
+                    teklif belgeleri, sipariş mektupları, müşteri siparişi teyidi, faturalar ve
+                    yazılı özel anlaşmalar, bu sözleşmenin ayrılmaz parçası sayılır.Söz konusu
+                    belgeler ile özel olarak düzenlenmeyen konularda, işbu sözleşme şartları
+                    geçerlidir.
                   </li>
-                  <li>
-                    Satış anında fiyatlar o günkü T.C.M.B. Efektif EURO / USD satış kurundan TL’ye
-                    çevrilerek satış gerçekleştirilir.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Taraflar arasında yazılı olarak kararlaştırılmamış ise satış konusu emtianın
+                    satış fiyatı fatura tarihinde SATICI’nın cari satış fiyatıdır.SATICI, fatura
+                    ve/veya teslim edilmemiş emtianın fiyat ve satış şartlarını ihbarsız olarak her
+                    zaman değiştirebilir.
                   </li>
-                  <li>Arena Diş zaman zaman kurları belli sürelerle sabitleme hakkına sahiptir.</li>
-                  <li>Fiyatlara KDV dahil değildir.</li>
-                  <li>
-                    Arena Diş katalog, web sayfası, sanal mağaza ilanlarda vb. mecralarda ilan
-                    ettiği fiyatları önceden haber vermeden değiştirme hakkına sahiptir.
-                  </li>
-                  <li>
-                    Arena Diş tüm ürünlerde zaman zaman kampanyalar düzenleyebilir. Kampanya
-                    dönemlerinde o günkü satış fiyatları ve koşulları geçerlidir. Bu durumda, daha
-                    önce bu ürünleri satın almış olanlar hak iddia edemez.
-                  </li>
-                  <li>
-                    Cihaz siparişlerinde eğer alıcı isterse leasing uygulanabilir. Alıcı tarafından
-                    ayrıca bir leasing firması belirtilmemişse, Arena Diş’in anlaşmalı olduğu
-                    leasing firmasıyla çalışılır. Leasing de yapılacak tüm masraflar (faiz, sigorta,
-                    sözleşme ve noter giderleri v.s) ve devir ücreti alıcıya aittir. Teslim
-                    tarihinden en az 15 gün önce leasing sözleşmesinin alıcı tarafından imzalanmış
-                    olması gereklidir. Leasing evraklarındaki eksiklikler ya da müşterinin leasing
-                    firması tarafından kredi açısından yeterli bulunmaması gibi nedenlerden meydana
-                    gelecek gecikme, işlem iptali v.s den dolayı Arena Diş’in sorumluluğu yoktur.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Bu sözleşme, satışlar ve satışlarla ilgili tüm belgelerden ve kıymetli evraktan
+                    kaynaklanan tüm giderler ile vergi, resim ve harçların sorumluluğu ALICI’ya ait
+                    olup ve ALICI tarafından ödenecektir.ALICI tarafından ödenmeyen iş bu
+                    giderlerden dolayı SATICI zarara uğrarsa iş bu zarar ALICI tarafından derhal
+                    tazmin edilecek olup aksi halde sözleşme SATICI tarafından hiçbir ihtar ve
+                    ihbara gerek kalmaksızın tek taraflı olarak fesh edilecektir.Bu takdirde ALICI
+                    bakiye satış bedelini ödemeyi kabul ve taahhüt etmiştir.
                   </li>
                 </ol>
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info">SATIŞ VE ÖDEMELER</h5>
-                </div>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li> BELGE VE ÖDEMELER</li>
+                </ul>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li> ÖDEMELER</li>
+                </ul>
                 <ol>
-                  <li>
-                    Cihaz satışlarında 11.01.2011 tarih ve 6098 sayılı Türk Borçlar Kanunun 207 ve
-                    ilgili maddeleri gereği Satış Sözleşmesi yapılması zorunludur.
-                  </li>
-                  <li>
-                    Satış işlemlerinde kapalı hesap çalışılır. Açık hesap çalışmak için 13.01.2011
-                    tarih ve 6102 sayılı Türk Ticaret Kanunun 89. Maddesi çerçevesinde Cari Hesap
-                    Sözleşmesi imzalanması gerekmektedir.
-                  </li>
-                  <li>
-                    Ödemeler nakit, havale, çek ve kredi kartı ile kabul edilir. Bunların dışındaki
-                    ödeme şekilleri kabul edilmez. Senetle yapılan ödemelerde Muacceliyet Sözleşmesi
-                    zorunludur.
-                  </li>
-                  <li>
-                    Kredi kartlarında ; Arena Diş’in hizmet aldığı bankaların kredi kartları ile
-                    yapılan ödemelerde Arena Diş uyguladığı vade farksız taksitlendirme imkanı
-                    bulunmaktadır.
-                  </li>
-                  <li>
-                    Taksitli satışlar KDV hariç 500,00 (BeşYüzTürkLirası) ve üzerindeki
-                    alışverişlerde uygulanmaktadır. Bu tutarın altındaki alışverişler tek
-                    ödeme(peşin) olarak alınmaktadır.
-                  </li>
-                  <li>
-                    Taksitli ödemelerde vade sayısı, sarf malzemeleri için 6 (altı)ay, cihazlar
-                    (cihaz olarak kabul edilen ürünler olarak işaretlenmektedir) için 9 (dokuz)
-                    aydır. Taksitli ödemeler kredi kartı ve çek ile kabul edilir. Arena Diş günün
-                    koşullarına göre taksit sayısını değiştirme hakkına sahiptir.
-                  </li>
-                  <li>
-                    Taksitli cihaz satışlarında KDV peşin olarak alınır KDV dışındaki tutar
-                    taksitlendirilir.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI’nın borçlarını gününde ifası esastır.
                   </li>
 
-                  <li>
-                    Kredi kartı ile yapılacak satışlarda eğer ödeme Mail-Order şeklinde alınacaksa
-                    “Mail-Order Talimatı” müşteri tarafından imzalanır ve Kredi kartı hamilinin
-                    Nüfus Cüzdanı ve Kredi kartının fotokopisi alınır. Başkasına ait kredi kartı ile
-                    ödeme yapacak cari hesaplara ilişkin olarak kredi kartı sahibi kredi kartından
-                    şirketimizin tahsilat yapabilmesi için ilgili formu mutlaka imzalayacaktır.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI, satışa konu emtia bedelleri ile sair hususlardan doğan borçlarını,
+                    bunlara aitirsaliye ve/veya faturanın tanzimi anında, SATICI’nın kabul edeceği
+                    ödeme şekilleriile kabul etmez ise nakden kapatacaktır.
                   </li>
-                  <li>
-                    Havale ile yapılacak ödemelerde havale Arena Diş’in hesabına geçtikten sonra
-                    ürün müşteriye sevk edilir.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Taraflar arasındaki bütün tediyelerin ispatı, imzalı makbuzla yapılmış
+                    olmasınabağlıdır.
                   </li>
-                  <li>
-                    Havale işlemlerinde yapılacak havale ücretinin, havalenin içinden ödenmesi
-                    kesinlikle kabul edilemez. Bu masraf sipariş sahibine aittir.
+
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI’nın ödemeleri, öncelikle SATICI’ya olan vade farkı ve temerrüt faizi
+                    borçlarına ve MASRAFLARA mahsup edilir. Nakden veya çek ile yapılan ödemeler,
+                    SATICI’nın doğmuşve doğacak vade farkı ve temerrüt faizi VE MASRAF
+                    alacaklarından vazgeçtiğini göstermez veSATICI’nın iş bu alacakları ALICI’dan
+                    talep hakları saklı tutulmuştur. .
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Fatura bedeli; mal bedeli ve/veya kur farkı, vade farkı ile temerrüt
+                    faizineuygulanacak KDV’den oluşur.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    SATICI tarafından yapılan satışların bedelleri, ALICI tarafından vadeli ödenecek
+                    iseSATICI’nın tayin ve tespit ettiği şekilde ALICI’nın teminata bağlanması
+                    halindevadeli satış mümkündür. Eğer ALICI ödemesini teminata bağlamadı ise
+                    ödemenin son taksidi tahsil edilene kadar malın mülkiyeti SATICIYA ait kalacak
+                    olup iş bu mallara
+                  </li>
+                  <div style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    <strong>
+                      {" "}
+                      ’’ARENA DİŞ DEPOSU’nin MALIDIR. KİRALIK OLARAK HİZMETE SUNULMUŞ OLUP, CİHAZ
+                      3.ŞAHISLARA SATILAMAZ, DEVİR EDİLEMEZ, HACİZ EDİLEMEZ VE HABER VERİLMEDEN AYNI
+                      ADRESTEN FARKLI BİR ADRESE TAŞINAMAZ ’’
+                    </strong>{" "}
+                    ibaresi içeren bir etiket cihazın görünebilir bir yerine konacaktır.
+                  </div>
+
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Teminat olarak alınan kıymetlerin gerektirdiği masraflar esas itibariyle
+                    ALICI’ya aittir.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI’nın gösterdiği teminatlar SATICI tarafından yeterli bulunmadığı
+                    taktirde,SATICI, ALICI’nın vereceği siparişleri kabul edip etmemekte
+                    serbesttir.ALICI’nınbu konuda herhangi bir talepte bulunma hakkı yoktur.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI, borçlarına karşılık SATICI’nın yazılı kabülü ve vade farkı
+                    ayrıcahesaplanmak ve ödenmek üzere ve TTK’na göre düzenlemiş ve vergise keşide
+                    edentarafından ödenmiş çek ve/veya bonoları SATICI’ya ciro ederek verebilir.
+                    SATICI,ALICI tarafından ciro edilen çeklerin postada veya bankada veya herhangi
+                    bir şekildekaybından veya yok olmasından sorumlu tutulamaz.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI tarafından, SATICI’ya verilen kambiyo senetlerinin gününde
+                    tahsiledilmemesi veya herhangi bir nedenle zayii halinde, bunların turarı ile
+                    yapılanmasrafları ve ödeme tarihine kadar AYLIK %7 oranında temerrüt faizi,
+                    SATICI’nın ihbarıüzerine, nakden ve def’atenödenir.Bu ihbarın, herhangi bir
+                    nedenler gecikmesininsorumluluğu, nakit ödeme yerine kambiyo senedi veren
+                    ALICI’ya aittir.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI’nın keşide veya ciro edilerek SATICI’ya verdiği çek ve bonoların
+                    günlerindeödenmemesi durumunda, bunların bedelleri SATICI’nın ilk ihbarında
+                    ALICItarafından, vade gününden itibaren vade farkları da eklenerek
+                    SATICI’yaödenecektir.Aksi halde, bu borç dahil ALICI’nın, SATICI’ya olan tüm
+                    borçlarımüeccel hale gelecektir.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Harp, çatışma, dahili kargaşa, işgal, sabotaj, grev, lokavt, işçi ve memur
+                    direnişi, sel,deprem, yangın, ham veya yarımamul madde, yarı mamul madde ve
+                    malzeme ithalveya dahili piyasadan temininin mümkün olmaması, enerji kısıtlaması
+                    gibiSATICI’nın ihtiyarında olmayan sebeplerle satış akdinin SATICI tarafından
+                    yerinegetirilmemesi/getirilememesi ve bunlarla sınırlı olmamak üzere kanunen
+                    kabul edilensair mücbir sebep hallerinde, veya sair sebeplerle malın temininde
+                    sorun yaşanması halindeSATICI’nınALICI’ya karşı hiçbir sorumluluğu yoktur.
+                  </li>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Aksi bildirilmediği sürece nakliye ücreti ALICI’ya aittir.
                   </li>
                 </ol>
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info ">TESLİMAT</h5>
-                </div>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li> HESAPLARIN KAPATILMASI VE VADE FARKLARI</li>
+                </ul>
                 <ol>
-                  <li>
-                    Siparişler eğer saat 16:00’dan önce alınmış ise aynı gün anlaşmalı olduğumuz
-                    kargo firması (Kargo firması müşteri tarafından bildirilmedikçe firmamızın
-                    seçeceği kargo şirketi ile gönderilir.) ile sipariş sahibine gönderilir.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    SATICI’nınALICI’ya kestiği her fatura, faturada belirtilen sürede, bedeli
+                    naktenve/veya SATICI’nın yazılı kabülüne bağlı olmak üzere bu sözleşmede,
+                    belirtilennitelikte çek ve/veya bonolarla kapatılır.Bono ve/veya çek verilerek
+                    kapatılan faturabedellerinde, faturada belirtilen ödeme gününün aşılması halinde
+                    aylık %7 oranındavade farkı uygulanır.
                   </li>
-                  <li>
-                    KDV Hariç 500 TL (BeşYüzTürkLirası) altındaki siparişlerin kargo ücreti sipariş
-                    sahibine aittir. Bu tutarın üzerindeki siparişlerin kargo ücretini Arena Diş
-                    karşılayacaktır.
+
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Hesapların, ALICI tarafından süresinde kapatılmaması halinde, ALICI’nınSATICI’ya
+                    senet ve/veya çekle kapatılmış olanlarda dahil, tüm borçları ve vadefarkları,
+                    SATICI’nın herhangi bir ihbarına gerek olmaksızın müeccel olur.
                   </li>
-                  <li>
-                    Cihazların nakliye ücretini her koşulda alıcı öder. (Cihaz olarak kabul edilen
-                    ürünler bu katalogda harfiyle işaretlenmiştir)
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI geciken ödemeleri için SATICI’ya aylık %7 vade farkı ödemeyi Kabul
+                    etmiştir.
                   </li>
-                  <li>
-                    Depomuzun bulunduğu illerde cihaz siparişleri kargo ve/veya Arena Diş’in
-                    Lojistik Müdürlüğü tarafından teslim edilir.
-                  </li>
-                  <li>
-                    11.01.2011 tarih ve 6098 sayılı Türk Borçlar Kanunun 208. Maddesine istinaden
-                    siparişler kargo firmasına teslim edildikten sonra mal seyri rizikosu alıcıya
-                    aittir.
-                  </li>
-                  <li>
-                    Siparişiniz teslim edildiğinde, kargo yetkilisi eşliğinde paketinizi açarak
-                    ürününüzü kontrol etmelisiniz. Özellikle ezilmiş, yırtılmış, açılmış veya
-                    ıslanmış paketlerde bunu yapmanız çok önemlidir. Beklenmedik bir durumda,
-                    sorunlu ürünle karşılaşırsanız paketi teslim almayıp, kargo yetkilisine tutanak
-                    tutturarak kargo şirketi tarafından tarafımıza iade edilmesini sağlamanız
-                    gerekmektedir.
-                  </li>
-                  <li>
-                    Stoklarımızda bulunmayan siparişlerin değeri 100 EURO’yu aşıyorsa sipariş
-                    bedelinin %25’si cayma bedeli alındıktan sonra sipariş kesinleşir ve
-                    siparişlerin teslimi esnasında bu tutar sipariş tutarından düşülür. Siparişin
-                    iptali halinde cayma bedeli iade edilmez. Ancak sipariş 75 gün içerisinde
-                    müşteriye teslim edilemez ise müşterinin talebi üzerine sipariş iptal edilir ve
-                    cayma bedeli müşteriye iade edilir.
+
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI’nınSATICI’ya verdiği çek ve bonoların ALICI’ya iade edilmiş
+                    olması,bunların bedellerinin ödendiğine dair SATICI tarafından düzenlenmiş ve
+                    imzalanmışbir makbuz olmadıkça, bedellerinin, masraflarının ve vade farklarının
+                    SATICI’yaödendiğini ve SATICI’nın bunlardan vazgeçtiğini göstermez.
                   </li>
                 </ol>
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info ">GARANTİ KOŞULLARI</h5>
-                </div>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li> DEĞİŞİKLİKLER VE FESİH</li>
+                </ul>
                 <ol>
-                  <li>
-                    Sarf malzemesi dışındaki ürünlerimiz ürüne yönelik özel olarak başka bir süre
-                    bildirilmediğinde teslim tarihinden itibaren 1 (bir) yıl süre ile garanti
-                    kapsamındadır ve garanti kartlarında verilen koşullar uygulanır.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Sözleşme ve temerrüt faizi oranlarında değişiklikler, SATICI tarafından yazılı
+                    olarakALICI’ya iadeli mektupla gönderildiği tarihten itibaren uygulanır.Bu faiz
+                    oranlarınıkabul etmeyen ALICI, borçlarını nakten ve def’aten ödemek
+                    zorundadır.Yeni faizoranının yazılı olarak bildirilmediği hallerde faturada
+                    belirtilmemiş ise bu sözleşmedebelirtilen AYLIK%7 faiz oranı uygulanır.Satıcı
+                    tarafından Vade Farkı oranında yapılan değişiklikler fatura üzerinde belirtilmek
+                    suretiyle de başkaca bildirim şartına bağlı olmadan da değiştirilebilir. Alıcı
+                    tarafından, faturada yazılan bu vade farkı oranının fatura münderecatından
+                    olmadığı için itiraz edilmediği yönündeki itirazlara itibar edilmez ve kötü
+                    niyetli olarak değerlendirilir.
                   </li>
-                  <li>
-                    Müşterilerimizin garanti kapsamında teknik servis hizmeti alabilmeleri için
-                    faturalarını ibraz etmeleri gereklidir ve fatura üzerinde marka, model ve seri
-                    numarası mutlaka belirtilmiş olmalıdır.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI’nın, bu sözleşme hükümlerine aykırı davranışı halinde SATICI tüm
+                    haklarınınifasını ve alacaklarının ödenmesini ALICI’dan derhal talep hakkında
+                    sahiptir veALICI buna uymak zorundadır. Buna uyulmadığı
+                    taktirdeSATICI’nınALICI’dakitüm hak ve alacakları herhangi bir ihbar
+                    veihtaragerek kalmaksızın muaccel hale gelir.
                   </li>
-                  <li>
-                    Arena Diş’in ürün portföyünde olup da Türkiye’ye Arena Diş üzerinden giriş
-                    yapmamış olan ürünlere garanti kapsamında teknik servis hizmeti verilmez.
-                    Cihazın gerek müşteri gerekse yetkisiz servis ve kişilerce kurcalanması, bu
-                    kişilerce sonradan ilave edilen yazılım, donanım ile bunların neden olduğu
-                    arızalar garanti kapsamı dışında olup garantiyi geçersiz kılar.
-                  </li>
-                  <li>
-                    Doğal afetler (yangın, sel vb.) sonucu darb alarak kırılma veya bozulma,
-                    uygunsuz ve/veya hatalı kullanım gibi nedenlerden dolayı meydana gelen arızalar
-                    ile hediye olarak verilen ürünler garanti kapsamı dışındadır.
-                  </li>
-                  <li>
-                    Bakımsızlık veya bakım eksikliğinden dolayı meydana gelen arızalar garanti
-                    kapsamı dışındadır.
-                  </li>
-                  <li>
-                    Gerek şebekeden gerekse ürünlerin kullanıldığı binanın tesisatından kaynaklanan
-                    her türlü elektriksel arızalar ve kullanım kılavuzunda belirtilmeyen her türlü
-                    dezenfektan kullanımından kaynaklanan deformasyonlar garanti kapsamı dışındadır.
-                  </li>
-                  <li>
-                    Ampul, diş ünitlerinin döşemeleri, kavitron uçları, O-ring ve conta gibi,
-                    plastik veya kauçuk her türlü sarf malzemesi ve aksesuar garanti kapsamı
-                    dışındadır.
-                  </li>
-                  <li>
-                    Yazılım kullanan ürünlerin yedek alınması ve/veya veri transferi sırasında
-                    uğrayacağı bilgi kayıpları ve yazılımların yeniden kurulumu garanti kapsamı
-                    dışındadır.
-                  </li>
-                  <li>
-                    Garanti süreci içerisinde arızalanan ve garanti kapsamında olmayan arızalar için
-                    müşterinin onayına müteakip yetkili Teknik Servisimiz Arena Diş’in fiyat listesi
-                    uygulanmak suretiyle arızalar giderilir.
-                  </li>
-                  <li>
-                    Satın almış olduğunuz cihazların orijinal kutularını garanti süresince muhafaza
-                    ediniz.
-                  </li>
-                  <li>
-                    Cihazlarda meydana gelen arızaların, bakımları ve onarımları firmamızın yetkili
-                    teknik servisi Arena Diş tarafından gerçekleştirilir.
-                  </li>
-                  <li>
-                    Hediye olarak verilen (bedelsiz) ürünlerin garantisi yoktur (örneğin otoklav
-                    cihazının yanında verilen poşetleme veya distile su cihazı veya ünitlerin
-                    yanında hediye edilen başlık vb.).
-                  </li>
-                  <li>
-                    Şirketimizin toptancılara sattığı cihazların garanti süreçleri teslim tarihinden
-                    üç ay sonra başlayacaktır. Eğer toptancı firma bu cihazı daha önce satarsa
-                    garanti cihazın kurulum tarihinden itibaren başlayacaktır. Üç aylık süreden
-                    sonra satışı toptancı tarafından yapılan cihazların kalan garanti süresi
-                    tarafımızca uygulanacak bakiye süre için garanti toptancının sorumluluğunda
-                    olacaktır.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Taraflardan birisinin, TTK hükümlerine göre diğer tarafa yapacağı yazılı ihbar
+                    ilesözleşmefeshedilir. Kim tarafından feshedilirse edilsin ALICI tüm
+                    borçlarınıSATICI’ya nakden ve def’aten ödemek zorundadır.
                   </li>
                 </ol>
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info ">İADE ve DEĞİŞTİRME</h5>
-                </div>
+                <ul className="page-title" style={{ marginLeft: "20px" }}>
+                  <li> GENEL HÜKÜMLER</li>
+                </ul>
+                <div className="page-title"> I- İHBAR, İHTAR, TEYİD VE ADRES DEĞİŞİKLİKLERİ</div>
                 <ol>
-                  <li>
-                    Şirketimizden satın almış olduğunuz sarf malzemeler fatura tarihinden itibaren 7
-                    gün içinde iade alınabilir veya değiştirilebilir.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Taraflar arasındaki her türlü ihbar, ihtar ve teyitler ile bunlara karşı
+                    itirazlar; iadeli taahhütlü mektup veya noter aracılığı ile yapılır.
+                  </li>{" "}
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Taraflar, adres değişikliklerini diğer tarafa 7(yedi) gün içerisinde yazılı
+                    olarak ihbarzorundadır. Bu ihbar yapılmadığı taktirde, sözleşmede mevcut adrese
+                    gönderilentebligatlar, hukuken geçerli bir tebligatın tüm hukuki sonuçlarını
+                    doğuracaktır.
                   </li>
-                  <li>
-                    Iade edeceğiniz ürünün kullanılmamış, kullanım hatası sonucu zarar görmemiş ya
-                    da paketinin hasar görmemiş olması gerekmektedir. İade etmek istediğiniz
-                    ürünleri tüm aksesuarları ve orijinal kutusu ile göndermeniz gerekmektedir.
-                    Üründe ve ambalajında herhangi bir bozulma, kırılma, tahrip, yırtılma,
-                    kullanılma ve sair durumlar tespit edildiği hallerde ve ürünün müşteriye teslim
-                    edildiği andaki hali ile iade edilememesi halinde ürün iade alınmaz ve bedeli
-                    iade edilmez. Kurulumu yapılmış cihazlar iade alınmaz veya değiştirilmez.
-                  </li>
-                  <li>
-                    Ürünler adresimize gönderilirken orijinal kutusu zarar görmeyecek şekilde
-                    muhafaza edilmelidir. Yani; ürünler kargoya direkt orijinal kutusu ile değil,
-                    orijinal kutusunun koruyucu bir koliye yerleştirilmesinden sonra gönderilmelidir
-                    (örnek: orijinal kutu üzerine kargo etiketi yapıştırılmış ve kargo koli bandı
-                    ile bantlanmış ürünler kabul edilmez).
-                  </li>
-                  <li>
-                    Eğer ürünün faturası şirket adına kesilmiş ise iade işlemi için kurumun
-                    düzenlemiş olduğu ‘iade faturası’ ve ‘iade irsaliyesi’ (ya da irsaliyeli fatura)
-                    gönderilmesi zorunludur. Aksi durumda, faturası kurumlar adına düzenlenen
-                    siparişlerin iadeleri yapılamamaktadır. Bu hususun WEB sayfasında olmasına da
-                    dikkat edin…
-                  </li>
-                  <li>
-                    Iade prosedürüne uygun sürelerde yapılan tüm iade işlemlerinde ürünleri Arena
-                    Diş Deposu San. ve Tic. A.Ş’nin anlaşmalı olduğu kargo şirketi ile karşı ödemeli
-                    olarak gönderebilirsiniz. Anlaşmalı kargo dışındaki firmalarla yapacağınız
-                    gönderilerde kargo bedeli sizin tarafınızdan karşılanmış olmalıdır, aksi halde
-                    karşı ödemeli gönderi teslim alınmaz.
-                  </li>
-                  <li>Kurulumu yapılmış cihazalar iade alınamaz veya değiştirilemez.</li>
                 </ol>
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info ">TABİ OLDUĞUMUZ KANUNLAR</h5>
-                </div>
-                Şirketimizin satmakta olduğu ürünler niteliği itibari ile 1- 13.01.2011 tarih ve
-                6102 sayılı Türk Ticaret Kanunu 2- 11.01.2011 tarih ve 6098 sayılı Türk Borçlar
-                Kanunu kapsamındadır.
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info ">
-                    TIBBİ CİHAZLARIN ELEKTRONİK KULLANIM TALİMATLARI HAKKINDA TEBLİĞ
-                  </h5>
-                </div>
-                02 Nisan 2015 tarih ve 29314 sayılı Resmi Gazetede Yayınlanan “Tıbbi Cihazların
-                Elektronik Kullanım Talimatları Hakkında Tebliğ”’e göre; İLGİ tebliğ ile Tıbbi Cihaz
-                Yönetmeliği ile Vücuda Yerleştirilebilir Aktif Tıbbi Cihazlar Yönetmeliği
-                kapsamındaki, ithalatını yapmakta olduğumuz Ünit, Otoklav, Panaromik Röntgen, Laser,
-                CAD-CAM vs gibi sabit kurulumlu cihazların kullanım kılavuzlarının kağıt kopyası
-                yerine elektronik ortamda ulaşıbilir olması isteniyor. Bu kapsamda; çalıştığımız tüm
-                markalarımızın web sitelerinde Ürünlerin Kullanım Kılavuzları bulunmakta, ve ayrıca
-                https://www.arenadis.com.tr adresimize girerek ilgili ürünlerin kullanım
-                kılavuzlarına ulaşabilir veya adresine e posta göndererek ilgili ürünün kullanım
-                kılavuzunu tarafımızdan talep edebilirsiniz. * Toptan satışlar için uygulanacak
-                satış koşulları için şirketimizin Kurumsal Satış Müdürlüğü ile temas kurunuz.{" "}
-                <div style={{ marginTop: 30 }}>
-                  <h5 className="dark-text-info ">
-                    TOPTAN SATIŞI YAPILAN CİHAZLARIN GARANTİ ŞARTLARI
-                  </h5>
-                </div>
-                Şirketimizin “Satış Koşullarımız” başlığı içinde belirtilen garanti koşullarına
-                ilave olarak;
+                <div className="page-title"> II- YETKİLİLERİN DEĞİŞMESİ VE DEVİR</div>
                 <ol>
-                  <li>
-                    Şirketimizin toptancılara sattığı cihazların garanti süreçleri teslim tarihinden
-                    üç ay sonra başlayacaktır.
-                  </li>
-                  <li>
-                    Eğer toptancı firma bu cihazı bahse konu üç ay içerisinde satarsa garanti
-                    cihazın kurulum tarihinden itibaren başlayacaktır.
-                  </li>
-                  <li>
-                    Üç aylık süreden sonra toptancı tarafından satışı yapılan cihazların kalan
-                    garanti süresi tarafımızca uygulanacak, 12 aylık garanti süresinin dışında kalan
-                    süre için garanti toptancının sorumluluğunda olacaktır.
-                  </li>
-                  <li>
-                    Şirketimizden cihaz alan toptancılar bu cihazların garantilerinin başlatılması
-                    için şirketimizin tek yetkili Teknik Servisi Arena Diş bildirim yapmak
-                    zorundadırlar. Aksi halde garanti geçersiz olacaktır.
-                  </li>
-                  <li>
-                    Garanti sürecinin başlatılması için Satış faturasının ibrazı şart olduğundan
-                    toptancı firmalar satışını yaptıkları cihazların sevkiyatları esnasında satış
-                    faturalarını ibraz etmek zorundadırlar. Arıza meydana geldikten sonra ibraz
-                    edilen faturalar ile garanti işlemi yapılmayacaktır.
-                  </li>
-                  <li>
-                    Fatura üzerinde, ilgili ürüne ait; satın alma yılı, ayı ve günü, müşteri adı,
-                    satıcı adı, ve ürünün seri numarası vb. bilgiler üzerinde herhangi bir tahribat
-                    ve/veya değişiklik yapıldığında o ürünler garanti kapsamına girmez.
-                  </li>
-                  <li>
-                    Cihazın Faturasında kimliği belirtilen kullanıcıdan başka hiç kimse hak ve/veya
-                    tazminat talep edemez.
-                  </li>
-                  <li>
-                    Şirketimizden 01.01.2015 tarihinden önce toptancı firmalar tarafından satın
-                    alınıp henüz satışı yapılmayan ürünler için şirketimiz tarafından garanti
-                    verilmemektedir.
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    ALICI, kendisini temsile yetkili şahıslar değiştiğiveya şirket nevi değişikliği
+                    halinde bu durumu SATICI’yaanında bildirmek ve hazırlanan yeni imza sirkülerini
+                    tebliğ etmek zorundadır.
+                  </li>{" "}
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Bu sözleşme, tarafların bütün kanuni ve akdi haleflerini bağlar ve akdi ve
+                    kanunihalefleri leh ve aleyhine hüküm ifade eder. ALICI sözleşme konusu işi ve
+                    doğacakhaklarını SATICI’nın yazılı izni olmaksızın herhangi bir başkasına devir
+                    ve temlikedemez.
                   </li>
                 </ol>
+                <div className="page-title"> III- SÖZLEŞMENİN DEĞİŞİMİ VE İHTİLAF HALLERİ</div>
+                <ol>
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Bu anlaşma ancak, tarafların yetkili mercilerince imzalanan ek sözleşme
+                    iledeğiştirilebilir.Sürekli uygulamalar dahi, yazılı ve imzalı bir değişiklik
+                    yok ise,sözleşmenin değiştirildiği anlamında yorumlanamaz ve bu tür
+                    uygulamalardayanılarak herhangi bir hak iddia edilemez.
+                  </li>{" "}
+                  <li style={{ marginTop: "10px", marginLeft: "20px" }}>
+                    Bu sözleşmeden kaynaklanan ya da sözleşme ile ilgili ihtilafların halinde,
+                    HUMK287. maddesi gereğince SATICI’nın defter, kayıt ve belgeleri yegane delil ve
+                    İZMİR Mahkemeleri ve İcra Daireleri, münhasıran yetkili kabul edilmiştir.
+                  </li>
+                </ol>
+                <div style={{ marginTop: "30px" }}>
+                  İşbu sözleşme tüm ekleriyle bir bütündür ve 28 /11 / 2019tarihinde iki nüsha
+                  olaraktanzim ve taraflarca okunduktan sonra imza edilmiştir.
+                </div>
               </Grid>
             </Grid>
           </Container>
