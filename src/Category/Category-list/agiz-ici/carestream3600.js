@@ -7,8 +7,9 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
-import { useNavigate } from "react-router-dom";
+import Katalog from "assets/docs/CS_3600_ARENA_KATALOG.pdf";
+// import { Document, Page } from "react-pdf";
+// import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 export function Carestream3600() {
@@ -89,9 +90,10 @@ export function Carestream3600() {
 }
 
 export function Carestream3600Title() {
-  const navigate = useNavigate();
-  const test = () => {
-    navigate("https://www.arenadis.com.tr/wp-content/uploads/2021/04/CS-3600-ARENA-KATALOG.pdf");
+  // const navigate = useNavigate();
+  const pdfViewer = () => {
+    console.log("asdasd");
+    window.open(Katalog, "_blank");
   };
   return (
     <div>
@@ -119,9 +121,9 @@ export function Carestream3600Title() {
               {/* ... */}
             </Grid>
           </Grid>
-          <Button onClick={() => test()} style={{ fontSize: "16px" }}>
+          <Button onClick={() => pdfViewer()} style={{ fontSize: "16px" }}>
             <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            <div style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</div>
           </Button>
         </Container>
       </MKBox>
