@@ -7,7 +7,7 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
+import Katalog from "assets/docs/CeramicMatserE1000/E1000_en_230V_v3.pdf";
 import { Button } from "@mui/material";
 
 function CeramicMasterE1000() {
@@ -59,7 +59,9 @@ function CeramicMasterE1000() {
 export default CeramicMasterE1000;
 
 export const CeramicMasterE1000Title = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">

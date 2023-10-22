@@ -15,6 +15,7 @@ import Content_7 from "assets/images/content-imgs/up3dp53/P53-7.jpg";
 import Content_8 from "assets/images/content-imgs/up3dp53/P53-8.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog from "assets/docs/Up3D/P53-dental-milling-machine-catalog_arena-1.pdf";
 
 import { Button } from "@mui/material";
 
@@ -68,7 +69,9 @@ function Up3dP53DentalFrezelemeCihazi() {
 export default Up3dP53DentalFrezelemeCihazi;
 
 export const Up3dP53DentalFrezelemeCihaziTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">

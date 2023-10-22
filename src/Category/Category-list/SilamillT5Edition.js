@@ -19,6 +19,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog from "assets/docs/SilamillT5Edition/T5edition.pdf";
 
 import { Button } from "@mui/material";
 
@@ -174,7 +175,9 @@ function SilamillT5Edition() {
 export default SilamillT5Edition;
 
 export const SilamillT5EditionTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">

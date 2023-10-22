@@ -16,7 +16,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
+import Katalog from "assets/docs/SilamillN4Edition/SN4Edition.pdf";
 import { Button } from "@mui/material";
 const itemData = [
   {
@@ -161,7 +161,9 @@ function SilamillN4Edition() {
 export default SilamillN4Edition;
 
 export const SilamillN4EditionTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">

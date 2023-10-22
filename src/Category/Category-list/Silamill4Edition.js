@@ -7,7 +7,7 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
+import Katalog from "assets/docs/Silamill4Edition/Teknik-Data.pdf";
 import { Button } from "@mui/material";
 function Silamill4Edition() {
   return (
@@ -94,7 +94,9 @@ function Silamill4Edition() {
 export default Silamill4Edition;
 
 export const Silamill4EditionTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">
