@@ -159,7 +159,7 @@ export function ProductSlider({ images }) {
     <Carousel
       infiniteLoop={true}
       autoPlay={true}
-      interval={1000}
+      interval={10000}
       showThumbs={true}
       // className="d-flex justify-content-center align-items-center"
       // animation="slide"
