@@ -5,6 +5,8 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import { Icon } from "@mui/material";
+import MKTypography from "components/MKTypography";
 
 export function DentaFabSega3D() {
   return (
@@ -95,6 +97,80 @@ export function DentaFabSega3DTitle() {
 
               {/* ... */}
             </Grid>
+          </Grid>
+        </Container>
+        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
+          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+            <MKTypography
+              component="a"
+              href="/urunler/cad-cam-sistemleri"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+                "&:hover .material-icons-round, &:focus .material-icons-round": {
+                  transform: `translateX(6px)`,
+                },
+              }}
+            >
+              CAD/CAM Sistemleri
+              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            </MKTypography>
+            <MKTypography
+              component="a"
+              href="/urunler/cad-cam-sistemleri/3d-printer"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+                "&:hover .material-icons-round, &:focus .material-icons-round": {
+                  transform: `translateX(6px)`,
+                },
+              }}
+            >
+              3D Printerlar
+              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            </MKTypography>
+            <MKTypography
+              component="a"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+              }}
+            >
+              DentaFab Sega 3D Printer
+            </MKTypography>
           </Grid>
         </Container>
       </MKBox>

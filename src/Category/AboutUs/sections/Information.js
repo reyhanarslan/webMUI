@@ -139,7 +139,7 @@ function CategoryMenu() {
       setListingPerPage(result.slice(0, 9));
       setListingProduct(result);
       setSelectedIndex(5);
-    } else if (pathArray[2] === "labaratuvar-ekipmanlari") {
+    } else if (pathArray[2] === "laboratuvar-ekipmanlari") {
       const result = Products[6].product;
       setListingProduct(result);
       setListingPerPage(result.slice(0, 9));
@@ -506,7 +506,7 @@ function CategoryMenu() {
                       <ListItemButton
                         className="listItemButton"
                         selected={selectedIndex === 6}
-                        onClick={() => handleListItemClick(6, "/urunler/labaratuvar-ekipmanlari")}
+                        onClick={() => handleListItemClick(6, "/urunler/laboratuvar-ekipmanlari")}
                       >
                         {" "}
                         <SendIcon />

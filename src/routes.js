@@ -177,7 +177,7 @@ const routes = [
       },
       {
         name: "Laboratuvar Ekipmanları",
-        route: "/urunler/labaratuvar-ekipmanlari",
+        route: "/urunler/laboratuvar-ekipmanlari",
         component: <Category />,
         // description: "See all 32 examples",
         // dropdown: true,

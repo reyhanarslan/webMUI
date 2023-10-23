@@ -570,12 +570,12 @@ const Products = [
       {
         id: "1jmZFqoVSi",
         model: "Çift Teknisyen Çalışma Masası",
-        img: [ttcm_1],
+        img: [ctcm_1],
       },
       {
         id: "pW7rUCqbGJ",
         model: "Tekli Teknisyen Çalışma Masası",
-        img: [ctcm_1],
+        img: [ttcm_1],
       },
     ],
   },

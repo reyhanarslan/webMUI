@@ -8,7 +8,8 @@ import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import Katalog from "assets/docs/Silamill4Edition/Teknik-Data.pdf";
-import { Button } from "@mui/material";
+import { Button, Icon } from "@mui/material";
+import MKTypography from "components/MKTypography";
 function Silamill4Edition() {
   return (
     <div>
@@ -121,6 +122,80 @@ export const Silamill4EditionTitle = () => {
             <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
             <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
           </Button>
+        </Container>
+        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
+          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+            <MKTypography
+              component="a"
+              href="/urunler/cad-cam-sistemleri"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+                "&:hover .material-icons-round, &:focus .material-icons-round": {
+                  transform: `translateX(6px)`,
+                },
+              }}
+            >
+              CAD/CAM Sistemleri
+              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            </MKTypography>
+            <MKTypography
+              component="a"
+              href="/urunler/cad-cam-sistemleri/kaziyicilar"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+                "&:hover .material-icons-round, &:focus .material-icons-round": {
+                  transform: `translateX(6px)`,
+                },
+              }}
+            >
+              Kazıyıcılar
+              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            </MKTypography>
+            <MKTypography
+              component="a"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+              }}
+            >
+              SILAMILL 4 EDITION
+            </MKTypography>
+          </Grid>
         </Container>
       </MKBox>
     </div>

@@ -9,7 +9,8 @@ import Content from "/assets/images/content-imgs/dentafabsega3d/1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
-import { Button } from "@mui/material";
+import { Button, Icon } from "@mui/material";
+import MKTypography from "components/MKTypography";
 function DentafabSega3DPrinter() {
   return (
     <div>
