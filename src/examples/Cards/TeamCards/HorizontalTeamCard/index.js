@@ -7,36 +7,107 @@ import Grid from "@mui/material/Grid";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import { Link } from "react-router-dom";
 
-function HorizontalTeamCard({ image, name, position, description }) {
+function HorizontalTeamCard({ image, name, position, index, description }) {
   return (
-    <Card sx={{ mt: 3 }}>
-      <Grid container>
-        <Grid item xs={12} md={6} lg={4} sx={{ mt: -6 }}>
-          <MKBox width="100%" pt={2} pb={1} px={2}>
-            <MKBox
-              component="img"
-              src={image}
-              alt={name}
-              width="100%"
-              borderRadius="md"
-              shadow="lg"
-            />
-          </MKBox>
-        </Grid>
-        <Grid item xs={12} md={6} lg={8} sx={{ my: "auto" }}>
-          <MKBox pt={{ xs: 1, lg: 2.5 }} pb={2.5} pr={4} pl={{ xs: 4, lg: 1 }} lineHeight={1}>
-            <MKTypography variant="h5">{name}</MKTypography>
-            <MKTypography variant="h6" color={position.color} mb={1}>
-              {position.label}
-            </MKTypography>
-            <MKTypography variant="body2" color="text">
-              {description}
-            </MKTypography>
-          </MKBox>
-        </Grid>
-      </Grid>
-    </Card>
+    <>
+      {index % 2 === 1 ? (
+        <>
+          <Card
+            className="home-card-right"
+            width="100%"
+            style={{ height: "320px", backgroundColor: "#F8F9FF" }}
+            sx={{ mt: 0 }}
+          >
+            <Grid container>
+              <Grid item xs={12} md={6} lg={4} sx={{ mt: -6, marginLeft: -15 }}>
+                <MKBox width="350px" pt={2} pb={1} px={0}>
+                  <MKBox
+                    bgColor="#F8F9FF"
+                    borderRadius="xl"
+                    shadow="lg"
+                    minHeight="10rem"
+                    sx={{
+                      overflow: "hidden",
+                      transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
+                      transformOrigin: "50% 0",
+                      willChange: "transform, box-shadow",
+                      transition: "transform 200ms ease-out",
+                      "&:hover": {
+                        transform: "perspective(999px) rotateX(7deg) translate3d(0px, -10px, 50px)",
+                      },
+                    }}
+                    component="img"
+                    src={image}
+                    alt={name}
+                    width="350px"
+                    height="300px"
+                  />
+                </MKBox>
+              </Grid>
+              <Grid item xs={12} md={6} lg={8} sx={{ my: "auto", marginLeft: "auto" }}>
+                <MKBox pt={5} pb={7} px={4} lineHeight={1.5}>
+                  <MKTypography sx={{ textAlign: "center" }} mb={3} variant="h3">
+                    <Link to={position.route}>{name}</Link>
+                  </MKTypography>
+                  <MKTypography sx={{ textAlign: "center" }} variant="body2" color="text">
+                    {description}
+                  </MKTypography>
+                </MKBox>
+              </Grid>
+            </Grid>
+          </Card>
+        </>
+      ) : (
+        <Card
+          className="home-card-left"
+          width="100%"
+          style={{ height: "320px", backgroundColor: "#F8F9FF" }}
+          sx={{ mt: 40 }}
+        >
+          <Grid container>
+            <Grid item xs={12} md={6} lg={8} sx={{ my: "auto" }}>
+              <MKBox pt={5} pb={7} pl={3} pr={{ xs: 4, lg: 1 }} lineHeight={1.5}>
+                <MKTypography mb={3} variant="h3">
+                  {" "}
+                  <Link to={position.route}> {name}</Link>{" "}
+                </MKTypography>{" "}
+                <MKTypography variant="body2" color="text">
+                  {description}
+                </MKTypography>
+              </MKBox>
+            </Grid>
+            <Grid item xs={12} md={6} lg={4} sx={{ mt: -6 }}>
+              <MKBox width="350px" pt={2} pb={1} px={0}>
+                <MKBox
+                  bgColor="#F8F9FF"
+                  borderRadius="xl"
+                  shadow="lg"
+                  minHeight="10rem"
+                  sx={{
+                    overflow: "hidden",
+                    transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
+                    transformOrigin: "50% 0",
+                    willChange: "transform, box-shadow",
+                    transition: "transform 200ms ease-out",
+
+                    "&:hover": {
+                      transform: "perspective(999px) rotateX(7deg) translate3d(0px, -10px, 50px)",
+                    },
+                  }}
+                  component="img"
+                  src={image}
+                  alt={name}
+                  width="350px"
+                  height="300px"
+                />
+              </MKBox>
+            </Grid>
+          </Grid>
+        </Card>
+      )}
+    </>
   );
 }
 
@@ -44,7 +115,9 @@ function HorizontalTeamCard({ image, name, position, description }) {
 HorizontalTeamCard.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
   position: PropTypes.shape({
+    route: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
       "primary",
       "secondary",
