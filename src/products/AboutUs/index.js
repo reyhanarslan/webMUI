@@ -41,10 +41,10 @@ import PropTypes from "prop-types";
 // Images
 // import bgImage from "assets/images/bg-about-us.jpg";
 import { Link, useParams } from "react-router-dom";
-import { CardMedia } from "@mui/material";
+// import { CardMedia } from "@mui/material";
 import { useEffect, useState } from "react";
 import Products from "products/ProductDatas/products";
-import Carousel from "react-material-ui-carousel";
+// import Carousel from "react-material-ui-carousel";
 // import DentafabSega3DPrinter from "Category/Category-list/DentafabSega3DPrinter";
 import Siladent3dPrinterSilaPrintLCD from "Category/Category-list/Siladent3dPrinterSilaPrintLCD";
 import Silamill4Edition from "Category/Category-list/Silamill4Edition";
@@ -152,38 +152,46 @@ import { MobilKabin04Title } from "Category/Category-list/MobilKabin04";
 import { DFM75ETitle } from "Category/Category-list/DFM75E";
 import { CiftTeknisyenCalismaMasasiTitle } from "Category/Category-list/CiftTeknisyenCalismaMasasi";
 import { TekliTeknisyenCalismaMasasiTitle } from "Category/Category-list/TekliTeknisyenCalismaMasasi";
-
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 export function ProductSlider({ images }) {
   return (
     <Carousel
-      className="d-flex justify-content-center align-items-center"
-      animation="slide"
-      duration={500}
-      width={800}
-      height={600}
-      navButtnsAlwaysVisible={false}
-      fullHeightHover={true}
-      stopAutoPlayOnHover={true}
-      swipe={true}
+      infiniteLoop={true}
+      autoPlay={true}
+      interval={1000}
+      showThumbs={true}
+      // className="d-flex justify-content-center align-items-center"
+      // animation="slide"
+      // duration={500}
+      // width={800}
+      // height={600}
+      // navButtnsAlwaysVisible={false}
+      // fullHeightHover={true}
+      // stopAutoPlayOnHover={true}
+      // swipe={true}
     >
       {images.map((item, i) => (
-        <CardMedia
-          className="d-flex justify-content-center align-items-center carousel-item"
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginLeft: "0",
-            boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
-            borderRadius: "20px",
-            transition: "transform 0.3s ease-in-out",
-          }}
-          key={i}
-          image={item}
-          alt="Logo"
-        />
+        <div key={i}>
+          <img src={item} />
+        </div>
+        // <CardMedia
+        //   className="d-flex justify-content-center align-items-center carousel-item"
+        //   style={{
+        //     width: "100%",
+        //     height: "100%",
+        //     display: "flex",
+        //     justifyContent: "center",
+        //     alignItems: "center",
+        //     marginLeft: "0",
+        //     boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
+        //     borderRadius: "20px",
+        //     transition: "transform 0.3s ease-in-out",
+        //   }}
+        //   key={i}
+        //   image={item}
+        //   alt="Logo"
+        // />
       ))}
     </Carousel>
   );
