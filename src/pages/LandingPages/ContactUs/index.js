@@ -40,17 +40,15 @@ function ContactUs() {
   const phone =
     "https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?w=1380&t=st=1695842013~exp=1695842613~hmac=bbe8d7b00c95f26157f7c4875836bedd0f7c5de0c8ce47128eef4fbc1f81ea77";
   return (
-    <div
-      style={{
-        backgroundColor: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
-      }}
-    >
+    <div>
       <div
         style={{
           position: "fixed",
           top: "0.5rem",
           width: "100%",
-          backgroundColor: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
+          background: "#11304C ",
+
+          // backgroundColor: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
         }}
       >
         <DefaultNavbar

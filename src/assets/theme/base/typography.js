@@ -107,7 +107,7 @@ const typography = {
 
   body2: {
     fontFamily: baseProperties.fontFamily,
-    fontSize: baseProperties.fontSizeMD,
+    fontSize: baseProperties.fontSizeLG,
     fontWeight: baseProperties.fontWeightLight,
     lineHeight: 1.6,
   },
