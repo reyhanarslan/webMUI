@@ -12,20 +12,22 @@ import Information from "pages/Presentation/sections/Information";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 // import Pages from "pages/Presentation/sections/Pages";
 
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
+// import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 import logo from "assets/images/logos/arenadis-logo-web-1.png";
 // import { Container } from "@mui/material";
 import routes from "routes";
 
 // import bgImage from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 // import bgImage1 from "assets/images/dashboard/test.jpg";
-import CarouselImages from "./sections/Carousel";
+// import CarouselImages from "./sections/Carousel";
+// import Counters from "./sections/Counters";
 import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
 import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
 import sld2 from "assets/images/carousel/SLIDER-2.jpg";
 import sld3 from "assets/images/carousel/SLIDER-3.jpg";
 import React, { useState, useEffect, useRef } from "react";
+import UrunlerCard from "./sections/UrunlerCards";
 // import { useCallback } from "react";
 // import { loadFull } from "tsparticles";
 // import Particles from "react-particles";
@@ -170,118 +172,64 @@ function Presentation() {
       />
       <div
         style={{
-          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
-
-          // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), rgba(7, 7, 67, 0.8) 25.71%)",
+          background: "#11304C ",
+          // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
         }}
       >
-        {/* <MKBox
-            minHeight="90vh"
-            width="100%"
-            sx={{
-              padding: 2,
-              // backgroundImage: `url(${bgImage1})`, //video gelecek
-              backgroundSize: "cover",
-              backgroundPosition: "top",
-              display: "grid",
-              placeItems: "center",
-            }}
-          > */}
-        {/* {isVideoPlaying ? ( */}
-        <div
-          style={{
-            position: "relative",
+        <Card
+          sx={{
+            p: 0,
+            mt: 0,
+            borderRadius: "30px",
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
-        ></div>
-        <div className="video-card">
-          <ReactPlayer
-            ref={playerRef}
-            style={{ borderRadius: "15px" }}
-            width="100%"
-            height="100%"
-            url={intro}
-            playing={true}
-            muted={true}
-            controls={false}
-          />
-        </div>
+        >
+          <div className="video-card">
+            <ReactPlayer
+              ref={playerRef}
+              style={{ borderRadius: "15px", zIndex: 1 }}
+              width="100%"
+              height="100%"
+              url={intro}
+              playing={true}
+              muted={true}
+              controls={false}
+            />
+          </div>
+        </Card>
         <div
           style={{
             position: "absolute",
-            top: "15px", // Adjust the top position as needed
-            left: "40px", // Adjust the left position as needed
-            zIndex: 1, // Ensure the logo appears above the video
+            top: "15px",
+            left: "40px",
+            zIndex: 1,
           }}
         >
           <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
         </div>
-        {/* <MKBox>
-          <Grid container>
-            <Grid className="d-flex" item xs={12} md={6} lg={3} sx={{ ml: 0, mb: 1 }}>
-              {" "}
-              <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
-            </Grid>
-          </Grid>
-        </MKBox>{" "} */}
-        {/* <Particles options={options} init={particlesInit} className="custom-particles" /> */}
-        {/* ) : (
-          <div
-            className={`d-flex justify-content-center align-items-center custom-carousel ${
-              isVideoPlaying ? "" : "active"
-            }`}
-          >
-            <img
-              width="100%"
-              height="700px"
-              src={images[currentIndex]}
-              className="image-transition"
-            />
-          </div>
-        )} */}
-        {/* </MKBox> */}
-        {/* <ReactPlayer
-                style={{ opacity: "0.90" }}
-                width={"100%"}
-                height="100%"
-                url={intro}
-                playing={true}
-                muted={true}
-                controls={true}
-              /> */}
         <Card
-          // className="div-background"
           sx={{
             p: 0,
-            // mx: { xs: 2, lg: 3 },
             mt: -25,
-            // borderBottomLeftRadius: "30px",
-            // borderBottomRightRadius: "30px",
             borderRadius: "30px",
-            // borderRadius:"30px",
             zIndex: 56456,
-            // backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
           <Information />
 
-          <CarouselImages />
-        </Card>
-        <BuiltByDevelopers />
+          {/* <CarouselImages /> */}
+          {/* <Counters /> */}
+        </Card>{" "}
+        <UrunlerCard> </UrunlerCard>
+        {/* <BuiltByDevelopers /> */}
         <Card
-          // className="div-background"
           sx={{
             p: 0,
-            // mx: { xs: 2, lg: 3 },
-            // mt: 2,
-            // borderBottomLeftRadius: "30px",
-            // borderBottomRightRadius: "30px",
             borderRadius: "30px",
-            // borderRadius:"30px",
-
-            // backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
-            backdropFilter: "saturate(200%) blur(30px)",
+            // backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >

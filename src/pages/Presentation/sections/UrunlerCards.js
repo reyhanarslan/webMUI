@@ -1,22 +1,23 @@
+// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import ExampleCard from "pages/Presentation/components/ExampleCard";
-import { Link } from "react-router-dom";
-import data from "pages/Presentation/sections/data/pagesData";
+import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
+import React from "react"; // Import React if not already imported
 import { useCallback } from "react";
 import { loadFull } from "tsparticles";
 import Particles from "react-particles";
+// Images
+import data from "pages/Presentation/sections/data/pagesData";
 import Icon from "@mui/material/Icon";
+// import team1 from "assets/images/team-5.jpg";
+// import team2 from "assets/images/bruce-mars.jpg";
+// import team3 from "assets/images/ivana-squares.jpg";
+// import team4 from "assets/images/ivana-square.jpg";
+// import { Link } from "react-router-dom";
 
-function BuiltByDevelopers() {
-  const renderData = data.map(({ image, name, route }) => (
-    <Grid item xs={12} lg={4} md={6} sx={{ mb: { xs: 3, lg: 0 } }} key={name}>
-      <Link to={route}>
-        <ExampleCard image={image} name={name} display="grid" minHeight="auto" />
-      </Link>
-    </Grid>
-  ));
+const UrunlerCard = () => {
   const options = {
     fpsLimit: 120,
     interactivity: {
@@ -84,18 +85,19 @@ function BuiltByDevelopers() {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
-  return (
-    <>
-      {" "}
-      <div
-        style={{
-          background: "#11304C ",
 
-          // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #11304C 20.71%)",
-        }}
-      >
-        <Particles options={options} init={particlesInit} className="custom-particles" />
-        <Container>
+  console.log(data);
+  return (
+    <div
+      style={{
+        // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #11304C 20.71%)",
+        background: "#11304C ",
+      }}
+    >
+      <Particles options={options} init={particlesInit} className="custom-particles" />
+
+      <Container position="relative" py={6} px={{ xs: 2, lg: 0 }} mx={-2}>
+        <Grid marginBottom={5} container>
           <Grid
             container
             item
@@ -105,32 +107,45 @@ function BuiltByDevelopers() {
             alignItems="center"
             sx={{ textAlign: "center", my: 2, mx: "auto" }}
           >
-            <MKTypography color="white" variant="h2" fontWeight="bold">
+            <MKTypography
+              style={{ marginBottom: "20px" }}
+              color="white"
+              variant="h2"
+              fontWeight="bold"
+            >
               Ürünlerimiz
             </MKTypography>
             <MKTypography color="white" variant="body1">
               Ürünlerimiz sektörün ihtiyaçlarına uygun çözümler sunuyor.
             </MKTypography>
           </Grid>
-        </Container>
-        <Container sx={{ mt: { xs: 4, lg: 8 } }}>
-          <Grid container>
-            <Grid
-              item
-              xs={12}
-              lg={16}
-              sx={{ px: { xs: 0, lg: 8 } }}
-              style={{ marginLeft: "50px", marginRight: "50px", marginBottom: "15px" }}
-            >
-              <Grid container spacing={5}>
-                {renderData}
-              </Grid>
+        </Grid>
+        <Grid container spacing={3}>
+          {data.map(({ image, name, route, description, index }) => (
+            <Grid item key={name} xs={12} lg={6}>
+              <MKBox>
+                <HorizontalTeamCard
+                  //   route={route}
+
+                  index={index}
+                  image={image}
+                  name={name}
+                  position={{ color: "info", label: "Detay", route }}
+                  description={description}
+                />
+              </MKBox>
             </Grid>
-          </Grid>
-        </Container>
+          ))}
+        </Grid>
 
         <Container>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-end", marginLeft: "-120px" }}>
+          <Grid
+            container
+            item
+            xs={12}
+            lg={12}
+            sx={{ my: 6, ml: { xs: 0, lg: 12 }, justifyContent: "flex-end" }}
+          >
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri/kaziyicilar"
@@ -157,9 +172,9 @@ function BuiltByDevelopers() {
             </MKTypography>
           </Grid>
         </Container>
-      </div>
-    </>
+      </Container>
+    </div>
   );
-}
+};
 
-export default BuiltByDevelopers;
+export default UrunlerCard;

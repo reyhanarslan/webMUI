@@ -211,9 +211,10 @@ export default function App() {
       <div
         style={{
           height: "200px",
-          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 25.71%)",
+          //background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 25.71%)",
+          // background: "#11304C ",
 
-          // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), rgba(7, 7, 67, 0.8) 25.71%)",
+          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #11304C 25.71%)",
         }}
       >
         <MKBox component="footer">
