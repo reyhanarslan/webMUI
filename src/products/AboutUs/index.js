@@ -160,7 +160,9 @@ export function ProductSlider({ images }) {
       infiniteLoop={true}
       autoPlay={true}
       interval={10000}
+      // dynamicHeight={}
       showThumbs={true}
+      stopOnHover={false}
       // className="d-flex justify-content-center align-items-center"
       // animation="slide"
       // duration={500}
