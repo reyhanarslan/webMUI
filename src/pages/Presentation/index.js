@@ -179,9 +179,8 @@ function Presentation() {
         <Card
           sx={{
             p: 0,
-            mt: -25,
+            mt: 0,
             borderRadius: "30px",
-            zIndex: 56456,
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
