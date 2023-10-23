@@ -10,6 +10,7 @@ import { ImageListItem } from "@mui/material";
 import Products from "products/ProductDatas/products";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog from "assets/docs/SmartOpticsVHR/Vinyl.pdf";
 
 import { Button } from "@mui/material";
 function SmartOpticsVinylHighResolution() {
@@ -105,7 +106,9 @@ function SmartOpticsVinylHighResolution() {
 export default SmartOpticsVinylHighResolution;
 
 export const SmartOpticsVinylHighResolutionTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">

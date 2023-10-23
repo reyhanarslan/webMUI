@@ -7,6 +7,7 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog from "assets/docs/CeramicMasterPress/CM-Press_stepper-motor_en_v6.pdf";
 
 import { Button } from "@mui/material";
 function CeramicMasterPress() {
@@ -56,7 +57,10 @@ function CeramicMasterPress() {
 export default CeramicMasterPress;
 
 export const CeramicMasterPressTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
+
   return (
     <div>
       <MKBox component="section">

@@ -16,6 +16,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog from "assets/docs/Silamill58Edition/S58edition.pdf";
 
 import { Button } from "@mui/material";
 
@@ -86,7 +87,9 @@ function Silamill58Edition() {
 export default Silamill58Edition;
 
 export const Silamill58EditionTitle = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader = () => {
+    window.open(Katalog, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">

@@ -29,6 +29,10 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog_1 from "assets/docs/SilamillR5/R5_1.pdf";
+import Katalog_2 from "assets/docs/SilamillR5/R5_2.pdf";
+import Katalog_3 from "assets/docs/SilamillR5/R5_3.pdf";
+import Katalog_4 from "assets/docs/SilamillR5/R5_4.pdf";
 
 import { Button } from "@mui/material";
 const itemData = [
@@ -240,7 +244,18 @@ function SilamillR5() {
 export default SilamillR5;
 
 export const SilamillR5Title = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader_1 = () => {
+    window.open(Katalog_1, "_blank");
+  };
+  const pdfDownloader_2 = () => {
+    window.open(Katalog_2, "_blank");
+  };
+  const pdfDownloader_3 = () => {
+    window.open(Katalog_3, "_blank");
+  };
+  const pdfDownloader_4 = () => {
+    window.open(Katalog_4, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">
@@ -260,7 +275,19 @@ export const SilamillR5Title = () => {
               </div>
             </Grid>
           </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+          <Button onClick={() => pdfDownloader_1()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+          <Button onClick={() => pdfDownloader_2()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+          <Button onClick={() => pdfDownloader_3()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+          <Button onClick={() => pdfDownloader_4()} style={{ fontSize: "16px" }}>
             <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
             <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
           </Button>

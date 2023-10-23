@@ -7,6 +7,9 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Katalog_1 from "assets/docs/SilamillR5/R5_1.pdf";
+import Katalog_2 from "assets/docs/SilamillR5/R5_2.pdf";
+import Katalog_3 from "assets/docs/SilamillR5/R5_3.pdf";
 
 import { Button } from "@mui/material";
 function SilamillZ4() {
@@ -118,7 +121,15 @@ function SilamillZ4() {
 export default SilamillZ4;
 
 export const SilamillZ4Title = () => {
-  const pdfDownloader = () => {};
+  const pdfDownloader_1 = () => {
+    window.open(Katalog_1, "_blank");
+  };
+  const pdfDownloader_2 = () => {
+    window.open(Katalog_2, "_blank");
+  };
+  const pdfDownloader_3 = () => {
+    window.open(Katalog_3, "_blank");
+  };
   return (
     <div>
       <MKBox component="section">
@@ -146,7 +157,15 @@ export const SilamillZ4Title = () => {
               </div>
             </Grid>
           </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+          <Button onClick={() => pdfDownloader_1()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+          <Button onClick={() => pdfDownloader_2()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button>
+          <Button onClick={() => pdfDownloader_3()} style={{ fontSize: "16px" }}>
             <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
             <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
           </Button>
