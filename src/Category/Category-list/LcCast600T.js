@@ -11,6 +11,7 @@ import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
+// import Iframe from "react-iframe";
 function LcCast600T() {
   return (
     <div>
@@ -71,6 +72,17 @@ function LcCast600T() {
                 }}
               />{" "}
             </Grid>
+          </Grid>
+          <Grid my={1}>
+            <iframe
+              width="800"
+              height="500"
+              src="https://www.youtube.com/embed/dEMArq04MaY"
+              title="How to cast with LC Cast 600T"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </Grid>
         </Container>
       </MKBox>

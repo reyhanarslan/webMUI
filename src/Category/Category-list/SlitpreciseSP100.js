@@ -4,19 +4,20 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
-import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+// import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
+// import MKButton from "components/MKButton";
 function SlitpreciseSP100() {
   return (
     <div>
       <MKBox component="section" py={12}>
         <Container>
-          <Grid container spacing={3} alignItems="center">
+          <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
               <div className="page-title">Teknik Bilgiler</div>
@@ -34,35 +35,63 @@ function SlitpreciseSP100() {
               <div className="page-content">W/d/h: 290x320x170 mm</div>
               <div className="page-content">Ağırlık: 10кg</div>
 
-              <div className="page-title">Youtube Vıdeosu</div>
-
-              <Link to="https://www.youtube.com/watch?v=pLXvoYGskPo&ab_channel=VOPBulgaria">
-                SP 100 Cutting
-              </Link>
-              <br />
-              <Link to="https://www.youtube.com/watch?v=h87OXy3Mrjs&ab_channel=VOPBulgaria">
-                SP 100 Cutting 1
-              </Link>
-              <br />
-
-              <Link to="https://www.youtube.com/watch?v=m8FR-tX1JMc&ab_channel=VOPBulgaria">
-                SP 100 Cutting 2
-              </Link>
-
               {/* ... */}
             </Grid>
-            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-              <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                title="Get insights on Search"
-                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
-                action={{
-                  type: "internal",
-                  route: "pages/company/about-us",
-                  color: "info",
-                  label: "find out more",
-                }}
-              />{" "}
+            <Grid lg={4} container>
+              <Grid lg={12} mb={5}>
+                <div>
+                  <iframe
+                    style={{ borderRadius: "20px" }}
+                    width="450"
+                    height="250"
+                    src="https://www.youtube.com/embed/xlg8x02HHNI"
+                    title="LC Cast 600T Filling of the wather tank"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div>
+                  <Link to="https://www.youtube.com/watch?v=pLXvoYGskPo&ab_channel=VOPBulgaria">
+                    SP 100 Cutting
+                  </Link>
+                </div>
+              </Grid>
+              <Grid lg={12} mb={5}>
+                {" "}
+                <div>
+                  <iframe
+                    style={{ borderRadius: "20px" }}
+                    width="450"
+                    height="250"
+                    src="https://www.youtube.com/embed/h87OXy3Mrjs"
+                    title="VID 20171027 132705"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div>
+                  <Link to="https://www.youtube.com/watch?v=h87OXy3Mrjs&ab_channel=VOPBulgaria">
+                    SP 100 Cutting 1
+                  </Link>
+                </div>
+              </Grid>
+              <Grid lg={12}>
+                <iframe
+                  style={{ borderRadius: "20px" }}
+                  width="450"
+                  height="250"
+                  src="https://www.youtube.com/embed/m8FR-tX1JMc"
+                  title="VID 20171027 132843"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <Link to="https://www.youtube.com/watch?v=m8FR-tX1JMc&ab_channel=VOPBulgaria">
+                  SP 100 Cutting 2
+                </Link>
+              </Grid>
             </Grid>
           </Grid>
         </Container>

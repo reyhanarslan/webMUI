@@ -61,6 +61,18 @@ function Up3dP53DentalFrezelemeCihazi() {
               />{" "} */}
             </Grid>
           </Grid>
+          <Grid>
+            <iframe
+              style={{ borderRadius: "20px" }}
+              width="1000"
+              height="600"
+              src="https://www.youtube.com/embed/bNvfcxRI3Bc"
+              title="The UP3D P53 Dental Milling Machine"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </Grid>
         </Container>
       </MKBox>
     </div>
