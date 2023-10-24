@@ -19,7 +19,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // import Inputs from "layouts/sections/input-areas/inputs";
 // import Forms from "layouts/sections/input-areas/forms";
 // import ProductInfo from "products/AboutUs/index.js";
-import ContactUs from "pages/LandingPages/ContactUs/index";
+// import ContactUs from "pages/LandingPages/ContactUs/index";
 import PresentationPage from "layouts/pages/presentation";
 import Category from "Category/AboutUs";
 import { Hakkimizda } from "products/AboutUs/hakkimizda";
@@ -28,6 +28,7 @@ import { SatisVeGarantiKosullari } from "products/AboutUs/satisvegarantikosullar
 import { CerezPolitikasi } from "products/AboutUs/cerezPolitikasi";
 import { KisiselVerilerinKorunmasi } from "products/AboutUs/kvkk";
 import { MesafeliSatisSozlesmesi } from "products/AboutUs/mesafeliSatisSozlesmesi";
+import { Iletisim } from "products/AboutUs/iletisim";
 
 // import Alerts from "layouts/sections/attention-catchers/alerts";
 // import Modals from "layouts/sections/attention-catchers/modals";
@@ -229,7 +230,7 @@ const routes = [
     icon: <GitHubIcon />,
     // href: "https://www.github.com/creativetimofficial/material-kit-react",
     route: "/iletişim",
-    component: <ContactUs />,
+    component: <Iletisim />,
   },
 ];
 

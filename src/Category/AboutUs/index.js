@@ -26,7 +26,7 @@ import routes from "routes";
 // import { Button } from "@mui/material";
 import { useEffect } from "react";
 import CategoryMenu from "./sections/Information";
-import DashboardImg from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
+import DashboardImg from "assets/images/products/urunler-title.jpg";
 
 function Category() {
   // const navigate = useNavigate();
@@ -58,8 +58,8 @@ function Category() {
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             `${linearGradient(
-              rgba(gradients.dark.main, 0.6),
-              rgba(gradients.dark.state, 0.6)
+              rgba(gradients.dark.main, 0.3),
+              rgba(gradients.dark.state, 0)
             )}, url(${DashboardImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -74,10 +74,10 @@ function Category() {
             xs={12}
             lg={8}
             mt={-7}
-            justifyContent="center"
-            alignItems="center"
+            justifyContent="left"
+            alignItems="left"
             flexDirection="column"
-            sx={{ mx: "auto", textAlign: "center" }}
+            sx={{ mx: "auto", textAlign: "left" }}
           >
             {/* <MKTypography
               variant="h1"
@@ -95,17 +95,17 @@ function Category() {
             </MKTypography>
             <Button onClick={() => test()}> TEST BUTTON</Button> */}
 
-            <MKTypography variant="h6" color="blue" mt={1} mb={1}>
+            <MKTypography variant="h6" color="white" mt={1} mb={1}>
               Daha Fazla Bilgi İçin Bize Ulaşın
             </MKTypography>
-            <MKBox display="flex" justifyContent="center" alignItems="center">
-              <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
+            <MKBox marginLeft={8} display="flex" justifyContent="left" alignItems="left">
+              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
                 <i className="fa fa-whatsapp" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
                 <i className="fa fa-phone" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
+              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
                 <i className="fa fa-envelope  " />
               </MKTypography>
             </MKBox>

@@ -167,8 +167,8 @@ function Presentation() {
           label: "Whatsapp ıle Sipariş ",
           color: "default",
         }}
-        transparent
-        light
+        // transparent
+        blue
       />
       <div
         style={{
@@ -195,6 +195,7 @@ function Presentation() {
               playing={true}
               muted={true}
               controls={false}
+              loop={true}
             />
           </div>
         </Card>

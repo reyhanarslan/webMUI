@@ -32,8 +32,8 @@ export default {
     focus: "#e91e63",
   },
   arena: {
-    main: "#0C385E",
-    focus: "#0C385E",
+    main: "#011729",
+    focus: "#011729",
   },
   secondary: {
     main: "#7b809a",
@@ -98,8 +98,8 @@ export default {
       state: "#1A73E8",
     },
     arena: {
-      main: "#1CA3A6",
-      state: "#1CA3A6",
+      main: "#011729",
+      state: "#011729",
     },
     success: {
       main: "#66BB6A",

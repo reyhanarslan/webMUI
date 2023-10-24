@@ -7,6 +7,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import about from "./about.jpg";
 import DashboardImg from "assets/images/dashboard/arena-dis-banner-2-2.jpg";
 import MKTypography from "components/MKTypography";
+
 export function Hakkimizda() {
   return (
     <div style={{ marginBottom: "223px" }}>
