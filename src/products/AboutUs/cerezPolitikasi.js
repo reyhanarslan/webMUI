@@ -25,55 +25,53 @@ export function CerezPolitikasi() {
 
       <Grid py={10}>
         <>
-          <Container>
-            <Grid container>
-              <Grid item xs={12} lg={12}>
-                <MKBox
-                  display="flex"
-                  alignItems="center"
-                  borderRadius="xl"
-                  py={10}
-                  className="slide-in-container"
-                  sx={{
-                    borderRadius: "30px",
-                    backgroundImage: ({
-                      functions: { linearGradient, rgba },
-                      palette: { gradients },
-                    }) =>
-                      `${linearGradient(
-                        rgba(gradients.light.main, 0.3),
-                        rgba(gradients.arena.state, 0.9)
-                      )}, url(${DashboardImg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <Container>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      lg={12}
-                      sx={{
-                        ml: { xs: 0, lg: 0 },
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <MKTypography variant="h1" color="white">
-                        Çerez Politikaları{" "}
-                      </MKTypography>
-                    </Grid>
-                  </Container>
-                </MKBox>
-              </Grid>
+          <Grid container>
+            <Grid item xs={12} lg={12}>
+              <MKBox
+                display="flex"
+                alignItems="center"
+                borderRadius="xl"
+                py={10}
+                className="slide-in-container"
+                sx={{
+                  borderRadius: "30px",
+                  backgroundImage: ({
+                    functions: { linearGradient, rgba },
+                    palette: { gradients },
+                  }) =>
+                    `${linearGradient(
+                      rgba(gradients.light.main, 0.3),
+                      rgba(gradients.arena.state, 0.9)
+                    )}, url(${DashboardImg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <Container>
+                  <Grid
+                    container
+                    item
+                    xs={12}
+                    lg={12}
+                    sx={{
+                      ml: { xs: 0, lg: 0 },
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <MKTypography variant="h1" color="white">
+                      Çerez Politikaları{" "}
+                    </MKTypography>
+                  </Grid>
+                </Container>
+              </MKBox>
             </Grid>
-          </Container>
+          </Grid>
         </>
 
-        <MKBox className="slide-in-container" component="section" py={8}>
-          <Container className="kurumsal">
+        <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
+          <div className="kurumsal slide-in-container ">
             <Grid container alignItems="center">
               <Grid className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
                 <div>
@@ -189,7 +187,7 @@ export function CerezPolitikasi() {
                 </div>
               </Grid>
             </Grid>
-          </Container>
+          </div>
         </MKBox>
       </Grid>
     </div>

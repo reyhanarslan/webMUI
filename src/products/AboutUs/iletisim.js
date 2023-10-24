@@ -27,7 +27,7 @@ export function Iletisim() {
   };
 
   return (
-    <div style={{ marginBottom: "223px" }}>
+    <div style={{ marginBottom: "5px" }}>
       <DefaultNavbar
         routes={routes}
         action={{
@@ -42,57 +42,55 @@ export function Iletisim() {
       />
       <Grid py={10}>
         <>
-          <Container>
-            <Grid container>
-              <Grid item xs={12} lg={12} md={12}>
-                <MKBox
-                  display="flex"
-                  alignItems="center"
-                  borderRadius="xl"
-                  py={25}
-                  className="slide-in-container"
-                  sx={{
-                    borderRadius: "30px",
-                    backgroundImage: ({
-                      functions: { linearGradient, rgba },
-                      palette: { gradients },
-                    }) =>
-                      `${linearGradient(
-                        rgba(gradients.arena.main, 0.3),
-                        rgba(gradients.arena.state, 0)
-                      )}, url(${DashboardImg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <Container>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      lg={12}
-                      md={12}
-                      sx={{
-                        ml: { xs: 5, lg: 12 },
-                        display: "flex",
-                        justifyContent: "left",
-                        alignItems: "left",
-                      }}
-                    >
-                      <MKTypography variant="h1" color="white">
-                        İletişim{" "}
-                      </MKTypography>
-                    </Grid>
-                  </Container>
-                </MKBox>
-              </Grid>
+          <Grid container>
+            <Grid item xs={12} lg={12} md={12}>
+              <MKBox
+                display="flex"
+                alignItems="center"
+                borderRadius="xl"
+                py={25}
+                className="slide-in-container"
+                sx={{
+                  borderRadius: "30px",
+                  backgroundImage: ({
+                    functions: { linearGradient, rgba },
+                    palette: { gradients },
+                  }) =>
+                    `${linearGradient(
+                      rgba(gradients.arena.main, 0.3),
+                      rgba(gradients.arena.state, 0)
+                    )}, url(${DashboardImg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <Container>
+                  <Grid
+                    container
+                    item
+                    xs={12}
+                    lg={12}
+                    md={12}
+                    sx={{
+                      ml: { xs: 5, lg: 12 },
+                      display: "flex",
+                      justifyContent: "left",
+                      alignItems: "left",
+                    }}
+                  >
+                    <MKTypography variant="h1" color="white">
+                      İletişim{" "}
+                    </MKTypography>
+                  </Grid>
+                </Container>
+              </MKBox>
             </Grid>
-          </Container>
+          </Grid>
         </>
-        <MKBox>
-          <Container className="kurumsal slide-in-container">
-            <Grid container spacing={3}>
-              <Grid item xs={12} lg={6} md={12}>
+        <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
+          <div className="kurumsal slide-in-container">
+            <Grid container px={10} spacing={5}>
+              <Grid marginTop={10} item xs={12} lg={6} md={12}>
                 <Grid item xs={12} sm={12}>
                   <Card
                     sx={{
@@ -243,6 +241,7 @@ export function Iletisim() {
               xl={12}
               ml={{ xs: "auto", lg: 12 }}
               mr={{ xs: "auto", lg: 12 }}
+              mt={8}
             >
               <div
                 style={{
@@ -263,6 +262,7 @@ export function Iletisim() {
                     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
                     borderRadius: "20px",
                     overflow: "hidden",
+                    marginBottom: "150px",
                   }}
                 >
                   <iframe
@@ -278,7 +278,7 @@ export function Iletisim() {
                 </div>
               </div>
             </Grid>
-          </Container>
+          </div>
         </MKBox>
       </Grid>
     </div>

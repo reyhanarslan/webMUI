@@ -5,9 +5,9 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 import React from "react"; // Import React if not already imported
-import { useCallback } from "react";
-import { loadFull } from "tsparticles";
-import Particles from "react-particles";
+// import { useCallback } from "react";
+// import { loadFull } from "tsparticles";
+// import Particles from "react-particles";
 // Images
 import data from "pages/Presentation/sections/data/pagesData";
 import Icon from "@mui/material/Icon";
@@ -18,73 +18,73 @@ import Icon from "@mui/material/Icon";
 // import { Link } from "react-router-dom";
 
 const UrunlerCard = () => {
-  const options = {
-    fpsLimit: 120,
-    interactivity: {
-      events: {
-        onClick: {
-          enable: true,
-          mode: "push",
-        },
-        onHover: {
-          enable: true,
-          mode: "slow",
-        },
-        resize: true,
-      },
-      modes: {
-        push: {
-          quantity: 1,
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-        },
-      },
-    },
-    particles: {
-      color: {
-        value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
-      },
-      links: {
-        color: "#D1E4F7",
-        distance: 150,
-        enable: true,
-        opacity: 0.5,
-        width: 1,
-      },
-      move: {
-        direction: "none",
-        enable: true,
-        outModes: {
-          default: "bounce",
-        },
-        random: false,
-        speed: 2,
-        straight: false,
-      },
-      number: {
-        density: {
-          enable: true,
-          area: 400,
-        },
-        value: 20,
-      },
-      opacity: {
-        value: 0.5,
-      },
-      shape: {
-        type: "circle",
-      },
-      size: {
-        value: { min: 1, max: 3 },
-      },
-    },
-    detectRetina: true,
-  };
-  const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
-  }, []);
+  // const options = {
+  //   fpsLimit: 120,
+  //   interactivity: {
+  //     events: {
+  //       onClick: {
+  //         enable: true,
+  //         mode: "push",
+  //       },
+  //       onHover: {
+  //         enable: true,
+  //         mode: "slow",
+  //       },
+  //       resize: true,
+  //     },
+  //     modes: {
+  //       push: {
+  //         quantity: 1,
+  //       },
+  //       repulse: {
+  //         distance: 200,
+  //         duration: 0.4,
+  //       },
+  //     },
+  //   },
+  //   particles: {
+  //     color: {
+  //       value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
+  //     },
+  //     links: {
+  //       color: "#D1E4F7",
+  //       distance: 150,
+  //       enable: true,
+  //       opacity: 0.5,
+  //       width: 1,
+  //     },
+  //     move: {
+  //       direction: "none",
+  //       enable: true,
+  //       outModes: {
+  //         default: "bounce",
+  //       },
+  //       random: false,
+  //       speed: 2,
+  //       straight: false,
+  //     },
+  //     number: {
+  //       density: {
+  //         enable: true,
+  //         area: 400,
+  //       },
+  //       value: 20,
+  //     },
+  //     opacity: {
+  //       value: 0.5,
+  //     },
+  //     shape: {
+  //       type: "circle",
+  //     },
+  //     size: {
+  //       value: { min: 1, max: 3 },
+  //     },
+  //   },
+  //   detectRetina: true,
+  // };
+  // const particlesInit = useCallback(async (engine) => {
+  //   await loadFull(engine);
+  // }, []);
 
   console.log(data);
   return (
@@ -94,7 +94,7 @@ const UrunlerCard = () => {
         background: "#11304C ",
       }}
     >
-      <Particles options={options} init={particlesInit} className="custom-particles" />
+      {/* <Particles options={options} init={particlesInit} className="custom-particles" /> */}
 
       <Container position="relative" py={6} px={{ xs: 2, lg: 0 }} mx={-2}>
         <Grid marginBottom={5} container>

@@ -25,54 +25,52 @@ export function Hakkimizda() {
       />
       <Grid py={10}>
         <>
-          <Container>
-            <Grid container>
-              <Grid item xs={12} lg={12}>
-                <MKBox
-                  display="flex"
-                  alignItems="center"
-                  borderRadius="xl"
-                  py={10}
-                  className="slide-in-container"
-                  sx={{
-                    borderRadius: "30px",
-                    backgroundImage: ({
-                      functions: { linearGradient, rgba },
-                      palette: { gradients },
-                    }) =>
-                      `${linearGradient(
-                        rgba(gradients.light.main, 0.3),
-                        rgba(gradients.arena.state, 0.9)
-                      )}, url(${DashboardImg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  <Container>
-                    <Grid
-                      container
-                      item
-                      xs={12}
-                      lg={12}
-                      sx={{
-                        ml: { xs: 0, lg: 0 },
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <MKTypography variant="h1" color="white">
-                        Hakkımızda{" "}
-                      </MKTypography>
-                    </Grid>
-                  </Container>
-                </MKBox>
-              </Grid>
+          <Grid container>
+            <Grid item xs={12} lg={12}>
+              <MKBox
+                display="flex"
+                alignItems="center"
+                borderRadius="xl"
+                py={10}
+                className="slide-in-container"
+                sx={{
+                  borderRadius: "30px",
+                  backgroundImage: ({
+                    functions: { linearGradient, rgba },
+                    palette: { gradients },
+                  }) =>
+                    `${linearGradient(
+                      rgba(gradients.light.main, 0.3),
+                      rgba(gradients.arena.state, 0.9)
+                    )}, url(${DashboardImg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <Container>
+                  <Grid
+                    container
+                    item
+                    xs={12}
+                    lg={12}
+                    sx={{
+                      ml: { xs: 0, lg: 0 },
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <MKTypography variant="h1" color="white">
+                      Hakkımızda{" "}
+                    </MKTypography>
+                  </Grid>
+                </Container>
+              </MKBox>
             </Grid>
-          </Container>
+          </Grid>
         </>
-        <MKBox component="section">
-          <Container className="kurumsal slide-in-container ">
+        <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
+          <div className="kurumsal slide-in-container ">
             <Grid className="kurumsal-grid" marginTop={4} container alignItems="center">
               <Grid style={{ marginRight: "70px" }} item xs={12} md={5}>
                 <div className="page-title-about">Türkiye’nin Diş Malzemeleri</div>
@@ -91,7 +89,7 @@ export function Hakkimizda() {
                 <img src={about} alt="About Image" className="about-image" />
               </Grid>
             </Grid>
-          </Container>
+          </div>
         </MKBox>
       </Grid>
     </div>

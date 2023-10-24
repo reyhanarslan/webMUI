@@ -1,26 +1,9 @@
-// import Container from "@mui/material/Container";
-// import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-// import MKBox from "components/MKBox";
-// import MKTypography from "components/MKTypography";
-// import MKSocialButton from "components/MKSocialButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-// import DefaultFooter from "examples/Footers/DefaultFooter";
-// import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
-
 import Information from "pages/Presentation/sections/Information";
 import Testimonials from "pages/Presentation/sections/Testimonials";
-// import Pages from "pages/Presentation/sections/Pages";
-
-// import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 import logo from "assets/images/logos/arenadis-logo-web-1.png";
-// import { Container } from "@mui/material";
 import routes from "routes";
-
-// import bgImage from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
-// import bgImage1 from "assets/images/dashboard/test.jpg";
-// import CarouselImages from "./sections/Carousel";
-// import Counters from "./sections/Counters";
 import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
 import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";

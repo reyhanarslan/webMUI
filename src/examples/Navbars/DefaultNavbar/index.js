@@ -436,7 +436,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
         // py={1}
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
         my={relative ? 0 : 2} //Navbar margin
-        mx={relative ? 0 : 3}
+        mx={relative ? 0 : 20}
         // ml={30}
         width={relative ? "80%" : "calc(80% - 48px)"}
         borderRadius="xl"
@@ -456,6 +456,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
             display={{ xs: "none", lg: "flex" }}
             ml="auto"
             mr={center ? "auto" : 0}
+            mx={0} // Sol taraftaki boşluğu kaldırmak için mx'ı 0 olarak ayarlayın
           >
             {renderNavbarItems}
           </MKBox>
