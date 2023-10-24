@@ -7,6 +7,9 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
+import Content_1 from "assets/content/Cs3700/2.jpg";
+import Content_2 from "assets/content/Cs3700/5.jpg";
+import Content_3 from "assets/content/Cs3700/6.jpg";
 
 export function Carestream3700() {
   return (
@@ -47,12 +50,18 @@ export function Carestream3700() {
                 Opsiyonel bilek kayışı,kullanıcıya tedavi sırasında cihazı en iyi şekilde kontrol
                 etmesini sağlar ve tarayıcının elden düşme riskini engeller.
               </div>
+              <Grid item xs={12} md={12} lg={12} my={3}>
+                <MKBox component="img" src={Content_1} width="100%" />
+              </Grid>
               <div className="page-title">Smart-Shade Teknolojisi</div>
               <div className="page-content">
                 Tek yüzeyden/yönden renk tonlarını toplayan diğer sistemlerden farklı olarak; CS3700
                 yüzey üzerindeki bir çok farklı noktadan renk tonlarını toplar böylelikle daha net
                 ve doğru bir klinik eşleme yapmamızı sağlar.
               </div>
+              <Grid item xs={12} md={12} lg={12}>
+                <MKBox component="img" src={Content_2} my={3} width="100%" />
+              </Grid>
               <div className="page-title">Smart Shade Eşleşme Raporu</div>
               <div className="page-content">
                 Tek bir tıklama ile çalışılan bölge üzerindeki diş tonlarına ait raporu hızlıca
@@ -60,6 +69,9 @@ export function Carestream3700() {
                 çalıştıkları diş laboratuarlarıyla kolayca paylaşmalarını ve yönlendirmelerini
                 sağlar.
               </div>
+              <Grid item xs={12} md={12} lg={12}>
+                <MKBox component="img" src={Content_3} my={3} width="100%" />
+              </Grid>
               <div className="page-title">Kalibre Edilmiş Parlaklık</div>
               <div className="page-content">
                 Kutu açılışında CS 3700 en güvenilir sabit ton eşlemesi için önceden kalibre

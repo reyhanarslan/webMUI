@@ -7,6 +7,7 @@ import MKBox from "components/MKBox";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
+import Content_1 from "assets/content/DentafabSega3D/1.png";
 
 export function DentaFabSega3D() {
   return (
@@ -71,6 +72,9 @@ export function DentaFabSega3D() {
                 }}
               />{" "}
             </Grid>
+          </Grid>
+          <Grid item xs={12} md={12} lg={12} my={3}>
+            <MKBox component="img" src={Content_1} width="100%" />
           </Grid>
         </Container>
       </MKBox>

@@ -12,6 +12,8 @@ import Katalog from "assets/docs/CS_3600_ARENA_KATALOG.pdf";
 // import { useNavigate } from "react-router-dom";
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
+import Content_1 from "assets/content/CS3600/8.png";
+import Content_2 from "assets/content/CS3600/7.JPG";
 
 export function Carestream3600() {
   return (
@@ -83,6 +85,12 @@ export function Carestream3600() {
                 }}
               />{" "}
             </Grid>
+          </Grid>
+          <Grid item xs={12} md={12} lg={12} my={3}>
+            <MKBox component="img" src={Content_2} width="100%" />
+          </Grid>
+          <Grid item xs={12} md={12} lg={12} my={3}>
+            <MKBox component="img" src={Content_1} width="100%" />
           </Grid>
         </Container>
       </MKBox>
