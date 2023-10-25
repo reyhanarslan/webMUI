@@ -73,7 +73,7 @@ export function KisiselVerilerinKorunmasi() {
         <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
           <div className="kurumsal slide-in-container ">
             <Grid container alignItems="center">
-              <Grid className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
+              <Grid px={12} className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
                 <div>
                   <h5 className="dark-text-info">
                     6698 Sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Hakkında Bilgilendirme

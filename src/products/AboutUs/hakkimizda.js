@@ -72,7 +72,7 @@ export function Hakkimizda() {
         <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
           <div className="kurumsal slide-in-container ">
             <Grid className="kurumsal-grid" marginTop={4} container alignItems="center">
-              <Grid style={{ marginRight: "70px" }} item xs={12} md={5}>
+              <Grid px={6} style={{ marginRight: "70px" }} item xs={12} md={5}>
                 <div className="page-title-about">Türkiye’nin Diş Malzemeleri</div>
                 <div className="page-content-about">
                   Diş Hekimliği sektöründe faaliyet gösteren Arena Diş Deposu A.Ş. Dental klinik ve

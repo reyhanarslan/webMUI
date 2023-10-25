@@ -156,6 +156,9 @@ export function Iletisim() {
                 </Grid>
               </Grid>
               <Grid style={{ marginTop: 250 }} item xs={12} lg={6} md={12}>
+                <div style={{ marginTop: "50px" }} className="page-title">
+                  Bizimle iletişime geçin{" "}
+                </div>{" "}
                 <Grid container spacing={3}>
                   <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                     <MKBox

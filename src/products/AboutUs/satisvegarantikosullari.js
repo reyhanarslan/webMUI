@@ -73,7 +73,7 @@ export function SatisVeGarantiKosullari() {
         <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
           <div className="kurumsal slide-in-container ">
             <Grid container alignItems="center">
-              <Grid className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
+              <Grid px={15} className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
                 <div className="page-title">SATIŞ KOŞULLARI</div>
                 <div style={{ marginBottom: 20 }}>
                   <h5 className="dark-text-info">FİYATLAR</h5>

@@ -72,7 +72,7 @@ export function MesafeliSatisSozlesmesi() {
         <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
           <div className="kurumsal slide-in-container ">
             <Grid className="kurumsal-grid" container alignItems="center">
-              <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Grid px={6} item xs={12} sm={12} md={12} lg={12}>
                 <div style={{ marginTop: "50px" }} className="page-title">
                   A- TARAFLAR
                 </div>
