@@ -12,7 +12,89 @@ import Particles from "react-particles";
 import data from "pages/Presentation/sections/data/pagesData";
 import Icon from "@mui/material/Icon";
 
-export const ParticleTest = () => {
+// export const ParticleTest = () => {
+//   const options = {
+//     fullScreen: {
+//       enable: true,
+//     },
+//     fpsLimit: 120,
+//     interactivity: {
+//       events: {
+//         onClick: {
+//           enable: true,
+//           mode: "push",
+//         },
+//         onHover: {
+//           enable: true,
+//           mode: "slow",
+//         },
+//         resize: true,
+//       },
+//       modes: {
+//         push: {
+//           quantity: 1,
+//         },
+//         repulse: {
+//           distance: 200,
+//           duration: 0.4,
+//         },
+//       },
+//     },
+//     particles: {
+//       color: {
+//         value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
+//       },
+//       links: {
+//         color: "#D1E4F7",
+//         distance: 150,
+//         enable: true,
+//         opacity: 0.5,
+//         width: 1,
+//       },
+//       move: {
+//         direction: "none",
+//         enable: true,
+//         outModes: {
+//           default: "bounce",
+//         },
+//         random: false,
+//         speed: 2,
+//         straight: false,
+//       },
+//       number: {
+//         density: {
+//           enable: true,
+//           area: 800,
+//         },
+//         value: 20,
+//       },
+//       opacity: {
+//         value: 0.8,
+//       },
+//       shape: {
+//         type: "circle",
+//       },
+//       size: {
+//         value: { min: 1, max: 3 },
+//       },
+//     },
+//     detectRetina: false,
+//     // fullScreen: { enable: false },
+//   };
+//   const particlesInit = useCallback(async (engine) => {
+//     await loadFull(engine);
+//   }, []);
+
+//   return (
+//     <Particles
+//       options={options}
+//       init={particlesInit}
+//       style={{ position: "absolute", zIndex: -1 }}
+//     />
+//   );
+// };
+const UrunlerCard = () => {
+  console.log(data);
   const options = {
     fullScreen: {
       enable: false,
@@ -84,26 +166,10 @@ export const ParticleTest = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
-
-  return <Particles options={options} init={particlesInit} />;
-};
-const UrunlerCard = () => {
-  console.log(data);
   return (
     <div>
       {" "}
-      <ParticleTest
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          height: "100%",
-          width: "100%",
-          margin: "0",
-          padding: "0",
-          zIndex: "0",
-        }}
-      />
+      <Particles options={options} init={particlesInit} />
       <Container position="relative" py={6} px={{ xs: 2, lg: 0 }} mx={-2}>
         <Grid marginBottom={5} container>
           <Grid
@@ -129,14 +195,11 @@ const UrunlerCard = () => {
             </MKTypography>
           </Grid>
         </Grid>
-        {/* <ParticleTest> </ParticleTest> */}
         <Grid container spacing={3}>
           {data.map(({ image, name, route, description, index }) => (
             <Grid item key={name} xs={12} lg={6}>
               <MKBox>
                 <HorizontalTeamCard
-                  //   route={route}
-
                   index={index}
                   image={image}
                   name={name}
@@ -147,40 +210,38 @@ const UrunlerCard = () => {
             </Grid>
           ))}
         </Grid>{" "}
-        <Container>
-          <Grid
-            container
-            item
-            xs={12}
-            lg={12}
-            sx={{ my: 6, ml: { xs: 0, lg: 12 }, justifyContent: "flex-end" }}
+        <Grid
+          container
+          item
+          xs={12}
+          lg={12}
+          sx={{ my: 6, ml: { xs: 0, lg: 12 }, justifyContent: "flex-end" }}
+        >
+          <MKTypography
+            component="a"
+            href="/urunler/cad-cam-sistemleri/kaziyicilar"
+            target="_blank"
+            rel="noreferrer"
+            variant="h5"
+            color="white"
+            fontWeight="regular"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              "& .material-icons-round": {
+                fontSize: "1.125rem",
+                transform: `translateX(3px)`,
+                transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+              },
+              "&:hover .material-icons-round, &:focus .material-icons-round": {
+                transform: `translateX(6px)`,
+              },
+            }}
           >
-            <MKTypography
-              component="a"
-              href="/urunler/cad-cam-sistemleri/kaziyicilar"
-              target="_blank"
-              rel="noreferrer"
-              variant="h5"
-              color="white"
-              fontWeight="regular"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                "& .material-icons-round": {
-                  fontSize: "1.125rem",
-                  transform: `translateX(3px)`,
-                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
-                },
-                "&:hover .material-icons-round, &:focus .material-icons-round": {
-                  transform: `translateX(6px)`,
-                },
-              }}
-            >
-              Daha Fazla Ürün Bilgisi İçin Lütfen Tıklayınız{" "}
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
-          </Grid>
-        </Container>
+            Daha Fazla Ürün Bilgisi İçin Lütfen Tıklayınız{" "}
+            <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+          </MKTypography>
+        </Grid>
       </Container>
     </div>
   );

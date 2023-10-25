@@ -206,9 +206,6 @@ export default function App() {
       <div
         style={{
           height: "200px",
-          //background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 25.71%)",
-          // background: "#11304C ",
-
           background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #0F2845 25.71%)",
         }}
       >

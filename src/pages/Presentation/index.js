@@ -11,6 +11,7 @@ import sld2 from "assets/images/carousel/SLIDER-2.jpg";
 import sld3 from "assets/images/carousel/SLIDER-3.jpg";
 import React, { useState, useEffect, useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
+import CarouselImages from "./sections/Carousel";
 // import { useCallback } from "react";
 // import { loadFull } from "tsparticles";
 // import Particles from "react-particles";
@@ -207,6 +208,7 @@ function Presentation() {
           {/* <CarouselImages /> */}
           {/* <Counters /> */}
         </Card>{" "}
+        <CarouselImages></CarouselImages>
         <UrunlerCard> </UrunlerCard>
         {/* <BuiltByDevelopers /> */}
         <Card
