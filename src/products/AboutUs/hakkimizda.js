@@ -5,7 +5,7 @@ import MKBox from "components/MKBox";
 import routes from "routes";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import about from "./about.jpg";
-import DashboardImg from "assets/images/dashboard/arena-dis-banner-2-2.jpg";
+import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
 
 export function Hakkimizda() {
@@ -40,8 +40,8 @@ export function Hakkimizda() {
                     palette: { gradients },
                   }) =>
                     `${linearGradient(
-                      rgba(gradients.light.main, 0.3),
-                      rgba(gradients.arena.state, 0.9)
+                      rgba(gradients.light.main, 0.1),
+                      rgba(gradients.light.state, 0)
                     )}, url(${DashboardImg})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
