@@ -97,7 +97,7 @@ const UrunlerCard = () => {
   console.log(data);
   const options = {
     fullScreen: {
-      enable: false,
+      enable: true,
     },
     fpsLimit: 120,
     interactivity: {
@@ -146,7 +146,7 @@ const UrunlerCard = () => {
       number: {
         density: {
           enable: true,
-          area: 800,
+          area: 500,
         },
         value: 20,
       },
@@ -166,9 +166,9 @@ const UrunlerCard = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
+
   return (
     <div>
-      {" "}
       <Particles options={options} init={particlesInit} />
       <Container position="relative" py={6} px={{ xs: 2, lg: 0 }} mx={-2}>
         <Grid marginBottom={5} container>

@@ -12,9 +12,6 @@ import sld3 from "assets/images/carousel/SLIDER-3.jpg";
 import React, { useState, useEffect, useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
-// import { useCallback } from "react";
-// import { loadFull } from "tsparticles";
-// import Particles from "react-particles";
 
 import("./video.css");
 
@@ -25,75 +22,7 @@ function Presentation() {
   const playerRef = useRef(null);
 
   const imageDuration = 30000;
-  // const options = {
-  //   // background: {
-  //   //   color: {
-  //   //     value: "#0d47a1",
-  //   //   },
-  //   // },
-  //   fpsLimit: 120,
-  //   interactivity: {
-  //     events: {
-  //       onClick: {
-  //         enable: true,
-  //         mode: "push",
-  //       },
-  //       onHover: {
-  //         enable: true,
-  //         mode: "slow",
-  //       },
-  //       resize: true,
-  //     },
-  //     modes: {
-  //       push: {
-  //         quantity: 1,
-  //       },
-  //       repulse: {
-  //         distance: 200,
-  //         duration: 0.4,
-  //       },
-  //     },
-  //   },
-  //   particles: {
-  //     color: {
-  //       value: ["#4A90E2", "#6BB9F0", "#AFCBF4", "#D1E4F7"],
-  //     },
-  //     links: {
-  //       color: "#D1E4F7",
-  //       distance: 150,
-  //       enable: true,
-  //       opacity: 0.5,
-  //       width: 1,
-  //     },
-  //     move: {
-  //       direction: "none",
-  //       enable: true,
-  //       outModes: {
-  //         default: "bounce",
-  //       },
-  //       random: false,
-  //       speed: 2,
-  //       straight: false,
-  //     },
-  //     number: {
-  //       density: {
-  //         enable: true,
-  //         area: 400,
-  //       },
-  //       value: 20,
-  //     },
-  //     opacity: {
-  //       value: 0.5,
-  //     },
-  //     shape: {
-  //       type: "circle",
-  //     },
-  //     size: {
-  //       value: { min: 1, max: 3 },
-  //     },
-  //   },
-  //   detectRetina: true,
-  // };
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (isVideoPlaying) {
@@ -120,9 +49,7 @@ function Presentation() {
 
     return () => clearInterval(interval);
   }, [currentIndex, isVideoPlaying]);
-  // const particlesInit = useCallback(async (engine) => {
-  //   await loadFull(engine);
-  // }, []);
+
   // useEffect(() => {
   //   const handleScroll = () => {
   //     const scrollY = window.scrollY;
@@ -167,6 +94,7 @@ function Presentation() {
             borderRadius: "30px",
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
+            zIndex: 9999,
           }}
         >
           <div className="video-card">
@@ -218,7 +146,7 @@ function Presentation() {
         >
           <Information />
         </Card>{" "}
-        <UrunlerCard> </UrunlerCard>
+        <UrunlerCard />
         <Card
           sx={{
             p: 0,
