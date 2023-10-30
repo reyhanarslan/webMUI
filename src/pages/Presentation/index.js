@@ -156,7 +156,7 @@ function Presentation() {
       />
       <div
         style={{
-          background: "#11304C ",
+          background: "#0C2540 ",
           // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
         }}
       >
@@ -197,6 +197,19 @@ function Presentation() {
           sx={{
             p: 0,
             mt: -25,
+            backgroundColor: "#0C2540",
+            borderRadius: "30px",
+            zIndex: 56456,
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
+          }}
+        >
+          <CarouselImages />
+        </Card>{" "}
+        <Card
+          sx={{
+            p: 0,
+            mt: 0,
             borderRadius: "30px",
             zIndex: 56456,
             backdropFilter: "saturate(200%) blur(30px)",
@@ -204,13 +217,8 @@ function Presentation() {
           }}
         >
           <Information />
-
-          {/* <CarouselImages /> */}
-          {/* <Counters /> */}
         </Card>{" "}
-        <CarouselImages></CarouselImages>
         <UrunlerCard> </UrunlerCard>
-        {/* <BuiltByDevelopers /> */}
         <Card
           sx={{
             p: 0,

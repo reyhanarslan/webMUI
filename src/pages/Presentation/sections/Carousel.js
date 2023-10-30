@@ -4,7 +4,7 @@ import MKBox from "components/MKBox";
 import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
 import sld2 from "assets/images/carousel/SLIDER-2.jpg";
 import sld3 from "assets/images/carousel/SLIDER-3.jpg";
-import DashboardImg1 from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
+// import DashboardImg1 from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 import { useState } from "react";
 import { Grid } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
@@ -24,13 +24,15 @@ function CarouselImages() {
           component="section"
           sx={{
             display: "flex",
+            mt: 0,
 
             borderRadius: "30px",
-            backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-              `${linearGradient(
-                rgba(gradients.light.main, 0.3),
-                rgba(gradients.arena.state, 0.9)
-              )}, url(${DashboardImg1})`,
+
+            // backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+            //   `${linearGradient(
+            //     rgba(gradients.light.main, 0.3),
+            //     rgba(gradients.arena.state, 0.9)
+            //   )}, url(${DashboardImg1})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",

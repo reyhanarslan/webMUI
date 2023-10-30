@@ -89,7 +89,7 @@ function BuiltByDevelopers() {
       {" "}
       <div
         style={{
-          background: "#11304C ",
+          background: "#0C2540 ",
 
           // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #11304C 20.71%)",
         }}

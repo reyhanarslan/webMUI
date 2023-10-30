@@ -23,7 +23,7 @@ import Grid from "@mui/material/Grid";
 import MKTypography from "components/MKTypography";
 // import footerRoutes from "footer.routes";
 import { CardMedia } from "@mui/material";
-import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import logo from "assets/images/logos/arenadis-logo-white.png";
 import ProductInfo from "./products/AboutUs";
 
 import EmailIcon from "@mui/icons-material/Email";
@@ -206,7 +206,7 @@ export default function App() {
       <div
         style={{
           height: "200px",
-          background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #0F2845 25.71%)",
+          background: "#0C2540",
         }}
       >
         <MKBox component="footer">
