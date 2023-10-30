@@ -2,6 +2,7 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import logo from "assets/images/logos/arenadis-logo-white.png";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -27,6 +28,7 @@ import routes from "routes";
 import { useEffect } from "react";
 import CategoryMenu from "./sections/Information";
 import DashboardImg from "assets/images/products/urunler-title.jpg";
+import { Link } from "react-router-dom";
 
 function Category() {
   // const navigate = useNavigate();
@@ -51,6 +53,16 @@ function Category() {
         transparent
         light
       />
+      <div
+        style={{
+          position: "absolute",
+          top: "15px",
+          left: "40px",
+          zIndex: 1,
+        }}
+      >
+        <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+      </div>
       <MKBox
         // minHeight="75vh"
         minHeight="60vh"
@@ -99,15 +111,19 @@ function Category() {
               Daha Fazla Bilgi İçin Bize Ulaşın
             </MKTypography>
             <MKBox marginLeft={8} display="flex" justifyContent="left" alignItems="left">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fa fa-whatsapp" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fa fa-phone" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fa fa-envelope  " />
-              </MKTypography>
+              <Link to="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum">
+                <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                  <i className="fa fa-whatsapp" />
+                </MKTypography>
+              </Link>
+              <Link to="/iletişim">
+                <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                  <i className="fa fa-phone" />
+                </MKTypography>
+                <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+                  <i className="fa fa-envelope  " />
+                </MKTypography>
+              </Link>
             </MKBox>
           </Grid>
         </Container>

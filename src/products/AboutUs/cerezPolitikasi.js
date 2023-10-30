@@ -6,6 +6,7 @@ import routes from "routes";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
+import logo from "assets/images/logos/arenadis-logo-web-1.png";
 
 export function CerezPolitikasi() {
   return (
@@ -22,8 +23,17 @@ export function CerezPolitikasi() {
         transparent
         blue
       />
-
-      <Grid py={10}>
+      <div
+        style={{
+          position: "absolute",
+          top: "15px",
+          left: "40px",
+          zIndex: 1,
+        }}
+      >
+        <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+      </div>
+      <Grid py={14}>
         <>
           <Grid container>
             <Grid item xs={12} lg={12}>

@@ -5,6 +5,7 @@ import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import logo from "assets/images/logos/arenadis-logo-web-1.png";
 
 // About Us page sections
 // import Information from "pages/LandingPages/AboutUs/sections/Information";
@@ -589,6 +590,16 @@ function ProductInfo() {
         transparent
         blue
       />{" "}
+      <div
+        style={{
+          position: "absolute",
+          top: "15px",
+          left: "40px",
+          zIndex: 1,
+        }}
+      >
+        <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+      </div>
       <Grid paddingX={10} paddingY={15} container paddingBottom={5}>
         <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6}>
           <ProductSlider

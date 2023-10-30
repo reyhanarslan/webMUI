@@ -13,6 +13,7 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import logo from "assets/images/logos/arenadis-logo-web-1.png";
 
 export function Iletisim() {
   const cardStyle = {
@@ -40,7 +41,17 @@ export function Iletisim() {
         transparent
         blue
       />
-      <Grid py={10}>
+      <div
+        style={{
+          position: "absolute",
+          top: "15px",
+          left: "40px",
+          zIndex: 1,
+        }}
+      >
+        <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+      </div>
+      <Grid py={14}>
         <>
           <Grid container>
             <Grid item xs={12} lg={12} md={12}>
