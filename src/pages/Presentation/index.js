@@ -94,7 +94,6 @@ function Presentation() {
             borderRadius: "30px",
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
-            zIndex: 9999,
           }}
         >
           <div className="video-card">

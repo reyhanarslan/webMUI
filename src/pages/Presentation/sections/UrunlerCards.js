@@ -97,7 +97,7 @@ const UrunlerCard = () => {
   console.log(data);
   const options = {
     fullScreen: {
-      enable: true,
+      enable: false,
     },
     fpsLimit: 120,
     interactivity: {
