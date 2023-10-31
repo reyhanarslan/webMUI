@@ -8,29 +8,8 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import { Link } from "react-router-dom";
-// import { ParticleTest } from "pages/Presentation/sections/UrunlerCards";
-// import Particles from "react-particles"; // React Particles'ı ekledik
 
 function HorizontalTeamCard({ image, name, position, index, description }) {
-  // const particlesConfig = {
-  //   particles: {
-  //     number: {
-  //       value: 50, // Parçacık sayısı
-  //     },
-  //     size: {
-  //       value: 3, // Parçacık boyutu
-  //     },
-  //     color: {
-  //       value: "#000000", // Parçacık rengi
-  //     },
-  //     opacity: {
-  //       value: 0.5, // Parçacık opaklığı
-  //     },
-  //     line_linked: {
-  //       enable: false, // Parçacıklar arasında çizgi etkileşimi
-  //     },
-  //   },
-  // };
   return (
     <>
       {" "}

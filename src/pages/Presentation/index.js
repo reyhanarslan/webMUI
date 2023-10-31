@@ -6,49 +6,49 @@ import logo from "assets/images/logos/arenadis-logo-web-1.png";
 import routes from "routes";
 import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
-import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
-import sld2 from "assets/images/carousel/SLIDER-2.jpg";
-import sld3 from "assets/images/carousel/SLIDER-3.jpg";
-import React, { useState, useEffect, useRef } from "react";
+// import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
+// import sld2 from "assets/images/carousel/SLIDER-2.jpg";
+// import sld3 from "assets/images/carousel/SLIDER-3.jpg";
+import React, { useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
 
 import("./video.css");
 
 function Presentation() {
-  const [images] = useState([sld1, sld2, sld3]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  // const [images] = useState([sld1, sld2, sld3]);
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const playerRef = useRef(null);
 
-  const imageDuration = 30000;
+  // const imageDuration = 30000;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (isVideoPlaying) {
-        if (playerRef.current) {
-          const player = playerRef.current;
-          if (player && player.getCurrentTime) {
-            const currentTime = player.getCurrentTime();
-            if (currentTime >= player.getDuration()) {
-              setIsVideoPlaying(false);
-              setCurrentIndex(0);
-              setTimeout(() => {
-                setIsVideoPlaying(true);
-              }, imageDuration);
-            }
-          }
-        }
-      } else {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setTimeout(() => {
-          setIsVideoPlaying(true);
-        }, imageDuration);
-      }
-    }, 10000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (isVideoPlaying) {
+  //       if (playerRef.current) {
+  //         const player = playerRef.current;
+  //         if (player && player.getCurrentTime) {
+  //           const currentTime = player.getCurrentTime();
+  //           if (currentTime >= player.getDuration()) {
+  //             setIsVideoPlaying(false);
+  //             setCurrentIndex(0);
+  //             setTimeout(() => {
+  //               setIsVideoPlaying(true);
+  //             }, imageDuration);
+  //           }
+  //         }
+  //       }
+  //     } else {
+  //       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //       setTimeout(() => {
+  //         setIsVideoPlaying(true);
+  //       }, imageDuration);
+  //     }
+  //   }, 10000);
 
-    return () => clearInterval(interval);
-  }, [currentIndex, isVideoPlaying]);
+  //   return () => clearInterval(interval);
+  // }, [currentIndex, isVideoPlaying]);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -89,9 +89,9 @@ function Presentation() {
       >
         <Card
           sx={{
+            zIndex: 1,
             p: 0,
             mt: 0,
-            borderRadius: "30px",
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}

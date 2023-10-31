@@ -97,9 +97,9 @@ const UrunlerCard = () => {
   console.log(data);
   const options = {
     fullScreen: {
-      enable: false,
+      enable: true,
     },
-    fpsLimit: 120,
+    fpsLimit: 30,
     interactivity: {
       events: {
         onClick: {
@@ -107,7 +107,7 @@ const UrunlerCard = () => {
           mode: "push",
         },
         onHover: {
-          enable: true,
+          enable: false,
           mode: "slow",
         },
         resize: true,
@@ -118,7 +118,7 @@ const UrunlerCard = () => {
         },
         repulse: {
           distance: 200,
-          duration: 0.4,
+          duration: 1,
         },
       },
     },
@@ -146,9 +146,9 @@ const UrunlerCard = () => {
       number: {
         density: {
           enable: true,
-          area: 500,
+          area: 120,
         },
-        value: 20,
+        value: 10,
       },
       opacity: {
         value: 0.8,
@@ -157,11 +157,10 @@ const UrunlerCard = () => {
         type: "circle",
       },
       size: {
-        value: { min: 1, max: 3 },
+        value: { min: 2, max: 3 },
       },
     },
     detectRetina: false,
-    // fullScreen: { enable: false },
   };
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
@@ -169,11 +168,10 @@ const UrunlerCard = () => {
 
   return (
     <div>
-      <Particles options={options} init={particlesInit} />
-      <Container position="relative" py={6} px={{ xs: 2, lg: 0 }} mx={-2}>
-        <Grid marginBottom={5} container>
+      <Container position="relative" py={6} px={{ xs: 2, lg: 3 }} mx={-2}>
+        <Particles options={options} init={particlesInit} />
+        <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
           <Grid
-            container
             item
             xs={12}
             lg={6}
