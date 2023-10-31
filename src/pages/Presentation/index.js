@@ -12,7 +12,7 @@ import ReactPlayer from "react-player";
 import React, { useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
-
+import videoBg from "assets/images/test1.mp4";
 import("./video.css");
 
 function Presentation() {
@@ -124,20 +124,8 @@ function Presentation() {
           sx={{
             p: 0,
             mt: -25,
-            backgroundColor: "#0C2540",
-            borderRadius: "30px",
-            zIndex: 56456,
-            backdropFilter: "saturate(200%) blur(30px)",
-            boxShadow: ({ boxShadows: { xxl } }) => xxl,
-          }}
-        >
-          <CarouselImages />
-        </Card>{" "}
-        <Card
-          sx={{
-            p: 0,
-            mt: 0,
-            borderRadius: "30px",
+            borderTopLeftRadius: "30px",
+            borderTopRightRadius: "30px",
             zIndex: 56456,
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -145,6 +133,39 @@ function Presentation() {
         >
           <Information />
         </Card>{" "}
+        <Card
+          sx={{
+            p: 0,
+            mt: 0,
+            backgroundColor: "#0C2540",
+
+            zIndex: 56456,
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
+            position: "relative",
+          }}
+        >
+          <div style={{ position: "relative" }}>
+            <video
+              src={videoBg}
+              autoPlay
+              loop
+              muted
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: -1,
+                borderBottomLeftRadius: "30px",
+                borderBottomRightRadius: "30px",
+              }}
+            />{" "}
+            <CarouselImages />
+          </div>
+        </Card>
         <UrunlerCard />
         <Card
           sx={{

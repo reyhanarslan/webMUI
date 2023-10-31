@@ -24,9 +24,8 @@ function Information() {
     <MKBox
       sx={{
         background: "#F8F9FF",
-        borderRadius: "30px",
-        // borderBottomRightRadius: "30px",
-        // borderBottomLeftRadius: "30px",
+        borderTopRightRadius: "30px",
+        borderTopLeftRadius: "30px",
         py: 6,
       }}
       component="section"
@@ -76,13 +75,13 @@ function Information() {
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
             <RotatingCard>
               <RotatingCardFront
-                image={bgFront3}
+                image={bgFront2}
                 icon="touch_app"
                 title={<>İletişim</>}
-                description="Kurumsal çözümlerimiz ve ürünlerimizle sektördeki etkimizi güçlendirmeye devam ederken, müşteri memnuniyetini artırmak için buradayız. İhtiyaçlarınızı ve sorularınızı iletişim kanallarımız ile bizimle paylaşabilirsiniz."
+                description="Kurumsal çözümlerimiz ve ürünlerimizle sektördeki etkimizi güçlendirmeye devam ederken, müşteri memnuniyetini artırmak için buradayız.İhtiyaçlarınız ve sorularınız için bize ulaşmaktan çekinmeyiniz."
               />
               <RotatingCardBack
-                image={bgFront2}
+                image={bgFront3}
                 title="İletişim"
                 description="Size en iyi şekilde yardımcı olabilmek için iletişim seçeneklerimizi kullanabilirsiniz."
                 action={{

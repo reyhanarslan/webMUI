@@ -7,11 +7,10 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import about from "./about.jpg";
 import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
-import logo from "assets/images/logos/arenadis-logo-web-1.png";
 
 export function Hakkimizda() {
   return (
-    <div style={{ marginBottom: "223px" }}>
+    <div style={{ marginBottom: "223px", zIndex: 556465 }}>
       <DefaultNavbar
         routes={routes}
         action={{
@@ -24,18 +23,7 @@ export function Hakkimizda() {
         transparent
         blue
       />
-
-      <div
-        style={{
-          position: "absolute",
-          top: "15px",
-          left: "40px",
-          zIndex: 1,
-        }}
-      >
-        <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
-      </div>
-      <Grid py={14}>
+      <Grid py={10}>
         <>
           <Grid container>
             <Grid item xs={12} lg={12}>
