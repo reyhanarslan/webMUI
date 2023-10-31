@@ -177,7 +177,7 @@ const UrunlerCard = () => {
             lg={6}
             flexDirection="column"
             alignItems="center"
-            sx={{ textAlign: "center", my: 2, mx: "auto" }}
+            sx={{ textAlign: "center", my: 10, mx: "auto" }}
           >
             {" "}
             <MKTypography

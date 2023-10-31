@@ -15,16 +15,10 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
       {" "}
       {index % 2 === 1 ? (
         <>
-          {" "}
-          <Card
-            className="home-card-right"
-            width="100%"
-            style={{ height: "300px", width: "900px", backgroundColor: "#F8F9FF" }}
-            sx={{ mt: 0 }}
-          >
+          <Card className="home-card-left" style={{ width: "800px", backgroundColor: "#F8F9FF" }}>
             <Grid container>
-              <Grid item xs={12} md={6} lg={4} sx={{ mt: -6, marginLeft: -6 }}>
-                <MKBox width="300px" pt={2} pb={1} px={0}>
+              <Grid item xs={12} sm={6} sx={{ mt: -6, marginLeft: -6 }}>
+                <MKBox width="300px" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
                   <MKBox
                     bgColor="#F8F9FF"
                     borderRadius="xl"
@@ -32,12 +26,13 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
                     minHeight="10rem"
                     sx={{
                       overflow: "hidden",
-                      transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
+                      transform: "perspective(999px) rotateX(0deg) translate3d(10px, -10px, 0)",
                       transformOrigin: "50% 0",
                       willChange: "transform, box-shadow",
                       transition: "transform 200ms ease-out",
                       "&:hover": {
-                        transform: "perspective(999px) rotateX(7deg) translate3d(0px, -10px, 50px)",
+                        transform:
+                          "perspective(999px) rotateX(7deg) translate3d(10px, -20px, 50px)",
                       },
                     }}
                     component="img"
@@ -48,12 +43,12 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
                   />
                 </MKBox>
               </Grid>
-              <Grid item xs={12} md={6} lg={8} sx={{ my: "auto", marginLeft: "auto" }}>
-                <MKBox pt={5} pb={7} px={4} lineHeight={1.5}>
-                  <MKTypography sx={{ textAlign: "center" }} mb={3} variant="h3">
+              <Grid item xs={12} sm={6}>
+                <MKBox p={3}>
+                  <MKTypography variant="h4">
                     <Link to={position.route}>{name}</Link>
                   </MKTypography>
-                  <MKTypography sx={{ textAlign: "center" }} variant="body2" color="text">
+                  <MKTypography variant="body2" color="text">
                     {description}
                   </MKTypography>
                 </MKBox>
@@ -63,25 +58,23 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
         </>
       ) : (
         <Card
-          className="home-card-left"
-          width="100%"
-          style={{ height: "300px", width: "900px", backgroundColor: "#F8F9FF" }}
+          className="home-card-right"
+          style={{ width: "800px", backgroundColor: "#F8F9FF" }}
           sx={{ mt: 40 }}
         >
           <Grid container>
-            <Grid item xs={12} md={6} lg={8} sx={{ my: "auto" }}>
+            <Grid item xs={12} sm={6}>
               <MKBox pt={5} pb={7} pl={3} pr={{ xs: 4, lg: 1 }} lineHeight={1.5}>
                 <MKTypography sx={{ textAlign: "center" }} mb={3} variant="h3">
-                  {" "}
-                  <Link to={position.route}> {name}</Link>{" "}
-                </MKTypography>{" "}
+                  <Link to={position.route}>{name}</Link>
+                </MKTypography>
                 <MKTypography sx={{ textAlign: "center" }} variant="body2" color="text">
                   {description}
                 </MKTypography>
               </MKBox>
             </Grid>
-            <Grid item xs={12} md={6} lg={4} sx={{ mt: -6 }}>
-              <MKBox width="300px" pt={2} pb={1} px={0}>
+            <Grid item xs={12} md={6} lg={4} sx={{ mt: -6, ml: 10 }}>
+              <MKBox width="300px" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
                 <MKBox
                   bgColor="#F8F9FF"
                   borderRadius="xl"
@@ -89,13 +82,12 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
                   minHeight="10rem"
                   sx={{
                     overflow: "hidden",
-                    transform: "perspective(999px) rotateX(0deg) translate3d(0, 0, 0)",
+                    transform: "perspective(999px) rotateX(0deg) translate3d(10px, -10px, 0)",
                     transformOrigin: "50% 0",
                     willChange: "transform, box-shadow",
                     transition: "transform 200ms ease-out",
-
                     "&:hover": {
-                      transform: "perspective(999px) rotateX(7deg) translate3d(0px, -10px, 50px)",
+                      transform: "perspective(999px) rotateX(7deg) translate3d(10px, -20px, 50px)",
                     },
                   }}
                   component="img"
