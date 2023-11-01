@@ -232,12 +232,14 @@ function ProductInfo() {
           setProductImages(section.img);
           // setProductModel(section.model);
           setProductId(section.id);
+          renderProductComponentTitle();
+          renderProductComponent();
           console.log(section);
         }
       });
     });
     console.log(productInfo);
-  }, []);
+  }, [productid]);
   const renderProductComponentTitle = () => {
     switch (productId) {
       case "y62vbr40D9":
