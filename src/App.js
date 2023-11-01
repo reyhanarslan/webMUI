@@ -9,7 +9,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import routes from "routes";
 import MKBox from "components/MKBox";
 
@@ -25,7 +26,6 @@ import MKTypography from "components/MKTypography";
 import { CardMedia } from "@mui/material";
 import logo from "assets/images/logos/arenadis-logo-white.png";
 import ProductInfo from "./products/AboutUs";
-
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";

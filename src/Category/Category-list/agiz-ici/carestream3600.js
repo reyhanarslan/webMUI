@@ -9,13 +9,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import Katalog from "assets/docs/CS_3600_ARENA_KATALOG.pdf";
 // import { Document, Page } from "react-pdf";
-// import { useNavigate } from "react-router-dom";
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Content_1 from "assets/content/CS3600/8.png";
 import Content_2 from "assets/content/CS3600/7.JPG";
 
+// Import css files
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import Products from "products/ProductDatas/products";
+
 export function Carestream3600() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    variableWidth: true,
+  };
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -72,25 +86,35 @@ export function Carestream3600() {
               </div>
               {/* ... */}
             </Grid>
-            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-              <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                title="Get insights on Search"
-                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
-                action={{
-                  type: "internal",
-                  route: "pages/company/about-us",
-                  color: "info",
-                  label: "find out more",
-                }}
-              />{" "}
-            </Grid>
+            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
           </Grid>
           <Grid item xs={12} md={12} lg={12} my={3}>
             <MKBox component="img" src={Content_2} width="100%" />
           </Grid>
           <Grid item xs={12} md={12} lg={12} my={3}>
             <MKBox component="img" src={Content_1} width="100%" />
+          </Grid>
+          <div className="page-title" style={{ marginBottom: "50px" }}>
+            Benzer Ürünleri İncele
+          </div>
+          <Grid item xs={12} md={12} lg={12} my={3} spacing={10}>
+            <div style={{ marginTop: "50px !important" }}>
+              <Slider {...settings}>
+                <div key={0} style={{ width: "300px", height: "170px" }}>
+                  <CenteredBlogCard
+                    image={Products[0].product[1].img[0]}
+                    title={Products[0].product[1].model}
+                    // description=""
+                    action={{
+                      type: "internal",
+                      route: "/urun-detay/:U2qoPEPPn7",
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />{" "}
+                </div>
+              </Slider>
+            </div>
           </Grid>
         </Container>
       </MKBox>

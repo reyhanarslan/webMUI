@@ -14,8 +14,22 @@ import Katalog from "assets/docs/SmartOpticsVHR/Vinyl.pdf";
 
 import { Button } from "@mui/material";
 import MKTypography from "components/MKTypography";
+import Slider from "react-slick";
+import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+
 function SmartOpticsVinylHighResolution() {
-  console.log(Products[1].product[11]);
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    variableWidth: true,
+    autoplay: true,
+  };
+  const filteredProducts = Products[1].product.filter(
+    (product) => product.model !== "SMARTOPTICS VINYL HIGH RESOLUTION"
+  );
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -98,6 +112,34 @@ function SmartOpticsVinylHighResolution() {
           <ImageListItem style={{ marginTop: "50px" }}>
             <img src={content_img_1} alt={"SMARTOPTICS VINYL HIGH RESOLUTION"} loading="lazy" />
           </ImageListItem>
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </Container>
       </MKBox>
     </div>

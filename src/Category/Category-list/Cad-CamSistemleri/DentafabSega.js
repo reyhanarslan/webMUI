@@ -8,8 +8,22 @@ import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Content_1 from "assets/content/DentafabSega3D/1.png";
+import Slider from "react-slick";
+import Products from "products/ProductDatas/products";
 
 export function DentaFabSega3D() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    variableWidth: true,
+    autoplay: true,
+  };
+  const filteredProducts = Products[1].product.filter(
+    (product) => product.model !== "DentaFab Sega 3D Printer"
+  );
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -59,23 +73,39 @@ export function DentaFabSega3D() {
               <div className="page-content">22 Kg</div>
               {/* ... */}
             </Grid>
-            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-              <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                title="Get insights on Search"
-                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
-                action={{
-                  type: "internal",
-                  route: "pages/company/about-us",
-                  color: "info",
-                  label: "find out more",
-                }}
-              />{" "}
-            </Grid>
+            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
           </Grid>
           <Grid item xs={12} md={12} lg={12} my={3}>
             <MKBox component="img" src={Content_1} width="100%" />
           </Grid>
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </Container>
       </MKBox>
     </div>

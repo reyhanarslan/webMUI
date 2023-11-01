@@ -19,6 +19,9 @@ import Katalog from "assets/docs/Up3D/P53-dental-milling-machine-catalog_arena-1
 
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
+import Slider from "react-slick";
+import Products from "products/ProductDatas/products";
+import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
 const img = [
   Content_1,
@@ -32,6 +35,18 @@ const img = [
 ];
 
 function Up3dP53DentalFrezelemeCihazi() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    variableWidth: true,
+    autoplay: true,
+  };
+  const filteredProducts = Products[1].product.filter(
+    (product) => product.model !== "Up3D P53 DENTAL FREZELEME CİHAZI"
+  );
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -73,6 +88,34 @@ function Up3dP53DentalFrezelemeCihazi() {
               allowfullscreen
             ></iframe>
           </Grid>
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </Container>
       </MKBox>
     </div>

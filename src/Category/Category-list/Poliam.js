@@ -10,8 +10,19 @@ import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
-
+import Slider from "react-slick";
+import Products from "products/ProductDatas/products";
 function Poliam() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    variableWidth: true,
+    autoplay: true,
+  };
+  const filteredProducts = Products[2].product.filter((product) => product.model !== "POLI AM");
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -37,20 +48,36 @@ function Poliam() {
 
               {/* ... */}
             </Grid>
-            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-              <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                title="Get insights on Search"
-                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
-                action={{
-                  type: "internal",
-                  route: "pages/company/about-us",
-                  color: "info",
-                  label: "find out more",
-                }}
-              />{" "}
-            </Grid>
+            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
           </Grid>
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </Container>
       </MKBox>
     </div>

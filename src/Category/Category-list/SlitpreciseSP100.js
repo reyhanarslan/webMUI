@@ -12,7 +12,22 @@ import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
 // import MKButton from "components/MKButton";
+import Slider from "react-slick";
+import Products from "products/ProductDatas/products";
+import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 function SlitpreciseSP100() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    variableWidth: true,
+    autoplay: true,
+  };
+  const filteredProducts = Products[2].product.filter(
+    (product) => product.model !== "SLITPRECISE SP100"
+  );
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -94,6 +109,34 @@ function SlitpreciseSP100() {
               </Grid>
             </Grid>
           </Grid>
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </Container>
       </MKBox>
     </div>

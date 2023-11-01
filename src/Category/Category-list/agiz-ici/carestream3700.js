@@ -11,7 +11,18 @@ import Content_1 from "assets/content/Cs3700/2.jpg";
 import Content_2 from "assets/content/Cs3700/5.jpg";
 import Content_3 from "assets/content/Cs3700/6.jpg";
 
+import Slider from "react-slick";
+import Products from "products/ProductDatas/products";
 export function Carestream3700() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    variableWidth: true,
+  };
   return (
     <div>
       <MKBox component="section" py={12}>
@@ -116,18 +127,28 @@ export function Carestream3700() {
               </div>
               {/* ... */}
             </Grid>
-            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-              <CenteredBlogCard
-                image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                title="Get insights on Search"
-                description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
-                action={{
-                  type: "internal",
-                  route: "pages/company/about-us",
-                  color: "info",
-                  label: "find out more",
-                }}
-              />{" "}
+            <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
+            <div className="page-title" style={{ marginBottom: "10px" }}>
+              Benzer Ürünleri İncele
+            </div>
+            <Grid item xs={12} md={12} lg={12} my={3} spacing={10}>
+              <div style={{ marginTop: "30px !important" }}>
+                <Slider {...settings}>
+                  <div key={0} style={{ width: "300px", height: "170px" }}>
+                    <CenteredBlogCard
+                      image={Products[0].product[0].img[0]}
+                      title={Products[0].product[0].model}
+                      // description=""
+                      action={{
+                        type: "internal",
+                        route: "/urun-detay/:y62vbr40D9",
+                        color: "info",
+                        label: "Ürünü İncele",
+                      }}
+                    />{" "}
+                  </div>
+                </Slider>
+              </div>
             </Grid>
           </Grid>
         </Container>
