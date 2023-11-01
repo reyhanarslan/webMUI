@@ -53,16 +53,24 @@ function Category() {
         transparent
         light
       />
-      <div
-        style={{
+
+      <MKBox
+        sx={{
           position: "absolute",
-          top: "15px",
-          left: "40px",
-          zIndex: 1,
+          top: "10px",
+          left: "20px",
+          zIndex: 3,
+          size: "cover",
         }}
       >
-        <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
-      </div>
+        <div
+          style={{
+            zIndex: 1,
+          }}
+        >
+          <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+        </div>
+      </MKBox>
       <MKBox
         // minHeight="75vh"
         minHeight="60vh"
