@@ -36,6 +36,7 @@
     "react-flatpickr": "3.10.13",
     "react-google-maps": "^9.4.5",
     "react-material-ui-carousel": "^3.4.2",
+    "react-particles": "^2.12.2",
     "react-pdf": "^7.5.1",
     "react-player": "^2.13.0",
     "react-responsive-carousel": "^3.2.23",

@@ -13,6 +13,7 @@ import React, { useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
 import videoBg from "assets/images/test1.mp4";
+import MKBox from "components/MKBox";
 import("./video.css");
 
 function Presentation() {
@@ -75,51 +76,57 @@ function Presentation() {
           type: "external",
           route:
             "https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum",
-          label: "Whatsapp ıle Sipariş ",
+          label: "Whatsapp ıle Sipariş",
           color: "default",
         }}
-        // transparent
         blue
-      />
-      <div
-        style={{
-          background: "#0C2540 ",
-          // background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #117789 20.71%)",
+      />{" "}
+      <MKBox
+        style={{}}
+        sx={{
+          position: "absolute",
+          top: "15px",
+          left: "20px",
+          zIndex: 3,
+          size: "cover",
         }}
       >
-        <Card
-          sx={{
-            zIndex: 1,
-            p: 0,
-            mt: 0,
-            backdropFilter: "saturate(200%) blur(30px)",
-            boxShadow: ({ boxShadows: { xxl } }) => xxl,
-          }}
-        >
-          <div className="video-card">
-            <ReactPlayer
-              ref={playerRef}
-              style={{ borderRadius: "15px", zIndex: 1 }}
-              width="100%"
-              height="100%"
-              url={intro}
-              playing={true}
-              muted={true}
-              controls={false}
-              loop={true}
-            />
-          </div>
-        </Card>
         <div
           style={{
-            position: "absolute",
-            top: "15px",
-            left: "40px",
             zIndex: 1,
           }}
         >
           <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
         </div>
+      </MKBox>
+      <Card
+        sx={{
+          zIndex: 1,
+          p: 0,
+          mt: 0,
+          backdropFilter: "saturate(200%) blur(30px)",
+          boxShadow: ({ boxShadows: { xxl } }) => xxl,
+        }}
+      >
+        <div className="video-card">
+          <ReactPlayer
+            ref={playerRef}
+            style={{ borderRadius: "15px", zIndex: 0 }}
+            width="100%"
+            height="100%"
+            url={intro}
+            playing={true}
+            muted={true}
+            controls={false}
+            loop={true}
+          />
+        </div>
+      </Card>
+      <div
+        style={{
+          background: "#0C2540 ",
+        }}
+      >
         <Card
           sx={{
             p: 0,
