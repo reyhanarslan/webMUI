@@ -182,12 +182,33 @@ function Presentation() {
                 height: "100%",
                 objectFit: "cover",
                 zIndex: -1,
-                borderBottomLeftRadius: "30px",
-                borderBottomRightRadius: "30px",
+                // borderBottomLeftRadius: "30px",
+                // borderBottomRightRadius: "30px",
               }}
             />{" "}
             <CarouselImages />
           </div>
+        </Card>
+        <Card
+          sx={{
+            borderBottomRightRadius: "30px",
+            borderBottomLeftRadius: "30px",
+            borderTopLeftRadius: "0px",
+            borderTopRightRadius: "0px",
+            backgroundColor: "#F8F9FF",
+            height: "100%",
+          }}
+        >
+          <MKBox
+            minHeight="5vh"
+            width="100%"
+            sx={{
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "grid",
+              placeItems: "center",
+            }}
+          ></MKBox>
         </Card>
         <UrunlerCard />
         <Card
