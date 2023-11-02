@@ -68,6 +68,7 @@ function Presentation() {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
+
   return (
     <>
       <DefaultNavbar
@@ -99,6 +100,21 @@ function Presentation() {
           <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
         </div>
       </MKBox>
+      <Card
+        sx={{
+          zIndex: 42545545,
+          borderRadius: "30px",
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+            `${linearGradient(
+              rgba(gradients.light.main, 0.1),
+              rgba(gradients.light.state, 0.45)
+            )}, url(${logo})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "100%", // Kartın yüzde 100 genişlikte olmasını sağlar.
+          height: "100%", // Kartın yüzde 100 yükseklikte olmasını sağlar.
+        }}
+      ></Card>
       <Card
         sx={{
           zIndex: 1,

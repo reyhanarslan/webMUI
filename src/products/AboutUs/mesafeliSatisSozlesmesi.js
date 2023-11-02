@@ -6,7 +6,7 @@ import routes from "routes";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
-import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import logo from "assets/images/logos/arenadis-logo-white.png";
 
 export function MesafeliSatisSozlesmesi() {
   return (
@@ -21,7 +21,7 @@ export function MesafeliSatisSozlesmesi() {
           color: "default",
         }}
         transparent
-        blue
+        light
       />
 
       <MKBox
@@ -42,53 +42,54 @@ export function MesafeliSatisSozlesmesi() {
           <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
         </div>
       </MKBox>
-      <Grid py={12}>
+      <Grid py={0}>
         <>
-          <Grid container>
-            <Grid item xs={12} lg={12}>
-              <MKBox
-                display="flex"
-                alignItems="center"
-                borderRadius="xl"
-                py={10}
-                className="slide-in-container"
+          <MKBox
+            // minHeight="75vh"
+            minHeight="60vh"
+            width="100%"
+            sx={{
+              backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+                `${linearGradient(
+                  rgba(gradients.dark.main, 0.3),
+                  rgba(gradients.dark.state, 0)
+                )}, url(${DashboardImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "grid",
+              placeItems: "center",
+            }}
+          >
+            <Container>
+              <Grid
+                container
+                item
+                xs={12}
+                lg={12}
                 sx={{
-                  borderRadius: "30px",
-                  backgroundImage: ({
-                    functions: { linearGradient, rgba },
-                    palette: { gradients },
-                  }) =>
-                    `${linearGradient(
-                      rgba(gradients.light.main, 0.1),
-                      rgba(gradients.light.state, 0)
-                    )}, url(${DashboardImg})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  ml: { xs: 0, lg: 0 },
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <Container>
-                  <Grid
-                    container
-                    item
-                    xs={12}
-                    lg={12}
-                    sx={{
-                      ml: { xs: 0, lg: 0 },
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <MKTypography variant="h1" color="white">
-                      Mesafeli Satış Sözleşmesi{" "}
-                    </MKTypography>
-                  </Grid>
-                </Container>
-              </MKBox>
-            </Grid>
+                <MKTypography variant="h1" color="white">
+                  Mesafeli Satış Sözleşmesi{" "}
+                </MKTypography>
+              </Grid>
+            </Container>
+          </MKBox>
+          <Grid container>
+            <Grid item xs={12} lg={12}></Grid>
           </Grid>
         </>
-        <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
+        <MKBox
+          style={{ borderRadius: 15, marginTop: -20 }}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {" "}
           <div className="kurumsal slide-in-container ">
             <Grid className="kurumsal-grid" container alignItems="center">
               <Grid px={6} item xs={12} sm={12} md={12} lg={12}>

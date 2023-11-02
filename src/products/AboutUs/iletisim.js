@@ -39,7 +39,7 @@ export function Iletisim() {
           color: "default",
         }}
         transparent
-        blue
+        light
       />
 
       <MKBox
@@ -60,54 +60,54 @@ export function Iletisim() {
           <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
         </div>
       </MKBox>
-      <Grid py={12}>
+      <Grid py={0}>
         <>
-          <Grid container>
-            <Grid item xs={12} lg={12} md={12}>
-              <MKBox
-                display="flex"
-                alignItems="center"
-                borderRadius="xl"
-                py={25}
-                className="slide-in-container"
+          <MKBox
+            // minHeight="75vh"
+            minHeight="60vh"
+            width="100%"
+            sx={{
+              backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+                `${linearGradient(
+                  rgba(gradients.dark.main, 0.3),
+                  rgba(gradients.dark.state, 0)
+                )}, url(${DashboardImg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              display: "grid",
+              placeItems: "center",
+            }}
+          >
+            <Container>
+              <Grid
+                container
+                item
+                xs={12}
+                lg={12}
                 sx={{
-                  borderRadius: "30px",
-                  backgroundImage: ({
-                    functions: { linearGradient, rgba },
-                    palette: { gradients },
-                  }) =>
-                    `${linearGradient(
-                      rgba(gradients.arena.main, 0.3),
-                      rgba(gradients.arena.state, 0)
-                    )}, url(${DashboardImg})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  ml: { xs: 0, lg: 0 },
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <Container>
-                  <Grid
-                    container
-                    item
-                    xs={12}
-                    lg={12}
-                    md={12}
-                    sx={{
-                      ml: { xs: 5, lg: 12 },
-                      display: "flex",
-                      justifyContent: "left",
-                      alignItems: "left",
-                    }}
-                  >
-                    <MKTypography variant="h1" color="white">
-                      İletişim{" "}
-                    </MKTypography>
-                  </Grid>
-                </Container>
-              </MKBox>
-            </Grid>
+                <MKTypography variant="h1" color="white">
+                  İletişim{" "}
+                </MKTypography>
+              </Grid>
+            </Container>
+          </MKBox>
+          <Grid container>
+            <Grid item xs={12} lg={12}></Grid>
           </Grid>
         </>
-        <MKBox py={10} display="flex" justifyContent="center" alignItems="center">
+        <MKBox
+          style={{ borderRadius: 15, marginTop: -20 }}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {" "}
           <div className="kurumsal slide-in-container">
             <Grid container px={10} spacing={5}>
               <Grid marginTop={10} item xs={12} lg={6} md={12}>
