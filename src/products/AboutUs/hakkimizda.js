@@ -7,7 +7,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import about from "./about.jpg";
 import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
-import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import logo from "assets/images/logos/arenadis-logo-white.png";
 
 export function Hakkimizda() {
   return (
@@ -22,7 +22,7 @@ export function Hakkimizda() {
           color: "default",
         }}
         transparent
-        blue
+        light
       />
 
       <MKBox
@@ -43,7 +43,7 @@ export function Hakkimizda() {
           <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
         </div>
       </MKBox>
-      <Grid py={12}>
+      <Grid py={0}>
         <>
           <Grid container>
             <Grid item xs={12} lg={12}>
