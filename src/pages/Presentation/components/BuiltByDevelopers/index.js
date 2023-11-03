@@ -106,11 +106,11 @@ function BuiltByDevelopers() {
             sx={{ textAlign: "center", my: 2, mx: "auto" }}
           >
             <MKTypography color="white" variant="h2" fontWeight="bold">
-              Ürünlerimiz
+              Kategoriler
             </MKTypography>
-            <MKTypography color="white" variant="body1">
+            {/* <MKTypography color="white" variant="body1">
               Ürünlerimiz sektörün ihtiyaçlarına uygun çözümler sunuyor.
-            </MKTypography>
+            </MKTypography> */}
           </Grid>
         </Container>
         <Container sx={{ mt: { xs: 4, lg: 8 } }}>

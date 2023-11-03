@@ -186,11 +186,11 @@ const UrunlerCard = () => {
               variant="h2"
               fontWeight="bold"
             >
-              Ürünlerimiz
+              Kategoriler
             </MKTypography>
-            <MKTypography color="white" variant="body1">
+            {/* <MKTypography color="white" variant="body1">
               Ürünlerimiz sektörün ihtiyaçlarına uygun çözümler sunuyor.
-            </MKTypography>
+            </MKTypography> */}
           </Grid>
         </Grid>
         <Grid container spacing={3}>
