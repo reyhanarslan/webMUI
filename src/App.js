@@ -35,7 +35,10 @@ import Category from "Category/AboutUs";
 // import Particles from "react-particles";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
+import { useNavigate } from "react-router-dom";
+
 export default function App() {
+  const navigate = useNavigate();
   const { pathname } = useLocation();
   const options = {
     fullScreen: {
@@ -151,8 +154,20 @@ export default function App() {
         <MKBox component="footer">
           {" "}
           <Grid container style={{ paddingTop: "40px" }}>
-            <Grid className="d-flex" item xs={12} md={3} lg={3} sx={{ ml: "auto", mb: 3 }}>
-              <CardMedia style={{ width: "302px", height: "77px" }} image={logo} alt="Logo" />
+            <Grid
+              onClick={() => navigate("/")}
+              className="d-flex"
+              item
+              xs={12}
+              md={3}
+              lg={3}
+              sx={{ ml: "auto", mb: 3 }}
+            >
+              <CardMedia
+                style={{ cursor: "pointer", width: "302px", height: "77px" }}
+                image={logo}
+                alt="Logo"
+              />
             </Grid>
             <Grid
               item

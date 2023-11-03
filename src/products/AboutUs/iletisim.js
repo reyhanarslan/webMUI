@@ -13,9 +13,11 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
-import logo from "assets/images/logos/arenadis-logo-web-1.png";
+import logo from "assets/images/logos/arenadis-logo-white.png";
+import { useNavigate } from "react-router-dom";
 
 export function Iletisim() {
+  const navigate = useNavigate();
   const cardStyle = {
     width: "600px",
     height: "270px",
@@ -57,7 +59,12 @@ export function Iletisim() {
             zIndex: 1,
           }}
         >
-          <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+          <img
+            onClick={() => navigate("/")}
+            src={logo}
+            alt="Logo"
+            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+          />
         </div>
       </MKBox>
       <Grid py={0}>

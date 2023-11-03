@@ -7,8 +7,10 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
 import logo from "assets/images/logos/arenadis-logo-white.png";
+import { useNavigate } from "react-router-dom";
 
 export function CerezPolitikasi() {
+  const navigate = useNavigate();
   return (
     <div>
       <DefaultNavbar
@@ -39,7 +41,12 @@ export function CerezPolitikasi() {
             zIndex: 1,
           }}
         >
-          <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+          <img
+            onClick={() => navigate("/")}
+            src={logo}
+            alt="Logo"
+            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+          />
         </div>
       </MKBox>
       <Grid py={0}>

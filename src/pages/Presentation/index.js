@@ -14,9 +14,12 @@ import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
 import videoBg from "assets/images/test1.mp4";
 import MKBox from "components/MKBox";
+import { useNavigate } from "react-router-dom";
+
 import("./video.css");
 
 function Presentation() {
+  const navigate = useNavigate();
   // const [images] = useState([sld1, sld2, sld3]);
   // const [currentIndex, setCurrentIndex] = useState(0);
   // const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -97,7 +100,12 @@ function Presentation() {
             zIndex: 1,
           }}
         >
-          <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+          <img
+            onClick={() => navigate("/")}
+            src={logo}
+            alt="Logo"
+            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+          />
         </div>
       </MKBox>
       <Card

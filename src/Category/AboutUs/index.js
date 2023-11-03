@@ -3,6 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import logo from "assets/images/logos/arenadis-logo-white.png";
+import { useNavigate } from "react-router-dom";
 
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -31,6 +32,7 @@ import DashboardImg from "assets/images/products/urunler-title.jpg";
 import { Link } from "react-router-dom";
 
 function Category() {
+  const navigate = useNavigate();
   // const navigate = useNavigate();
   // const { name } = useParams();
   // const test = () => {
@@ -68,7 +70,12 @@ function Category() {
             zIndex: 1,
           }}
         >
-          <img src={logo} alt="Logo" style={{ width: "302px", height: "77px" }} />
+          <img
+            onClick={() => navigate("/")}
+            src={logo}
+            alt="Logo"
+            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+          />
         </div>
       </MKBox>
       <MKBox
