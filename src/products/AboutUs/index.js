@@ -629,10 +629,14 @@ function ProductInfo() {
               sx={{
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                display: "grid",
-                placeItems: "center",
+                // display: "grid",
+                // placeItems: "center",
               }}
             >
+              {" "}
+              <MKTypography marginBottom={3} color="white">
+                {renderProductComponentTitle()}
+              </MKTypography>
               <Grid
                 container
                 justifyContent="center"
@@ -640,11 +644,7 @@ function ProductInfo() {
                 flexDirection="column"
                 sx={{ mx: "auto", textAlign: "center" }}
               >
-                <MKTypography className="productTitle"> {productInfo.model}</MKTypography>
-
-                <MKTypography marginBottom={3} color="white">
-                  {renderProductComponentTitle()}
-                </MKTypography>
+                {/* <MKTypography className="productTitle"> {productInfo.model}</MKTypography> */}
 
                 <MKTypography marginTop={3} variant="h6" color="blue">
                   Daha Fazla Bilgi İçin Bize Ulaşın

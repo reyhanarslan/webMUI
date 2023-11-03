@@ -286,43 +286,18 @@ export const SilamillR5Title = () => {
     window.open(Katalog_4, "_blank");
   };
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <div className="page-title">
-                <h5>R5 – kazıyamayı yeni baştan tanımlayın..</h5>
-              </div>
-              <div className="page-content">
-                Yüksek kapasiteli R5 dental laboratuvar cihazının tam otomatik 10 blok değiştirme
-                sistemi, ıslak ve kuru kazıma özellikleri ile laboratuvarlarda devrime hazır olun!
-                <br />
-                Material ayırtetmeden yüksek hassasiyet ve maksimum stabilite sağlar.
-                <br />
-                {"10 Blok     60 İngot      60 Prefab Abutment"}
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader_1()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-          <Button onClick={() => pdfDownloader_2()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-          <Button onClick={() => pdfDownloader_3()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-          <Button onClick={() => pdfDownloader_4()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          {" "}
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri"
@@ -394,6 +369,64 @@ export const SilamillR5Title = () => {
               SILAMILL R5
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          SILAMILL R5
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <div className="page-title">
+                <h5>R5 – kazıyamayı yeni baştan tanımlayın..</h5>
+              </div>
+              <div className="page-content">
+                Yüksek kapasiteli R5 dental laboratuvar cihazının tam otomatik 10 blok değiştirme
+                sistemi, ıslak ve kuru kazıma özellikleri ile laboratuvarlarda devrime hazır olun!
+                <br />
+                Material ayırtetmeden yüksek hassasiyet ve maksimum stabilite sağlar.
+                <br />
+                {"10 Blok     60 İngot      60 Prefab Abutment"}
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader_1()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+            <Button onClick={() => pdfDownloader_2()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+            <Button onClick={() => pdfDownloader_3()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+            <Button onClick={() => pdfDownloader_4()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

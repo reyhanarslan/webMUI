@@ -130,8 +130,79 @@ export const Azurit02Title = () => {
   return (
     <div>
       <MKBox component="section">
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
+            <MKTypography
+              component="a"
+              href="/urunler/dis-uniteleri"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+                "&:hover .material-icons-round, &:focus .material-icons-round": {
+                  transform: `translateX(6px)`,
+                },
+              }}
+            >
+              Klinik Dolapları <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            </MKTypography>
+            <MKTypography
+              component="a"
+              target="_blank"
+              rel="noreferrer"
+              variant="h6"
+              color="white"
+              fontWeight="regular"
+              sx={{
+                marginRight: "10px",
+                display: "flex",
+                alignItems: "center",
+                "& .material-icons-round": {
+                  fontSize: "1.125rem",
+                  transform: `translateX(3px)`,
+                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                },
+              }}
+            >
+              Azurit 02
+            </MKTypography>
+          </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          Azurit 02
+        </MKTypography>
         <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
             <Grid item xs={12} lg={12}>
               <div className="page-title">
                 <h5>ÜRÜN ADI: Mobil Kabinli Klinik Tezgahı</h5>
@@ -154,10 +225,19 @@ export const Azurit02Title = () => {
               </div>
             </Grid>
           </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

@@ -112,10 +112,24 @@ export default DentafabSega3DPrinter;
 export const DentafabSega3DPrinterTitle = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          DentaFab Sega 3D Printer{" "}
+        </MKTypography>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <Grid item xs={12} lg={12}>
               <br />
               <div className="page-content">
@@ -126,10 +140,19 @@ export const DentafabSega3DPrinterTitle = () => {
               </div>
             </Grid>
           </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

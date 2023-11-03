@@ -135,34 +135,18 @@ export const Silamill58EditionTitle = () => {
     window.open(Katalog, "_blank");
   };
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <div className="page-content">
-                <br />
-                <li>Beş eksenli eş zamanlı freze makinesi</li>
-                <li>± 30 derece dönüş açısı</li>
-                <li>16 takım için otomatik takım değiştirici</li>
-                <li>
-                  Direct-Mill fonksiyonlu sağlanan CAM yazılımı DentalCAM aracılığıyla çok kolay
-                  kullanım
-                </li>
-                <li>Frezeleme konusunda önceden bilgi gerekmez</li>
-                <li>Kısmi protez çerçeveleri için özel Cam modülü</li>
-                <li>CoCr boşluklarının frezelenmesi için de kullanılabilir</li>
-                <li>8 blok için otomatik boşluk değiştiricili</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          {" "}
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri"
@@ -234,6 +218,55 @@ export const Silamill58EditionTitle = () => {
               SILAMILL 5.8 EDITION
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          SILAMILL 5.8 EDITION
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <div className="page-content">
+                <br />
+                <li>Beş eksenli eş zamanlı freze makinesi</li>
+                <li>± 30 derece dönüş açısı</li>
+                <li>16 takım için otomatik takım değiştirici</li>
+                <li>
+                  Direct-Mill fonksiyonlu sağlanan CAM yazılımı DentalCAM aracılığıyla çok kolay
+                  kullanım
+                </li>
+                <li>Frezeleme konusunda önceden bilgi gerekmez</li>
+                <li>Kısmi protez çerçeveleri için özel Cam modülü</li>
+                <li>CoCr boşluklarının frezelenmesi için de kullanılabilir</li>
+                <li>8 blok için otomatik boşluk değiştiricili</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

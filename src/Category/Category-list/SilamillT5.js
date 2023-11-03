@@ -208,36 +208,18 @@ export const SilamillT5Title = () => {
     window.open(Katalog, "_blank");
   };
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <div className="page-title">
-                <h5>T5 – YENİ JENERASYON</h5>
-              </div>
-              <div className="page-content">
-                T5, geniş kullanım alanına sahip beş eksenli kuru kazıma makinesidir. Stabil yapısı
-                sayesinde muhteşem kazıma sonuçlarını garanti eder.
-                <br />
-                Otomatik frez değiştirici ve pratik aksesuar çekmecesi gibi pek çok avantajlı
-                özelliği, T5 ile çalışmayı hızlı ve verimli hale getirir.
-                <br />
-                <div className="page-content">{"5 Eksen     1 Blok      16 Frez"}</div>
-                <div className="page-content">
-                  <li>B aksı ± 35 derece</li>
-                </div>
-                <br />
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          {" "}
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri"
@@ -309,6 +291,57 @@ export const SilamillT5Title = () => {
               SILAMILL T5
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          SILAMILL T5
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <div className="page-title">
+                <h5>T5 – YENİ JENERASYON</h5>
+              </div>
+              <div className="page-content">
+                T5, geniş kullanım alanına sahip beş eksenli kuru kazıma makinesidir. Stabil yapısı
+                sayesinde muhteşem kazıma sonuçlarını garanti eder.
+                <br />
+                Otomatik frez değiştirici ve pratik aksesuar çekmecesi gibi pek çok avantajlı
+                özelliği, T5 ile çalışmayı hızlı ve verimli hale getirir.
+                <br />
+                <div className="page-content">{"5 Eksen     1 Blok      16 Frez"}</div>
+                <div className="page-content">
+                  <li>B aksı ± 35 derece</li>
+                </div>
+                <br />
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

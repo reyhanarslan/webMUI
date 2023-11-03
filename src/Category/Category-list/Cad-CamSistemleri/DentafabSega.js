@@ -114,27 +114,17 @@ export function DentaFabSega3D() {
 
 export function DentaFabSega3DTitle() {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={3}>
-            <Grid item xs={12} lg={12}>
-              {/* Başlık */}
-              <div className="page-title">
-                <h5 className="dark-text"> 1 Cihaz, 12 Kusursuz İşlem!</h5>
-              </div>
-
-              <div className="page-content">
-                1 Cihaz, 12 Kusursuz İşlem! Sega 3D Yazıcı, olağanüstü hızda yazdırırken çok yüksek
-                doğruluk sağlamak için Ultra Hızlı DLP teknolojimizi kullanır.
-              </div>
-
-              {/* ... */}
-            </Grid>
-          </Grid>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri"
@@ -205,6 +195,39 @@ export function DentaFabSega3DTitle() {
             >
               DentaFab Sega 3D Printer
             </MKTypography>
+          </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          DentaFab Sega 3D Printer
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              {/* Başlık */}
+              <div className="page-title">
+                <h5 className="dark-text"> 1 Cihaz, 12 Kusursuz İşlem!</h5>
+              </div>
+
+              <div className="page-content">
+                1 Cihaz, 12 Kusursuz İşlem! Sega 3D Yazıcı, olağanüstü hızda yazdırırken çok yüksek
+                doğruluk sağlamak için Ultra Hızlı DLP teknolojimizi kullanır.
+              </div>
+
+              {/* ... */}
+            </Grid>
           </Grid>
         </Container>
       </MKBox>
