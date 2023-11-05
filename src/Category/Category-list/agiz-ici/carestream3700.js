@@ -159,33 +159,17 @@ export function Carestream3700() {
 
 export function Carestream3700Title() {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center">
-            <Grid item xs={12} lg={12}>
-              {/* Başlık */}
-              <div className="page-title">
-                <h5 className="dark-text">Ürün Özellikleri:</h5>
-                <span className="light-text">Ultra Hızlı Direkt Dijital Ölçü Sistemi</span>
-              </div>
-
-              <div className="page-content">
-                CS3700; CS 3600 den %20 daha hızlı tarama sağlar buda kullanıcıya TURBO hızlı tarama
-                imkanı verir. Önerilen pc konfigürasyonu kullanıldığında 30 sn için in vitro
-                uygulamada tek çeneyi taradığı test edildi ve kanıtlandı. F.A Porsche tarafından
-                tasarlanmış ergonomik dizaynı, hekimlerin çalışma ihtiyaçlarını gelişmiş uygulama
-                fonksiyonlarının merkezine almıştır. Performansı intraoral taramada yeni nesil
-                performans sunar. Yeni CS 3700 ile sadece intraoral taramalarınızı iyileştirmeyin,
-                onu yeniden tanımlayın
-              </div>
-
-              {/* ... */}
-            </Grid>
-          </Grid>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/agiz-ici-tarayicilar"
@@ -231,6 +215,46 @@ export function Carestream3700Title() {
             >
               Carestream CS 3700 Ağız İçi Tarayıcı
             </MKTypography>
+          </Grid>
+        </Container>
+
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <MKTypography
+              sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+              className="productTitle"
+            >
+              {" "}
+              Carestream CS 3700 Ağız İçi Tarayıcı
+            </MKTypography>
+            <Grid item xs={12} lg={12}>
+              {/* Başlık */}
+              <div className="page-title">
+                <h5 className="dark-text">Ürün Özellikleri:</h5>
+                <span className="light-text">Ultra Hızlı Direkt Dijital Ölçü Sistemi</span>
+              </div>
+
+              <div className="page-content">
+                CS3700; CS 3600 den %20 daha hızlı tarama sağlar buda kullanıcıya TURBO hızlı tarama
+                imkanı verir. Önerilen pc konfigürasyonu kullanıldığında 30 sn için in vitro
+                uygulamada tek çeneyi taradığı test edildi ve kanıtlandı. F.A Porsche tarafından
+                tasarlanmış ergonomik dizaynı, hekimlerin çalışma ihtiyaçlarını gelişmiş uygulama
+                fonksiyonlarının merkezine almıştır. Performansı intraoral taramada yeni nesil
+                performans sunar. Yeni CS 3700 ile sadece intraoral taramalarınızı iyileştirmeyin,
+                onu yeniden tanımlayın
+              </div>
+
+              {/* ... */}
+            </Grid>
           </Grid>
         </Container>
       </MKBox>

@@ -90,35 +90,18 @@ export default Siladent3dPrinterSilaPrintLCD;
 export const Siladent3dPrinterSilaPrintLCDTitle = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <br />
-              <div className="page-content">
-                1 Cihaz, 12 Kusursuz İşlem!
-                <br />
-                SilaPrint LCD, LCD teknolojisi ve çift lineer Z ekseni yardımıyla ayrıntılı,
-                boyutsal olarak doğru modeller sağlayan ve aynı zamanda daha düşük giriş fiyatı
-                nedeniyle daha az model yazdırmak için ekonomik olan profesyonel ve çok yönlü bir 3D
-                yazıcıdır.
-                <br />
-                <li>DLP teknolojisi</li>
-                <li>Yüksek çözünürlük</li>
-                <li>Tam boyutsal doğruluk</li>
-                <li>SilaPrint reçineleriyle mükemmel uyum</li>
-                <li>Sezgisel kontrol ve kullanılabilirlik</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          {" "}
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/cad-cam-sistemleri"
@@ -190,6 +173,56 @@ export const Siladent3dPrinterSilaPrintLCDTitle = () => {
               Sıladent 3D Printer Sılaprint LCD
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          Sıladent 3D Printer Sılaprint LCD
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <br />
+              <div className="page-content">
+                1 Cihaz, 12 Kusursuz İşlem!
+                <br />
+                SilaPrint LCD, LCD teknolojisi ve çift lineer Z ekseni yardımıyla ayrıntılı,
+                boyutsal olarak doğru modeller sağlayan ve aynı zamanda daha düşük giriş fiyatı
+                nedeniyle daha az model yazdırmak için ekonomik olan profesyonel ve çok yönlü bir 3D
+                yazıcıdır.
+                <br />
+                <li>DLP teknolojisi</li>
+                <li>Yüksek çözünürlük</li>
+                <li>Tam boyutsal doğruluk</li>
+                <li>SilaPrint reçineleriyle mükemmel uyum</li>
+                <li>Sezgisel kontrol ve kullanılabilirlik</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>
