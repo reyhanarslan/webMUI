@@ -92,32 +92,18 @@ export default DFM75E;
 export const DFM75ETitle = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <h5>Diş Freze Ünitesi </h5> <br />
-              <div className="page-content">
-                <li>Hem balmumu hem de diş alaşımlarının frezesi</li>
-                <li>Hassas frezeleme ve delme</li>
-                <li>olarak kullanılma imkanı</li>
-                <li>Çalışma masasının elektromanyetik fiksasyonu</li>
-              </div>
-              <h5>Aksesuarlar:</h5>
-              <div className="page-content">
-                <li>Araçlar Başlangıç Kümesi</li>
-                <li>Tablo</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          {" "}
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/laboratuvar-ekipmanlari"
@@ -164,6 +150,53 @@ export const DFM75ETitle = () => {
               DFM 75E
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          DFM 75E
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <h5>Diş Freze Ünitesi </h5> <br />
+              <div className="page-content">
+                <li>Hem balmumu hem de diş alaşımlarının frezesi</li>
+                <li>Hassas frezeleme ve delme</li>
+                <li>olarak kullanılma imkanı</li>
+                <li>Çalışma masasının elektromanyetik fiksasyonu</li>
+              </div>
+              <h5>Aksesuarlar:</h5>
+              <div className="page-content">
+                <li>Araçlar Başlangıç Kümesi</li>
+                <li>Tablo</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>{" "}
+          </div>
         </Container>
       </MKBox>
     </div>

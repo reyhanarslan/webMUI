@@ -125,32 +125,17 @@ export default LcCast600T;
 export const LcCast600TTitle = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <br />
-              <div className="page-content">
-                Yüksek frekanslı indüksiyon eritme ve santrifüj döküm ile otomatik masa üstü diş
-                döküm ünitesi.
-                <br />
-                <li>Dental Co-Cr, Ni-Cr ve değerli alaşımların dökümü için tasarlanmıştır</li>
-                <li>Masa üstü tasarımı</li>
-                <li>Hem manuel hem de otomatik eritme modu</li>
-                <li>Optimum gücün otomatik bakım</li>
-                <li>Otomatik döküm modu</li>
-                <li>Otonom soğutma sistemi</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/dental-firinlar"
@@ -222,6 +207,44 @@ export const LcCast600TTitle = () => {
               Lc Cast 600T
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          Lc Cast 600T
+        </MKTypography>
+        <Container>
+          <Grid container spacing={3} alignItems="center" marginBottom={2}>
+            <Grid item xs={12} lg={12}>
+              <br />
+              <div className="page-content">
+                Yüksek frekanslı indüksiyon eritme ve santrifüj döküm ile otomatik masa üstü diş
+                döküm ünitesi.
+                <br />
+                <li>Dental Co-Cr, Ni-Cr ve değerli alaşımların dökümü için tasarlanmıştır</li>
+                <li>Masa üstü tasarımı</li>
+                <li>Hem manuel hem de otomatik eritme modu</li>
+                <li>Optimum gücün otomatik bakım</li>
+                <li>Otomatik döküm modu</li>
+                <li>Otonom soğutma sistemi</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

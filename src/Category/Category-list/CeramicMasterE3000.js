@@ -98,35 +98,17 @@ export default CeramicMasterE3000;
 export const CeramicMasterE3000Title = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <h5>Metal Ve Saf Seramikler İçin Otomatik Programlanabilir Diş Fırını.</h5> <br />
-              <div className="page-content">
-                <li>Mevcut tüm dental metal seramik türleri için tasarlanmıştır</li>
-                <li>255 bireysel program</li>
-                <li>Tamamen kontrollü süreç – her programda 16 programlanabilir parametre</li>
-                <li>Geliştirilmiş kendi kendine teşhis ve otomatik kalibrasyon sistemi</li>
-                <li>Koruyucu temperli camlı 7” tft ekran</li>
-                <li>Sensör düğmeleri</li>
-                <li>Süreçlerin ilerlemesinin grafiksel gösterimi</li>
-                <li>Kuvars spiral tüpte ısıtma elemanı olan ısıtıcı</li>
-                <li>Pt/ro termoka kapak</li>
-                <li>Kısa güç kesintisinden sonra programın otomatik devamı</li>
-                <li>Program parametrelerinin usb aktarımı</li>
-                <li>Hasarın uzaktan analizi</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/dental-firinlar"
@@ -198,6 +180,55 @@ export const CeramicMasterE3000Title = () => {
               CeramicMaster E3000
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          CeramicMaster E3000
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <h5>Metal Ve Saf Seramikler İçin Otomatik Programlanabilir Diş Fırını.</h5> <br />
+              <div className="page-content">
+                <li>Mevcut tüm dental metal seramik türleri için tasarlanmıştır</li>
+                <li>255 bireysel program</li>
+                <li>Tamamen kontrollü süreç – her programda 16 programlanabilir parametre</li>
+                <li>Geliştirilmiş kendi kendine teşhis ve otomatik kalibrasyon sistemi</li>
+                <li>Koruyucu temperli camlı 7” tft ekran</li>
+                <li>Sensör düğmeleri</li>
+                <li>Süreçlerin ilerlemesinin grafiksel gösterimi</li>
+                <li>Kuvars spiral tüpte ısıtma elemanı olan ısıtıcı</li>
+                <li>Pt/ro termoka kapak</li>
+                <li>Kısa güç kesintisinden sonra programın otomatik devamı</li>
+                <li>Program parametrelerinin usb aktarımı</li>
+                <li>Hasarın uzaktan analizi</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

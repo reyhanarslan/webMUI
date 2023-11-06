@@ -87,42 +87,18 @@ export default ZirconMasterS;
 export const ZirconMasterSTitle = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <h5>Zno2 Sinterleme İçin Programlanabilir Diş Fırını</h5>
-              <br />
-              <div className="page-content">
-                <li>Zno2’nin her türlü diş hekimi için tasarlanmıştır</li>
-                <li>10 işletim programı</li>
-                <li>Hızlı sıcaklık artışı</li>
-                <li>Kontrollü soğutma işlemi</li>
-                <li>Yüksek kaliteli mosi2 ısıtma elemanları</li>
-                <li>Ana ateşleme aşamasında düşük enerji tüketimi</li>
-              </div>
-              <br />
-              <h5>Aksesuarlar</h5>
-              <br />
-              <div className="page-content">
-                <li>Tepsi gts ref. No 234000001</li>
-                <li>Tepsi ag ref. No 234000002</li>
-                <li>İnci ag ref. No 234000003</li>
-                <li>İnci noritake ref. No 234000004</li>
-                <li>Tutucu tepsi ref. No 234000005</li>
-                <li>Yalıtım tablosu alt ref. No 234020301</li>
-                <li>Yalıtım tablosu üst ref. No 234020302</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          {" "}
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/dental-firinlar"
@@ -190,10 +166,65 @@ export const ZirconMasterSTitle = () => {
                   transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
                 },
               }}
-            >
-              CeramicMaster Press
-            </MKTypography>
+            ></MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          CeramicMaster Press
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <h5>Zno2 Sinterleme İçin Programlanabilir Diş Fırını</h5>
+              <br />
+              <div className="page-content">
+                <li>Zno2’nin her türlü diş hekimi için tasarlanmıştır</li>
+                <li>10 işletim programı</li>
+                <li>Hızlı sıcaklık artışı</li>
+                <li>Kontrollü soğutma işlemi</li>
+                <li>Yüksek kaliteli mosi2 ısıtma elemanları</li>
+                <li>Ana ateşleme aşamasında düşük enerji tüketimi</li>
+              </div>
+              <br />
+              <h5>Aksesuarlar</h5>
+              <br />
+              <div className="page-content">
+                <li>Tepsi gts ref. No 234000001</li>
+                <li>Tepsi ag ref. No 234000002</li>
+                <li>İnci ag ref. No 234000003</li>
+                <li>İnci noritake ref. No 234000004</li>
+                <li>Tutucu tepsi ref. No 234000005</li>
+                <li>Yalıtım tablosu alt ref. No 234020301</li>
+                <li>Yalıtım tablosu üst ref. No 234020302</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

@@ -137,7 +137,6 @@ import { PhantomDentalSimulasyonCalismaMasasiTitle } from "Category/Category-lis
 import { QuattroAskiliDisUnitesiTitle } from "Category/Category-list/QuattroAskiliDisUnitesi";
 import { QuattroKamciliDisUnitesiTitle } from "Category/Category-list/QuattroKamciliDisUnitesi";
 import { PanoramikTitle } from "Category/Category-list/Panoramik";
-import { TomografiTitle } from "Category/Category-list/Tomografi";
 import { Anemon00Title } from "Category/Category-list/Anemon00";
 import { Anemon04Title } from "Category/Category-list/Anemon04";
 import { Anemon05Title } from "Category/Category-list/Anemon05";
@@ -156,6 +155,7 @@ import { CiftTeknisyenCalismaMasasiTitle } from "Category/Category-list/CiftTekn
 import { TekliTeknisyenCalismaMasasiTitle } from "Category/Category-list/TekliTeknisyenCalismaMasasi";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { TomografiTitle } from "Category/Category-list/Tomografi";
 export function ProductSlider({ images }) {
   return (
     <Carousel

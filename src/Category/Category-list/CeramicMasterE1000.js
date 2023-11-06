@@ -94,37 +94,17 @@ export const CeramicMasterE1000Title = () => {
     window.open(Katalog, "_blank");
   };
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <h5>Diş Seramikleri İçin Otomatik Programlanabilir Diş Fırını</h5> <br />
-              <div className="page-content">
-                <li>Her türlü diş metali ve saf seramik için tasarlanmıştır</li>
-                <li>200 işletim programı</li>
-                <li>Tamamen kontrollü ateşleme süreci</li>
-                <li>Geliştirilmiş kendi kendine teşhis sistemi</li>
-                <li>Sıcaklığın otomatik kalibrasyonu</li>
-                <li>Kuvars susturucu</li>
-              </div>
-              <br />
-              <h5>Diş Seramikleri İçin Otomatik Programlanabilir Vakum Fırını</h5> <br />
-              <div className="page-content">
-                <li>Yalıtım tablosu</li>
-                <li>Ateşleme tepsisi</li>
-                <li>Pinler</li>
-                <li>Vakum pompası pvm122</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/dental-firinlar"
@@ -196,6 +176,58 @@ export const CeramicMasterE1000Title = () => {
               CeramicMaster E1000
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          CeramicMaster E1000
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <h5>Diş Seramikleri İçin Otomatik Programlanabilir Diş Fırını</h5> <br />
+              <div className="page-content">
+                <li>Her türlü diş metali ve saf seramik için tasarlanmıştır</li>
+                <li>200 işletim programı</li>
+                <li>Tamamen kontrollü ateşleme süreci</li>
+                <li>Geliştirilmiş kendi kendine teşhis sistemi</li>
+                <li>Sıcaklığın otomatik kalibrasyonu</li>
+                <li>Kuvars susturucu</li>
+              </div>
+              <br />
+              <h5>Diş Seramikleri İçin Otomatik Programlanabilir Vakum Fırını</h5> <br />
+              <div className="page-content">
+                <li>Yalıtım tablosu</li>
+                <li>Ateşleme tepsisi</li>
+                <li>Pinler</li>
+                <li>Vakum pompası pvm122</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>

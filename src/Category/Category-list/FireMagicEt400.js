@@ -116,29 +116,17 @@ export default FireMagicEt400;
 export const FireMagicEt400Title = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <div className="page-content">
-                Döküm halkaları ve balmumu buharlaşması için ön ısıtma fırını
-                <li>10 +1 Kullanıcı Programı</li>
-                <li>5 Sıcaklık Bölgesi</li>
-                <li>Otomatik Parametre Denetimi</li>
-                <li>90 Saate Kadar Ertelenmiş Başlangıç</li>
-                <li>Buhar Çıkarıcının Otomatik Kontrolü</li>
-                <li>Şok Yatırımla Çalışmak</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/dental-firinlar"
@@ -210,6 +198,50 @@ export const FireMagicEt400Title = () => {
               FireMagic ET400
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          FireMagic ET400
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <div className="page-content">
+                Döküm halkaları ve balmumu buharlaşması için ön ısıtma fırını
+                <li>10 +1 Kullanıcı Programı</li>
+                <li>5 Sıcaklık Bölgesi</li>
+                <li>Otomatik Parametre Denetimi</li>
+                <li>90 Saate Kadar Ertelenmiş Başlangıç</li>
+                <li>Buhar Çıkarıcının Otomatik Kontrolü</li>
+                <li>Şok Yatırımla Çalışmak</li>
+              </div>
+            </Grid>
+          </Grid>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 4,
+            }}
+          >
+            <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+              <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+              <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+            </Button>
+          </div>
         </Container>
       </MKBox>
     </div>
