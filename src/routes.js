@@ -42,6 +42,7 @@ import HomeIcon from "@mui/icons-material/Home";
 // import Typography from "layouts/sections/elements/typography";
 // import Presentation from "pages/Presentation";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
+import { VizyonMizyon } from "products/AboutUs/VizyonMisyon";
 const routes = [
   {
     name: "Ana Sayfa",
@@ -200,6 +201,12 @@ const routes = [
     component: <Hakkimizda />,
     route: "/hakkimizda",
     collapse: [
+      {
+        name: "Vizyon Ve Misyon",
+        component: <VizyonMizyon />,
+        route: "/visyon-misyon",
+      },
+
       {
         name: "Hakkımızda",
         component: <Hakkimizda />,
