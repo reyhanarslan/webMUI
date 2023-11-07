@@ -38,20 +38,7 @@ function CarouselImages() {
               className="d-flex justify-content-left align-items-left"
               lg={3}
             >
-              <Carousel
-                infiniteLoop={true}
-                autoPlay={true}
-                interval={5000}
-                showThumbs={false}
-                // animation="fade"
-                // duration={1500}
-                // height={"700px"}
-                // navButtonsAlwaysVisible={false}
-                // fullHeightHover={true}
-                // stopAutoPlayOnHover={true}
-                // swipe={false}
-                // className="custom-carousel"
-              >
+              <Carousel infiniteLoop={true} autoPlay={true} interval={5000} showThumbs={false}>
                 {images.map((item, i) => (
                   <div key={i}>
                     <img key={i} src={item} />

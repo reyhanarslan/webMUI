@@ -23,6 +23,7 @@ import dentafab from "assets/images/products-images/cad-cam-sistemleri/3d-printe
 // import zirdent from "assets/images/products-images/zirdent/4.jpg";
 import zirconmasters from "assets/images/products-images/dental-firinlar/zirkon-sinterleme-firinlari/zirconmatser-s/Z.M.S-1.jpg";
 import ceramicmastere20 from "assets/images/products-images/dental-firinlar/ceramic-processing-porselen-firinlari/ceramic-matser-e20/E-20-3.jpg";
+import EtkinlikImages from "./sections/etkinlik";
 
 import("./video.css");
 
@@ -206,7 +207,7 @@ function Presentation() {
             <CarouselImages />
           </div>
         </Card>
-        <Card style={{ borderRadius: "0px 0px 30px 30px" }}>
+        <Card style={{ borderRadius: "0px" }}>
           <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
             <Grid
               item
@@ -913,6 +914,7 @@ function Presentation() {
             }}
           ></MKBox>
         </Card> */}
+        <EtkinlikImages />
         <UrunlerCard />
         <Card
           sx={{
