@@ -28,7 +28,7 @@ import { CerezPolitikasi } from "products/AboutUs/cerezPolitikasi";
 import { KisiselVerilerinKorunmasi } from "products/AboutUs/kvkk";
 import { MesafeliSatisSozlesmesi } from "products/AboutUs/mesafeliSatisSozlesmesi";
 import { Iletisim } from "products/AboutUs/iletisim";
-
+import HomeIcon from "@mui/icons-material/Home";
 // import Alerts from "layouts/sections/attention-catchers/alerts";
 // import Modals from "layouts/sections/attention-catchers/modals";
 // import TooltipsPopovers from "layouts/sections/attention-catchers/tooltips-popovers";
@@ -41,11 +41,13 @@ import { Iletisim } from "products/AboutUs/iletisim";
 // import Toggles from "layouts/sections/elements/toggles";
 // import Typography from "layouts/sections/elements/typography";
 // import Presentation from "pages/Presentation";
-
+import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 const routes = [
   {
     name: "Ana Sayfa",
-    icon: <Icon>dashboard</Icon>,
+    // icon: <Icon>dashboard</Icon>,
+    icon: <HomeIcon />,
+
     columns: 1,
     // component:<Presentation />,
     // route:"ana-sayfa",
@@ -91,7 +93,8 @@ const routes = [
     name: "Ürünlerimiz",
     route: "/urunler/tum-urunler",
     // component: <ContactUs />,
-    icon: <Icon>view_day</Icon>,
+    // icon: <Icon>view_day</Icon>,
+    icon: <PrecisionManufacturingIcon />,
     collapse: [
       {
         name: "Ağıziçi Tarayıcılar",
