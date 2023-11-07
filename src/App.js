@@ -25,7 +25,7 @@ import MKTypography from "components/MKTypography";
 // import footerRoutes from "footer.routes";
 import { CardMedia } from "@mui/material";
 import logo from "assets/images/logos/arenadis-logo-white.png";
-import wp from "assets/images/wp-logo.png";
+import wp from "assets/images/wp-3.gif";
 import ProductInfo from "./products/AboutUs";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -258,7 +258,7 @@ export default function App() {
                 style={{
                   position: "fixed",
                   top: "50%",
-                  right: "10px",
+                  right: "0px",
                   zIndex: 9999999,
                   display: "flex",
                   flexDirection: "column",
@@ -272,7 +272,13 @@ export default function App() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={wp} alt="WhatsApp" width="100" />
+                  <img
+                    style={{ backgroundColor: "transparent" }}
+                    width={50}
+                    height={"auto"}
+                    src={wp}
+                    alt="WhatsApp"
+                  />
                 </a>
                 {/* <span
                   style={{
