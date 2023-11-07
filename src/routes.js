@@ -2,8 +2,7 @@
 import Icon from "@mui/material/Icon";
 
 // @mui icons
-import GitHubIcon from "@mui/icons-material/GitHub";
-
+import WifiCalling3Icon from "@mui/icons-material/WifiCalling3";
 // Pages
 // import AboutUs from "layouts/pages/landing-pages/about-us";
 // import ContactUs from "layouts/pages/landing-pages/contact-us";
@@ -227,7 +226,7 @@ const routes = [
   },
   {
     name: "İletişim",
-    icon: <GitHubIcon />,
+    icon: <WifiCalling3Icon />,
     // href: "https://www.github.com/creativetimofficial/material-kit-react",
     route: "/iletişim",
     component: <Iletisim />,

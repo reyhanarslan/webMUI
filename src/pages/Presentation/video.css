@@ -32,3 +32,20 @@
   background-size: "250%"; /* "cover" tırnak içinde olmamalı */
   background-position: center; /* "center" tırnak içinde olmamalı */
 }
+@keyframes changeBackgroundColor {
+  0% {
+    background: linear-gradient(90deg, #344767, #f8f9ff); /* #344767 to #F8F9FF */
+  }
+  25% {
+    background: linear-gradient(90deg, #f8f9ff, #64b0b4); /* #F8F9FF to #64B0B4 */
+  }
+  50% {
+    background: linear-gradient(90deg, #64b0b4, #344761); /* #64B0B4 to #18A1A4 */
+  }
+  75% {
+    background: linear-gradient(90deg, #18a1a4, #344767); /* #18A1A4 to #344767 */
+  }
+  100% {
+    background: linear-gradient(90deg, #344767, #f8f9ff); /* #344767 to #F8F9FF */
+  }
+}

@@ -15,11 +15,7 @@ function CarouselImages() {
 
   return (
     <>
-      <div
-      // style={{
-      //   background: "linear-gradient(90deg, rgba(188, 188, 189, 0), #11304C 20.71%)",
-      // }}
-      >
+      <div>
         <MKBox
           component="section"
           sx={{
@@ -27,16 +23,12 @@ function CarouselImages() {
             mt: 0,
 
             borderRadius: "30px",
+            animation: "changeBackgroundColor 10s linear infinite",
+            transition: "background-color 0.5s ease-in-out",
 
-            // backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
-            //   `${linearGradient(
-            //     rgba(gradients.light.main, 0.3),
-            //     rgba(gradients.arena.state, 0.9)
-            //   )}, url(${DashboardImg1})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
-            animation: "slideRight 10s linear infinite",
             height: "550px",
           }}
         >

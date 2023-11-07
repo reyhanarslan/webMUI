@@ -25,6 +25,7 @@ import MKTypography from "components/MKTypography";
 // import footerRoutes from "footer.routes";
 import { CardMedia } from "@mui/material";
 import logo from "assets/images/logos/arenadis-logo-white.png";
+import wp from "assets/images/wp-logo.png";
 import ProductInfo from "./products/AboutUs";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -252,6 +253,44 @@ export default function App() {
                 </MKTypography>
               </MKBox>
             </Grid>
+            <div style={{ position: "relative" }}>
+              <div
+                style={{
+                  position: "fixed",
+                  top: "50%",
+                  right: "10px",
+                  zIndex: 9999999,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  padding: "10px",
+                  borderRadius: "5px",
+                }}
+              >
+                <a
+                  href="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={wp} alt="WhatsApp" width="100" />
+                </a>
+                {/* <span
+                  style={{
+                    backgroundColor: "white",
+                    color: "black",
+                    fontSize: "15px",
+                    marginTop: "5px",
+                    paddingLeft: "5px",
+                    paddingRight: "5px",
+                    paddingTop: "5px",
+                    paddingBottom: "5px",
+                  }}
+                >
+                  İletişim
+                </span> */}
+              </div>
+            </div>
+
             <Grid
               item
               xs={12}
