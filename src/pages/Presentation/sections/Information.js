@@ -13,7 +13,6 @@ import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import bgFront1 from "assets/images/dashboard/back1.jpg";
 import bgFront2 from "assets/images/dashboard/back2.jpg";
 import bgFront3 from "assets/images/dashboard/back3.jpg";
-import test from "assets/images/products/kurumsal.jpg";
 // import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 // import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 // import bgFront from "assets/images/rotating-card-bg-front.jpeg";
