@@ -257,7 +257,7 @@ export default function App() {
               <div
                 style={{
                   position: "fixed",
-                  top: "50%",
+                  top: "80%",
                   right: "0px",
                   zIndex: 9999999,
                   display: "flex",
@@ -273,7 +273,7 @@ export default function App() {
                   rel="noreferrer"
                 >
                   <img
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ backgroundColor: "transparent", borderRadius: "30px" }}
                     width={50}
                     height={"auto"}
                     src={wp}
