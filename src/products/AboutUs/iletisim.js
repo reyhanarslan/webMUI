@@ -236,7 +236,7 @@ export function Iletisim() {
                         variant="outlined"
                         type="text"
                         label="Nasıl yardımcı olabiliriz?"
-                        placeholder="Describe your problem in at least 250 characters"
+                        // placeholder="Describe your problem in at least 250 characters"
                         InputLabelProps={{ shrink: true }}
                         multiline
                         fullWidth
@@ -246,6 +246,7 @@ export function Iletisim() {
                   </Grid>
                   <Grid
                     container
+                    marginLeft={8}
                     justifyContent="flex-end"
                     xs={11}
                     sm={11}
@@ -255,7 +256,7 @@ export function Iletisim() {
                     mt={3}
                     mb={2}
                   >
-                    <MKButton type="submit" variant="gradient" color="info">
+                    <MKButton type="submit" variant="gradient" color="arena">
                       Gönder
                     </MKButton>
                   </Grid>
