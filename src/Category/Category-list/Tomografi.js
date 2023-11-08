@@ -8,12 +8,10 @@ import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
-import { Button } from "@mui/material";
-import Icon from "assets/theme/components/icon";
+import { Button, Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
-
 function Tomografi() {
   var settings = {
     dots: true,
@@ -24,7 +22,7 @@ function Tomografi() {
     variableWidth: true,
     autoplay: true,
   };
-  const filteredProducts = Products[4].product.filter((product) => product.model !== "Tomografi");
+  const filteredProducts = Products[4].product.filter((product) => product.model !== "Panoramik");
   return (
     <div>
       <MKBox component="section" py={12}>
