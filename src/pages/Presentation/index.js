@@ -12,7 +12,7 @@ import ReactPlayer from "react-player";
 import React, { useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
-import videoBg from "assets/images/test1.mp4";
+// import videoBg from "assets/images/test1.mp4";
 import MKBox from "components/MKBox";
 import { useNavigate } from "react-router-dom";
 import MKTypography from "components/MKTypography";
@@ -303,8 +303,8 @@ function Presentation() {
           sx={{
             p: 0,
             mt: 0,
-            backgroundColor: "#0C2540",
-
+            backgroundColor: "#F8F9FF",
+            borderRadius: "0px",
             zIndex: 56456,
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -312,7 +312,7 @@ function Presentation() {
           }}
         >
           <div style={{ position: "relative" }}>
-            <video
+            {/* <video
               src={videoBg}
               autoPlay
               loop
@@ -325,14 +325,13 @@ function Presentation() {
                 height: "100%",
                 objectFit: "cover",
                 zIndex: -1,
-                // borderBottomLeftRadius: "30px",
-                // borderBottomRightRadius: "30px",
+            
               }}
-            />{" "}
+            /> */}
             <CarouselImages />
           </div>
         </Card>
-        <Card>
+        <Card style={{ borderRadius: "0px 0px 30px 30px" }}>
           <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
             <Grid
               item
@@ -356,7 +355,6 @@ function Presentation() {
               </MKTypography>
             </Grid>
           </Grid>
-
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
               <Grid container alignItems="center">
