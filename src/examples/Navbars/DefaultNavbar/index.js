@@ -587,7 +587,12 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                     {/* Arama sonuçlarını görüntüle */}
                     {searchResults.map((result) => (
                       <div
-                        style={{ fontSize: "17px", opacity: "0.8" }}
+                        style={{
+                          fontSize: "17px",
+                          opacity: "0.8",
+                          padding: "5px",
+                          marginLeft: "12px",
+                        }}
                         onClick={(e) => navigateSearchBox(e)}
                         onMouseEnter={(e) => {
                           e.target.style.backgroundColor = "#0C2540"; // Mouse ile üzerine gelindiğinde arka plan rengi mavi olsun
