@@ -12,21 +12,61 @@ import ReactPlayer from "react-player";
 import React, { useRef } from "react";
 import UrunlerCard from "./sections/UrunlerCards";
 import CarouselImages from "./sections/Carousel";
-// import videoBg from "assets/images/test1.mp4";
+import videoBg from "assets/images/test1.mp4";
 import MKBox from "components/MKBox";
 import { useNavigate } from "react-router-dom";
 import MKTypography from "components/MKTypography";
-import { Container, Grid, Icon, Stack } from "@mui/material";
+import { Container, Grid, Icon, InputBase, Stack } from "@mui/material";
 import p53 from "assets/images/products-images/cad-cam-sistemleri/kaziyicilar/up3d-p53-dental-frezleme-cihazi/UP3D-P53-Gorsel.jpg";
 import dentafab from "assets/images/products-images/cad-cam-sistemleri/3d-printer/dentafab-sega-3d-printer/Sega-double.jpg";
 // import blz from "assets/images/products-images/blz/Poster of LS100.jpg";
 // import zirdent from "assets/images/products-images/zirdent/4.jpg";
 import zirconmasters from "assets/images/products-images/dental-firinlar/zirkon-sinterleme-firinlari/zirconmatser-s/Z.M.S-1.jpg";
 import ceramicmastere20 from "assets/images/products-images/dental-firinlar/ceramic-processing-porselen-firinlari/ceramic-matser-e20/E-20-3.jpg";
-import EtkinlikImages from "./sections/etkinlik";
-
+import { SearchBoxDatas } from "products/ProductDatas/productsSearch";
+import { styled, alpha } from "@mui/material/styles";
+import SearchIcon from "@mui/icons-material/Search";
 import("./video.css");
 
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(1),
+    width: "auto",
+  },
+}));
+const SearchIconWrapper = styled("div")(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: "inherit",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
+      },
+    },
+  },
+}));
 function Presentation() {
   const navigate = useNavigate();
   // const [images] = useState([sld1, sld2, sld3]);
@@ -34,6 +74,33 @@ function Presentation() {
   // const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const playerRef = useRef(null);
 
+  const [searchTerm, setSearchTerm] = React.useState(""); // Arama terimini saklamak için bir state tanımla
+  const [searchResults, setSearchResults] = React.useState([]); // Arama sonuçlarını saklamak için bir state tanımla
+
+  // Arama işlevini tanımla
+  const handleSearch = (event) => {
+    console.log(event);
+    if (event.target.value !== "") {
+      const query = event.target.value.toLowerCase();
+      setSearchTerm(query);
+
+      // Arama sonuçlarını filtrele
+      const filteredResults = SearchBoxDatas?.filter((item) =>
+        item.value.toLowerCase().includes(query)
+      );
+      console.log(filteredResults);
+      setSearchResults(filteredResults);
+    } else {
+      setSearchResults([]);
+    }
+  };
+
+  const navigateSearchBox = (e) => {
+    console.log(e.target.innerHTML);
+    const found = SearchBoxDatas.find((element) => element.value === e.target.innerHTML);
+    navigate("/urun-detay/:" + found.key);
+    // navigate();
+  };
   // const imageDuration = 30000;
 
   // useEffect(() => {
@@ -80,7 +147,8 @@ function Presentation() {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
-
+  console.log(searchTerm);
+  console.log(searchResults);
   return (
     <>
       <DefaultNavbar
@@ -115,6 +183,63 @@ function Presentation() {
             alt="Logo"
             style={{ width: "100%", height: "100%" }}
           />
+        </div>
+      </MKBox>
+      <MKBox
+        style={{}}
+        sx={{
+          position: "absolute",
+          top: "10%",
+          left: "50%",
+          zIndex: 3,
+          size: "cover",
+        }}
+      >
+        <div
+          style={{
+            zIndex: 1,
+          }}
+        >
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              onChange={handleSearch}
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
+            />
+          </Search>
+          <div
+            style={{
+              maxHeight: "300px",
+              overflowY: "auto",
+              zIndex: 1,
+              background: "rgb(248,249,255)",
+              borderRadius: "15px",
+            }}
+          >
+            {/* Arama sonuçlarını görüntüle */}
+            {searchResults.map((result) => (
+              <div
+                style={{ fontSize: "17px", opacity: "0.8" }}
+                onClick={(e) => navigateSearchBox(e)}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#0C2540"; // Mouse ile üzerine gelindiğinde arka plan rengi mavi olsun
+                  e.target.style.color = "white"; // Mouse ile üzerine gelindiğinde yazı rengi beyaz olsun
+                  e.target.style.cursor = "pointer";
+                  e.target.style.borderRadious = "15px";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "initial"; // Mouse ayrıldığında arka plan rengini varsayılana dön
+                  e.target.style.color = "initial"; // Mouse ayrıldığında yazı rengini varsayılana dön
+                }}
+                key={result.key}
+              >
+                {result.value}
+              </div>
+            ))}
+          </div>
         </div>
       </MKBox>
       <Card
@@ -177,8 +302,7 @@ function Presentation() {
           sx={{
             p: 0,
             mt: 0,
-            backgroundColor: "#F8F8F8",
-            borderRadius: "0",
+            backgroundColor: "#0C2540",
 
             zIndex: 56456,
             backdropFilter: "saturate(200%) blur(30px)",
@@ -187,7 +311,7 @@ function Presentation() {
           }}
         >
           <div style={{ position: "relative" }}>
-            {/* <video
+            <video
               src={videoBg}
               autoPlay
               loop
@@ -203,11 +327,11 @@ function Presentation() {
                 // borderBottomLeftRadius: "30px",
                 // borderBottomRightRadius: "30px",
               }}
-            />{" "} */}
+            />{" "}
             <CarouselImages />
           </div>
         </Card>
-        <Card style={{ borderRadius: "0px" }}>
+        <Card>
           <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
             <Grid
               item
@@ -914,7 +1038,6 @@ function Presentation() {
             }}
           ></MKBox>
         </Card> */}
-        <EtkinlikImages />
         <UrunlerCard />
         <Card
           sx={{
