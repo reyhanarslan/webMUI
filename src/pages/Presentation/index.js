@@ -913,9 +913,9 @@ function Presentation() {
               placeItems: "center",
             }}
           ></MKBox>
-        </Card> */}
-        <EtkinlikImages />
+        </Card> */}{" "}
         <UrunlerCard />
+        <EtkinlikImages />
         <Card
           sx={{
             p: 0,

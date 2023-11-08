@@ -22,7 +22,7 @@ function EtkinlikImages() {
           sx={{
             display: "flex",
             mt: 0,
-            borderRadius: "0px 0px 30px 30px",
+            borderRadius: "0px ",
             animation: "changeBackgroundColor 10s linear infinite",
             transition: "background-color 0.5s ease-in-out",
             backgroundSize: "100%",
