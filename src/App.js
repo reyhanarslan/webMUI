@@ -146,26 +146,61 @@ export default function App() {
 
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>{" "}
+      <div style={{ position: "relative" }}>
+        <div
+          style={{
+            position: "fixed",
+            top: "80%",
+            right: "0px",
+            zIndex: 9999999,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "10px",
+            borderRadius: "5px",
+          }}
+        >
+          <a
+            href="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              style={{ backgroundColor: "transparent", borderRadius: "30px" }}
+              width={50}
+              height={"auto"}
+              src={wp}
+              alt="WhatsApp"
+            />
+          </a>
+        </div>
+      </div>
       <div
         style={{
-          height: "200px",
           background: "#0C2540",
+          padding: "20px",
         }}
       >
         <MKBox component="footer">
-          {" "}
-          <Grid container style={{ paddingTop: "40px" }}>
+          <Grid container spacing={3}>
             <Grid
               onClick={() => navigate("/")}
               className="d-flex"
               item
               xs={12}
               md={3}
-              lg={3}
-              sx={{ ml: "auto", mb: 3 }}
+              sx={{
+                mb: 3,
+                textAlign: "center",
+              }}
             >
               <CardMedia
-                style={{ cursor: "pointer", width: "302px", height: "77px" }}
+                style={{
+                  cursor: "pointer",
+                  width: "100%",
+                  maxWidth: "302px",
+                  height: "77px",
+                }}
                 image={logo}
                 alt="Logo"
               />
@@ -174,13 +209,12 @@ export default function App() {
               item
               xs={12}
               md={3}
-              lg={3}
               sx={{
-                ml: "auto",
                 mb: 3,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                textAlign: "center",
               }}
             >
               <MKBox mt={1}>
@@ -192,7 +226,7 @@ export default function App() {
                   mb={1}
                 >
                   <p style={{ color: "rgb(205,205,206)", fontSize: "20px" }}>
-                    <LocationOnIcon style={{ marginRight: "5px", marginTop: "20px" }} /> Adres:
+                    <LocationOnIcon style={{ marginRight: "5px" }} /> Adres:
                   </p>
                 </MKTypography>
 
@@ -204,7 +238,6 @@ export default function App() {
                   opacity={0.8}
                 >
                   <p style={{ color: "#F2F2F2", fontSize: "15px" }}>
-                    {" "}
                     Sokullu Mehmet Paşa, 1361. Sk. <br /> No:6 D:25, 06420 Çankaya/Ankara
                   </p>
                 </MKTypography>
@@ -215,13 +248,12 @@ export default function App() {
               item
               xs={12}
               md={3}
-              lg={3}
               sx={{
-                ml: "auto",
                 mb: 3,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                textAlign: "center",
               }}
             >
               <MKBox mt={1}>
@@ -233,7 +265,7 @@ export default function App() {
                   mb={1}
                 >
                   <p style={{ color: "rgb(205,205,206)", fontSize: "20px" }}>
-                    <PhoneIcon style={{ marginRight: "5px", marginTop: "20px" }} /> Telefon:
+                    <PhoneIcon style={{ marginRight: "5px" }} /> Telefon:
                   </p>
                 </MKTypography>
 
@@ -245,7 +277,6 @@ export default function App() {
                   opacity={0.8}
                 >
                   <p style={{ color: "#F2F2F2", fontSize: "15px" }}>
-                    {" "}
                     +90 312 433 27 35
                     <br />
                     +90 507 868 89 53
@@ -253,62 +284,17 @@ export default function App() {
                 </MKTypography>
               </MKBox>
             </Grid>
-            <div style={{ position: "relative" }}>
-              <div
-                style={{
-                  position: "fixed",
-                  top: "80%",
-                  right: "0px",
-                  zIndex: 9999999,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  padding: "10px",
-                  borderRadius: "5px",
-                }}
-              >
-                <a
-                  href="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    style={{ backgroundColor: "transparent", borderRadius: "30px" }}
-                    width={50}
-                    height={"auto"}
-                    src={wp}
-                    alt="WhatsApp"
-                  />
-                </a>
-                {/* <span
-                  style={{
-                    backgroundColor: "white",
-                    color: "black",
-                    fontSize: "15px",
-                    marginTop: "5px",
-                    paddingLeft: "5px",
-                    paddingRight: "5px",
-                    paddingTop: "5px",
-                    paddingBottom: "5px",
-                  }}
-                >
-                  İletişim
-                </span> */}
-              </div>
-            </div>
 
             <Grid
               item
               xs={12}
               md={3}
-              lg={3}
               sx={{
-                ml: "auto",
                 mb: 3,
-
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                textAlign: "center",
               }}
             >
               <MKBox mt={1}>
@@ -320,12 +306,12 @@ export default function App() {
                   mb={1}
                 >
                   <p style={{ color: "rgb(205,205,206)", fontSize: "20px" }}>
-                    <EmailIcon style={{ marginRight: "5px", marginTop: "20px" }} /> E-mail:
+                    <EmailIcon style={{ marginRight: "5px" }} /> E-mail:
                   </p>
                 </MKTypography>
 
                 <MKTypography target="_blank" rel="noreferrer" color="dark" opacity={0.8}>
-                  <p style={{ color: "#F2F2F2", fontSize: "15px" }}> info@arenadis.com.tr</p>
+                  <p style={{ color: "#F2F2F2", fontSize: "15px" }}>info@arenadis.com.tr</p>
                 </MKTypography>
               </MKBox>
             </Grid>

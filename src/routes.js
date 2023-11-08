@@ -41,8 +41,8 @@ import HomeIcon from "@mui/icons-material/Home";
 // import Toggles from "layouts/sections/elements/toggles";
 // import Typography from "layouts/sections/elements/typography";
 // import Presentation from "pages/Presentation";
-import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import { VizyonMizyon } from "products/AboutUs/VizyonMisyon";
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 const routes = [
   {
     name: "Ana Sayfa",
@@ -95,7 +95,7 @@ const routes = [
     route: "/urunler/tum-urunler",
     // component: <ContactUs />,
     // icon: <Icon>view_day</Icon>,
-    icon: <PrecisionManufacturingIcon />,
+    icon: <FormatListBulletedIcon />,
     collapse: [
       {
         name: "Ağıziçi Tarayıcılar",

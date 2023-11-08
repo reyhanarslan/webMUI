@@ -26,6 +26,7 @@ import ceramicmastere20 from "assets/images/products-images/dental-firinlar/cera
 import { SearchBoxDatas } from "products/ProductDatas/productsSearch";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
+import EtkinlikImages from "./sections/etkinlik";
 import("./video.css");
 
 const Search = styled("div")(({ theme }) => ({
@@ -1037,8 +1038,9 @@ function Presentation() {
               placeItems: "center",
             }}
           ></MKBox>
-        </Card> */}
+        </Card> */}{" "}
         <UrunlerCard />
+        <EtkinlikImages />
         <Card
           sx={{
             p: 0,

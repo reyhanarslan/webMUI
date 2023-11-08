@@ -27,7 +27,7 @@ function Information() {
       py={12}
       sx={{
         background: "#F8F9FF",
-        borderRadius: "30px",
+        borderRadius: "0px 0px 30px 30px",
       }}
     >
       <Container>

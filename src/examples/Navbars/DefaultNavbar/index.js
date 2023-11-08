@@ -23,6 +23,7 @@ import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarD
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
 import breakpoints from "assets/theme/base/breakpoints";
+import wp from "assets/images/wp-3.gif";
 
 function DefaultNavbar({ routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
@@ -460,6 +461,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
           >
             {renderNavbarItems}
           </MKBox>
+
           <MKBox ml={{ xs: "auto", lg: 0 }}>
             {action &&
               (action.type === "internal" ? (
@@ -474,6 +476,8 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                   color={action.color ? action.color : "info"}
                   size="small"
                 >
+                  <Icon fontSize="default">search</Icon>
+
                   {action.label}
                 </MKButton>
               ) : (
@@ -490,6 +494,13 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                   color={action.color ? action.color : "info"}
                   size="small"
                 >
+                  <img
+                    style={{ marginRight: "8px" }}
+                    src={wp}
+                    alt="WordPress Image"
+                    width="24"
+                    height="24"
+                  />{" "}
                   {action.label}
                 </MKButton>
               ))}
