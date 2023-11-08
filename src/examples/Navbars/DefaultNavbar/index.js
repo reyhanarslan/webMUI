@@ -555,7 +555,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                 </MKButton>
               ) : (
                 <div>
-                  <Search>
+                  <Search style={{}}>
                     <SearchIconWrapper>
                       {" "}
                       <img
@@ -568,6 +568,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       {/* <SearchIcon /> */}
                     </SearchIconWrapper>
                     <StyledInputBase
+                      style={{ fontSize: "17px" }}
                       onChange={handleSearch}
                       placeholder="Search…"
                       inputProps={{ "aria-label": "search" }}
@@ -580,6 +581,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       zIndex: 1,
                       background: "rgb(248,249,255)",
                       borderRadius: "15px",
+                      position: "absolute",
                     }}
                   >
                     {/* Arama sonuçlarını görüntüle */}
