@@ -40,21 +40,113 @@
   25% {
     background: linear-gradient(90deg, #f8f9ff, #64b0b4); /* #F8F9FF to #64B0B4 */
     transition: 0.5s;
-
   }
   50% {
     background: linear-gradient(90deg, #64b0b4, #344761); /* #64B0B4 to #18A1A4 */
     transition: 0.5s;
-
   }
   75% {
     background: linear-gradient(90deg, #18a1a4, #344767); /* #18A1A4 to #344767 */
     transition: 0.5s;
-
   }
   100% {
     background: linear-gradient(90deg, #344767, #f8f9ff); /* #344767 to #F8F9FF */
     transition: 0.5s;
-
   }
+}
+
+.kategoriler-carousel {
+
+  color: #fff;
+  background: linear-gradient(-45deg, #18a1a4, #344767, #344767, #f8f9ff,#64b0b4);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  }
+
+
+@-webkit-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+
+
+.etkinlik-carousel {
+
+  color: #fff;
+  background: linear-gradient(-45deg, #E0F4FF, #f8f9ff,#E3F4F4);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  }
+
+
+@-webkit-keyframes Gradient1 {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient1 {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@keyframes Gradient1 {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
 }

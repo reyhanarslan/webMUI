@@ -17,14 +17,15 @@ function CarouselImages() {
     <>
       <div>
         <MKBox
+          className="kategoriler-carousel"
           component="section"
           sx={{
             display: "flex",
             mt: 0,
 
             borderRadius: "30px",
-            animation: "changeBackgroundColor 10s linear infinite",
-            transition: "background-color 0.5s ease-in-out",
+            // animation: "test 10s linear infinite",
+            // transition: "background-color 0.5s ease-in-out",
 
             backgroundSize: "cover",
             backgroundPosition: "center",

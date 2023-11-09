@@ -969,7 +969,38 @@ function Presentation() {
           ></MKBox>
         </Card> */}{" "}
         <UrunlerCard />
-        <EtkinlikImages />
+        <Card
+          sx={{
+            p: 0,
+            mt: 0,
+            backgroundColor: "#F8F9FF",
+            borderRadius: "0px",
+            zIndex: 56456,
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
+            position: "relative",
+          }}
+        >
+          <div style={{ position: "relative" }}>
+            {/* <video
+              src={videoBg}
+              autoPlay
+              loop
+              muted
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                zIndex: -1,
+            
+              }}
+            /> */}
+            <EtkinlikImages />{" "}
+          </div>
+        </Card>
         <Card
           sx={{
             p: 0,
