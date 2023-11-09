@@ -582,6 +582,8 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       background: "rgb(248,249,255)",
                       borderRadius: "15px",
                       position: "absolute",
+                      border: "1px solid #ccc",
+                      transition: "border 0.3s ease-in-out",
                     }}
                   >
                     {/* Arama sonuçlarını görüntüle */}
@@ -592,16 +594,20 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                           opacity: "0.8",
                           padding: "5px",
                           marginLeft: "12px",
+                          cursor: "pointer",
+                          transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
                         }}
                         onClick={(e) => navigateSearchBox(e)}
                         onMouseEnter={(e) => {
                           e.target.style.backgroundColor = "#0C2540"; // Mouse ile üzerine gelindiğinde arka plan rengi mavi olsun
                           e.target.style.color = "white"; // Mouse ile üzerine gelindiğinde yazı rengi beyaz olsun
-                          e.target.style.cursor = "pointer";
-                          e.target.style.borderRadious = "15px";
+                          // e.target.style.cursor = "pointer";
+                          e.target.style.borderRadius = "15px";
                         }}
                         onMouseLeave={(e) => {
                           e.target.style.backgroundColor = "initial"; // Mouse ayrıldığında arka plan rengini varsayılana dön
+                          e.target.style.borderRadius = "15px";
+
                           e.target.style.color = "initial"; // Mouse ayrıldığında yazı rengini varsayılana dön
                         }}
                         key={result.key}
