@@ -16,59 +16,17 @@ import CarouselImages from "./sections/Carousel";
 import MKBox from "components/MKBox";
 import { useNavigate } from "react-router-dom";
 import MKTypography from "components/MKTypography";
-import { Container, Grid, Icon, InputBase, Stack } from "@mui/material";
+import { Container, Grid, Icon, Stack } from "@mui/material";
 import p53 from "assets/images/products-images/cad-cam-sistemleri/kaziyicilar/up3d-p53-dental-frezleme-cihazi/UP3D-P53-Gorsel.jpg";
 import dentafab from "assets/images/products-images/cad-cam-sistemleri/3d-printer/dentafab-sega-3d-printer/Sega-double.jpg";
 // import blz from "assets/images/products-images/blz/Poster of LS100.jpg";
 // import zirdent from "assets/images/products-images/zirdent/4.jpg";
 import zirconmasters from "assets/images/products-images/dental-firinlar/zirkon-sinterleme-firinlari/zirconmatser-s/Z.M.S-1.jpg";
 import ceramicmastere20 from "assets/images/products-images/dental-firinlar/ceramic-processing-porselen-firinlari/ceramic-matser-e20/E-20-3.jpg";
-import { SearchBoxDatas } from "products/ProductDatas/productsSearch";
-import { styled, alpha } from "@mui/material/styles";
-import SearchIcon from "@mui/icons-material/Search";
 import EtkinlikImages from "./sections/etkinlik";
 import { useLogoWidth } from "utils";
 import("./video.css");
 
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "20ch",
-      },
-    },
-  },
-}));
 function Presentation() {
   const navigate = useNavigate();
   // const [images] = useState([sld1, sld2, sld3]);
@@ -76,33 +34,6 @@ function Presentation() {
   // const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const playerRef = useRef(null);
 
-  const [searchTerm, setSearchTerm] = React.useState(""); // Arama terimini saklamak için bir state tanımla
-  const [searchResults, setSearchResults] = React.useState([]); // Arama sonuçlarını saklamak için bir state tanımla
-
-  // Arama işlevini tanımla
-  const handleSearch = (event) => {
-    console.log(event);
-    if (event.target.value !== "") {
-      const query = event.target.value.toLowerCase();
-      setSearchTerm(query);
-
-      // Arama sonuçlarını filtrele
-      const filteredResults = SearchBoxDatas?.filter((item) =>
-        item.value.toLowerCase().includes(query)
-      );
-      console.log(filteredResults);
-      setSearchResults(filteredResults);
-    } else {
-      setSearchResults([]);
-    }
-  };
-
-  const navigateSearchBox = (e) => {
-    console.log(e.target.innerHTML);
-    const found = SearchBoxDatas.find((element) => element.value === e.target.innerHTML);
-    navigate("/urun-detay/:" + found.key);
-    // navigate();
-  };
   // const imageDuration = 30000;
 
   // useEffect(() => {
@@ -151,7 +82,6 @@ function Presentation() {
   // }, []);
   const logoWidth = useLogoWidth();
 
-  console.log(searchTerm);
   return (
     <>
       <DefaultNavbar
@@ -188,7 +118,7 @@ function Presentation() {
           />
         </div>
       </MKBox>
-      <MKBox
+      {/* <MKBox
         style={{}}
         sx={{
           position: "absolute",
@@ -222,7 +152,6 @@ function Presentation() {
               borderRadius: "15px",
             }}
           >
-            {/* Arama sonuçlarını görüntüle */}
             {searchResults.map((result) => (
               <div
                 style={{ fontSize: "17px", opacity: "0.8" }}
@@ -244,7 +173,7 @@ function Presentation() {
             ))}
           </div>
         </div>
-      </MKBox>
+      </MKBox> */}
       <Card
         sx={{
           zIndex: 42545545,

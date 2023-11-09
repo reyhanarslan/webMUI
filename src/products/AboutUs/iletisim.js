@@ -16,8 +16,20 @@ import MKButton from "components/MKButton";
 import logo from "assets/images/logos/arenadis-logo-white.png";
 import { useNavigate } from "react-router-dom";
 import { useLogoWidth } from "utils";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export function Iletisim() {
+  // const [message, setMessage] = useState("");
+  // const [gmail, setGmail] = useState("");
+  // const [name, setName] = useState("");
+  const [form, setForm] = useState({
+    message: "",
+    from_name: "",
+    from_email: "",
+    to_name: "arenadis",
+  });
+
   const navigate = useNavigate();
   const cardStyle = {
     width: "600px",
@@ -30,7 +42,41 @@ export function Iletisim() {
     color: "white",
   };
   const logoWidth = useLogoWidth();
+  const emailChange = (e) => {
+    // setGmail(e.target.value);
+    setForm({
+      ...form,
+      from_email: e.target.value,
+    });
+  };
+  const nameChange = (e) => {
+    // setName(e.target.value);
+    setForm({
+      ...form,
+      from_name: e.target.value,
+    });
+  };
+  const messageChange = (e) => {
+    // setMessage(e.target.value);
+    setForm({
+      ...form,
+      message: e.target.value,
+    });
+  };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.send("service_m7jk5hi", "template_9cq6u2c", form, "V8J_a9Y8gT14LhJAt").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+  console.log(form);
   return (
     <div>
       <DefaultNavbar
@@ -204,6 +250,7 @@ export function Iletisim() {
                         variant="outlined"
                         label="Adınız Soyadınız"
                         InputLabelProps={{ shrink: true }}
+                        onChange={(e) => nameChange(e)}
                       />
                     </MKBox>
                   </Grid>
@@ -217,6 +264,7 @@ export function Iletisim() {
                       justifyContent="center"
                     >
                       <MKInput
+                        onChange={(e) => emailChange(e)}
                         type="email"
                         variant="outlined"
                         label="Email adresiniz"
@@ -235,6 +283,7 @@ export function Iletisim() {
                       justifyContent="center"
                     >
                       <MKInput
+                        onChange={(e) => messageChange(e)}
                         variant="outlined"
                         type="text"
                         label="Nasıl yardımcı olabiliriz?"
@@ -258,7 +307,7 @@ export function Iletisim() {
                     mt={3}
                     mb={2}
                   >
-                    <MKButton type="submit" variant="gradient" color="arena">
+                    <MKButton type="submit" variant="gradient" color="arena" onClick={sendEmail}>
                       Gönder
                     </MKButton>
                   </Grid>
