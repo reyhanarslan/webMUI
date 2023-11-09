@@ -1,20 +1,15 @@
-// react-router components
+import React from "react";
 import { Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
-// @mui material components
 import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
-
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
 function CenteredBlogCard({ image, title, description, action }) {
   return (
-    <Card style={{ marginRight: "40px" }}>
+    <Card style={{ marginRight: "40px", height: 350 }}>
       <MKBox position="relative" borderRadius="lg" mx={2} mt={-3}>
         <MKBox
           component="img"
@@ -22,23 +17,9 @@ function CenteredBlogCard({ image, title, description, action }) {
           alt={title}
           borderRadius="lg"
           width="100%"
+          height="200px"
           position="relative"
           zIndex={1}
-        />
-        <MKBox
-          borderRadius="lg"
-          shadow="md"
-          width="100%"
-          height="100%"
-          position="absolute"
-          left={0}
-          top={0}
-          sx={{
-            backgroundImage: `url(${image})`,
-            transform: "scale(0.94)",
-            filter: "blur(12px)",
-            backgroundSize: "cover",
-          }}
         />
       </MKBox>
       <MKBox p={3} mt={-1} textAlign="center">
@@ -50,35 +31,36 @@ function CenteredBlogCard({ image, title, description, action }) {
             {description}
           </MKTypography>
         </MKBox>
-        {action.type === "external" ? (
-          <MKButton
-            component={MuiLink}
-            href={action.route}
-            target="_blank"
-            rel="noreferrer"
-            variant="gradient"
-            size="small"
-            color={action.color ? action.color : "dark"}
-          >
-            {action.label}
-          </MKButton>
-        ) : (
-          <MKButton
-            component={Link}
-            to={action.route}
-            variant="gradient"
-            size="small"
-            color={action.color ? action.color : "dark"}
-          >
-            {action.label}
-          </MKButton>
-        )}
+        <MKBox bottom={0}>
+          {action.type === "external" ? (
+            <MKButton
+              component={MuiLink}
+              href={action.route}
+              target="_blank"
+              rel="noreferrer"
+              variant="gradient"
+              size="small"
+              color={action.color ? action.color : "dark"}
+            >
+              {action.label}
+            </MKButton>
+          ) : (
+            <MKButton
+              component={Link}
+              to={action.route}
+              variant="gradient"
+              size="small"
+              color={action.color ? action.color : "dark"}
+            >
+              {action.label}
+            </MKButton>
+          )}
+        </MKBox>
       </MKBox>
     </Card>
   );
 }
 
-// Typechecking props for the CenteredBlogCard
 CenteredBlogCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
