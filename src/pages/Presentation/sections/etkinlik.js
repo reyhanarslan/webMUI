@@ -18,12 +18,13 @@ function EtkinlikImages() {
     <>
       <div>
         <MKBox
+          className="etkinlik-carousel"
           component="section"
           sx={{
             display: "flex",
             mt: 0,
             borderRadius: "0px ",
-            animation: "changeBackgroundColor 10s linear infinite",
+            // animation: "changeBackgroundColor 10s linear infinite",
             transition: "background-color 0.5s ease-in-out",
             backgroundSize: "100%",
             backgroundPosition: "center",
