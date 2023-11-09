@@ -40,55 +40,7 @@ function Azurit02() {
             </Grid>
             <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
           </Grid>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
-            <MKTypography
-              component="a"
-              href="/urunler/klinik-dolaplari"
-              target="_blank"
-              rel="noreferrer"
-              variant="h6"
-              color="white"
-              fontWeight="regular"
-              sx={{
-                marginRight: "10px",
-                display: "flex",
-                alignItems: "center",
-                "& .material-icons-round": {
-                  fontSize: "1.125rem",
-                  transform: `translateX(3px)`,
-                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
-                },
-                "&:hover .material-icons-round, &:focus .material-icons-round": {
-                  transform: `translateX(6px)`,
-                },
-              }}
-            >
-              Klinik Dolapları
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </MKTypography>
-            <MKTypography
-              component="a"
-              target="_blank"
-              rel="noreferrer"
-              variant="h6"
-              color="white"
-              fontWeight="regular"
-              sx={{
-                marginRight: "10px",
-                display: "flex",
-                alignItems: "center",
-                "& .material-icons-round": {
-                  fontSize: "1.125rem",
-                  transform: `translateX(3px)`,
-                  transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
-                },
-              }}
-            >
-              Azurit 02
-            </MKTypography>
-          </Grid>
+
           <div className="page-title" style={{ marginBottom: "10px" }}>
             Benzer Ürünleri İncele
           </div>
@@ -128,7 +80,7 @@ export default Azurit02;
 export const Azurit02Title = () => {
   const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
         <Container
           style={{
@@ -138,6 +90,7 @@ export const Azurit02Title = () => {
             borderTopRightRadius: 15,
           }}
         >
+          {" "}
           <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
