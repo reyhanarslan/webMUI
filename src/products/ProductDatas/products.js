@@ -326,6 +326,12 @@ const Products = [
       },
       {
         code: 3,
+        id: "dqkPfUvCTD",
+        model: "BLZ",
+        img: [],
+      },
+      {
+        code: 3,
         id: "VWt82QTAxh",
         model: "SMARTOPTICS VINYL HIGH RESOLUTION",
         img: [svhr_5, svhr_1, svhr_2, svhr_3, svhr_4, svhr_6],
@@ -576,6 +582,17 @@ const Products = [
         id: "pW7rUCqbGJ",
         model: "Tekli Teknisyen Çalışma Masası",
         img: [ttcm_1],
+      },
+    ],
+  },
+  {
+    index: 8,
+    category: "sarf-malzemeleri",
+    product: [
+      {
+        id: "lLcw6ysuXl",
+        model: "Zirdent",
+        img: [],
       },
     ],
   },

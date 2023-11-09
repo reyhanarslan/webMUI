@@ -157,6 +157,10 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { TomografiTitle } from "Category/Category-list/Tomografi";
 import { useLogoWidth } from "utils";
+import Blz from "Category/Category-list/BLZ";
+import Zirdent from "Category/Category-list/Zirdent";
+import { ZirdentTitle } from "Category/Category-list/Zirdent";
+import { BlzTitle } from "Category/Category-list/BLZ";
 export function ProductSlider({ images }) {
   return (
     <Carousel
@@ -403,7 +407,10 @@ function ProductInfo() {
 
       case "pW7rUCqbGJ":
         return <TekliTeknisyenCalismaMasasiTitle />;
-
+      case "lLcw6ysuXl":
+        return <ZirdentTitle />;
+      case "dqkPfUvCTD":
+        return <BlzTitle />;
       default:
         return null;
     }
@@ -577,6 +584,10 @@ function ProductInfo() {
         return <SVHighResolution />;
       case "SMART OPTİCS VİNYL OPEN AİR":
         return <SVOpenAir />;
+      case "lLcw6ysuXl":
+        return <Zirdent />;
+      case "dqkPfUvCTD":
+        return <Blz />;
       default:
         return null;
     }
