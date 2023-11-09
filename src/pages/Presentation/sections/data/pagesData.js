@@ -28,7 +28,7 @@ export default [
     name: "Dental Fırınlar",
     route: "/urunler/dental-firinlar",
     description:
-      "Dental fırınlar,diş protezlerinin sertleştirilmesi ve şekillendirilmesi işlemlini gerçekleştirmek için kullanılır.",
+      "Dental fırınlar, porselen işlemleri, seramik pişirme ve diğer dental uygulamalarda kullanılmak üzere tasarlanmıştır.Dental fırınlar bölümünde, yüksek kaliteli ekipmanları bulabilirsiniz.",
   },
   {
     index: 4,
@@ -44,7 +44,7 @@ export default [
     name: "Klinik Dolapları",
     route: "/urunler/klinik-dolaplari",
     description:
-      "Klinik dolapları, sağlık kurumlarında kullanılan temiz ve düzenli depolama çözümleridir. Steril malzemelerin etkili bir şekilde saklanmasını sağlar, sağlık profesyonellerine hijyenik çalışma alanları sunar. Klinik dolapları bölümünde çeşitli boyutlarda ve özelliklerde uygun dolapları bulabilirsiniz.",
+      "Klinik dolapları, sağlık kurumlarında kullanılan temiz ve düzenli depolama çözümleridir. Steril malzemelerin etkili bir şekilde saklanmasını sağlar, sağlık profesyonellerine hijyenik çalışma alanları sunar. ",
   },
   {
     index: 6,
@@ -52,6 +52,6 @@ export default [
     name: "Görüntüleme Sistemleri",
     route: "/urunler/goruntuleme-sistemleri",
     description:
-      "Görüntüleme sistemleri, tıbbi alanlarda kullanılan önemli teşhis araçlarıdır. Hastaların iç yapısını incelemek ve tanı koymak için radyoloji, ultrason, MR gibi teknolojileri içerir. Sitemizde çeşitli görüntüleme sistemlerini bulabilirsiniz.",
+      "Görüntüleme sistemleri, tıbbi alanlarda kullanılan önemli teşhis araçlarıdır. Hastaların iç yapısını incelemek ve tanı koymak için radyoloji, ultrason, MR gibi teknolojileri içerir. Detaylı bilgiler sağlar",
   },
 ];
