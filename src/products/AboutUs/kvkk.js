@@ -8,9 +8,12 @@ import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
 import logo from "assets/images/logos/arenadis-logo-white.png";
 import { useNavigate } from "react-router-dom";
+import { useLogoWidth } from "utils";
 
 export function KisiselVerilerinKorunmasi() {
   const navigate = useNavigate();
+  const logoWidth = useLogoWidth();
+
   return (
     <div>
       <DefaultNavbar
@@ -27,13 +30,13 @@ export function KisiselVerilerinKorunmasi() {
       />
 
       <MKBox
-        style={{}}
         sx={{
           position: "absolute",
           top: "10px",
           left: "20px",
-          zIndex: 3,
+          zIndex: 1,
           size: "cover",
+          maxWidth: logoWidth,
         }}
       >
         <div
@@ -45,7 +48,7 @@ export function KisiselVerilerinKorunmasi() {
             onClick={() => navigate("/")}
             src={logo}
             alt="Logo"
-            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
       </MKBox>

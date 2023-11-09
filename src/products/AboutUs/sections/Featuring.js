@@ -12,6 +12,7 @@ import spotify from "assets/images/logos/gray-logos/logo-spotify.svg";
 import vodafone from "assets/images/logos/gray-logos/logo-vodafone.svg";
 
 function Featuring() {
+  
   return (
     <MKBox component="section" pt={3} pb={8}>
       <Container>

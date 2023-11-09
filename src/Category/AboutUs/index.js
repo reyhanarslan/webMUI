@@ -30,6 +30,7 @@ import { useEffect } from "react";
 import CategoryMenu from "./sections/Information";
 import DashboardImg from "assets/images/products/urunler-title.jpg";
 import { Link } from "react-router-dom";
+import { useLogoWidth } from "utils";
 
 function Category() {
   const navigate = useNavigate();
@@ -41,6 +42,8 @@ function Category() {
   useEffect(() => {
     console.log(name);
   }, []);
+  const logoWidth = useLogoWidth();
+
   return (
     <>
       <DefaultNavbar
@@ -61,8 +64,9 @@ function Category() {
           position: "absolute",
           top: "10px",
           left: "20px",
-          zIndex: 3,
+          zIndex: 1,
           size: "cover",
+          maxWidth: logoWidth,
         }}
       >
         <div
@@ -74,7 +78,7 @@ function Category() {
             onClick={() => navigate("/")}
             src={logo}
             alt="Logo"
-            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
       </MKBox>

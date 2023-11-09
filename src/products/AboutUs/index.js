@@ -156,6 +156,7 @@ import { TekliTeknisyenCalismaMasasiTitle } from "Category/Category-list/TekliTe
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { TomografiTitle } from "Category/Category-list/Tomografi";
+import { useLogoWidth } from "utils";
 export function ProductSlider({ images }) {
   return (
     <Carousel
@@ -580,6 +581,8 @@ function ProductInfo() {
         return null;
     }
   };
+  const logoWidth = useLogoWidth();
+
   return (
     <>
       <DefaultNavbar
@@ -594,21 +597,29 @@ function ProductInfo() {
         transparent
         blue
       />{" "}
-      <div
-        style={{
+      <MKBox
+        sx={{
           position: "absolute",
-          top: "15px",
-          left: "40px",
+          top: "10px",
+          left: "20px",
           zIndex: 1,
+          size: "cover",
+          maxWidth: logoWidth,
         }}
       >
-        <img
-          onClick={() => navigate("/")}
-          src={logo}
-          alt="Logo"
-          style={{ cursor: "pointer", width: "302px", height: "77px" }}
-        />
-      </div>
+        <div
+          style={{
+            zIndex: 1,
+          }}
+        >
+          <img
+            onClick={() => navigate("/")}
+            src={logo}
+            alt="Logo"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+      </MKBox>
       <Grid paddingX={10} paddingY={15} container paddingBottom={5}>
         <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6.5}>
           <ProductSlider

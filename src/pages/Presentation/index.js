@@ -27,6 +27,7 @@ import { SearchBoxDatas } from "products/ProductDatas/productsSearch";
 import { styled, alpha } from "@mui/material/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import EtkinlikImages from "./sections/etkinlik";
+import { useLogoWidth } from "utils";
 import("./video.css");
 
 const Search = styled("div")(({ theme }) => ({
@@ -148,8 +149,9 @@ function Presentation() {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
+  const logoWidth = useLogoWidth();
+
   console.log(searchTerm);
-  console.log(searchResults);
   return (
     <>
       <DefaultNavbar
@@ -164,13 +166,13 @@ function Presentation() {
         blue
       />{" "}
       <MKBox
-        style={{}}
         sx={{
           position: "absolute",
           top: "15px",
           left: "20px",
           zIndex: 3,
           size: "cover",
+          maxWidth: logoWidth,
         }}
       >
         <div

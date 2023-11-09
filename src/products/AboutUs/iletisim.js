@@ -15,6 +15,7 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import logo from "assets/images/logos/arenadis-logo-white.png";
 import { useNavigate } from "react-router-dom";
+import { useLogoWidth } from "utils";
 
 export function Iletisim() {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export function Iletisim() {
     textAlign: "left",
     color: "white",
   };
+  const logoWidth = useLogoWidth();
 
   return (
     <div>
@@ -45,13 +47,13 @@ export function Iletisim() {
       />
 
       <MKBox
-        style={{}}
         sx={{
           position: "absolute",
           top: "10px",
           left: "20px",
-          zIndex: 3,
+          zIndex: 1,
           size: "cover",
+          maxWidth: logoWidth,
         }}
       >
         <div
@@ -63,7 +65,7 @@ export function Iletisim() {
             onClick={() => navigate("/")}
             src={logo}
             alt="Logo"
-            style={{ cursor: "pointer", width: "302px", height: "77px" }}
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
       </MKBox>
