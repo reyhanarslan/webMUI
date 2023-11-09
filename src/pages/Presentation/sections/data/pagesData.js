@@ -35,20 +35,23 @@ export default [
     image: unite,
     name: "Diş Üniteleri",
     route: "/urunler/dis-uniteleri",
-    description: "a",
+    description:
+      "Diş üniteleri, muayene koltuğu, aydınlatma sistemleri, emiş üniteleri ve diğer dental araçları içerir. Diş üniteleri bölümünde, profesyonel diş sağlığı uzmanlarının ihtiyaçlarına uygun yüksek kaliteli ekipmanları bulabilirsiniz.",
   },
   {
     index: 5,
     image: klinik,
     name: "Klinik Dolapları",
     route: "/urunler/klinik-dolaplari",
-    description: "a",
+    description:
+      "Klinik dolapları, sağlık kurumlarında kullanılan temiz ve düzenli depolama çözümleridir. Steril malzemelerin etkili bir şekilde saklanmasını sağlar, sağlık profesyonellerine hijyenik çalışma alanları sunar. Klinik dolapları bölümünde çeşitli boyutlarda ve özelliklerde uygun dolapları bulabilirsiniz.",
   },
   {
     index: 6,
     image: tomografi,
     name: "Görüntüleme Sistemleri",
     route: "/urunler/goruntuleme-sistemleri",
-    description: "a",
+    description:
+      "Görüntüleme sistemleri, tıbbi alanlarda kullanılan önemli teşhis araçlarıdır. Hastaların iç yapısını incelemek ve tanı koymak için radyoloji, ultrason, MR gibi teknolojileri içerir. Sitemizde çeşitli görüntüleme sistemlerini bulabilirsiniz.",
   },
 ];
