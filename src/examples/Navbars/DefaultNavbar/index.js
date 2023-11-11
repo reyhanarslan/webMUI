@@ -584,7 +584,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       position: "absolute",
                       border: "1px solid #ccc",
                       transition: "border 0.3s ease-in-out",
-                      padding: "10px",
+                      // padding: "10px",
                     }}
                   >
                     {/* Arama sonuçlarını görüntüle */}
@@ -593,8 +593,8 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                         style={{
                           fontSize: "17px",
                           opacity: "0.8",
-                          padding: "10px",
-                          marginLeft: "12px",
+                          padding: "5px",
+                          margin: "5px",
                           cursor: "pointer",
                           transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
                         }}
@@ -604,12 +604,10 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                           e.target.style.color = "white"; // Mouse ile üzerine gelindiğinde yazı rengi beyaz olsun
                           // e.target.style.cursor = "pointer";
                           e.target.style.borderRadius = "15px";
-                          e.target.style.padding = "10px";
                         }}
                         onMouseLeave={(e) => {
                           e.target.style.backgroundColor = "initial"; // Mouse ayrıldığında arka plan rengini varsayılana dön
                           e.target.style.borderRadius = "15px";
-                          e.target.style.padding = "10px";
 
                           e.target.style.color = "initial"; // Mouse ayrıldığında yazı rengini varsayılana dön
                         }}
