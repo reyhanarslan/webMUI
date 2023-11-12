@@ -7,6 +7,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DashboardImg from "assets/images/products/kurumsal.jpg";
 import MKTypography from "components/MKTypography";
 import logo from "assets/images/logos/arenadis-logo-white.png";
+import logo1 from "assets/images/logos/arenadis-logo-web-1.png";
 import { useNavigate } from "react-router-dom";
 import { useLogoWidth } from "utils";
 
@@ -101,7 +102,9 @@ export function VizyonMizyon() {
           <div className="kurumsal slide-in-container ">
             <Grid className="kurumsal-grid" marginTop={4} container alignItems="center">
               <Grid item style={{ marginRight: "70px" }} xs={12} md={5}>
-                <div className="page-title-about">Vizyonumuz</div>
+                <div className="page-title-about" style={{ textAlign: "center" }}>
+                  VİZYONUMUZ
+                </div>{" "}
                 <div className="page-content-about">
                   Arena Diş Deposu A.Ş. olarak vizyonumuz, diş sağlığı sektöründe lider bir kaynak
                   olmayı hedeflemektedir. Vizyonumuz, sektördeki en yenilikçi ve en yüksek kalitede
@@ -116,8 +119,23 @@ export function VizyonMizyon() {
                   tutkuyla çalışırız. Diş sağlığının geleceğini inşa etmek, bizim önceliğimizdir.
                 </div>
               </Grid>
+              <Grid item style={{ marginRight: "70px" }} xs={12} md={5}>
+                <div className="page-content-about">
+                  {" "}
+                  <img src={logo1} alt="Logo" style={{ width: "100%", height: "auto" }} />
+                </div>
+              </Grid>
+            </Grid>
+            <Grid className="kurumsal-grid" marginTop={4} container alignItems="center">
+              <Grid item style={{ marginRight: "70px" }} xs={12} md={5}>
+                <div className="page-title-about" style={{ textAlign: "center" }}>
+                  <img src={logo1} alt="Logo" style={{ width: "100%", height: "auto" }} />
+                </div>
+              </Grid>
               <Grid marginTop={4} item xs={12} md={6}>
-                <div className="page-title-about">Misyonumuz</div>
+                <div style={{ textAlign: "center" }} className="page-title-about">
+                  MİSYONUMUZ
+                </div>
                 <div className="page-content-about">
                   Arena Diş Deposu A.Ş., diş hekimleri, diş teknisyenleri ve diş sağlığı
                   profesyonellerine en yüksek kalitede diş ekipmanlarını sunarak sektörün önde gelen
