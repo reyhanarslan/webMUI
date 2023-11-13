@@ -202,15 +202,14 @@ const routes = [
     route: "/hakkimizda",
     collapse: [
       {
-        name: "Vizyon Ve Misyon",
-        component: <VizyonMizyon />,
-        route: "/visyon-misyon",
-      },
-
-      {
         name: "Hakkımızda",
         component: <Hakkimizda />,
         route: "/hakkimizda",
+      },
+      {
+        name: "Vizyon Ve Misyon",
+        component: <VizyonMizyon />,
+        route: "/visyon-misyon",
       },
       {
         name: "Satış ve Garanti Koşullarımız",

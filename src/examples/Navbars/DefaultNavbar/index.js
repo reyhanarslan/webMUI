@@ -568,7 +568,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       {/* <SearchIcon /> */}
                     </SearchIconWrapper>
                     <StyledInputBase
-                      style={{ fontSize: "17px" }}
+                      style={{ fontSize: "15px" }}
                       onChange={handleSearch}
                       placeholder="Search…"
                       inputProps={{ "aria-label": "search" }}
@@ -582,6 +582,8 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       background: "rgb(248,249,255)",
                       borderRadius: "15px",
                       position: "absolute",
+                      border: "1px solid #ccc",
+                      transition: "border 0.3s ease-in-out",
                     }}
                   >
                     {/* Arama sonuçlarını görüntüle */}
@@ -590,19 +592,23 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                         style={{
                           fontSize: "17px",
                           opacity: "0.8",
-                          padding: "5px",
-                          marginLeft: "12px",
+                          padding: "10px",
+                          margin: "10px",
+                          cursor: "pointer",
+                          transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
+                          borderRadius: "8px",
+                          boxShadow: "0 0.5px 0.5px rgba(0, 0, 0, 0.1)",
+                          backgroundColor: "white",
+                          color: "#333",
                         }}
                         onClick={(e) => navigateSearchBox(e)}
                         onMouseEnter={(e) => {
-                          e.target.style.backgroundColor = "#0C2540"; // Mouse ile üzerine gelindiğinde arka plan rengi mavi olsun
-                          e.target.style.color = "white"; // Mouse ile üzerine gelindiğinde yazı rengi beyaz olsun
-                          e.target.style.cursor = "pointer";
-                          e.target.style.borderRadious = "15px";
+                          e.target.style.backgroundColor = "#0C2540";
+                          e.target.style.color = "white";
                         }}
                         onMouseLeave={(e) => {
-                          e.target.style.backgroundColor = "initial"; // Mouse ayrıldığında arka plan rengini varsayılana dön
-                          e.target.style.color = "initial"; // Mouse ayrıldığında yazı rengini varsayılana dön
+                          e.target.style.backgroundColor = "white";
+                          e.target.style.color = "#333";
                         }}
                         key={result.key}
                       >
