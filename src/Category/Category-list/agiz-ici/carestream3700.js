@@ -217,7 +217,13 @@ export function Carestream3700Title() {
             </MKTypography>
           </Grid>
         </Container>
-
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          Carestream CS 3700 Ağız İçi Tarayıcı
+        </MKTypography>
         <Container>
           <Grid
             container
@@ -229,13 +235,6 @@ export function Carestream3700Title() {
             marginBottom={2}
           >
             {" "}
-            <MKTypography
-              sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
-              className="productTitle"
-            >
-              {" "}
-              Carestream CS 3700 Ağız İçi Tarayıcı
-            </MKTypography>
             <Grid item xs={12} lg={12}>
               {/* Başlık */}
               <div className="page-title">

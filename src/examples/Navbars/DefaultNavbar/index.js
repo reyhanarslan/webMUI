@@ -593,7 +593,12 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                             fontWeight: "bold",
                             textAlign: "left",
                             padding: "10px",
-                            borderBottom: "1px solid #ccc",
+                            borderBottom: "2px solid #ccc",
+                            position: "sticky",
+                            backgroundColor: "#F8F9FF",
+                            top: "0",
+                            zIndex: "2",
+                            marginBottom: "10px",
                           }}
                         >
                           İlgili Sonuçlar
@@ -606,19 +611,14 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                               fontSize: "17px",
                               opacity: "0.8",
                               // padding: "10px",
-                              marginBottom: "5px",
-                              marginRight: "10px",
-                              marginLeft: "10px",
+                              marginBottom: "20px",
+                              marginRight: "12px",
+                              marginLeft: "12px",
                               cursor: "pointer",
                               transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
                               borderRadius: "8px",
                               borderBottom: "1px solid #ccc",
-                              // boxShadow: "0 0.5px 0.5px rgba(0, 0, 0, 0.1)",
-                              // backgroundColor: "white",
-                              position: "sticky", // Add this line
-                              top: "0", // Add this line
-                              background: "rgb(248,249,255)", // Add this line
-                              zIndex: "2", // Add this line
+                              background: "rgb(248,249,255)",
                               color: "#333",
                             }}
                             onClick={(e) => navigateSearchBox(e)}
