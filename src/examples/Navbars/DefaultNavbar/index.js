@@ -610,7 +610,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                               marginRight: "10px",
                               marginLeft: "10px",
                               cursor: "pointer",
-                              // transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
+                              transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
                               borderRadius: "8px",
                               borderBottom: "1px solid #ccc",
                               // boxShadow: "0 0.5px 0.5px rgba(0, 0, 0, 0.1)",
