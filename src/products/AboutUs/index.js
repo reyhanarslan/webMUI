@@ -698,7 +698,7 @@ function ProductInfo() {
         sx={{
           p: 0,
           // mx: { xs: 2, lg: 3 },
-          mt: -8,
+          // mt: -8,
           mb: 0,
           borderBottomLeftRadius: "30px",
           borderBottomRightRadius: "30px",
