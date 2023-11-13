@@ -43,8 +43,8 @@ export function Iletisim() {
   const [dangerOpen, setDangerOpen] = React.useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const successHandler = () => {
-    setSuccess(true);
-    setButtonDisabled(false);
+    setSuccess(!success);
+    setButtonDisabled(!buttonDisabled);
   };
   console.log(success);
   const navigate = useNavigate();
