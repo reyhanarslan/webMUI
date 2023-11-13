@@ -562,10 +562,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                         style={{ marginRight: "8px", borderRadius: "30px" }}
                         src={wp}
                         alt="WordPress Image"
-                        // width="24"
-                        // height="24"
                       />{" "}
-                      {/* <SearchIcon /> */}
                     </SearchIconWrapper>
                     <StyledInputBase
                       style={{ fontSize: "15px" }}
@@ -574,48 +571,74 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       inputProps={{ "aria-label": "search" }}
                     />
                   </Search>
-                  <div
-                    style={{
-                      maxHeight: "300px",
-                      overflowY: "auto",
-                      zIndex: 1,
-                      background: "rgb(248,249,255)",
-                      borderRadius: "15px",
-                      position: "absolute",
-                      border: "1px solid #ccc",
-                      transition: "border 0.3s ease-in-out",
-                    }}
-                  >
-                    {/* Arama sonuçlarını görüntüle */}
-                    {searchResults.map((result) => (
-                      <div
-                        style={{
-                          fontSize: "17px",
-                          opacity: "0.8",
-                          padding: "10px",
-                          margin: "10px",
-                          cursor: "pointer",
-                          transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
-                          borderRadius: "8px",
-                          boxShadow: "0 0.5px 0.5px rgba(0, 0, 0, 0.1)",
-                          backgroundColor: "white",
-                          color: "#333",
-                        }}
-                        onClick={(e) => navigateSearchBox(e)}
-                        onMouseEnter={(e) => {
-                          e.target.style.backgroundColor = "#0C2540";
-                          e.target.style.color = "white";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.target.style.backgroundColor = "white";
-                          e.target.style.color = "#333";
-                        }}
-                        key={result.key}
-                      >
-                        {result.value}
-                      </div>
-                    ))}
+                  <div>
+                    <div
+                      style={{
+                        maxHeight: "300px",
+                        overflowY: "auto",
+                        zIndex: 1,
+                        background: "rgb(248,249,255)",
+                        borderRadius: "15px",
+                        position: "absolute",
+                        border: "1px solid #ccc",
+                        transition: "border 0.3s ease-in-out",
+                        paddingBottom: "10px",
+                      }}
+                    >
+                      {" "}
+                      {searchResults.length > 0 && (
+                        <div
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "bold",
+                            textAlign: "left",
+                            padding: "10px",
+                            borderBottom: "1px solid #ccc",
+                          }}
+                        >
+                          İlgili Sonuçlar
+                        </div>
+                      )}
+                      {searchResults.map((result) => (
+                        <div key={result.key}>
+                          <div
+                            style={{
+                              fontSize: "17px",
+                              opacity: "0.8",
+                              // padding: "10px",
+                              marginBottom: "5px",
+                              marginRight: "10px",
+                              marginLeft: "10px",
+                              cursor: "pointer",
+                              // transition: "background 0.3s ease-in-out, color 0.3s ease-in-out",
+                              borderRadius: "8px",
+                              borderBottom: "1px solid #ccc",
+                              // boxShadow: "0 0.5px 0.5px rgba(0, 0, 0, 0.1)",
+                              // backgroundColor: "white",
+                              position: "sticky", // Add this line
+                              top: "0", // Add this line
+                              background: "rgb(248,249,255)", // Add this line
+                              zIndex: "2", // Add this line
+                              color: "#333",
+                            }}
+                            onClick={(e) => navigateSearchBox(e)}
+                            onMouseEnter={(e) => {
+                              e.target.style.backgroundColor = "#0C2540";
+                              e.target.style.color = "white";
+                            }}
+                            onMouseLeave={(e) => {
+                              e.target.style.backgroundColor = "#F8F9FF";
+                              e.target.style.color = "#333";
+                            }}
+                            key={result.key}
+                          >
+                            {result.value}
+                          </div>{" "}
+                        </div>
+                      ))}
+                    </div>
                   </div>
+
                   {/* <MKButton
                     component="a"
                     href={action.route}
