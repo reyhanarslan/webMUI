@@ -161,6 +161,7 @@ import Blz from "Category/Category-list/BLZ";
 import Zirdent from "Category/Category-list/Zirdent";
 import { ZirdentTitle } from "Category/Category-list/Zirdent";
 import { BlzTitle } from "Category/Category-list/BLZ";
+import { Container } from "@mui/material";
 export function ProductSlider({ images }) {
   return (
     <Carousel
@@ -631,66 +632,68 @@ function ProductInfo() {
           />
         </div>
       </MKBox>
-      <Grid paddingX={10} paddingY={15} container paddingBottom={5}>
-        <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6.5}>
-          <ProductSlider
-            sx={{
-              width: "100%",
-              height: "auto",
-            }}
-            images={productImages}
-          />
-        </Grid>
-        <Grid lg={0.5}></Grid>
-
-        <Grid className="product-card-left" item xs={4} md={5} lg={5}>
-          <Card>
-            <MKBox
-              minHeight="80vh"
-              width="100%"
+      <Container>
+        <Grid paddingY={15} container paddingBottom={5}>
+          <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6.5}>
+            <ProductSlider
               sx={{
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                // display: "grid",
-                // placeItems: "center",
+                width: "100%",
+                height: "auto",
               }}
-            >
-              {" "}
-              <MKTypography marginBottom={3} color="white">
-                {renderProductComponentTitle()}
-              </MKTypography>
-              <Grid
-                container
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                sx={{ mx: "auto", textAlign: "center" }}
-              >
-                {/* <MKTypography className="productTitle"> {productInfo.model}</MKTypography> */}
+              images={productImages}
+            />
+          </Grid>
+          <Grid lg={0.5}></Grid>
 
-                <MKTypography marginTop={3} variant="h6" color="blue">
-                  Daha Fazla Bilgi İçin Bize Ulaşın
+          <Grid className="product-card-left" item xs={4} md={5} lg={5}>
+            <Card>
+              <MKBox
+                minHeight="80vh"
+                width="100%"
+                sx={{
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  // display: "grid",
+                  // placeItems: "center",
+                }}
+              >
+                {" "}
+                <MKTypography marginBottom={3} color="white">
+                  {renderProductComponentTitle()}
                 </MKTypography>
-                <MKBox display="flex" justifyContent="center" alignItems="center">
-                  <Link to="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum">
-                    <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
-                      <i className="fa fa-whatsapp" />
-                    </MKTypography>
-                  </Link>
-                  <Link to="/iletişim">
-                    <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
-                      <i className="fa fa-phone" />
-                    </MKTypography>
-                    <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
-                      <i className="fa fa-envelope  " />
-                    </MKTypography>
-                  </Link>
-                </MKBox>
-              </Grid>
-            </MKBox>
-          </Card>
+                <Grid
+                  container
+                  justifyContent="center"
+                  alignItems="center"
+                  flexDirection="column"
+                  sx={{ mx: "auto", textAlign: "center" }}
+                >
+                  {/* <MKTypography className="productTitle"> {productInfo.model}</MKTypography> */}
+
+                  <MKTypography marginTop={3} variant="h6" color="blue">
+                    Daha Fazla Bilgi İçin Bize Ulaşın
+                  </MKTypography>
+                  <MKBox display="flex" justifyContent="center" alignItems="center">
+                    <Link to="https://api.whatsapp.com/send?phone=+905078688953&text=Merhabasiparivermekistiyorum">
+                      <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
+                        <i className="fa fa-whatsapp" />
+                      </MKTypography>
+                    </Link>
+                    <Link to="/iletişim">
+                      <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
+                        <i className="fa fa-phone" />
+                      </MKTypography>
+                      <MKTypography component="a" variant="body1" color="blue" href="#" mr={3}>
+                        <i className="fa fa-envelope  " />
+                      </MKTypography>
+                    </Link>
+                  </MKBox>
+                </Grid>
+              </MKBox>
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
+      </Container>
       <Card
         sx={{
           p: 0,
