@@ -633,7 +633,7 @@ function ProductInfo() {
         </div>
       </MKBox>
       <Container>
-        <Grid paddingY={15} container paddingBottom={5}>
+        <Grid paddingY={15} container>
           <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6}>
             <ProductSlider
               sx={{
