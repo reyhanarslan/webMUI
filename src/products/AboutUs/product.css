@@ -84,7 +84,7 @@
   }
   100% {
     opacity: 1;
-    transform: translateX(60px);
+    transform: translateX(70px);
   }
 }
 .product-card-right {
@@ -94,11 +94,11 @@
 @keyframes product-animation-right {
   0% {
     opacity: 0.3;
-    transform: translateX(30px);
+    transform: translateX(20px);
   }
   100% {
     opacity: 1;
-    transform: translateX(70px);
+    transform: translateX(50px);
   }
 }
 
