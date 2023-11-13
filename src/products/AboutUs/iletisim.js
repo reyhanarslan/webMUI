@@ -18,6 +18,15 @@ import { useNavigate } from "react-router-dom";
 import { useLogoWidth } from "utils";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const recaptchaKey = "6LczBg4pAAAAALi8Hrgmqlr6WkHUSwmUVzit5SfB";
+// const recaptchaSecretKey = "6LczBg4pAAAAALGMfw7h4zr04LjtupH_GHxdEKDF";
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 export function Iletisim() {
   // const [message, setMessage] = useState("");
@@ -29,7 +38,15 @@ export function Iletisim() {
     from_email: "",
     to_name: "arenadis",
   });
-
+  const [success, setSuccess] = useState(false);
+  const [successOpen, setSuccessOpen] = React.useState(false);
+  const [dangerOpen, setDangerOpen] = React.useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const successHandler = () => {
+    setSuccess(true);
+    setButtonDisabled(false);
+  };
+  console.log(success);
   const navigate = useNavigate();
   const cardStyle = {
     width: "600px",
@@ -68,13 +85,23 @@ export function Iletisim() {
     e.preventDefault();
 
     emailjs.send("service_m7jk5hi", "template_9cq6u2c", form, "V8J_a9Y8gT14LhJAt").then(
+      // emailjs.send("service_m7hi", "template_9cq6u2c", form, "V8J_a9Y8gT14LhJAt").then(
       (result) => {
         console.log(result.text);
+        setSuccessOpen(true);
       },
       (error) => {
         console.log(error.text);
+        setDangerOpen(true);
       }
     );
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setSuccessOpen(false);
   };
   console.log(form);
   return (
@@ -298,6 +325,19 @@ export function Iletisim() {
                   <Grid
                     container
                     marginLeft={8}
+                    justifyContent="flex-start"
+                    xs={11}
+                    sm={11}
+                    md={11}
+                    lg={11}
+                    xl={11}
+                    mt={3}
+                  >
+                    <ReCAPTCHA sitekey={recaptchaKey} onChange={successHandler} />
+                  </Grid>
+                  <Grid
+                    container
+                    marginLeft={8}
                     justifyContent="flex-end"
                     xs={11}
                     sm={11}
@@ -307,7 +347,13 @@ export function Iletisim() {
                     mt={3}
                     mb={2}
                   >
-                    <MKButton type="submit" variant="gradient" color="arena" onClick={sendEmail}>
+                    <MKButton
+                      disabled={buttonDisabled}
+                      type="submit"
+                      variant="gradient"
+                      color="arena"
+                      onClick={sendEmail}
+                    >
                       Gönder
                     </MKButton>
                   </Grid>
@@ -363,6 +409,16 @@ export function Iletisim() {
           </div>
         </MKBox>
       </Grid>
+      <Snackbar open={successOpen} autoHideDuration={2000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+          Mailiniz iletildi!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={dangerOpen} autoHideDuration={2000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="danger" sx={{ width: "100%" }}>
+          Mailiniz iletilirken bir sorunla karşılaştık!
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
