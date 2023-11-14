@@ -127,6 +127,7 @@ export function Iletisim() {
           zIndex: 1,
           size: "cover",
           maxWidth: logoWidth,
+          cursor: "pointer",
         }}
       >
         <div
@@ -135,7 +136,7 @@ export function Iletisim() {
           }}
         >
           <img
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             src={logo}
             alt="Logo"
             style={{ width: "100%", height: "100%" }}

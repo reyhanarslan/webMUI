@@ -103,6 +103,7 @@ function Presentation() {
           zIndex: 3,
           size: "cover",
           maxWidth: logoWidth,
+          cursor: "pointer",
         }}
       >
         <div
@@ -111,7 +112,7 @@ function Presentation() {
           }}
         >
           <img
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             src={logo}
             alt="Logo"
             style={{ width: "100%", height: "100%" }}

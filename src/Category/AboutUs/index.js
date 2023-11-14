@@ -67,6 +67,7 @@ function Category() {
           zIndex: 1,
           size: "cover",
           maxWidth: logoWidth,
+          cursor: "pointer",
         }}
       >
         <div
@@ -75,7 +76,7 @@ function Category() {
           }}
         >
           <img
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             src={logo}
             alt="Logo"
             style={{ width: "100%", height: "100%" }}

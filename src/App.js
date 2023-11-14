@@ -184,7 +184,7 @@ export default function App() {
         <MKBox component="footer">
           <Grid container spacing={3}>
             <Grid
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/home")}
               className="d-flex"
               item
               xs={12}
