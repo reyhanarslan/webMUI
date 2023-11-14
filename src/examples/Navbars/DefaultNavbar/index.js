@@ -632,7 +632,11 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                             }}
                             key={result.key}
                           >
-                            {result.value}
+                            {result.value
+                              .toLowerCase()
+                              .split(" ")
+                              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                              .join(" ")}
                           </div>{" "}
                         </div>
                       ))}
