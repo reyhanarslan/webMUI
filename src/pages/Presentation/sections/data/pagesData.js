@@ -10,7 +10,7 @@ export default [
     index: 1,
     image: scanner,
     name: "Ağız İçi Tarayıcılar",
-    route: "/urunler/agiz-ici-tarayicilar",
+    // route: "/urunler/agiz-ici-tarayicilar",
     description:
       "Ağız içi tarayıcılar, geleneksel alçı izlenimlerine kıyasla daha hızlı, konforlu ve hassas sonuçlar sunar.",
   },

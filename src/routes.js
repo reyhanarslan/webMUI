@@ -97,11 +97,11 @@ const routes = [
     // icon: <Icon>view_day</Icon>,
     icon: <FormatListBulletedIcon />,
     collapse: [
-      {
-        name: "Ağıziçi Tarayıcılar",
-        route: "/urunler/agiz-ici-tarayicilar",
-        component: <Category />,
-      },
+      // {
+      //   name: "Ağıziçi Tarayıcılar",
+      //   route: "/urunler/agiz-ici-tarayicilar",
+      //   component: <Category />,
+      // },
       {
         name: "CAD/CAM Sistemleri",
         route: "/urunler/cad-cam-sistemleri",

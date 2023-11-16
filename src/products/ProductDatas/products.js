@@ -1,14 +1,14 @@
-import Agizicitarayicilar1 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/1.jpg";
-import Agizicitarayicilar2 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/2.jpg";
-import Agizicitarayicilar3 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/5.jpg";
-import Agizicitarayicilar4 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/6.jpg";
-import Agizicitarayicilar5 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/carestream-cs-3600-agiz-ici-tarayici-gorsel.jpg";
-import Agizicitarayicilar6 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/3-scaled.jpg";
+// import Agizicitarayicilar1 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/1.jpg";
+// import Agizicitarayicilar2 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/2.jpg";
+// import Agizicitarayicilar3 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/5.jpg";
+// import Agizicitarayicilar4 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/6.jpg";
+// import Agizicitarayicilar5 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/carestream-cs-3600-agiz-ici-tarayici-gorsel.jpg";
+// import Agizicitarayicilar6 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3600/3-scaled.jpg";
 
-import Agizicitarayicilar7 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/1-1.jpg";
-import Agizicitarayicilar8 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/3-1.jpg";
-import Agizicitarayicilar9 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/7-1.jpg";
-import Agizicitarayicilar10 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/carestream-cs-3700-agiz-ici-tarayici-gorsel.jpg";
+// import Agizicitarayicilar7 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/1-1.jpg";
+// import Agizicitarayicilar8 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/3-1.jpg";
+// import Agizicitarayicilar9 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/7-1.jpg";
+// import Agizicitarayicilar10 from "assets/images/products-images/agiz-ici-tarayicilar/carestream-cs-3700/carestream-cs-3700-agiz-ici-tarayici-gorsel.jpg";
 
 import linkedin1024393 from "assets/images/products-images/cad-cam-sistemleri/3d-printer/dentafab-sega-3d-printer/linkedin-1024x393.jpeg";
 import segasidejpg from "assets/images/products-images/cad-cam-sistemleri/3d-printer/dentafab-sega-3d-printer/sega-side.jpg";
@@ -223,29 +223,29 @@ import zirdent_5 from "assets/images/products-images/zirdent/5.jpg";
 import zirdent_6 from "assets/images/products-images/zirdent/6.jpg";
 
 const Products = [
-  {
-    index: 0,
-    category: "agiz-ici-tarayicilar",
-    product: [
-      {
-        id: "y62vbr40D9",
-        model: "Carestream CS 3600 Ağız İçi Tarayıcı",
-        img: [
-          Agizicitarayicilar5,
-          Agizicitarayicilar1,
-          Agizicitarayicilar2,
-          Agizicitarayicilar3,
-          Agizicitarayicilar4,
-          Agizicitarayicilar6,
-        ],
-      },
-      {
-        id: "U2qoPEPPn7",
-        model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-        img: [Agizicitarayicilar9, Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar10],
-      },
-    ],
-  },
+  // {
+  //   index: 0,
+  //   category: "agiz-ici-tarayicilar",
+  //   product: [
+  //     {
+  //       id: "y62vbr40D9",
+  //       model: "Carestream CS 3600 Ağız İçi Tarayıcı",
+  //       img: [
+  //         Agizicitarayicilar5,
+  //         Agizicitarayicilar1,
+  //         Agizicitarayicilar2,
+  //         Agizicitarayicilar3,
+  //         Agizicitarayicilar4,
+  //         Agizicitarayicilar6,
+  //       ],
+  //     },
+  //     {
+  //       id: "U2qoPEPPn7",
+  //       model: "Carestream CS 3700 Ağız İçi Tarayıcı",
+  //       img: [Agizicitarayicilar9, Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar10],
+  //     },
+  //   ],
+  // },
   {
     index: 1,
     category: "cad-cam-sistemleri",

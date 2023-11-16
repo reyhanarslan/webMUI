@@ -211,7 +211,7 @@ function CategoryMenu() {
                         </ListSubheader>
                       }
                     >
-                      <ListItemButton
+                      {/* <ListItemButton
                         className="listItemButton"
                         selected={selectedIndex === 0}
                         onClick={() => handleListItemClick(0, "/urunler/agiz-ici-tarayicilar")}
@@ -230,7 +230,7 @@ function CategoryMenu() {
                             Ağız İçi Tarayıcılar
                           </p>
                         </ListItemText>
-                      </ListItemButton>
+                      </ListItemButton> */}
 
                       <ListItemButton
                         className="listItemButton"

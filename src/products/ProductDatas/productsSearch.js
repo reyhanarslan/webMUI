@@ -1,6 +1,6 @@
 export const SearchBoxDatas = [
-  { key: "y62vbr40D9", value: "Carestream CS 3600 Ağız İçi Tarayıcı" },
-  { key: "U2qoPEPPn7", value: "Carestream CS 3700 Ağız İçi Tarayıcı" },
+  // { key: "y62vbr40D9", value: "Carestream CS 3600 Ağız İçi Tarayıcı" },
+  // { key: "U2qoPEPPn7", value: "Carestream CS 3700 Ağız İçi Tarayıcı" },
   { key: "0fky5JRUK5", value: "DentaFab Sega 3D Printer" },
   { key: "wF2McAwDbN", value: "SILADENT 3D PRINTER SILAPRINT LCD" },
   { key: "OgKzyq7qlj", value: "SILAMILL 4 EDITION" },
