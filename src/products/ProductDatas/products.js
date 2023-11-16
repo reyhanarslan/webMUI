@@ -223,29 +223,29 @@ import zirdent_5 from "assets/images/products-images/zirdent/5.jpg";
 import zirdent_6 from "assets/images/products-images/zirdent/6.jpg";
 
 const Products = [
-  // {
-  //   index: 0,
-  //   category: "agiz-ici-tarayicilar",
-  //   product: [
-  //     {
-  //       id: "y62vbr40D9",
-  //       model: "Carestream CS 3600 Ağız İçi Tarayıcı",
-  //       img: [
-  //         Agizicitarayicilar5,
-  //         Agizicitarayicilar1,
-  //         Agizicitarayicilar2,
-  //         Agizicitarayicilar3,
-  //         Agizicitarayicilar4,
-  //         Agizicitarayicilar6,
-  //       ],
-  //     },
-  //     {
-  //       id: "U2qoPEPPn7",
-  //       model: "Carestream CS 3700 Ağız İçi Tarayıcı",
-  //       img: [Agizicitarayicilar9, Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar10],
-  //     },
-  //   ],
-  // },
+  {
+    // index: 0,
+    // category: "agiz-ici-tarayicilar",
+    // product: [
+    //   {
+    //     id: "y62vbr40D9",
+    //     model: "Carestream CS 3600 Ağız İçi Tarayıcı",
+    //     img: [
+    //       Agizicitarayicilar5,
+    //       Agizicitarayicilar1,
+    //       Agizicitarayicilar2,
+    //       Agizicitarayicilar3,
+    //       Agizicitarayicilar4,
+    //       Agizicitarayicilar6,
+    //     ],
+    //   },
+    //   {
+    //     id: "U2qoPEPPn7",
+    //     model: "Carestream CS 3700 Ağız İçi Tarayıcı",
+    //     img: [Agizicitarayicilar9, Agizicitarayicilar7, Agizicitarayicilar8, Agizicitarayicilar10],
+    //   },
+    // ],
+  },
   {
     index: 1,
     category: "cad-cam-sistemleri",
