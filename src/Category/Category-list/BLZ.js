@@ -131,7 +131,7 @@ export const BlzTitle = () => {
                 },
               }}
             >
-              Azurit 05{" "}
+              BLZ{" "}
             </MKTypography>
           </Grid>
         </Container>
@@ -140,7 +140,7 @@ export const BlzTitle = () => {
           className="productTitle"
         >
           {" "}
-          Azurit 05{" "}
+          BLZ
         </MKTypography>
         <Container>
           <Grid

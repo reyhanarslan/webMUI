@@ -55,4 +55,6 @@ export const SearchBoxDatas = [
   { key: "SwCYBQQ3TM", value: "SLITPRECISE SP100" },
   { key: "1jmZFqoVSi", value: "Çift Teknisyen Çalışma Masası" },
   { key: "pW7rUCqbGJ", value: "Tekli Teknisyen Çalışma Masası" },
+  { key: "lLcw6ysuXl", value: "Zirdent" },
+  { key: "dqkPfUvCTD", value: "BLZ" },
 ];

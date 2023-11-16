@@ -208,6 +208,20 @@ import ctcm_1 from "assets/images/products-images/teknisyen-masaları/cift-tekni
 
 import ttcm_1 from "assets/images/products-images/teknisyen-masaları/tekli-teknisyen-calisma-masasi/GPW02.jpg";
 
+import blz_1 from "assets/images/products-images/blz/BLXZPNG.png";
+import blz_2 from "assets/images/products-images/blz/LS100-1.jpg";
+import blz_3 from "assets/images/products-images/blz/LS100-2.png";
+import blz_4 from "assets/images/products-images/blz/LS100-3.png";
+import blz_5 from "assets/images/products-images/blz/LS100-4.png";
+import blz_6 from "assets/images/products-images/blz/Poster of LS100.jpg";
+
+import zirdent_1 from "assets/images/products-images/zirdent/1.jpg";
+import zirdent_2 from "assets/images/products-images/zirdent/2.jpg";
+import zirdent_3 from "assets/images/products-images/zirdent/3.jpg";
+import zirdent_4 from "assets/images/products-images/zirdent/4.jpg";
+import zirdent_5 from "assets/images/products-images/zirdent/5.jpg";
+import zirdent_6 from "assets/images/products-images/zirdent/6.jpg";
+
 const Products = [
   {
     index: 0,
@@ -328,7 +342,7 @@ const Products = [
         code: 3,
         id: "dqkPfUvCTD",
         model: "BLZ",
-        img: [],
+        img: [blz_1, blz_2, blz_3, blz_4, blz_5, blz_6],
       },
       {
         code: 3,
@@ -592,7 +606,7 @@ const Products = [
       {
         id: "lLcw6ysuXl",
         model: "Zirdent",
-        img: [],
+        img: [zirdent_1, zirdent_2, zirdent_3, zirdent_4, zirdent_5, zirdent_6],
       },
     ],
   },
