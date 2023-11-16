@@ -4,7 +4,7 @@ import Information from "pages/Presentation/sections/Information";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 import logo from "assets/images/logos/arenadis-logo-web-1.png";
 import routes from "routes";
-import intro from "assets/videos/UP3D.mp4";
+// import intro from "assets/videos/UP3D.mp4";
 import ReactPlayer from "react-player";
 // import sld1 from "assets/images/carousel/SLIDER-1psd.jpg";
 // import sld2 from "assets/images/carousel/SLIDER-2.jpg";
@@ -205,7 +205,9 @@ function Presentation() {
             style={{ borderRadius: "15px", zIndex: 0 }}
             width="100%"
             height="100%"
-            url={intro}
+            url={
+              "https://video.wixstatic.com/video/f30992_0d74c04a6deb42979d1a7fa1270d39e1/1080p/mp4/file.mp4"
+            }
             playing={true}
             muted={true}
             controls={false}
