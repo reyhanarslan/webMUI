@@ -104,6 +104,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
   const navigateSearchBox = (e) => {
     console.log(e.target.innerHTML);
     const found = SearchBoxDatas.find((element) => element.value === e.target.innerHTML);
+    console.log(found);
     navigate("/urun-detay/:" + found.key);
     // navigate();
   };
@@ -632,11 +633,13 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                             }}
                             key={result.key}
                           >
-                            {result.value
-                              .toLowerCase()
-                              .split(" ")
-                              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                              .join(" ")}
+                            {
+                              result.value
+                              // .toLowerCase()
+                              // .split(" ")
+                              // .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                              // .join(" ")
+                            }
                           </div>{" "}
                         </div>
                       ))}
