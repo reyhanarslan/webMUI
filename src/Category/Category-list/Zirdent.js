@@ -131,7 +131,7 @@ export const ZirdentTitle = () => {
                 },
               }}
             >
-              Azurit 05{" "}
+              Zirdent
             </MKTypography>
           </Grid>
         </Container>
@@ -140,7 +140,7 @@ export const ZirdentTitle = () => {
           className="productTitle"
         >
           {" "}
-          Azurit 05{" "}
+          Zirdent
         </MKTypography>
         <Container>
           <Grid

@@ -27,6 +27,9 @@ import EtkinlikImages from "./sections/etkinlik";
 import { useLogoWidth } from "utils";
 import("./video.css");
 
+import blz from "assets/images/products-images/blz/LS100-1_resize.jpg";
+import zirdent from "assets/images/products-images/zirdent/6_resize.jpg";
+
 function Presentation() {
   const navigate = useNavigate();
   // const [images] = useState([sld1, sld2, sld3]);
@@ -512,12 +515,12 @@ function Presentation() {
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
               <Grid container alignItems="center">
-                <Grid item xs={12} lg={5}>
-                  {/* <div>
+                <Grid item xs={12} lg={6}>
+                  <div>
                     <div style={{ marginBottom: "20px" }}>
                       <img src={blz} loading="lazy" />
                     </div>
-                  </div> */}
+                  </div>
                 </Grid>
                 <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
                   <Stack>
@@ -720,11 +723,11 @@ function Presentation() {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} lg={5}>
-                  {/* <div>
+                  <div>
                     <div style={{ marginBottom: "20px" }}>
                       <img src={zirdent} loading="lazy" />
                     </div>
-                  </div> */}
+                  </div>
                 </Grid>
               </Grid>
             </Container>
@@ -732,14 +735,14 @@ function Presentation() {
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
               <Grid container alignItems="center">
-                <Grid item xs={12} lg={5}>
+                <Grid item xs={6} lg={6}>
                   <div>
                     <div style={{ marginBottom: "20px" }}>
                       <img src={zirconmasters} loading="lazy" />
                     </div>
                   </div>
                 </Grid>
-                <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
+                <Grid item xs={6} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
                   <Stack>
                     <MKTypography variant="h3" my={1}>
                       ZirconMaster S
