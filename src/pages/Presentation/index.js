@@ -16,7 +16,7 @@ import CarouselImages from "./sections/Carousel";
 import MKBox from "components/MKBox";
 import { useNavigate } from "react-router-dom";
 import MKTypography from "components/MKTypography";
-import { Container, Grid, Icon, Stack } from "@mui/material";
+import { Container, Grid, Icon, Stack, useMediaQuery, useTheme } from "@mui/material";
 import p53 from "assets/images/products-images/cad-cam-sistemleri/kaziyicilar/up3d-p53-dental-frezleme-cihazi/UP3D-P53-Gorsel.jpg";
 import dentafab from "assets/images/products-images/cad-cam-sistemleri/3d-printer/dentafab-sega-3d-printer/Sega-double.jpg";
 // import blz from "assets/images/products-images/blz/Poster of LS100.jpg";
@@ -32,58 +32,11 @@ import zirdent from "assets/images/products-images/zirdent/6_resize.jpg";
 
 function Presentation() {
   const navigate = useNavigate();
-  // const [images] = useState([sld1, sld2, sld3]);
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const playerRef = useRef(null);
-
-  // const imageDuration = 30000;
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (isVideoPlaying) {
-  //       if (playerRef.current) {
-  //         const player = playerRef.current;
-  //         if (player && player.getCurrentTime) {
-  //           const currentTime = player.getCurrentTime();
-  //           if (currentTime >= player.getDuration()) {
-  //             setIsVideoPlaying(false);
-  //             setCurrentIndex(0);
-  //             setTimeout(() => {
-  //               setIsVideoPlaying(true);
-  //             }, imageDuration);
-  //           }
-  //         }
-  //       }
-  //     } else {
-  //       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //       setTimeout(() => {
-  //         setIsVideoPlaying(true);
-  //       }, imageDuration);
-  //     }
-  //   }, 10000);
-
-  //   return () => clearInterval(interval);
-  // }, [currentIndex, isVideoPlaying]);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
-  //     const bgPosition = `-${scrollY / 15}px 0`;
-  //     const divBackground = document.querySelector(".div-background");
-
-  //     if (divBackground) {
-  //       divBackground.style.backgroundPosition = bgPosition;
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
   const logoWidth = useLogoWidth();
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <>
@@ -122,62 +75,6 @@ function Presentation() {
           />
         </div>
       </MKBox>
-      {/* <MKBox
-        style={{}}
-        sx={{
-          position: "absolute",
-          top: "10%",
-          left: "50%",
-          zIndex: 3,
-          size: "cover",
-        }}
-      >
-        <div
-          style={{
-            zIndex: 1,
-          }}
-        >
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              onChange={handleSearch}
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <div
-            style={{
-              maxHeight: "300px",
-              overflowY: "auto",
-              zIndex: 1,
-              background: "rgb(248,249,255)",
-              borderRadius: "15px",
-            }}
-          >
-            {searchResults.map((result) => (
-              <div
-                style={{ fontSize: "17px", opacity: "0.8" }}
-                onClick={(e) => navigateSearchBox(e)}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = "#0C2540"; // Mouse ile üzerine gelindiğinde arka plan rengi mavi olsun
-                  e.target.style.color = "white"; // Mouse ile üzerine gelindiğinde yazı rengi beyaz olsun
-                  e.target.style.cursor = "pointer";
-                  e.target.style.borderRadious = "15px";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = "initial"; // Mouse ayrıldığında arka plan rengini varsayılana dön
-                  e.target.style.color = "initial"; // Mouse ayrıldığında yazı rengini varsayılana dön
-                }}
-                key={result.key}
-              >
-                {result.value}
-              </div>
-            ))}
-          </div>
-        </div>
-      </MKBox> */}
       <Card
         sx={{
           zIndex: 42545545,
@@ -193,31 +90,33 @@ function Presentation() {
           height: "100%", // Kartın yüzde 100 yükseklikte olmasını sağlar.
         }}
       ></Card>
-      <Card
-        sx={{
-          zIndex: 1,
-          p: 0,
-          mt: 0,
-          backdropFilter: "saturate(200%) blur(30px)",
-          boxShadow: ({ boxShadows: { xxl } }) => xxl,
-        }}
-      >
-        <div className="video-card">
-          <ReactPlayer
-            ref={playerRef}
-            style={{ borderRadius: "15px", zIndex: 0 }}
-            width="100%"
-            height="100%"
-            url={
-              "https://video.wixstatic.com/video/f30992_0d74c04a6deb42979d1a7fa1270d39e1/1080p/mp4/file.mp4"
-            }
-            playing={true}
-            muted={true}
-            controls={false}
-            loop={true}
-          />
-        </div>
-      </Card>
+      {!isMobile && (
+        <Card
+          sx={{
+            zIndex: 1,
+            p: 0,
+            mt: 0,
+            backdropFilter: "saturate(200%) blur(30px)",
+            boxShadow: ({ boxShadows: { xxl } }) => xxl,
+          }}
+        >
+          <div className="video-card">
+            <ReactPlayer
+              ref={playerRef}
+              style={{ borderRadius: "15px", zIndex: 0 }}
+              width="100%"
+              height="100%"
+              url={
+                "https://video.wixstatic.com/video/f30992_0d74c04a6deb42979d1a7fa1270d39e1/1080p/mp4/file.mp4"
+              }
+              playing={true}
+              muted={true}
+              controls={false}
+              loop={true}
+            />
+          </div>
+        </Card>
+      )}
       <div
         style={{
           background: "#0C2540 ",
