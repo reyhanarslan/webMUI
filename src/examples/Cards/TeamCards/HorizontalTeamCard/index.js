@@ -18,7 +18,7 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
     >
       <Grid container direction={isMobile ? "column" : "row"}>
         {isOdd && (
-          <Grid item xs={12} sm={6} sx={{ mt: isMobile ? 0 : -6, ml: isMobile ? 0 : -6 }}>
+          <Grid item xs={12} sm={6} sx={{ mt: isMobile ? 0 : -6, ml: isMobile ? 0 : -3 }}>
             {isMobile ? null : ( // Render image only if not in mobile view
               <MKBox width="100%" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
                 <MKBox
@@ -59,7 +59,7 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
         </Grid>
 
         {!isOdd && (
-          <Grid item xs={12} sm={6} sx={{ mt: isMobile ? 0 : -6, mr: isMobile ? 0 : -23 }}>
+          <Grid item xs={12} sm={6} sx={{ mt: isMobile ? 0 : -6, marginLeft: isMobile ? 0 : 0 }}>
             {isMobile ? null : ( // Render image only if not in mobile view
               <MKBox width="100%" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
                 <MKBox
