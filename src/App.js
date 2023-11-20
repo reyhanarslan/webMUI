@@ -1,28 +1,15 @@
 import { useCallback, useEffect } from "react";
-
-// react-router components
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-
-// @mui material components
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-
 import theme from "assets/theme";
 import Presentation from "layouts/pages/presentation";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import routes from "routes";
 import MKBox from "components/MKBox";
-
-// react-router-dom components
-// import { Link } from "react-router-dom";
-
-// @mui material components
-// import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
 import MKTypography from "components/MKTypography";
-// import footerRoutes from "footer.routes";
 import { CardMedia } from "@mui/material";
 import logo from "assets/images/logos/arenadis-logo-white.png";
 import wp from "assets/images/wp-3.gif";
@@ -31,9 +18,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Category from "Category/AboutUs";
-// import { useCallback } from "react";
-// import { loadFull } from "tsparticles";
-// import Particles from "react-particles";
+
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useNavigate } from "react-router-dom";
