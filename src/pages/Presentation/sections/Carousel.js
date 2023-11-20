@@ -6,12 +6,15 @@ import sld2 from "assets/images/carousel/SLIDER-2.jpg";
 import sld3 from "assets/images/carousel/SLIDER-3.jpg";
 // import DashboardImg1 from "assets/images/dashboard/perfect-healthy-teeth-smile-young-woman.jpg";
 import { useState } from "react";
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function CarouselImages() {
   const [images] = useState([sld1, sld2, sld3]);
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <>
@@ -21,23 +24,19 @@ function CarouselImages() {
           component="section"
           sx={{
             display: "flex",
-            mt: 0,
-
             borderRadius: "30px",
-            // animation: "test 10s linear infinite",
-            // transition: "background-color 0.5s ease-in-out",
-
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
-            height: "550px",
+            height: isMobile ? 250 : 550,
           }}
         >
           <Container>
             <Grid
-              sx={{ marginTop: "100px" }}
+              sx={{ marginTop: "70px" }}
               className="d-flex justify-content-left align-items-left"
-              lg={3}
+              lg={6}
+              xs={12}
             >
               <Carousel infiniteLoop={true} autoPlay={true} interval={5000} showThumbs={false}>
                 {images.map((item, i) => (

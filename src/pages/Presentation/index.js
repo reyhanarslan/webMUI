@@ -148,22 +148,6 @@ function Presentation() {
           }}
         >
           <div style={{ position: "relative" }}>
-            {/* <video
-              src={videoBg}
-              autoPlay
-              loop
-              muted
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                zIndex: -1,
-            
-              }}
-            /> */}
             <CarouselImages />
           </div>
         </Card>
@@ -634,8 +618,7 @@ function Presentation() {
                     />
                   </div>
                 </Grid>
-
-                <Grid item xs={6} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
+                <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
                   <Stack>
                     <MKTypography variant="h3" my={1}>
                       ZirconMaster S
@@ -657,8 +640,6 @@ function Presentation() {
                       </MKBox>
                       <MKTypography variant="body2" color="text" pl={2}>
                         Zno2’nin her türlü diş hekimi için tasarlanmıştır
-                        {/* <br />
-                        hassasiyette işlemesine olanak sağlar. */}
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" alignItems="center" p={2}>
@@ -678,8 +659,6 @@ function Presentation() {
                       </MKBox>
                       <MKTypography variant="body2" color="text" pl={2}>
                         10 işletim programı
-                        {/* <br />
-                        tasarımını daha estetik hale getirebilir. */}
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" alignItems="center" p={2}>
@@ -699,8 +678,6 @@ function Presentation() {
                       </MKBox>
                       <MKTypography variant="body2" color="text" pl={2}>
                         Yüksek kaliteli mosi2 ısıtma elemanları
-                        {/* <br />
-                        ve tek tıkla işleme */}
                       </MKTypography>
                     </MKBox>
                     <MKBox display="flex" alignItems="center" p={2}>
@@ -735,6 +712,7 @@ function Presentation() {
               </Grid>
             </Container>
           </MKBox>
+
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
               <Grid container alignItems="center">
