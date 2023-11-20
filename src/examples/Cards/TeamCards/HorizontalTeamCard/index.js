@@ -1,80 +1,26 @@
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
-// @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import { Link } from "react-router-dom";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 function HorizontalTeamCard({ image, name, position, index, description }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isOdd = index % 2 === 1;
+
   return (
-    <>
-      {" "}
-      {index % 2 === 1 ? (
-        <>
-          <Card className="home-card-left" style={{ width: "800px", backgroundColor: "#F8F9FF" }}>
-            <Grid container>
-              <Grid item xs={12} sm={6} sx={{ mt: -6, marginLeft: -6 }}>
-                <MKBox width="300px" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
-                  <MKBox
-                    bgColor="#F8F9FF"
-                    borderRadius="xl"
-                    shadow="lg"
-                    minHeight="10rem"
-                    sx={{
-                      overflow: "hidden",
-                      transform: "perspective(999px) rotateX(0deg) translate3d(10px, -10px, 0)",
-                      transformOrigin: "50% 0",
-                      willChange: "transform, box-shadow",
-                      transition: "transform 200ms ease-out",
-                      "&:hover": {
-                        transform:
-                          "perspective(999px) rotateX(7deg) translate3d(10px, -20px, 50px)",
-                      },
-                    }}
-                    component="img"
-                    src={image}
-                    alt={name}
-                    width="350px"
-                    height="300px"
-                  />
-                </MKBox>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <MKBox pt={5} pb={7} pl={3} pr={{ xs: 4, lg: 1 }} lineHeight={1.5}>
-                  <MKTypography sx={{ textAlign: "center" }} mb={3} variant="h3">
-                    <Link to={position.route}>{name}</Link>
-                  </MKTypography>
-                  <MKTypography sx={{ textAlign: "center" }} variant="body2" color="text">
-                    {description}
-                  </MKTypography>
-                </MKBox>
-              </Grid>
-            </Grid>
-          </Card>
-        </>
-      ) : (
-        <Card
-          className="home-card-right"
-          style={{ width: "800px", backgroundColor: "#F8F9FF" }}
-          sx={{ mt: 40 }}
-        >
-          <Grid container>
-            <Grid item xs={12} sm={6}>
-              <MKBox pt={5} pb={7} pl={3} pr={{ xs: 4, lg: 1 }} lineHeight={1.5}>
-                <MKTypography sx={{ textAlign: "center" }} mb={3} variant="h3">
-                  <Link to={position.route}>{name}</Link>
-                </MKTypography>
-                <MKTypography sx={{ textAlign: "center" }} variant="body2" color="text">
-                  {description}
-                </MKTypography>
-              </MKBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4} sx={{ mt: -6, ml: 10 }}>
-              <MKBox width="300px" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
+    <Card
+      style={{ width: "100%", backgroundColor: "#F8F9FF" }}
+      sx={{ mt: isOdd && !isMobile ? 0 : 20 }}
+    >
+      <Grid container direction={isMobile ? "column" : "row"}>
+        {isOdd && (
+          <Grid item xs={12} sm={6} sx={{ mt: isMobile ? 0 : -6, ml: isMobile ? 0 : -6 }}>
+            {isMobile ? null : ( // Render image only if not in mobile view
+              <MKBox width="100%" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
                 <MKBox
                   bgColor="#F8F9FF"
                   borderRadius="xl"
@@ -93,19 +39,59 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
                   component="img"
                   src={image}
                   alt={name}
-                  width="350px"
+                  width="100%"
                   height="300px"
                 />
               </MKBox>
-            </Grid>
+            )}
           </Grid>
-        </Card>
-      )}
-    </>
+        )}
+
+        <Grid item xs={12} sm={6}>
+          <MKBox pt={5} pb={7} pl={3} lineHeight={1.5}>
+            <MKTypography sx={{ textAlign: "center" }} mb={2} variant="h4">
+              <Link to={position.route}>{name}</Link>
+            </MKTypography>
+            <MKTypography sx={{ textAlign: "center" }} variant="body2" color="text">
+              {description}
+            </MKTypography>
+          </MKBox>
+        </Grid>
+
+        {!isOdd && (
+          <Grid item xs={12} sm={6} sx={{ mt: isMobile ? 0 : -6, mr: isMobile ? 0 : -23 }}>
+            {isMobile ? null : ( // Render image only if not in mobile view
+              <MKBox width="100%" pt={2} pb={1} px={0} sx={{ textAlign: "center" }}>
+                <MKBox
+                  bgColor="#F8F9FF"
+                  borderRadius="xl"
+                  shadow="lg"
+                  minHeight="10rem"
+                  sx={{
+                    overflow: "hidden",
+                    transform: "perspective(999px) rotateX(0deg) translate3d(10px, -10px, 0)",
+                    transformOrigin: "50% 0",
+                    willChange: "transform, box-shadow",
+                    transition: "transform 200ms ease-out",
+                    "&:hover": {
+                      transform: "perspective(999px) rotateX(7deg) translate3d(10px, -20px, 50px)",
+                    },
+                  }}
+                  component="img"
+                  src={image}
+                  alt={name}
+                  width="100%"
+                  height="300px"
+                />
+              </MKBox>
+            )}
+          </Grid>
+        )}
+      </Grid>
+    </Card>
   );
 }
 
-// Typechecking props for the HorizontalTeamCard
 HorizontalTeamCard.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

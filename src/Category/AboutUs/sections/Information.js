@@ -61,13 +61,7 @@ function CategoryMenu() {
     const pathArray = currentURL.split("/");
     console.log(pathArray[3]);
     setPage(1);
-    if (pathArray[2] === "agiz-ici-tarayicilar") {
-      const result = Products[0].product;
-      setCount(Math.ceil(result.length / limit));
-      setListingPerPage(result.slice(0, 9));
-      setListingProduct(result);
-      setSelectedIndex(0);
-    } else if (pathArray[3] === "3d-printer") {
+    if (pathArray[3] === "3d-printer") {
       const result = Products[1].product.filter((item) => item.code === 1);
       setCount(Math.ceil(result.length / limit));
       setListingPerPage(result.slice(0, 9));
