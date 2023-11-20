@@ -14,7 +14,7 @@ function HorizontalTeamCard({ image, name, position, index, description }) {
   return (
     <Card
       style={{ width: "100%", backgroundColor: "#F8F9FF" }}
-      sx={{ mt: isOdd && !isMobile ? 0 : 20 }}
+      sx={{ mt: isMobile ? 1 : isOdd ? 0 : 20 }}
     >
       <Grid container direction={isMobile ? "column" : "row"}>
         {isOdd && (
