@@ -269,22 +269,16 @@ function Presentation() {
           </div>
         </Card>
         <Card style={{ borderRadius: "0px 0px 30px 30px" }}>
-          <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
+          <Grid container item xs={12} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
             <Grid
               item
               xs={12}
               lg={6}
               flexDirection="column"
               alignItems="center"
-              sx={{ textAlign: "center", my: 10, mx: "auto" }}
+              sx={{ textAlign: "center", my: 3, mx: "auto" }}
             >
-              {" "}
-              <MKTypography
-                style={{ marginBottom: "20px" }}
-                // color="white"
-                variant="h2"
-                fontWeight="bold"
-              >
+              <MKTypography style={{ marginBottom: "20px" }} variant="h2" fontWeight="bold">
                 Ürünlerimiz
               </MKTypography>
               <MKTypography variant="body1">
@@ -292,14 +286,17 @@ function Presentation() {
               </MKTypography>
             </Grid>
           </Grid>
+
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
-              <Grid container alignItems="center">
+              <Grid
+                container
+                alignItems="center"
+                flexDirection={{ xs: "column-reverse", lg: "row" }}
+              >
                 <Grid item xs={12} lg={5}>
-                  <div>
-                    <div style={{ marginBottom: "20px" }}>
-                      <img src={p53} loading="lazy" />
-                    </div>
+                  <div style={{ marginBottom: "20px" }}>
+                    <img src={p53} loading="lazy" style={{ width: "100%", height: "auto" }} />
                   </div>
                 </Grid>
                 <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
@@ -503,10 +500,8 @@ function Presentation() {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} lg={5}>
-                  <div>
-                    <div style={{ marginBottom: "20px" }}>
-                      <img src={dentafab} loading="lazy" />
-                    </div>
+                  <div style={{ marginBottom: "20px" }}>
+                    <img src={dentafab} loading="lazy" style={{ width: "100%", height: "auto" }} />
                   </div>
                 </Grid>
               </Grid>
@@ -515,11 +510,9 @@ function Presentation() {
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
               <Grid container alignItems="center">
-                <Grid item xs={12} lg={6}>
-                  <div>
-                    <div style={{ marginBottom: "20px" }}>
-                      <img src={blz} loading="lazy" />
-                    </div>
+                <Grid item xs={12} lg={5}>
+                  <div style={{ marginBottom: "20px" }}>
+                    <img src={blz} loading="lazy" style={{ width: "100%", height: "auto" }} />
                   </div>
                 </Grid>
                 <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
@@ -723,10 +716,8 @@ function Presentation() {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} lg={5}>
-                  <div>
-                    <div style={{ marginBottom: "20px" }}>
-                      <img src={zirdent} loading="lazy" />
-                    </div>
+                  <div style={{ marginBottom: "20px" }}>
+                    <img src={zirdent} loading="lazy" style={{ width: "100%", height: "auto" }} />
                   </div>
                 </Grid>
               </Grid>
@@ -735,13 +726,16 @@ function Presentation() {
           <MKBox component="section" py={{ xs: 3, md: 2, lg: 0 }}>
             <Container>
               <Grid container alignItems="center">
-                <Grid item xs={6} lg={6}>
-                  <div>
-                    <div style={{ marginBottom: "20px" }}>
-                      <img src={zirconmasters} loading="lazy" />
-                    </div>
+                <Grid item xs={12} lg={5}>
+                  <div style={{ marginBottom: "20px" }}>
+                    <img
+                      src={zirconmasters}
+                      loading="lazy"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </div>
                 </Grid>
+
                 <Grid item xs={6} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
                   <Stack>
                     <MKTypography variant="h3" my={1}>
@@ -943,10 +937,12 @@ function Presentation() {
                   </Stack>
                 </Grid>
                 <Grid item xs={12} lg={5}>
-                  <div>
-                    <div style={{ marginBottom: "20px" }}>
-                      <img src={ceramicmastere20} loading="lazy" />
-                    </div>
+                  <div style={{ marginBottom: "20px" }}>
+                    <img
+                      src={ceramicmastere20}
+                      loading="lazy"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </div>
                 </Grid>
               </Grid>
