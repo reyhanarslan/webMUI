@@ -53,6 +53,8 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   justifyContent: "center",
 }));
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  backgroundColor: "white",
+  borderRadius: "5px",
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
@@ -560,7 +562,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                     <SearchIconWrapper>
                       {" "}
                       <img
-                        style={{ marginRight: "8px", borderRadius: "30px" }}
+                        style={{ marginRight: "8px", borderRadius: "30px", zIndex: 9999 }}
                         src={wp}
                         alt="WordPress Image"
                       />{" "}
@@ -572,39 +574,37 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                       inputProps={{ "aria-label": "search" }}
                     />
                   </Search>
-                  <div>
+                  {searchResults.length > 0 && (
                     <div
                       style={{
                         maxHeight: "300px",
                         overflowY: "auto",
                         zIndex: 1,
                         background: "rgb(248,249,255)",
-                        borderRadius: "15px",
+                        borderRadius: "5px",
                         position: "absolute",
-                        border: "1px solid #ccc",
+                        border: "0.5px solid #ccc",
                         transition: "border 0.3s ease-in-out",
                         paddingBottom: "10px",
                       }}
                     >
-                      {" "}
-                      {searchResults.length > 0 && (
-                        <div
-                          style={{
-                            fontSize: "20px",
-                            fontWeight: "bold",
-                            textAlign: "left",
-                            padding: "10px",
-                            borderBottom: "2px solid #ccc",
-                            position: "sticky",
-                            backgroundColor: "#F8F9FF",
-                            top: "0",
-                            zIndex: "2",
-                            marginBottom: "10px",
-                          }}
-                        >
-                          İlgili Sonuçlar
-                        </div>
-                      )}
+                      <div
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: "bold",
+                          textAlign: "left",
+                          padding: "10px",
+                          borderBottom: "2px solid #ccc",
+                          position: "sticky",
+                          backgroundColor: "#F8F9FF",
+                          top: "0",
+                          zIndex: "2",
+                          marginBottom: "10px",
+                        }}
+                      >
+                        İlgili Sonuçlar
+                      </div>
+
                       {searchResults.map((result) => (
                         <div key={result.key}>
                           <div
@@ -644,8 +644,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                         </div>
                       ))}
                     </div>
-                  </div>
-
+                  )}
                   {/* <MKButton
                     component="a"
                     href={action.route}
