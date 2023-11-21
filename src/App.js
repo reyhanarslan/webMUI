@@ -127,16 +127,16 @@ export default function App() {
           element={<Category />}
         />
         {getRoutes(routes)}
-        <Route path="/presentation" element={<Presentation />} />
+        <Route path="/home" element={<Presentation />} />
 
-        <Route path="*" element={<Navigate to="/presentation" />} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>{" "}
       <div style={{ position: "relative" }}>
         <div
           style={{
             position: "fixed",
             top: "80%",
-            right: "0px",
+            right: "100px",
             zIndex: 9999999,
             display: "flex",
             flexDirection: "column",
