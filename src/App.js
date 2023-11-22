@@ -22,6 +22,7 @@ import Category from "Category/AboutUs";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 export default function App() {
   const navigate = useNavigate();
@@ -113,7 +114,8 @@ export default function App() {
 
       return null;
     });
-
+  const theme1 = useTheme();
+  const isMobile = useMediaQuery(theme1.breakpoints.down("sm"));
   return (
     <ThemeProvider theme={theme}>
       {/* <Particles options={options} init={particlesInit} /> */}
@@ -136,7 +138,7 @@ export default function App() {
           style={{
             position: "fixed",
             top: "80%",
-            right: "100px",
+            right: isMobile ? "20px" : "0px",
             zIndex: 9999999,
             display: "flex",
             flexDirection: "column",
