@@ -161,7 +161,7 @@ import Blz from "Category/Category-list/BLZ";
 import Zirdent from "Category/Category-list/Zirdent";
 import { ZirdentTitle } from "Category/Category-list/Zirdent";
 import { BlzTitle } from "Category/Category-list/BLZ";
-import { Container } from "@mui/material";
+import { Container, useMediaQuery, useTheme } from "@mui/material";
 export function ProductSlider({ images }) {
   return (
     <Carousel
@@ -216,6 +216,8 @@ function ProductInfo() {
   const [productImages, setProductImages] = useState([]);
   const [productId, setProductId] = useState("");
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   // const test = () => {
   //   navigate("/urunler/agiz-ici-tarayicilar/:asdasd");
   // };
@@ -635,7 +637,13 @@ function ProductInfo() {
       </MKBox>
       <Container>
         <Grid paddingY={15} container>
-          <Grid className="product-card-right" borderRadius={25} item xs={4} md={5} lg={6}>
+          <Grid
+            className="product-card-right"
+            borderRadius={25}
+            item
+            xs={12}
+            lg={isMobile ? 12 : 5.8}
+          >
             <ProductSlider
               sx={{
                 width: "100%",
@@ -644,9 +652,8 @@ function ProductInfo() {
               images={productImages}
             />
           </Grid>
-          {/* <Grid lg={0.5}></Grid> */}
-
-          <Grid className="product-card-left" item xs={4} md={5} lg={5}>
+          <Grid lg={0.2}></Grid>
+          <Grid className="product-card-left" item xs={11} lg={isMobile ? 12 : 6}>
             <Card>
               <MKBox
                 minHeight="80vh"
@@ -654,8 +661,6 @@ function ProductInfo() {
                 sx={{
                   backgroundSize: "cover",
                   backgroundPosition: "center",
-                  // display: "grid",
-                  // placeItems: "center",
                 }}
               >
                 {" "}
@@ -669,8 +674,6 @@ function ProductInfo() {
                   flexDirection="column"
                   sx={{ mx: "auto", textAlign: "center" }}
                 >
-                  {/* <MKTypography className="productTitle"> {productInfo.model}</MKTypography> */}
-
                   <MKTypography marginTop={3} variant="h6" color="blue">
                     Daha Fazla Bilgi İçin Bize Ulaşın
                   </MKTypography>
