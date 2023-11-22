@@ -138,7 +138,7 @@ export default function App() {
           style={{
             position: "fixed",
             top: "80%",
-            right: isMobile ? "10px" : "0px",
+            right: isMobile ? "2px" : "0px",
             zIndex: 9999999,
             display: "flex",
             flexDirection: "column",
