@@ -5,7 +5,7 @@
   "author": "Creative Tim",
   "license": "See license in https://www.creative-tim.com/license",
   "description": "React version of Material Kit 2 by Creative Tim",
-  "homepage": "https://wwww.arenadis.com.tr",
+  "homepage": "https://wwww.arenadis.com",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@emotion/cache": "11.10.7",

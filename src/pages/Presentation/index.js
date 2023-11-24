@@ -25,7 +25,6 @@ function Presentation() {
   const navigate = useNavigate();
   const playerRef = useRef(null);
   const logoWidth = useLogoWidth();
- 
 
   return (
     <>
