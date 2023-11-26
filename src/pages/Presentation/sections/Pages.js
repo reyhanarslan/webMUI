@@ -113,7 +113,7 @@ function Pages() {
                   <MKBox display="flex" alignItems="center" p={2}>
                     <MKTypography
                       component="a"
-                      href="#"
+                      href="/urun-detay/:jJpfLj3OLE"
                       variant="body2"
                       color="info"
                       fontWeight="regular"
@@ -216,7 +216,7 @@ function Pages() {
                   <MKBox display="flex" alignItems="center" p={2}>
                     <MKTypography
                       component="a"
-                      href="#"
+                      href="/urun-detay/:0fky5JRUK5"
                       variant="body2"
                       color="info"
                       fontWeight="regular"
@@ -329,7 +329,7 @@ function Pages() {
                   <MKBox display="flex" alignItems="center" p={2}>
                     <MKTypography
                       component="a"
-                      href="#"
+                      href="/urun-detay/:dqkPfUvCTD"
                       variant="body2"
                       color="info"
                       fontWeight="regular"
@@ -432,7 +432,7 @@ function Pages() {
                   <MKBox display="flex" alignItems="center" p={2}>
                     <MKTypography
                       component="a"
-                      href="#"
+                      href="/urun-detay/:lLcw6ysuXl"
                       variant="body2"
                       color="info"
                       fontWeight="regular"
@@ -543,7 +543,7 @@ function Pages() {
                   <MKBox display="flex" alignItems="center" p={2}>
                     <MKTypography
                       component="a"
-                      href="#"
+                      href="/urun-detay/:AbbKvzOCgk"
                       variant="body2"
                       color="info"
                       fontWeight="regular"
