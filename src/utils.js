@@ -16,9 +16,9 @@ export const useLogoWidth = () => {
   let logoWidth = "100%";
 
   if (width <= 400) {
-    logoWidth = "15%";
+    logoWidth = "25%";
   } else if (width <= 600) {
-    logoWidth = "22%";
+    logoWidth = "25%";
   } else if (width <= 800) {
     logoWidth = "22%";
   } else if (width <= 1000) {
