@@ -48,9 +48,14 @@ export function Iletisim() {
     setButtonDisabled(!buttonDisabled);
   };
   console.log(success);
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log(isMobile);
+  console.log(form);
   const navigate = useNavigate();
   const cardStyle = {
-    width: "600px",
+    width: isMobile ? 400 : 600,
     height: "270px",
     padding: "3rem",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
@@ -104,11 +109,7 @@ export function Iletisim() {
 
     setSuccessOpen(false);
   };
-  const theme = useTheme();
 
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(isMobile);
-  console.log(form);
   return (
     <div>
       <DefaultNavbar
@@ -185,9 +186,9 @@ export function Iletisim() {
               </Grid>
             </Container>
           </MKBox>
-          <Grid container>
+          {/* <Grid container>
             <Grid item xs={12} lg={12}></Grid>
-          </Grid>
+          </Grid> */}
         </>
         <MKBox
           style={{ borderRadius: 15, marginTop: -20, overflowX: "hidden" }}
@@ -266,7 +267,7 @@ export function Iletisim() {
               <Grid
                 style={{
                   marginTop: 100,
-                  marginLeft: isMobile ? 60 : 0,
+                  marginLeft: isMobile ? 30 : 0,
                 }}
                 item
                 xs={12}
@@ -277,7 +278,7 @@ export function Iletisim() {
                   Bizimle iletişime geçin{" "}
                 </div>{" "}
                 <Grid container spacing={3}>
-                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+                  <Grid item xs={8} sm={6} md={6} lg={6} xl={6}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
@@ -296,7 +297,7 @@ export function Iletisim() {
                       />
                     </MKBox>
                   </Grid>
-                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+                  <Grid item xs={8} sm={6} md={6} lg={6} xl={6}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
@@ -315,7 +316,7 @@ export function Iletisim() {
                       />
                     </MKBox>
                   </Grid>
-                  <Grid item xs={12} sm={12} md={12} lg={6} xl={12}>
+                  <Grid item xs={10} sm={10} md={12} lg={12} xl={12}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
