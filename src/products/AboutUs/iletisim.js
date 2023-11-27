@@ -21,6 +21,7 @@ import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const recaptchaKey = "6LczBg4pAAAAALi8Hrgmqlr6WkHUSwmUVzit5SfB";
 // const recaptchaSecretKey = "6LczBg4pAAAAALGMfw7h4zr04LjtupH_GHxdEKDF";
@@ -103,6 +104,10 @@ export function Iletisim() {
 
     setSuccessOpen(false);
   };
+  const theme = useTheme();
+
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  console.log(isMobile);
   console.log(form);
   return (
     <div>
@@ -185,16 +190,16 @@ export function Iletisim() {
           </Grid>
         </>
         <MKBox
-          style={{ borderRadius: 15, marginTop: -20 }}
+          style={{ borderRadius: 15, marginTop: -20, overflowX: "hidden" }}
           display="flex"
           justifyContent="center"
           alignItems="center"
         >
           {" "}
           <div className="kurumsal slide-in-container">
-            <Grid container px={10} spacing={5}>
-              <Grid marginTop={10} item xs={12} lg={6} md={12}>
-                <Grid item xs={12} sm={12}>
+            <Grid container px={10}>
+              <Grid marginTop={10} container xs={12} lg={6} md={12}>
+                <Grid container xs={12} sm={12}>
                   <Card
                     sx={{
                       backgroundImage: ({
@@ -217,7 +222,7 @@ export function Iletisim() {
                     </CardContent>
                   </Card>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={12}>
                   <Card
                     sx={{
                       backgroundImage: ({
@@ -235,7 +240,7 @@ export function Iletisim() {
                     </CardContent>
                   </Card>
                 </Grid>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={12}>
                   <Card
                     sx={{
                       backgroundImage: ({
@@ -258,7 +263,16 @@ export function Iletisim() {
                   </Card>
                 </Grid>
               </Grid>
-              <Grid style={{ marginTop: 250 }} item xs={12} lg={6} md={12}>
+              <Grid
+                style={{
+                  marginTop: 100,
+                  marginLeft: isMobile ? 60 : 0,
+                }}
+                item
+                xs={12}
+                lg={6}
+                md={12}
+              >
                 <div style={{ marginTop: "50px" }} className="page-title">
                   Bizimle iletişime geçin{" "}
                 </div>{" "}
@@ -301,7 +315,7 @@ export function Iletisim() {
                       />
                     </MKBox>
                   </Grid>
-                  <Grid item xs={12} sm={8} md={8} lg={6} xl={12}>
+                  <Grid item xs={12} sm={12} md={12} lg={6} xl={12}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
@@ -325,7 +339,7 @@ export function Iletisim() {
                   </Grid>
                   <Grid
                     container
-                    marginLeft={8}
+                    marginLeft={3}
                     justifyContent="flex-start"
                     xs={11}
                     sm={11}
@@ -334,26 +348,14 @@ export function Iletisim() {
                     xl={11}
                     mt={3}
                   >
-                    <ReCAPTCHA sitekey={recaptchaKey} onChange={successHandler} />
-                  </Grid>
-                  <Grid
-                    container
-                    marginLeft={8}
-                    justifyContent="flex-end"
-                    xs={11}
-                    sm={11}
-                    md={11}
-                    lg={11}
-                    xl={11}
-                    mt={3}
-                    mb={2}
-                  >
+                    <ReCAPTCHA sitekey={recaptchaKey} onChange={successHandler} />{" "}
                     <MKButton
                       disabled={buttonDisabled}
                       type="submit"
                       variant="gradient"
                       color="arena"
                       onClick={sendEmail}
+                      style={{ marginLeft: 30, height: 20 }}
                     >
                       Gönder
                     </MKButton>
