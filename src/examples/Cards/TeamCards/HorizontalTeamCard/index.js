@@ -8,7 +8,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 
 function HorizontalTeamCard({ image, name, position, index, description }) {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("xl"));
   const isOdd = index % 2 === 1;
 
   return (
