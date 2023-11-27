@@ -19,13 +19,16 @@ import { useNavigate } from "react-router-dom";
 import EtkinlikImages from "./sections/etkinlik";
 import { useLogoWidth } from "utils";
 import Pages from "./sections/Pages";
+import { useMediaQuery, useTheme } from "@mui/material";
 import("./video.css");
 
 function Presentation() {
   const navigate = useNavigate();
   const playerRef = useRef(null);
   const logoWidth = useLogoWidth();
-
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xl"));
+  console.log(isMobile);
   return (
     <>
       <DefaultNavbar
@@ -72,21 +75,21 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <div className="video-card">
-          <ReactPlayer
-            ref={playerRef}
-            style={{ borderRadius: "15px", zIndex: 0 }}
-            width="100%"
-            height="100%"
-            url={
-              "https://video.wixstatic.com/video/f30992_0d74c04a6deb42979d1a7fa1270d39e1/1080p/mp4/file.mp4"
-            }
-            playing={true}
-            muted={true}
-            controls={false}
-            loop={true}
-          />
-        </div>
+        {/* <div className="video-card" > */}
+        <ReactPlayer
+          ref={playerRef}
+          style={{ borderRadius: "15px", zIndex: 0, minHeight: 400 }}
+          width="100%"
+          height={"100%"}
+          url={
+            "https://video.wixstatic.com/video/f30992_0d74c04a6deb42979d1a7fa1270d39e1/1080p/mp4/file.mp4"
+          }
+          playing={true}
+          muted={true}
+          controls={false}
+          loop={true}
+        />
+        {/* </div> */}
       </Card>
       <div
         style={{
