@@ -647,7 +647,7 @@ function Pages() {
                   <MKBox display="flex" alignItems="center" p={2}>
                     <MKTypography
                       component="a"
-                      href="#"
+                      href="/urun-detay/:aYdRQamh7o"
                       variant="body2"
                       color="info"
                       fontWeight="regular"

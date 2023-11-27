@@ -46,7 +46,7 @@ function Presentation() {
         sx={{
           position: "absolute",
           top: "15px",
-          left: "20px",
+          left: "0px",
           zIndex: 3,
           size: "cover",
           maxWidth: logoWidth,
