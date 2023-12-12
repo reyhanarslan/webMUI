@@ -232,7 +232,7 @@ export const SlitpreciseSP100Title = () => {
                 <li>Kompakt ve ergonomik</li>
                 <li>Toz azaltma sistemi</li>
               </div>
-              <h5>Aksesuarlar:</h5>
+              <h5 style={{ marginTop: "5px" }}>Aksesuarlar:</h5>
               <div className="page-content">
                 <li>Pin sistemi</li>
                 <li>Matkap</li>
