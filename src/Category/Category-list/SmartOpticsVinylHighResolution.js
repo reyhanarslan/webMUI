@@ -6,7 +6,7 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 // import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import content_img_1 from "assets/images/content-imgs/smartoptics_vhr-content/1.jpg";
-import { Icon, ImageListItem } from "@mui/material";
+import { Icon, ImageListItem, useMediaQuery, useTheme } from "@mui/material";
 import Products from "products/ProductDatas/products";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
@@ -18,12 +18,14 @@ import Slider from "react-slick";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
 function SmartOpticsVinylHighResolution() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };
