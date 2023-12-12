@@ -21,7 +21,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import Katalog from "assets/docs/SilamillT5Edition/T5edition.pdf";
 
-import { Button, Icon } from "@mui/material";
+import { Button, Icon, useMediaQuery, useTheme } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
@@ -65,12 +65,14 @@ const itemData = [
 ];
 
 function SilamillT5Edition() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };
@@ -155,49 +157,51 @@ function SilamillT5Edition() {
               {/* ... */}
             </Grid>
             <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
-            <ImageList variant="masonry" cols={3} gap={8}>
-              {itemData.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                  <ImageListItemBar position="below" title={item.author} />
-                </ImageListItem>
-              ))}
-            </ImageList>
           </Grid>
-        </Container>
-        <div className="page-title" style={{ marginBottom: "10px" }}>
-          Benzer Ürünleri İncele
-        </div>
 
-        <div style={{ marginTop: "30px !important" }}>
-          <Slider {...settings}>
-            {filteredProducts.map((product, index) => (
-              <div
-                key={index}
-                style={{
-                  width: "300px",
-                  height: "200px",
-                }}
-              >
-                <CenteredBlogCard
-                  image={product.img[0]}
-                  title={product.model}
-                  action={{
-                    type: "internal",
-                    route: `/urun-detay/${product.id}`,
-                    color: "info",
-                    label: "Ürünü İncele",
-                  }}
+          <ImageList variant="masonry" cols={3} gap={8}>
+            {itemData.map((item) => (
+              <ImageListItem key={item.img}>
+                <img
+                  srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                  src={`${item.img}?w=248&fit=crop&auto=format`}
+                  alt={item.title}
+                  loading="lazy"
                 />
-              </div>
+                <ImageListItemBar position="below" title={item.author} />
+              </ImageListItem>
             ))}
-          </Slider>
-        </div>
+          </ImageList>
+
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </Container>
       </MKBox>
     </div>
   );
