@@ -17,7 +17,7 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import Katalog from "assets/docs/SilamillN4Edition/SN4Edition.pdf";
-import { Button, Icon } from "@mui/material";
+import { Button, Icon, useMediaQuery, useTheme } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
@@ -45,12 +45,14 @@ const itemData = [
 ];
 
 function SilamillN4Edition() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };

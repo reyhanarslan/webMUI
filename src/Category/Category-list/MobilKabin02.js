@@ -5,11 +5,7 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
-import { Button, Icon } from "@mui/material";
+import { Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
@@ -78,7 +74,6 @@ function MobilKabin02() {
 export default MobilKabin02;
 
 export const MobilKabin02Title = () => {
-  const pdfDownloader = () => {};
   return (
     <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
@@ -175,7 +170,7 @@ export const MobilKabin02Title = () => {
               </div>
             </Grid>
           </Grid>
-          <div
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "center",
@@ -187,7 +182,7 @@ export const MobilKabin02Title = () => {
               <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
               <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
             </Button>
-          </div>
+          </div> */}
         </Container>
       </MKBox>
     </div>

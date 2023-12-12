@@ -5,19 +5,21 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-import { Icon } from "@mui/material";
+import { Icon, useMediaQuery, useTheme } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Content_1 from "assets/content/DentafabSega3D/1.png";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
 
 export function DentaFabSega3D() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };

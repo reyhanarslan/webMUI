@@ -6,22 +6,21 @@ import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 // import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
-import { Button, Icon } from "@mui/material";
+import { Icon, useMediaQuery, useTheme } from "@mui/material";
 import MKTypography from "components/MKTypography";
 // import MKButton from "components/MKButton";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 function SlitpreciseSP100() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };
@@ -146,7 +145,7 @@ function SlitpreciseSP100() {
 export default SlitpreciseSP100;
 
 export const SlitpreciseSP100Title = () => {
-  const pdfDownloader = () => {};
+  // const pdfDownloader = () => {};
   return (
     <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
@@ -240,7 +239,7 @@ export const SlitpreciseSP100Title = () => {
               </div>
             </Grid>
           </Grid>
-          <div
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "center",
@@ -252,7 +251,7 @@ export const SlitpreciseSP100Title = () => {
               <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
               <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
             </Button>
-          </div>
+          </div> */}
         </Container>
       </MKBox>
     </div>

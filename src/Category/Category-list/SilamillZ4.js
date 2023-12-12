@@ -11,17 +11,19 @@ import Katalog_1 from "assets/docs/SilamillR5/R5_1.pdf";
 import Katalog_2 from "assets/docs/SilamillR5/R5_2.pdf";
 import Katalog_3 from "assets/docs/SilamillR5/R5_3.pdf";
 
-import { Button, Icon } from "@mui/material";
+import { Button, Icon, useMediaQuery, useTheme } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
 function SilamillZ4() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };

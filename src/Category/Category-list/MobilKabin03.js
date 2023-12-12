@@ -5,10 +5,7 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 // import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
-
-import { Button, Icon } from "@mui/material";
+import { Icon } from "@mui/material";
 import MKTypography from "components/MKTypography";
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
@@ -76,38 +73,18 @@ function MobilKabin03() {
 export default MobilKabin03;
 
 export const MobilKabin03Title = () => {
-  const pdfDownloader = () => {};
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <MKBox component="section">
-        <Container>
-          <Grid container spacing={3} alignItems="center" marginBottom={2}>
-            <Grid item xs={12} lg={12}>
-              <div className="page-title">
-                <h5>ÜRÜN BOYUTLARI:</h5> <br />
-                {"(E x D x Y) 500 x 500 x 830. (±50 mm)"}
-                <br />
-                Üst Bölüm: Cam
-              </div>
-
-              <div className="page-content">
-                <h5>ÖZELLİKLER:</h5>
-                <li>1 mm Çelik sactan üretilmiştir</li>
-                <li>Elektrostatik toz boya ile boyanmıştır.</li>
-                <li>Ral renk seçenekleri mevcuttur.</li>
-                <li>Sessiz tekerlekler</li>
-                <li>Yavaş kapanma mekanizması ( Blum )</li>
-                <li>Paslanma önleyici demir fosfat kaplaması</li>
-              </div>
-            </Grid>
-          </Grid>
-          <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
-            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
-            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
-          </Button>
-        </Container>
-        <Container style={{ backgroundColor: "#358EED", borderRadius: "20px" }}>
-          <Grid container item mt={3} sx={{ justifyContent: "flex-start" }}>
+        <Container
+          style={{
+            backgroundColor: "#0C2540",
+            padding: 10,
+            borderTopLeftRadius: 15,
+            borderTopRightRadius: 15,
+          }}
+        >
+          <Grid container item sx={{ justifyContent: "flex-start" }}>
             <MKTypography
               component="a"
               href="/urunler/klinik-dolaplari"
@@ -154,6 +131,48 @@ export const MobilKabin03Title = () => {
               Mobil Kabin 03
             </MKTypography>
           </Grid>
+        </Container>
+        <MKTypography
+          sx={{ mx: "auto", textAlign: "center", marginTop: 8 }}
+          className="productTitle"
+        >
+          {" "}
+          Mobil Kabin 03
+        </MKTypography>
+        <Container>
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
+            sx={{ mx: "auto", textAlign: "center" }}
+            spacing={1}
+            marginBottom={2}
+          >
+            {" "}
+            <Grid item xs={12} lg={12}>
+              <div className="page-title">
+                <h5>ÜRÜN BOYUTLARI:</h5> <br />
+                {"(E x D x Y) 500 x 500 x 830. (±50 mm)"}
+                <br />
+                Üst Bölüm: Cam
+              </div>
+
+              <div className="page-content">
+                <h5>ÖZELLİKLER:</h5>
+                <li>1 mm Çelik sactan üretilmiştir</li>
+                <li>Elektrostatik toz boya ile boyanmıştır.</li>
+                <li>Ral renk seçenekleri mevcuttur.</li>
+                <li>Sessiz tekerlekler</li>
+                <li>Yavaş kapanma mekanizması ( Blum )</li>
+                <li>Paslanma önleyici demir fosfat kaplaması</li>
+              </div>
+            </Grid>
+          </Grid>
+          {/* <Button onClick={() => pdfDownloader()} style={{ fontSize: "16px" }}>
+            <FontAwesomeIcon icon={faFilePdf} style={{ fontSize: "36px", marginRight: "8px" }} />
+            <span style={{ fontSize: "16px", fontWeight: "bold" }}>Ürün Kataloğu</span>
+          </Button> */}
         </Container>
       </MKBox>
     </div>
