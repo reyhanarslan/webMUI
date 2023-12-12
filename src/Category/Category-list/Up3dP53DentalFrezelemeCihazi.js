@@ -53,12 +53,17 @@ function Up3dP53DentalFrezelemeCihazi() {
     <div>
       <MKBox component="section" py={12}>
         <Container>
-          <Grid container spacing={3} alignItems="center">
-            <Grid item xs={12} lg={8}>
+          <Grid container alignItems="center">
+            <Grid item xs={12} lg={12}>
               {/* Başlık */}
               {img.map((section, index) => (
                 <div key={index} style={{ marginBottom: "20px" }}>
-                  <img src={section} loading="lazy" />
+                  <img
+                    width={isMobile ? 350 : "auto"}
+                    height={"auto"}
+                    src={section}
+                    loading="lazy"
+                  />
                 </div>
               ))}
 
@@ -81,8 +86,8 @@ function Up3dP53DentalFrezelemeCihazi() {
           <Grid>
             <iframe
               style={{ borderRadius: "20px" }}
-              width="1000"
-              height="600"
+              width={isMobile ? 350 : 1000}
+              height={isMobile ? 450 : 600}
               src="https://www.youtube.com/embed/bNvfcxRI3Bc"
               title="The UP3D P53 Dental Milling Machine"
               frameBorder="0"
