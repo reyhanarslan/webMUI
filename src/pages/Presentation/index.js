@@ -33,6 +33,7 @@ function Presentation() {
     <>
       <DefaultNavbar
         routes={routes}
+        sticky
         action={{
           type: "external",
           route:
