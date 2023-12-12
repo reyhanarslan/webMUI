@@ -8,18 +8,20 @@ import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 
-import { Button, Icon } from "@mui/material";
+import { Button, Icon, useMediaQuery, useTheme } from "@mui/material";
 import MKTypography from "components/MKTypography";
 
 import Slider from "react-slick";
 import Products from "products/ProductDatas/products";
 function Siladent3dPrinterSilaPrintLCD() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   var settings = {
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: isMobile ? 1 : 4,
+    slidesToScroll: isMobile ? 1 : 2,
     variableWidth: true,
     autoplay: true,
   };
@@ -54,31 +56,35 @@ function Siladent3dPrinterSilaPrintLCD() {
               {/* ... */}
             </Grid>
             <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}></Grid>
-            <div style={{ marginTop: "30px !important" }}>
-              <Slider {...settings}>
-                {filteredProducts.map((product, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      width: "300px",
-                      height: "200px",
-                    }}
-                  >
-                    <CenteredBlogCard
-                      image={product.img[0]}
-                      title={product.model}
-                      action={{
-                        type: "internal",
-                        route: `/urun-detay/${product.id}`,
-                        color: "info",
-                        label: "Ürünü İncele",
-                      }}
-                    />
-                  </div>
-                ))}
-              </Slider>
-            </div>
           </Grid>
+          <div className="page-title" style={{ marginBottom: "10px" }}>
+            Benzer Ürünleri İncele
+          </div>
+
+          <div style={{ marginTop: "30px !important" }}>
+            <Slider {...settings}>
+              {filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: "300px",
+                    height: "200px",
+                  }}
+                >
+                  <CenteredBlogCard
+                    image={product.img[0]}
+                    title={product.model}
+                    action={{
+                      type: "internal",
+                      route: `/urun-detay/${product.id}`,
+                      color: "info",
+                      label: "Ürünü İncele",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </Container>
       </MKBox>
     </div>
