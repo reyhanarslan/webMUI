@@ -56,8 +56,10 @@ function SlitpreciseSP100() {
                 <div>
                   <iframe
                     style={{ borderRadius: "20px" }}
-                    width="450"
-                    height="250"
+                    width={isMobile ? 350 : 450}
+                    height={isMobile ? 150 : 250}
+                    // width="450"
+                    // height="250"
                     src="https://www.youtube.com/embed/xlg8x02HHNI"
                     title="LC Cast 600T Filling of the wather tank"
                     frameBorder="0"
@@ -76,8 +78,8 @@ function SlitpreciseSP100() {
                 <div>
                   <iframe
                     style={{ borderRadius: "20px" }}
-                    width="450"
-                    height="250"
+                    width={isMobile ? 350 : 450}
+                    height={isMobile ? 150 : 250}
                     src="https://www.youtube.com/embed/h87OXy3Mrjs"
                     title="VID 20171027 132705"
                     frameBorder="0"
@@ -94,8 +96,8 @@ function SlitpreciseSP100() {
               <Grid lg={12}>
                 <iframe
                   style={{ borderRadius: "20px" }}
-                  width="450"
-                  height="250"
+                  width={isMobile ? 350 : 450}
+                  height={isMobile ? 150 : 250}
                   src="https://www.youtube.com/embed/m8FR-tX1JMc"
                   title="VID 20171027 132843"
                   frameBorder="0"

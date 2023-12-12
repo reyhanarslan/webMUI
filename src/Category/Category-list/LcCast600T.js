@@ -76,8 +76,8 @@ function LcCast600T() {
           </Grid>
           <Grid my={1}>
             <iframe
-              width="800"
-              height="500"
+              width={isMobile ? 450 : 800}
+              height={isMobile ? 250 : 500}
               src="https://www.youtube.com/embed/dEMArq04MaY"
               title="How to cast with LC Cast 600T"
               frameBorder="0"
