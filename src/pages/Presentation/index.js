@@ -79,7 +79,7 @@ function Presentation() {
         {/* <div className="video-card" > */}
         <ReactPlayer
           ref={playerRef}
-          style={{ borderRadius: "15px", zIndex: 0, minHeight: 400 }}
+          style={{ borderRadius: "15px", zIndex: 0, minHeight: 450 }}
           width="100%"
           height={"100%"}
           url={
