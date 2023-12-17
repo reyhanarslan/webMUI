@@ -1,0 +1,23 @@
+.card-hover {
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+}
+
+.card-hover:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.custom-carousel .MuiCarouselIndicators-root {
+  display: none !important;
+}
+
+.custom-carousel .MuiButtonBase-root.MuiIconButton-root {
+  display: none !important;
+}
+.custom-particles {
+  /* height: 1850px !important;  */
+  overflow: hidden;
+}
+
