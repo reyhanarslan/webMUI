@@ -652,7 +652,7 @@ function ProductInfo() {
               images={productImages}
             />
           </Grid>
-          <Grid lg={0.2}></Grid>
+          <Grid lg={isMobile ? 0 : 0.2}></Grid>
           <Grid className="product-card-left" item xs={11} lg={isMobile ? 12 : 6}>
             <Card>
               <MKBox
@@ -661,6 +661,7 @@ function ProductInfo() {
                 sx={{
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  paddingBottom: 3,
                 }}
               >
                 {" "}
