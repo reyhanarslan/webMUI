@@ -200,7 +200,7 @@ export function Iletisim() {
           <div className="kurumsal slide-in-container">
             <Grid container px={10}>
               <Grid marginTop={10} container xs={12} lg={6} md={12}>
-                <Grid container xs={12} sm={12}>
+                <Grid container xs={12} sm={10}>
                   <Card
                     sx={{
                       backgroundImage: ({
@@ -223,7 +223,7 @@ export function Iletisim() {
                     </CardContent>
                   </Card>
                 </Grid>
-                <Grid item xs={12} sm={12}>
+                <Grid container xs={12} sm={10}>
                   <Card
                     sx={{
                       backgroundImage: ({
@@ -241,7 +241,7 @@ export function Iletisim() {
                     </CardContent>
                   </Card>
                 </Grid>
-                <Grid item xs={12} sm={12}>
+                <Grid container xs={12} sm={10}>
                   <Card
                     sx={{
                       backgroundImage: ({
@@ -267,18 +267,18 @@ export function Iletisim() {
               <Grid
                 style={{
                   marginTop: 100,
-                  marginLeft: isMobile ? 30 : 0,
+                  marginLeft: isMobile ? 0 : 15,
                 }}
                 item
                 xs={12}
-                lg={6}
+                lg={5.8}
                 md={12}
               >
                 <div style={{ marginTop: "50px" }} className="page-title">
                   Bizimle iletişime geçin{" "}
                 </div>{" "}
                 <Grid container spacing={3}>
-                  <Grid item xs={8} sm={6} md={6} lg={6} xl={6}>
+                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
@@ -297,7 +297,7 @@ export function Iletisim() {
                       />
                     </MKBox>
                   </Grid>
-                  <Grid item xs={8} sm={6} md={6} lg={6} xl={6}>
+                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
@@ -316,7 +316,7 @@ export function Iletisim() {
                       />
                     </MKBox>
                   </Grid>
-                  <Grid item xs={10} sm={10} md={12} lg={12} xl={12}>
+                  <Grid item xs={12} sm={10} md={12} lg={12} xl={12}>
                     <MKBox
                       bgColor="white"
                       borderRadius="xl"
