@@ -30,7 +30,7 @@ function Blz() {
     <div>
       <MKBox component="section" py={12}>
         <Container>
-        <Grid container spacing={3}>
+          <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
               {/* Başlık */}
               <div className="page-title">OPSİYONEL: </div>
