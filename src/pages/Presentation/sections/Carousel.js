@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "video.css";
+import "../video.css";
 
 function CarouselImages() {
   const [images] = useState([sld1, sld2, sld3]);
