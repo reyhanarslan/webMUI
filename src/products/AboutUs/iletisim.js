@@ -267,7 +267,8 @@ export function Iletisim() {
               <Grid
                 style={{
                   marginTop: 100,
-                  marginLeft: isMobile ? 0 : 15,
+                  marginLeft: isMobile ? 20 : 15,
+                  marginRight: isMobile ? 20 : 0,
                 }}
                 item
                 xs={12}
@@ -371,8 +372,8 @@ export function Iletisim() {
               md={12}
               lg={12}
               xl={12}
-              ml={{ xs: "auto", lg: 12 }}
-              mr={{ xs: "auto", lg: 12 }}
+              ml={{ xs: 10, lg: 12 }}
+              mr={{ xs: 10, lg: 12 }}
               mt={8}
             >
               <div
