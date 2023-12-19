@@ -103,47 +103,52 @@ export function SatisVeGarantiKosullari() {
         >
           {" "}
           <div className="kurumsal slide-in-container ">
-            <Grid container alignItems="center">
-              <Grid px={15} className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
-                <div className="page-title">SATIŞ KOŞULLARI</div>
+            <Grid className="kurumsal-grid" container alignItems="center">
+              <Grid px={6} item xs={12} sm={12} md={12} lg={12}>
+                <div className="page-title-about">SATIŞ KOŞULLARI</div>
                 <div style={{ marginBottom: 20 }}>
                   <h5 className="dark-text-info">FİYATLAR</h5>
                 </div>
-                <ol>
-                  <li>
-                    Fiyatlar ürünlerin ithal edildikleri ülkelere göre EURO ve USD olarak
-                    düzenlenmiştir ve tavsiye edilen satış fiyatlarıdır.
-                  </li>
-                  <li>
-                    Satış anında fiyatlar o günkü T.C.M.B. Efektif EURO / USD satış kurundan TL’ye
-                    çevrilerek satış gerçekleştirilir.
-                  </li>
-                  <li>Arena Diş zaman zaman kurları belli sürelerle sabitleme hakkına sahiptir.</li>
-                  <li>Fiyatlara KDV dahil değildir.</li>
-                  <li>
-                    Arena Diş katalog, web sayfası, sanal mağaza ilanlarda vb. mecralarda ilan
-                    ettiği fiyatları önceden haber vermeden değiştirme hakkına sahiptir.
-                  </li>
-                  <li>
-                    Arena Diş tüm ürünlerde zaman zaman kampanyalar düzenleyebilir. Kampanya
-                    dönemlerinde o günkü satış fiyatları ve koşulları geçerlidir. Bu durumda, daha
-                    önce bu ürünleri satın almış olanlar hak iddia edemez.
-                  </li>
-                  <li>
-                    Cihaz siparişlerinde eğer alıcı isterse leasing uygulanabilir. Alıcı tarafından
-                    ayrıca bir leasing firması belirtilmemişse, Arena Diş’in anlaşmalı olduğu
-                    leasing firmasıyla çalışılır. Leasing de yapılacak tüm masraflar (faiz, sigorta,
-                    sözleşme ve noter giderleri v.s) ve devir ücreti alıcıya aittir. Teslim
-                    tarihinden en az 15 gün önce leasing sözleşmesinin alıcı tarafından imzalanmış
-                    olması gereklidir. Leasing evraklarındaki eksiklikler ya da müşterinin leasing
-                    firması tarafından kredi açısından yeterli bulunmaması gibi nedenlerden meydana
-                    gelecek gecikme, işlem iptali v.s den dolayı Arena Diş’in sorumluluğu yoktur.
-                  </li>
-                </ol>
+                <div className="page-content-about">
+                  <ol>
+                    <li>
+                      Fiyatlar ürünlerin ithal edildikleri ülkelere göre EURO ve USD olarak
+                      düzenlenmiştir ve tavsiye edilen satış fiyatlarıdır.
+                    </li>
+                    <li>
+                      Satış anında fiyatlar o günkü T.C.M.B. Efektif EURO / USD satış kurundan TL’ye
+                      çevrilerek satış gerçekleştirilir.
+                    </li>
+                    <li>
+                      Arena Diş zaman zaman kurları belli sürelerle sabitleme hakkına sahiptir.
+                    </li>
+                    <li>Fiyatlara KDV dahil değildir.</li>
+                    <li>
+                      Arena Diş katalog, web sayfası, sanal mağaza ilanlarda vb. mecralarda ilan
+                      ettiği fiyatları önceden haber vermeden değiştirme hakkına sahiptir.
+                    </li>
+                    <li>
+                      Arena Diş tüm ürünlerde zaman zaman kampanyalar düzenleyebilir. Kampanya
+                      dönemlerinde o günkü satış fiyatları ve koşulları geçerlidir. Bu durumda, daha
+                      önce bu ürünleri satın almış olanlar hak iddia edemez.
+                    </li>
+                    <li>
+                      Cihaz siparişlerinde eğer alıcı isterse leasing uygulanabilir. Alıcı
+                      tarafından ayrıca bir leasing firması belirtilmemişse, Arena Diş’in anlaşmalı
+                      olduğu leasing firmasıyla çalışılır. Leasing de yapılacak tüm masraflar (faiz,
+                      sigorta, sözleşme ve noter giderleri v.s) ve devir ücreti alıcıya aittir.
+                      Teslim tarihinden en az 15 gün önce leasing sözleşmesinin alıcı tarafından
+                      imzalanmış olması gereklidir. Leasing evraklarındaki eksiklikler ya da
+                      müşterinin leasing firması tarafından kredi açısından yeterli bulunmaması gibi
+                      nedenlerden meydana gelecek gecikme, işlem iptali v.s den dolayı Arena Diş’in
+                      sorumluluğu yoktur.
+                    </li>
+                  </ol>
+                </div>
                 <div style={{ marginTop: 30, marginBottom: 20 }}>
                   <h5 className="dark-text-info">SATIŞ VE ÖDEMELER</h5>
                 </div>
-                <ol>
+                <ol className="page-content-about">
                   <li>
                     Cihaz satışlarında 11.01.2011 tarih ve 6098 sayılı Türk Borçlar Kanunun 207 ve
                     ilgili maddeleri gereği Satış Sözleşmesi yapılması zorunludur.
@@ -198,7 +203,7 @@ export function SatisVeGarantiKosullari() {
                 <div style={{ marginTop: 30, marginBottom: 20 }}>
                   <h5 className="dark-text-info ">TESLİMAT</h5>
                 </div>
-                <ol>
+                <ol className="page-content-about">
                   <li>
                     Siparişler eğer saat 16:00’dan önce alınmış ise aynı gün anlaşmalı olduğumuz
                     kargo firması (Kargo firması müşteri tarafından bildirilmedikçe firmamızın
@@ -242,7 +247,7 @@ export function SatisVeGarantiKosullari() {
                 <div style={{ marginTop: 30, marginBottom: 20 }}>
                   <h5 className="dark-text-info ">GARANTİ KOŞULLARI</h5>
                 </div>
-                <ol>
+                <ol className="page-content-about">
                   <li>
                     Sarf malzemesi dışındaki ürünlerimiz ürüne yönelik özel olarak başka bir süre
                     bildirilmediğinde teslim tarihinden itibaren 1 (bir) yıl süre ile garanti
@@ -314,7 +319,7 @@ export function SatisVeGarantiKosullari() {
                 <div style={{ marginTop: 30, marginBottom: 20 }}>
                   <h5 className="dark-text-info ">İADE ve DEĞİŞTİRME</h5>
                 </div>
-                <ol>
+                <ol className="page-content-about">
                   <li>
                     Şirketimizden satın almış olduğunuz sarf malzemeler fatura tarihinden itibaren 7
                     gün içinde iade alınabilir veya değiştirilebilir.
@@ -380,7 +385,7 @@ export function SatisVeGarantiKosullari() {
                 </div>
                 Şirketimizin “Satış Koşullarımız” başlığı içinde belirtilen garanti koşullarına
                 ilave olarak;
-                <ol>
+                <ol className="page-content-about">
                   <li>
                     Şirketimizin toptancılara sattığı cihazların garanti süreçleri teslim tarihinden
                     üç ay sonra başlayacaktır.

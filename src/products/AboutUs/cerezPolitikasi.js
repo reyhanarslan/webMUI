@@ -103,12 +103,12 @@ export function CerezPolitikasi() {
         >
           {" "}
           <div className="kurumsal slide-in-container ">
-            <Grid container alignItems="center">
-              <Grid px={12} className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
+            <Grid className="kurumsal-grid" container alignItems="center">
+              <Grid px={6} item xs={12} sm={12} md={12} lg={12}>
                 <div>
                   <h5 className="dark-text-info">Çerez Politikası Hakkında</h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Bu Çerez Politikası, çerezlerin ne olduğunu ve nasıl kullandığımızı açıklar.
                   Çerezlerin ne olduğunu, nasıl kullandığımızı, kullandığımız çerez türlerini,
                   çerezleri kullanarak topladığımız bilgileri ve bu bilgilerin nasıl kullanıldığını
@@ -124,7 +124,7 @@ export function CerezPolitikasi() {
                 <div style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info">Çerez Nedir?</h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Çerezler, küçük bilgileri saklamak için kullanılan küçük metin dosyalarıdır. Web
                   sitesi tarayıcınıza yüklendiğinde çerezler cihazınızda saklanır. Bu çerezler, web
                   sitesinin düzgün çalışmasını sağlamamıza, web sitesini daha güvenli hale
@@ -132,30 +132,30 @@ export function CerezPolitikasi() {
                   performans gösterdiğini anlamamıza ve neyin işe yaradığını ve nerede
                   iyileştirilmesi gerektiğini analiz etmemize yardımcı olur.
                 </div>
-                <div style={{ marginTop: 5 }}>
+                <div className="page-content-about" style={{ marginTop: 5 }}>
                   Önemli: Sitemizin tüm işlevlerini deneyimlemek için bazı çerezler gereklidir.
                   Kullanıcı oturumlarını sürdürmemize ve güvenlik tehditlerini önlememize izin
                   veriyorlar. Herhangi bir kişisel bilgi toplamaz veya saklamaz. Örneğin, bu
                   çerezler hesabınıza giriş yapmanıza ve sepetinize ürün eklemenize ve güvenli bir
                   şekilde ödeme yapmanıza olanak tanır.
                 </div>
-                <div style={{ marginTop: 5 }}>
+                <div className="page-content-about" style={{ marginTop: 5 }}>
                   İstatistikler: Bu çerezler, web sitesini ziyaret edenlerin sayısı, benzersiz
                   ziyaretçilerin sayısı, web sitesinin hangi sayfalarının ziyaret edildiği,
                   ziyaretin kaynağı vb. Gibi bilgileri depolar. Bu veriler, web sitesinin ne kadar
                   iyi performans gösterdiğini anlamamıza ve analiz etmemize yardımcı olur.
                 </div>
-                <div style={{ marginTop: 5 }}>
+                <div className="page-content-about" style={{ marginTop: 5 }}>
                   Pazarlama: Web sitemizde reklamlar gösterilmektedir. Bu çerezler, size
                   gösterdiğimiz reklamları sizin için anlamlı olacak şekilde kişiselleştirmek için
                   kullanılır. Bu çerezler ayrıca bu reklam kampanyalarının verimliliğini takip
                   etmemize yardımcı olur.
                 </div>
-                <div style={{ marginTop: 5 }}>
+                <div className="page-content-about" style={{ marginTop: 5 }}>
                   Bu çerezlerde saklanan bilgiler, üçüncü taraf reklam sağlayıcıları tarafından size
                   tarayıcıdaki diğer web sitelerinde de reklam göstermek için de kullanılabilir.
                 </div>
-                <div style={{ marginTop: 5 }}>
+                <div className="page-content-about" style={{ marginTop: 5 }}>
                   İşlevsel: Bunlar, web sitemizde bazı temel olmayan işlevlere yardımcı olan
                   çerezlerdir. Bu işlevler, video gibi içerikleri gömmeyi veya web sitesinde sosyal
                   medya platformlarında içerik paylaşmayı içerir.
@@ -163,7 +163,7 @@ export function CerezPolitikasi() {
                 <div style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info ">Çerezleri Nasıl Kullanıyoruz?</h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   <p>
                     Çevrimiçi hizmetlerin çoğu olarak, web sitemiz çerezleri birinci taraf ve üçüncü
                     taraf çerezlerini çeşitli amaçlarla kullanır.
@@ -184,7 +184,7 @@ export function CerezPolitikasi() {
                 <div style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info ">Ne Tür Çerezler Kullanıyoruz?</h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Önemli: Sitemizin tüm işlevlerini deneyimlemek için bazı çerezler gereklidir.
                   Kullanıcı oturumlarını sürdürmemize ve güvenlik tehditlerini önlememize izin
                   veriyorlar. Herhangi bir kişisel bilgi toplamaz veya saklamaz. Örneğin, bu
@@ -207,7 +207,7 @@ export function CerezPolitikasi() {
                 <div style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info ">Çerez Tercihlerini Nasıl Kontrol Edebilirim?</h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Tercihlerinizi daha sonra göz atma oturumunuz aracılığıyla değiştirmeye karar
                   verirseniz, ekranınızdaki “Gizlilik ve Çerez Politikası” sekmesini
                   tıklayabilirsiniz. Bu, tercihlerinizi değiştirmenizi veya onayınızı tamamen geri

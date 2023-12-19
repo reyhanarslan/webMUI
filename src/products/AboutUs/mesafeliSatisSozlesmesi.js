@@ -104,9 +104,7 @@ export function MesafeliSatisSozlesmesi() {
           <div className="kurumsal slide-in-container ">
             <Grid className="kurumsal-grid" container alignItems="center">
               <Grid px={6} item xs={12} sm={12} md={12} lg={12}>
-                <div style={{ marginTop: "50px" }} className="page-title">
-                  A- TARAFLAR
-                </div>
+                <div className="page-title">A- TARAFLAR</div>
                 <div style={{ marginTop: "50px" }}>
                   <h5 className="dark-text-info">I- Satıcı :</h5>
                   <h5 className="dark-text-info">Adres :</h5>
@@ -120,19 +118,19 @@ export function MesafeliSatisSozlesmesi() {
                 <div style={{ marginTop: "50px" }} className="page-title">
                   B- KAPSAM VE SÜRE
                 </div>
-                <div style={{ marginTop: "30px" }}>
+                <div className="page-content-about" style={{ marginTop: "30px" }}>
                   1-SATICI ve ALICI arasındaki tüm ticari işlemler bu sözleşme hükümlerine tabi
                   olup, sözleşme hükümlerinde yapılacak değişiklik ancak taraflarca yazılı olarak
                   yapılacak “Tadil Sözleşmesi” ile yapıldığında geçerli olacaktır.
                 </div>
-                <div style={{ marginTop: "30px" }}>
+                <div className="page-content-about" style={{ marginTop: "30px" }}>
                   {" "}
                   2-İş bu sözleşme, taraflardan birisi tarafından fesh edildiği tarihe kadar geçerli
                   olup, taraflarca yapılacak fesih ihbarı ancak karşı tarafa yazılı olarak ulaştığı
                   anda geçerli olacaktır. Taraflardan birisi tarafından gönderilen sözleşmenin
                   feshine ilişkin ihbarın, muhataba ulaşmasına kadar geçerlidir.
                 </div>
-                <div style={{ marginTop: "30px" }}>
+                <div className="page-content-about" style={{ marginTop: "30px" }}>
                   {" "}
                   ALICI, SATICIYA olan borcunu gününde ödememesi ve/veya ALICI’ya SATICI tarafından
                   keşide edilen kıymetli evrakın ademi kabul ve ademi tediyeden protesto edilmiş
@@ -144,7 +142,7 @@ export function MesafeliSatisSozlesmesi() {
                 <ul className="page-title" style={{ marginLeft: "20px" }}>
                   <li>SÖZLEŞME KONUSU ÜRÜN BİLGİLERİ</li>
                 </ul>
-                <div>
+                <div className="page-content-about">
                   <ol>
                     <li style={{ marginLeft: "20px" }}>
                       Malın / Ürünün/Hizmetin türü, miktarı, marka/modeli, rengi, adedi, satış
@@ -212,7 +210,7 @@ export function MesafeliSatisSozlesmesi() {
                 <ul className="page-title" style={{ marginLeft: "20px" }}>
                   <li>SATIŞLAR</li>
                 </ul>
-                <ol>
+                <ol className="page-content-about">
                   <li style={{ marginTop: "10px", marginLeft: "20px" }}>
                     Taraflar arasındaki, satışa konu emtianın, cinsi, kalitesi, miktarı, tutarı,
                     ödeme şekli ve varsa özel şartlarını içeren sipariş belgeleri, özel bağlantı
@@ -243,7 +241,7 @@ export function MesafeliSatisSozlesmesi() {
                 <ul className="page-title" style={{ marginLeft: "20px" }}>
                   <li> ÖDEMELER</li>
                 </ul>
-                <ol>
+                <ol className="page-content-about">
                   <li style={{ marginTop: "10px", marginLeft: "20px" }}>
                     ALICI’nın borçlarını gününde ifası esastır.
                   </li>
@@ -333,7 +331,7 @@ export function MesafeliSatisSozlesmesi() {
                 <ul className="page-title" style={{ marginLeft: "20px" }}>
                   <li> HESAPLARIN KAPATILMASI VE VADE FARKLARI</li>
                 </ul>
-                <ol>
+                <ol className="page-content-about">
                   <li style={{ marginTop: "10px", marginLeft: "20px" }}>
                     SATICI’nınALICI’ya kestiği her fatura, faturada belirtilen sürede, bedeli
                     naktenve/veya SATICI’nın yazılı kabülüne bağlı olmak üzere bu sözleşmede,
@@ -362,7 +360,7 @@ export function MesafeliSatisSozlesmesi() {
                 <ul className="page-title" style={{ marginLeft: "20px" }}>
                   <li> DEĞİŞİKLİKLER VE FESİH</li>
                 </ul>
-                <ol>
+                <ol className="page-content-about">
                   <li style={{ marginTop: "10px", marginLeft: "20px" }}>
                     Sözleşme ve temerrüt faizi oranlarında değişiklikler, SATICI tarafından yazılı
                     olarakALICI’ya iadeli mektupla gönderildiği tarihten itibaren uygulanır.Bu faiz
@@ -392,7 +390,7 @@ export function MesafeliSatisSozlesmesi() {
                   <li> GENEL HÜKÜMLER</li>
                 </ul>
                 <div className="page-title"> I- İHBAR, İHTAR, TEYİD VE ADRES DEĞİŞİKLİKLERİ</div>
-                <ol>
+                <ol className="page-content-about">
                   <li style={{ marginTop: "10px", marginLeft: "20px" }}>
                     Taraflar arasındaki her türlü ihbar, ihtar ve teyitler ile bunlara karşı
                     itirazlar; iadeli taahhütlü mektup veya noter aracılığı ile yapılır.
@@ -405,7 +403,7 @@ export function MesafeliSatisSozlesmesi() {
                   </li>
                 </ol>
                 <div className="page-title"> II- YETKİLİLERİN DEĞİŞMESİ VE DEVİR</div>
-                <ol>
+                <ol className="page-content-about">
                   <li style={{ marginTop: "10px", marginLeft: "20px" }}>
                     ALICI, kendisini temsile yetkili şahıslar değiştiğiveya şirket nevi değişikliği
                     halinde bu durumu SATICI’yaanında bildirmek ve hazırlanan yeni imza sirkülerini
@@ -432,7 +430,7 @@ export function MesafeliSatisSozlesmesi() {
                     İZMİR Mahkemeleri ve İcra Daireleri, münhasıran yetkili kabul edilmiştir.
                   </li>
                 </ol>
-                <div style={{ marginTop: "30px" }}>
+                <div className="page-content-about" style={{ marginTop: "30px" }}>
                   İşbu sözleşme tüm ekleriyle bir bütündür ve 28 /11 / 2019tarihinde iki nüsha
                   olaraktanzim ve taraflarca okunduktan sonra imza edilmiştir.
                 </div>

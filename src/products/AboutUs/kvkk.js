@@ -103,25 +103,25 @@ export function KisiselVerilerinKorunmasi() {
         >
           {" "}
           <div className="kurumsal slide-in-container ">
-            <Grid container alignItems="center">
-              <Grid px={12} className="kurumsal-grid" item xs={12} sm={12} md={12} lg={12}>
+            <Grid className="kurumsal-grid" container alignItems="center">
+              <Grid px={6} item xs={12} sm={12} md={12} lg={12}>
                 <div>
                   <h5 className="dark-text-info">
                     6698 Sayılı Kişisel Verilerin Korunması Kanunu (KVKK) Hakkında Bilgilendirme
                   </h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Bu sayfada; özel hayatın gizliliği, temel hak ve özgürlüklerin korunması amacıyla
                   yürürlüğe giren “6698 Sayılı Kişisel Verilerin Korunması Kanunu” hakkında
                   firmamızın üstlendiği sorumluluklar ve ayrıca kullanıcı sıfatıyla sahip olduğunuz
                   haklar ile ilgili bilgilendirici içerikler yer almaktadır.
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Arena Diş Deposu sitelerini ziyaret eden, sağladıkları hizmetlerden faydalanan siz
                   değerli kullanıcılarımızın kişisel verilerini Türkiye Cumhuriyeti kanunları
                   kapsamında korumak en büyük önceliklerimizdendir.
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Kişisel veri, kimliği belirli veya belirlenebilir kişiye ilişkin ad, soyad, TC
                   kimlik numarası, iletişim bilgileri gibi her türlü bilgiyi ifade etmektedir.
                   Kişisel verileriniz; 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”), 5809
@@ -132,7 +132,7 @@ export function KisiselVerilerinKorunmasi() {
                   erişilmesini önleme ve muhafazasını sağlama amacıyla, uygun güvenlik düzeyini
                   temin etmeye yönelik tüm teknik ve idari tedbirleri almaktadır.
                 </div>
-                <div style={{ marginTop: 30 }}>
+                <div className="page-content-about" style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info">
                     Kişisel Verilerin Toplanması, İşlenmesi ve İşleme Amaçları
                   </h5>
@@ -140,14 +140,14 @@ export function KisiselVerilerinKorunmasi() {
                     KVKK madde 4 uyarınca:
                   </h5>
                 </div>
-                <ol style={{ marginLeft: "20px" }}>
+                <ol className="page-content-about" style={{ marginLeft: "20px" }}>
                   <li>
                     Kişisel veriler, ancak bu Kanunda ve diğer kanunlarda öngörülen usul ve esaslara
                     uygun olarak işlenebilir.
                   </li>
                   <li> Kişisel verilerin işlenmesinde aşağıdaki ilkelere uyulması zorunludur:</li>
                 </ol>
-                <ul style={{ marginLeft: "40px" }}>
+                <ul className="page-content-about" style={{ marginLeft: "40px" }}>
                   <li>Hukuka ve dürüstlük kurallarına uygun olma.</li>
                   <li>Doğru ve gerektiğinde güncel olma.</li>
                   <li>Belirli, açık ve meşru amaçlar için işlenme.</li>
@@ -157,7 +157,7 @@ export function KisiselVerilerinKorunmasi() {
                     muhafaza edilme.
                   </li>
                 </ul>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Kişisel verileriniz, Arena Diş Deposu tarafından sunulan ürün, hizmet ya da ticari
                   faaliyete bağlı olarak değişkenlik gösterebilmekle beraber; otomatik ya da
                   otomatik olmayan yöntemlerle, ofisler, internet sitesi, sosyal medya mecraları,
@@ -168,12 +168,12 @@ export function KisiselVerilerinKorunmasi() {
                   eğitim, seminer veya organizasyonlara katıldığınızda kişisel verileriniz
                   işlenebilecektir.
                 </div>{" "}
-                <div style={{ marginTop: 30 }}>
+                <div className="page-content-about" style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info ">
                     İşlenen Kişisel Verilerin Kimlere ve Hangi Amaçla Aktarılabileceği
                   </h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Kayıt altına alınan kişisel verileriniz; alan adı tescili, lisans tescili, SSL
                   tescili ve benzeri hizmetler için, 3. Parti firmalar, kurum ve kuruluşlar; sunucu
                   hizmetlerinde kullanılan hizmet ve lisanslara bağlı olarak yazılımların üretici
@@ -184,7 +184,7 @@ export function KisiselVerilerinKorunmasi() {
                   çalışmalarının yapılabilmesi için 3. Parti istatistik ve analiz firmaları ve yasal
                   merciler ile gerekli ölçüde paylaşılmaktadır.
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   {" "}
                   Toplanan kişisel verileriniz; Arena Diş Deposu tarafından sunulan ürün ve
                   hizmetlerden sizleri faydalandırmak için gerekli çalışmaların birimlerimiz
@@ -197,12 +197,12 @@ export function KisiselVerilerinKorunmasi() {
                   kurumları ve özel kişilere, KVK Kanunu’nun 8. ve 9. maddelerinde belirtilen
                   kişisel veri işleme şartları ve amaçları çerçevesinde aktarılabilecektir.
                 </div>
-                <div style={{ marginTop: 30 }}>
+                <div className="page-content-about" style={{ marginTop: 30 }}>
                   <h5 className="dark-text-info ">
                     Kişisel Veri Toplamanın Yöntemi ve Hukuki Sebebi
                   </h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Kişisel verileriniz, her türlü sözlü, yazılı ya da elektronik ortamda, yukarıda
                   yer verilen amaçlar doğrultusunda Arena Diş Deposu tarafından sunulan ürün ve
                   hizmetlerin belirlenen yasal çerçevede sunulabilmesi ve bu kapsamda Arena Diş
@@ -212,12 +212,12 @@ export function KisiselVerilerinKorunmasi() {
                   şartları ve amaçları kapsamında bu metnin (1) ve (2) numaralı maddelerinde
                   belirtilen amaçlarla da işlenebilmekte ve aktarılabilmektedir.{" "}
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   <h5 className="dark-text-info ">
                     Kişisel Veri Sahibinin KVK Kanunu’nun 11. Maddesinde Sayılan Hakları
                   </h5>
                 </div>
-                <div style={{ marginTop: 20 }}>
+                <div className="page-content-about" style={{ marginTop: 20 }}>
                   Kişisel veri sahipleri olarak, haklarınıza ilişkin taleplerinizi aşağıda
                   düzenlenen yöntemlerle Arena Diş Deposu’a iletmeniz durumunda, Arena Diş Deposu
                   talebin niteliğine göre talebi en kısa sürede ve en geç otuz gün içinde ücretsiz
@@ -226,7 +226,7 @@ export function KisiselVerilerinKorunmasi() {
                   tarifedeki ücret alınacaktır.{" "}
                 </div>
                 <p style={{ marginTop: 30 }}>Bu kapsamda kişisel veri sahipleri;</p>
-                <ul style={{ marginLeft: "40px" }}>
+                <ul className="page-content-about" style={{ marginLeft: "40px" }}>
                   <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
                   <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
                   <li>
@@ -257,12 +257,14 @@ export function KisiselVerilerinKorunmasi() {
                     halinde zararın giderilmesini talep etme haklarına sahiptir.
                   </li>
                 </ul>
-                6698 sayılı Kanun’un 13. maddesinin 1. fıkrası gereğince, yukarıda belirtilen
-                haklarınızı kullanmak ile ilgili talebinizi, yazılı veya Kişisel Verileri Koruma
-                Kurulu’nun belirlediği diğer yöntemlerle Arena Diş Deposu’ye iletebilirsiniz.
-                Kişisel Verileri Koruma Kurulu, şu aşamada herhangi bir yöntem belirlemediği için,
-                başvurunuzu, 6698 sayılı Kanun gereğince, yazılı olarak Arena Diş Deposu’ye
-                iletmeniz gerekmektedir.
+                <div className="page-content-about">
+                  6698 sayılı Kanun’un 13. maddesinin 1. fıkrası gereğince, yukarıda belirtilen
+                  haklarınızı kullanmak ile ilgili talebinizi, yazılı veya Kişisel Verileri Koruma
+                  Kurulu’nun belirlediği diğer yöntemlerle Arena Diş Deposu’ye iletebilirsiniz.
+                  Kişisel Verileri Koruma Kurulu, şu aşamada herhangi bir yöntem belirlemediği için,
+                  başvurunuzu, 6698 sayılı Kanun gereğince, yazılı olarak Arena Diş Deposu’ye
+                  iletmeniz gerekmektedir.
+                </div>
               </Grid>
             </Grid>
           </div>

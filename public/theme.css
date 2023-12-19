@@ -118,7 +118,7 @@
 }
 .dark-text-info {
   color: #11304c !important;
-  font-size: 20px !important;
+  font-size: 22px !important;
 }
 .carousel-item {
   border-radius: 20px !important !important;
@@ -138,13 +138,16 @@
 .page-title-about {
   font-size: 32px !important;
   font-weight: bold !important;
-  margin-bottom: 20px !important;
-  margin-top: 20px !important;
+  /* margin-bottom: 20px !important;
+  margin-top: 20px !important; */
+  margin: 0 0 20px;
   color: #11304c !important;
+  font-family: "YoungSerif" !important;
 }
 .page-content {
   font-size: 16px !important;
-  line-height: 1.3 !important;
+  line-height: 1.5 !important;
+  margin: 0 0 20px;
   color: #8a95a7 !important;
   font-weight: 400 !important;
   justify-content: start !important;
@@ -153,11 +156,14 @@
   padding: 3px !important;
 }
 .page-content-about {
-  font-size: 22px !important;
-  line-height: 1.2 !important;
-  color: #1a212c !important;
-  font-weight: 500 !important;
-  font-family: sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  /* color: #1a212c !important; */
+  color: #11304c !important;
+  /* font-weight: 500 !important; */
+  padding: 3px !important;
+
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
 }
 
 .productTitle {
