@@ -167,10 +167,11 @@
 }
 
 .productTitle {
+  padding: 2px !important;
   font-size: 35px !important;
   color: #18a1a4 !important;
   font-weight: 550 !important;
-  font-family: sans-serif !important;
+  font-family: "YoungSerif" !important;
 }
 .productSubtitle {
   color: "white" !important;
