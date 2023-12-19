@@ -139,7 +139,13 @@ function Presentation() {
             position: "relative",
           }}
         >
-          <div style={{ position: "relative" }}>
+          <div
+            style={{
+              position: "relative",
+              borderTop: "15px solid #D7DCE1",
+              borderBottom: "15px solid #D7DCE1",
+            }}
+          >
             <EtkinlikImages />{" "}
           </div>
         </Card>
