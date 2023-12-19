@@ -20,7 +20,6 @@ import EtkinlikImages from "./sections/etkinlik";
 import { useLogoWidth } from "utils";
 import Pages from "./sections/Pages";
 import { useMediaQuery, useTheme } from "@mui/material";
-import("./video.css");
 
 function Presentation() {
   const navigate = useNavigate();
@@ -76,7 +75,6 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        {/* <div className="video-card" > */}
         <ReactPlayer
           ref={playerRef}
           style={{ borderRadius: "15px", zIndex: 0, minHeight: 450 }}

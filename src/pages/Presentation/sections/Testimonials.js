@@ -16,7 +16,6 @@ import Companies_8 from "assets/companies/Arena-markalar-8.jpg";
 import Companies_9 from "assets/companies/Arena-markalar-9.jpg";
 import Companies_10 from "assets/companies/Arena-markalar-10.png";
 import Companies_11 from "assets/companies/Arena-markalar-11.png";
-import "./card-hover.css";
 
 // import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 

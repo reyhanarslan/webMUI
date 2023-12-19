@@ -1,3 +1,89 @@
+.card-hover {
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+}
+
+.card-hover:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.custom-carousel .MuiCarouselIndicators-root {
+  display: none !important;
+}
+
+.custom-carousel .MuiButtonBase-root.MuiIconButton-root {
+  display: none !important;
+}
+.custom-particles {
+  /* height: 1850px !important;  */
+  overflow: hidden;
+}
+
+
+@keyframes card-animation {
+  0% {
+    opacity: 0.3;
+    /* transform: translateY(10px); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
+}
+
+.custom-carousel {
+  animation: card-animation 1s !important;
+  z-index: 2;
+}
+.image-transition {
+  animation: card-animation 1s !important;
+}
+
+.kategoriler-carousel {
+  color: #fff;
+  background: linear-gradient(-45deg, #18a1a4, #344767, #344767, #f8f9ff, #64b0b4);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+  -moz-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite !important;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.etkinlik-carousel {
+  color: #fff;
+  background: linear-gradient(-45deg, #e0f4ff, #f8f9ff, #e3f4f4);
+  background-size: 400% 400%;
+  -webkit-animation: gradient1 15s ease infinite;
+  -moz-animation: gradient1 15s ease infinite;
+  animation: gradient1 15s ease infinite !important;
+}
+
+
+@keyframes gradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .dark-text,
 .light-text {
   display: inline-block;

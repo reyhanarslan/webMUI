@@ -9,7 +9,6 @@ import logo from "assets/images/logos/arenadis-logo-web-1.png";
 
 // About Us page sections
 // import Information from "pages/LandingPages/AboutUs/sections/Information";
-import "./product.css";
 import { useNavigate } from "react-router-dom";
 import {
   Carestream3600,
@@ -100,7 +99,6 @@ import DFM75E from "Category/Category-list/DFM75E";
 import CiftTeknisyenCalismaMasasi from "Category/Category-list/CiftTeknisyenCalismaMasasi";
 import TekliTeknisyenCalismaMasasi from "Category/Category-list/TekliTeknisyenCalismaMasasi";
 import QuattroKamciliDisUnitesi from "Category/Category-list/QuattroKamciliDisUnitesi";
-import "./product.css";
 import { useRef } from "react";
 import { Siladent3dPrinterSilaPrintLCDTitle } from "Category/Category-list/Siladent3dPrinterSilaPrintLCD";
 import { Silamill4EditionTitle } from "Category/Category-list/Silamill4Edition";
