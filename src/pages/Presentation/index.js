@@ -99,8 +99,10 @@ function Presentation() {
           sx={{
             p: 0,
             mt: -25,
-            borderTopLeftRadius: "30px",
-            borderTopRightRadius: "30px",
+            // borderTopLeftRadius: "30px",
+            borderRadius: "30px",
+
+            // borderTopRightRadius: "30px",
             zIndex: 56456,
             backdropFilter: "saturate(200%) blur(30px)",
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
@@ -108,7 +110,7 @@ function Presentation() {
         >
           <Information />
         </Card>{" "}
-        <Card
+        {/* <Card
           sx={{
             p: 0,
             mt: 0,
@@ -120,10 +122,9 @@ function Presentation() {
             position: "relative",
           }}
         >
-          <div style={{ position: "relative" }}>
-            <CarouselImages />
-          </div>
-        </Card>
+          <div style={{ position: "relative" }}></div>
+        </Card>{" "} */}
+        <CarouselImages />
         <Pages></Pages>
         <UrunlerCard />
         <Card

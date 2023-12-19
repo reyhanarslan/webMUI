@@ -24,8 +24,10 @@ function Information() {
     <MKBox
       sx={{
         background: "#F8F9FF",
-        borderTopRightRadius: "30px",
-        borderTopLeftRadius: "30px",
+        borderRadius: "30px",
+
+        // borderTopRightRadius: "30px",
+        // borderTopLeftRadius: "30px",
         py: 6,
       }}
       component="section"

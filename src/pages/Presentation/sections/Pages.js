@@ -22,7 +22,7 @@ function Pages() {
       {isMobile ? (
         <>
           {" "}
-          <Card style={{ borderRadius: "0px 0px 30px 30px", overflowX: "hidden", padding: "20px" }}>
+          <Card style={{ borderRadius: "30px", overflowX: "hidden", padding: "20px" }}>
             <Grid container item xs={12} alignItems="center" sx={{ mx: "auto" }}>
               <Grid
                 item
@@ -727,7 +727,7 @@ function Pages() {
         </>
       ) : (
         <>
-          <Card style={{ borderRadius: "0px 0px 30px 30px", overflowX: "hidden" }}>
+          <Card style={{ borderRadius: "30px", overflowX: "hidden" }}>
             <Grid container item xs={12} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
               <Grid
                 item
