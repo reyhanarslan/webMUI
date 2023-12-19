@@ -54,7 +54,7 @@ export function Hakkimizda() {
           />
         </div>
       </MKBox>
-      <Grid py={0}>
+      <Grid>
         <>
           <MKBox
             // minHeight="75vh"
@@ -103,9 +103,9 @@ export function Hakkimizda() {
         >
           <div className="kurumsal slide-in-container ">
             <Grid
-              style={{ paddingBottom: "350px" }}
+              style={{ marginBottom: 450 }}
               className="kurumsal-grid"
-              marginTop={4}
+              marginTop={5}
               container
               alignItems="center"
             >
