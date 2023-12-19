@@ -10,11 +10,14 @@ import MKTypography from "components/MKTypography";
 import logo from "assets/images/logos/arenadis-logo-white.png";
 import { useNavigate } from "react-router-dom";
 import { useLogoWidth } from "utils";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 export function Hakkimizda() {
   const logoWidth = useLogoWidth();
 
   const navigate = useNavigate();
+  const theme1 = useTheme();
+  const isMobile = useMediaQuery(theme1.breakpoints.down("sm"));
   return (
     <div>
       <DefaultNavbar
@@ -103,7 +106,7 @@ export function Hakkimizda() {
         >
           <div className="kurumsal slide-in-container ">
             <Grid
-              style={{ marginBottom: 450 }}
+              style={{ marginBottom: isMobile ? 10 : 450 }}
               className="kurumsal-grid"
               marginTop={5}
               container
@@ -111,7 +114,7 @@ export function Hakkimizda() {
             >
               <Grid px={6} style={{ marginRight: "70px" }} item xs={12} md={5}>
                 <div className="page-title-about">Türkiye’nin Diş Malzemeleri</div>
-                <div className="page-content-about">
+                <div className="page-content-about" style={{ marginBottom: isMobile ? 20 : 0 }}>
                   Diş Hekimliği sektöründe faaliyet gösteren Arena Diş Deposu A.Ş. Dental klinik ve
                   diş laboratuvar ekipmanları ile sarf malzemeleri satışlarını kapsayan ticari
                   faaliyetlerini yurt içinde ve yurt dışında sürdürmektedir. Merkezi Ankara’da
